@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/yourname/poe2-build-lib/poe2-build.schema.json",
+  "$id": "https://raw.githubusercontent.com/chesler410/poe2-build-forge/main/packages/schema/src/poe2-build.schema.json",
   "title": "Path of Exile 2 Build File",
   "description": "JSON Schema for .build files consumed by the Path of Exile 2 in-game Build Planner. Files live in 'Documents/My Games/Path of Exile 2/BuildPlanner' and must end in '.build'. Source spec: https://www.pathofexile.com/developer/docs/game",
   "type": "object",
