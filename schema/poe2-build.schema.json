@@ -1,0 +1,214 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/yourname/poe2-build-lib/poe2-build.schema.json",
+  "title": "Path of Exile 2 Build File",
+  "description": "JSON Schema for .build files consumed by the Path of Exile 2 in-game Build Planner. Files live in 'Documents/My Games/Path of Exile 2/BuildPlanner' and must end in '.build'. Source spec: https://www.pathofexile.com/developer/docs/game",
+  "type": "object",
+  "required": ["name"],
+  "additionalProperties": false,
+  "properties": {
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Build display name shown in-game."
+    },
+    "description": {
+      "type": "string",
+      "description": "Build description. Supports markup tags (see $defs/AdditionalText)."
+    },
+    "ascendancy": {
+      "type": "string",
+      "description": "Ascendancy class id from the Ascendancy table (e.g. 'Mercenary2', 'Witch1'). Empty/omitted means no ascendancy hint."
+    },
+    "passives": {
+      "type": "array",
+      "description": "Passive tree allocations. Each entry is either a string (shorthand for just the id) or a BuildPassive object.",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string",
+            "description": "Shorthand form: a PassiveSkills table id with no level interval or additional text."
+          },
+          { "$ref": "#/$defs/BuildPassive" }
+        ]
+      }
+    },
+    "skills": {
+      "type": "array",
+      "description": "Active skill gems. Each entry is either a string (shorthand) or a BuildSkill object with optional support gems.",
+      "items": {
+        "oneOf": [
+          {
+            "type": "string",
+            "description": "Shorthand form: a BaseItemTypes table id for a skill gem."
+          },
+          { "$ref": "#/$defs/BuildSkill" }
+        ]
+      }
+    },
+    "items": {
+      "type": "array",
+      "description": "Inventory slot hints. Used to show tips on equipment slots in the character panel; does not provide actual items.",
+      "items": { "$ref": "#/$defs/BuildItem" }
+    }
+  },
+  "$defs": {
+    "LevelInterval": {
+      "type": "array",
+      "description": "Inclusive character-level range [min, max]. PoE2's level cap is 100. Hint is shown to the player while their level is within this range.",
+      "items": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 100
+      },
+      "minItems": 2,
+      "maxItems": 2,
+      "examples": [[0, 25], [25, 100]]
+    },
+    "AdditionalText": {
+      "type": "string",
+      "description": "Hover/tooltip text shown in-game. Supports simple markup: <bold>{text}, <italics>{text}, <underline>{text}, named colours like <red>{text} / <green>{text}, and arbitrary RGB via <rgb(r, g, b)>{text}. Tags can nest. Use \\n for newlines."
+    },
+    "BuildPassive": {
+      "type": "object",
+      "required": ["id"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "A PassiveSkills table id. Examples: 'projectiles18', 'duelist_mercenary_notable1', 'AscendancyMercenary2Notable1'."
+        },
+        "level_interval": { "$ref": "#/$defs/LevelInterval" },
+        "weapon_set": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Weapon-set this passive applies to. PoE2 supports two weapon sets; typical values are 1 or 2."
+        },
+        "additional_text": { "$ref": "#/$defs/AdditionalText" }
+      }
+    },
+    "BuildSkill": {
+      "type": "object",
+      "required": ["id"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "A BaseItemTypes table id for an active skill gem. Example: 'Metadata/Items/Gem/SkillGemShieldWall'.",
+          "pattern": "^Metadata/Items/Gem(s)?/.+$"
+        },
+        "level_interval": { "$ref": "#/$defs/LevelInterval" },
+        "additional_text": { "$ref": "#/$defs/AdditionalText" },
+        "support_skills": {
+          "type": "array",
+          "description": "Recommended support gems linked to this skill. Order is informational only.",
+          "items": {
+            "oneOf": [
+              {
+                "type": "string",
+                "description": "Shorthand form: a BaseItemTypes table id for a support gem."
+              },
+              { "$ref": "#/$defs/BuildSupport" }
+            ]
+          }
+        }
+      }
+    },
+    "BuildSupport": {
+      "type": "object",
+      "required": ["id"],
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "A BaseItemTypes table id for a support gem. Example: 'Metadata/Items/Gems/SupportGemBrutality'.",
+          "pattern": "^Metadata/Items/Gem(s)?/.+$"
+        },
+        "level_interval": { "$ref": "#/$defs/LevelInterval" },
+        "additional_text": { "$ref": "#/$defs/AdditionalText" }
+      }
+    },
+    "BuildItem": {
+      "type": "object",
+      "required": ["inventory_id", "slot_x", "slot_y"],
+      "additionalProperties": false,
+      "description": "A hint attached to an inventory slot. Shows when the player hovers that slot in the character panel.",
+      "properties": {
+        "inventory_id": {
+          "type": "string",
+          "description": "Inventory slot identifier. Common values: 'Weapon1', 'Weapon2', 'Offhand1', 'Offhand2', 'Helm', 'BodyArmour', 'Gloves', 'Boots', 'Belt', 'Amulet', 'Ring', 'Ring2', 'Flask'.",
+          "examples": [
+            "Weapon1",
+            "Weapon2",
+            "Offhand1",
+            "Offhand2",
+            "Helm",
+            "BodyArmour",
+            "Gloves",
+            "Boots",
+            "Belt",
+            "Amulet",
+            "Ring",
+            "Ring2",
+            "Flask"
+          ]
+        },
+        "slot_x": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "X coordinate within the inventory slot's grid."
+        },
+        "slot_y": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Y coordinate within the inventory slot's grid."
+        },
+        "level_interval": { "$ref": "#/$defs/LevelInterval" },
+        "unique_name": {
+          "type": "string",
+          "description": "A UniqueName entry from the Words table, used to suggest a specific unique item."
+        },
+        "additional_text": { "$ref": "#/$defs/AdditionalText" }
+      }
+    }
+  },
+  "examples": [
+    {
+      "name": "Tutorial Mercenary - Shield Wall",
+      "description": "<bold>{First-time player build}\nMercenary class is recommended.",
+      "ascendancy": "Mercenary2",
+      "passives": [
+        { "id": "projectiles18", "level_interval": [0, 25] },
+        "duelist_mercenary_notable1",
+        {
+          "id": "armour_and_evasion2",
+          "level_interval": [25, 100],
+          "additional_text": "Allocate after transitioning to Shield Wall."
+        }
+      ],
+      "skills": [
+        {
+          "id": "Metadata/Items/Gem/SkillGemShieldWall",
+          "level_interval": [22, 100],
+          "additional_text": "<green>{Your main damaging skill.}",
+          "support_skills": [
+            "Metadata/Items/Gems/SupportGemBrutality",
+            {
+              "id": "Metadata/Items/Gems/SupportGemMartialTempo",
+              "additional_text": "Pick this up after Multishot."
+            }
+          ]
+        }
+      ],
+      "items": [
+        {
+          "inventory_id": "Weapon1",
+          "slot_x": 0,
+          "slot_y": 0,
+          "level_interval": [0, 100],
+          "additional_text": "Crossbow until level 22, then swap to one-hand mace + shield."
+        }
+      ]
+    }
+  ]
+}
