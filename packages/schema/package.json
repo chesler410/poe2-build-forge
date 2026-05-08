@@ -14,7 +14,7 @@
         "default": "./dist/index.js"
       },
       "require": {
-        "types": "./dist/index.d.cts",
+        "types": "./dist/index.d.ts",
         "default": "./dist/index.cjs"
       }
     },
@@ -28,7 +28,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsup",
+    "build": "tsup && tsc -b",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc -b"
