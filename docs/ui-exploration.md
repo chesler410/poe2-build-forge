@@ -75,7 +75,9 @@ prototype to react to.
 
 ## 2. In-game appearance
 
-The `additional_text` field in the schema supports inline markup:
+### Schema markup tags
+
+The `additional_text` field supports inline markup:
 
 - `<bold>{text}`, `<italics>{text}`, `<underline>{text}`
 - Named colors: `<red>{text}`, `<green>{text}`, etc.
@@ -83,33 +85,114 @@ The `additional_text` field in the schema supports inline markup:
 - `\n` for newlines
 - Tags can nest
 
-**What GGG's reveal video tells us** (transcribed timestamps 1:10:32 –
-1:11:48): downloaded `.build` files appear in the in-game client; selecting
-one shows passives to allocate, ascendancy points, skill gems to equip,
-support gem recommendations, and per-slot item suggestions (unique items
-or loose notes about "what kind of item you need"). Build creators can
-add notes to "just about any of these areas." Level ranges per element
-are explicitly called out as supporting respec-at-level builds.
+### What the GGG reveal screenshots show
 
-What we **still don't know** with screenshot-level certainty — drop
-captures into `docs/screenshots/` to nail these down:
+Reference imagery in `docs/screenshots/` (frames captured from GGG's
+official reveal video, 2026-05) resolves most of the rendering
+questions:
 
-- **Rendering surface details.** Hover tooltips on the passive node /
-  skill slot / item slot? Always-visible labels? A separate "Build Plan"
-  panel? The reveal showed parts of this briefly; we want stills.
-- **How aggressively does the level-interval gate kick in?** When a hint's
-  `level_interval` is `[25, 100]` and the character is level 24, is the
-  hint hidden, dimmed, or just shown with a "future" badge?
-- **Markup parser strictness.** Does an unclosed `<bold>` break the tooltip,
-  or render gracefully? Probably worth fuzz-testing once we have something
-  in-hand.
+**Build storage and selection**
 
-The web app's job is to *generate good text* that the in-game tooltip
-reads correctly. The web app does not need to *render* the markup
-identically — it can show a simplified preview. That said, **[exploratory
-— needs user input]**, a "preview pane that approximates how the in-game
-tooltip would look" might be valuable to authors of build guides; less so
-for one-shot consumers.
+- [`simpleBuildFileExampleFromGGG.png`](screenshots/simpleBuildFileExampleFromGGG.png)
+  — Windows file explorer showing the BuildPlanner directory with
+  `Ranger.build` (5 KB) and `Shieldwall.build` (10 KB) at
+  `Documents\My Games\Path of Exile 2\BuildPlanner\`. Confirms file
+  locations match the dev docs.
+- [`howToactivateLoadedBuildFile.png`](screenshots/howToactivateLoadedBuildFile.png)
+  — multiple loaded builds appear in a dropdown at the top-left of
+  the in-game **Build Planner** UI. Shown slots: `None / None /
+  MercenaryBuild`, implying multiple build slots can coexist.
+
+**Passive tree rendering**
+
+- [`highlightedPathFromBuildGuide.png`](screenshots/highlightedPathFromBuildGuide.png)
+  — when a build is loaded, the passive tree shows allocated nodes
+  highlighted with brighter glow/lines tracing the recommended path.
+  Side panels show `Skill Points`, `Weapon Set` (twice — confirming
+  weapon-set support), `Ascendancy Points`, and a `Search here` text
+  field for finding nodes.
+
+**Skill gem recommendations**
+
+- [`skillsFromBuildDropdown.png`](screenshots/skillsFromBuildDropdown.png)
+  — the Gem Cutting screen has a `RECOMMENDED` tab populated by the
+  loaded build file. Skills render as a grid (Cold Attunement / Double
+  Barrel / Rapid Attacks visible). Right-side tooltip shows full skill
+  details + a "Supportable Skills" panel listing legal targets for
+  support gems.
+- [`skillsBeingFilteredFromBuildFiles.png`](screenshots/skillsBeingFilteredFromBuildFiles.png)
+  — skill picker with category filters down the left side
+  (Bow / Sword / Spear / Staff / Quarterstaff / Dagger / Elemental /
+  Chaos / Occult / Frost / Fire / Mace / Axe / Equipped Gems / All
+  Gems). Build-file recommendations integrate into this same picker.
+
+**Item slot annotations** (this is what `BuildItem.additional_text`
+renders as)
+
+- [`gearNotes1.png`](screenshots/gearNotes1.png) — red text floats above
+  an inventory slot: *"This new unique is pretty explosive!"* Pointing
+  at a specific slot.
+- [`gearNotes2.png`](screenshots/gearNotes2.png) — multiple notes on
+  different slots: *"Get as much life on this and some resistances as
+  you can!"* and *"Add as much you life than I can do!"* (sic). Confirms
+  multiple slots can carry independent notes.
+- [`gearNotes3.png`](screenshots/gearNotes3.png) — flask slot:
+  *"Keep replacing your Life Flask with any that recover more life
+  than your current."* The same annotation pattern works for flask
+  slots, not just armor/weapons.
+
+**JSON file format** — see "Schema conflicts" below.
+
+- [`sampleBuildFileJson.png`](screenshots/sampleBuildFileJson.png) —
+  shows the literal JSON content of a Ranger build file. Contents are
+  the most authoritative format reference we have, and conflict with
+  the published dev docs in three places.
+
+**Community context**
+
+- [`exampleOfBuildGuides.png`](screenshots/exampleOfBuildGuides.png) —
+  community sites already host PoE2 build guides organized by
+  class/ascendancy with thumbnails and "Last Updated" dates. Our app
+  sits between these guides and the in-game `.build` format.
+- [`poeNinjaInUse.png`](screenshots/poeNinjaInUse.png) — poe.ninja's
+  existing passive-tree designer view. Reference for what
+  build-design tools look like today.
+
+### Schema conflicts: dev docs vs. reveal screenshot
+
+The reveal-video screenshot of `Ranger.build` shows fields that conflict
+with the published dev docs (re-verified 2026-05-09). Both sources are
+from GGG; one is stale. **The schema isn't fixed yet — needs ground
+truth.**
+
+| Field | Dev docs say | Screenshot shows |
+|---|---|---|
+| Top-level identifier | `name` (required) | `id` |
+| `ascendancy` value format | `"Mercenary2"` (table-id) | `"Pathfinder"` (display name) |
+| `unique_name` location | `BuildItem` only | also seen on a `BuildPassive` |
+
+If the screenshot wins on (1)/(2), our mapping plan simplifies — no
+ascendancy ID lookup needed; we'd just pass through the display name.
+If the dev docs win, our existing schema is correct and we keep our
+ascendancies.json mapping logic.
+
+**[exploratory — needs ground truth]** Best resolution: install PoE2,
+create a build via a community tool that supports `.build` export,
+open the resulting file in a text editor, see which form is real. Or
+ask in the official PoE2 Discord. Until resolved, the schema
+(`packages/schema/src/poe2-build.schema.json`) follows the dev docs;
+the mapper will need a defensive fallback for whichever form turns
+out to be wrong.
+
+### Other rendering details
+
+- **Level-interval gate behavior** — not visible in the captured
+  screenshots. Still unknown whether out-of-range hints are hidden,
+  dimmed, or shown with a "future" badge. Worth checking with a real
+  loaded build.
+- **Markup parser strictness** — also not visible. Whether an unclosed
+  `<bold>` breaks the tooltip or renders gracefully will need
+  fuzz-testing once we can write our own `.build` files and load them.
 
 ## 3. Color scheme candidates
 
