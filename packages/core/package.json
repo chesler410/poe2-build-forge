@@ -32,9 +32,12 @@
     "typecheck": "tsc -b"
   },
   "dependencies": {
-    "@poe2-build-forge/schema": "workspace:*"
+    "@poe2-build-forge/schema": "workspace:*",
+    "fast-xml-parser": "^5.7.3",
+    "pako": "^2.1.0"
   },
   "devDependencies": {
+    "@types/pako": "^2.0.4",
     "tsup": "^8.3.5",
     "vitest": "^2.1.4"
   }

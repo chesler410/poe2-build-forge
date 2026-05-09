@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathOfBuilding2>
+	<Build characterLevelAutoMode="true" mainSocketGroup="2" level="89" viewMode="IMPORT" targetVersion="0_1" className="Ranger" ascendClassName="Deadeye">
+		<PlayerStat value="0" stat="CombinedDPS"/>
+		<PlayerStat value="32" stat="Str"/>
+		<PlayerStat value="15" stat="ReqStr"/>
+		<PlayerStat value="140" stat="Dex"/>
+		<PlayerStat value="21" stat="ReqDex"/>
+		<PlayerStat value="37" stat="Int"/>
+		<PlayerStat value="5" stat="ReqInt"/>
+		<PlayerStat value="0" stat="Devotion"/>
+		<PlayerStat value="0" stat="Tribute"/>
+		<PlayerStat value="900.79318694164" stat="TotalEHP"/>
+		<PlayerStat value="1226" stat="PhysicalMaximumHitTaken"/>
+		<PlayerStat value="817" stat="LightningMaximumHitTaken"/>
+		<PlayerStat value="817" stat="FireMaximumHitTaken"/>
+		<PlayerStat value="817" stat="ColdMaximumHitTaken"/>
+		<PlayerStat value="1226" stat="ChaosMaximumHitTaken"/>
+		<PlayerStat value="0" stat="Darkness"/>
+		<PlayerStat value="0" stat="ReservedDarkness"/>
+		<PlayerStat value="1226" stat="Life"/>
+		<PlayerStat value="5" stat="Spec:LifeInc"/>
+		<PlayerStat value="1226" stat="LifeUnreserved"/>
+		<PlayerStat value="1226" stat="LifeRecoverable"/>
+		<PlayerStat value="100" stat="LifeUnreservedPercent"/>
+		<PlayerStat value="0" stat="LifeRegenRecovery"/>
+		<PlayerStat value="483" stat="Mana"/>
+		<PlayerStat value="0" stat="Spec:ManaInc"/>
+		<PlayerStat value="483" stat="ManaUnreserved"/>
+		<PlayerStat value="100" stat="ManaUnreservedPercent"/>
+		<PlayerStat value="22.2" stat="ManaRegenRecovery"/>
+		<PlayerStat value="100" stat="Spirit"/>
+		<PlayerStat value="70" stat="SpiritUnreserved"/>
+		<PlayerStat value="70" stat="SpiritUnreservedPercent"/>
+		<PlayerStat value="0" stat="EnergyShield"/>
+		<PlayerStat value="0" stat="EnergyShieldRecoveryCap"/>
+		<PlayerStat value="0" stat="Spec:EnergyShieldInc"/>
+		<PlayerStat value="0" stat="EnergyShieldRegenRecovery"/>
+		<PlayerStat value="0" stat="RageRegenRecovery"/>
+		<PlayerStat value="17" stat="Evasion"/>
+		<PlayerStat value="0" stat="Spec:EvasionInc"/>
+		<PlayerStat value="0" stat="EvadeChance"/>
+		<PlayerStat value="0" stat="MeleeEvadeChance"/>
+		<PlayerStat value="0" stat="ProjectileEvadeChance"/>
+		<PlayerStat value="0" stat="SpellEvadeChance"/>
+		<PlayerStat value="0" stat="SpellProjectileEvadeChance"/>
+		<PlayerStat value="0" stat="DeflectionRating"/>
+		<PlayerStat value="0" stat="DeflectChance"/>
+		<PlayerStat value="0" stat="Armour"/>
+		<PlayerStat value="0" stat="Spec:ArmourInc"/>
+		<PlayerStat value="0" stat="PhysicalDamageReduction"/>
+		<PlayerStat value="0" stat="EffectiveBlockChance"/>
+		<PlayerStat value="0" stat="EffectiveSpellBlockChance"/>
+		<PlayerStat value="0" stat="AttackDodgeChance"/>
+		<PlayerStat value="0" stat="SpellDodgeChance"/>
+		<PlayerStat value="0" stat="EffectiveSpellSuppressionChance"/>
+		<PlayerStat value="-50" stat="FireResist"/>
+		<PlayerStat value="0" stat="FireResistOverCap"/>
+		<PlayerStat value="-50" stat="ColdResist"/>
+		<PlayerStat value="0" stat="ColdResistOverCap"/>
+		<PlayerStat value="-50" stat="LightningResist"/>
+		<PlayerStat value="0" stat="LightningResistOverCap"/>
+		<PlayerStat value="0" stat="ChaosResist"/>
+		<PlayerStat value="0" stat="ChaosResistOverCap"/>
+		<PlayerStat value="1.03" stat="EffectiveMovementSpeedMod"/>
+		<PlayerStat value="4" stat="PresenceRadiusMetres"/>
+		<PlayerStat value="0" stat="FullDPS"/>
+		<PlayerStat value="0" stat="FullDotDPS"/>
+		<PlayerStat value="0" stat="PowerCharges"/>
+		<PlayerStat value="3" stat="PowerChargesMax"/>
+		<PlayerStat value="0" stat="FrenzyCharges"/>
+		<PlayerStat value="5" stat="FrenzyChargesMax"/>
+		<PlayerStat value="0" stat="EnduranceCharges"/>
+		<PlayerStat value="3" stat="EnduranceChargesMax"/>
+		<Buffs buffList="" curseList="" combatList=""/>
+		<TimelessData devotionVariant1="1" socketFilterDistance="0" searchListFallback="" searchList="" devotionVariant2="1"/>
+	</Build>
+	<Tree activeSpec="7">
+		<Spec classId="0" title="Campaign Start" ascendancyInternalId="" treeVersion="0_4" masteryEffects="" ascendClassId="0" nodes="28992,38459,50459,49691,5988,59653,60505,56651,19808,35234,18548,61373,53539,35987,65009,30695,13783,35660,13828,61106,28050" classInternalId="2" secondaryAscendClassId="nil">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgAAFHFAljvCGxdk6QXsWd1LTWCJokh0773RI4yT_fF35zXXi0w2BO6ybZIAAA==
+			</URL>
+			<WeaponSet1 nodes="38459,5988,61373,53539"/>
+			<WeaponSet2 nodes="49691,59653,35987,61106"/>
+			<Sockets/>
+			<Overrides>
+				<AttributeOverride strNodes="65009,28050" dexNodes="" intNodes="60505"/>
+			</Overrides>
+		</Spec>
+		<Spec classId="0" title="Early Campaign" ascendancyInternalId="Ranger1" treeVersion="0_4" masteryEffects="" ascendClassId="1" nodes="61106,8194,50459,11825,49691,46990,52501,60505,35901,56651,35234,3987,18548,60735,63981,29517,63888,28992,38459,46705,35660,60700,61373,5988,59653,14226,5305,17854,32701,26598,19808,13828,30695,65009,30,28050,44974,24287,53539,35987,18818,43082,34015,13783,54984,3431,49461,62464" classInternalId="2" secondaryAscendClassId="nil">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgABLu6yIAIuMcIbzRXsWYw93UuJog-TSHTtP_ntc035kHFAlju2cYtM7RzvvRdk6QU3khS5Rb5_vWfmTWA2BHfn_fEAHm2Sr65e39EjjJNJgqhKhN8119bIDWfBNfQAAAA=
+			</URL>
+			<WeaponSet1 nodes="52501,38459,46705,60700,61373,5988,44974,53539"/>
+			<WeaponSet2 nodes="61106,8194,49691,63981,59653,17854,35987,62464"/>
+			<Sockets/>
+			<Overrides>
+				<AttributeOverride strNodes="11825,24287,28050,26598,65009" dexNodes="54984,29517,63888" intNodes="32701,60505,35901,34015"/>
+			</Overrides>
+		</Spec>
+		<Spec classId="0" title="Campaign Progression" ascendancyInternalId="Ranger1" treeVersion="0_4" masteryEffects="" ascendClassId="1" nodes="61106,8194,54152,26786,18882,18818,60505,35901,30047,35234,3987,56493,5704,61246,13828,12253,24656,28992,38459,37336,21280,62464,43877,64213,32701,14658,25170,30695,24287,28050,43082,13783,3431,50459,11825,49691,46990,52501,30820,46705,19442,56651,5305,17854,60735,61373,24295,144,63981,29517,62166,43453,34015,9275,59653,51522,26598,19808,12611,63888,30,65009,44974,53539,35660,19337,5988,35987,14226,18548,54984,64050,49461,60700" classInternalId="2" secondaryAscendClassId="nil">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgABSO6yIALTiGiiScJJguxZjD11X4miD5PcrRZI7z42BC_dYFBxQJY7kdhTIPQAq2X61X-9OUJiUnfnXt9tkqhKNdcNZy4xwhvNFXhktnFL8t1LFLlFvu0_771e5wCQ-e1zTfLWqb2E3yQ76QXJQmfmTWAxQ_mQAB798a-u0SOLTEuJF2SMkzeSSHTWyPoywTXtHAAA
+			</URL>
+			<WeaponSet1 nodes="5704,38459,52501,46705,61373,62166,9275,44974,53539,19337,5988,60700"/>
+			<WeaponSet2 nodes="61106,8194,54152,24656,62464,49691,17854,63981,43453,59653,35987,64050"/>
+			<Sockets/>
+			<Overrides>
+				<AttributeOverride strNodes="11825,35901,24287,65009,26598" dexNodes="18882,21280,14658,63888,26786,30047,54984,29517" intNodes="60505,32701,28050,12253,34015"/>
+			</Overrides>
+		</Spec>
+		<Spec classId="0" title="Late Campaign" ascendancyInternalId="Ranger1" treeVersion="0_4" masteryEffects="" ascendClassId="1" nodes="61106,8194,54152,26786,18882,14226,60505,35901,30047,35234,3987,56493,5704,23508,13828,12253,56045,24656,28992,38459,37336,21280,64050,43877,16367,32701,14658,25170,62431,30695,24287,35987,43691,43082,31517,13783,3431,35801,50459,8569,49691,46990,52501,14340,30820,46705,19442,60700,12611,64213,5305,5257,17854,60735,61373,24295,61246,144,21746,63981,39839,61196,29517,62166,43453,34015,33059,11722,19337,31950,11825,62464,55507,59653,51522,65009,5988,63888,35660,26598,19808,56651,38338,18818,30,9275,44974,53539,60692,5703,28050,46034,58329,24647,54984,20205,49461,18548" classInternalId="2" secondaryAscendClassId="nil">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgABYO6yIALTiGiiScI3kuxZjD11X4miD5PcrRZIW9Q2BC_d2u1gUHFAljuR2FMg-jKrZT_vf705QmJS8993517fjJOqq6hKex011w1ni9khecIbzRU4BHhktnFL8u0cMUP61RS5FIlFvu0_771e5-8-AJBU8vntm5_vDHNN8tapvYTfgSMtykuJfM4uMfQA2NPpBclC_fEXZPmQi0xn5k1g3UuVwkmCAB4kO6-u0SPtFBZHbZKz0uPZYEfWyE7twTVIdAAA
+			</URL>
+			<WeaponSet1 nodes="5704,38459,62431,31517,52501,46705,60700,61373,62166,11722,19337,5988,9275,44974,53539,46034"/>
+			<WeaponSet2 nodes="61106,8194,54152,24656,64050,35987,49691,14340,17854,63981,39839,43453,33059,62464,59653,20205"/>
+			<Sockets/>
+			<Overrides>
+				<AttributeOverride strNodes="35901,11825,24287,65009,26598" dexNodes="31950,18882,21280,14340,14658,30047,54984,58329,61196,26786,46034,21746,8569,43691,24647,29517,56045,63888" intNodes="34015,60505,32701,28050,12253"/>
+			</Overrides>
+		</Spec>
+		<Spec classId="0" title="Early Atlas" ascendancyInternalId="Ranger1" treeVersion="0_4" masteryEffects="" ascendClassId="1" nodes="61106,8194,54152,26786,18882,14226,9472,60505,35901,33463,30047,35234,3987,11722,44573,5704,34233,13828,12253,12611,36070,56045,42250,28992,38459,14045,61246,37336,21280,62464,64213,56493,43877,49165,16367,32701,14658,20205,25170,62431,61196,30695,19337,5703,24287,53539,28050,43691,43082,31517,13783,5988,60692,8569,39839,23508,35801,50459,11825,49691,46990,52501,18818,14340,30820,46705,14725,19442,56651,63888,31991,5305,5257,17854,60735,61373,24295,63981,144,21746,65009,55507,49220,29517,62166,43453,34015,33059,51522,31950,55377,60700,9275,35660,59653,49996,65176,26211,46034,33848,26598,19808,18548,38338,64050,30,3431,44974,59913,32545,35987,24883,58329,47677,24647,54984,32183,49461,24656" classInternalId="2" secondaryAscendClassId="nil">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgABde6yIALTiGiiScI3kiUA7FmMPYK3dV-Jog-TLcquHRZIhbk2BC_dMUOM5trtpQpxQJY7Nt3vPpHYUyD0APrV3K2rZcANP-9_vTlCTu1iUvPf7wx350uJFkde39EjbZKqq6hKex011xdk7RQheZufW9SL2S4xwhvNFUmCOAR4ZLZxOYVL8t1L-ZB89xS5FIlFvu0_771e5_ntAJBU8v3x2NPARHNN8tapvYTfgSPJQnzO2FHtHCQ7i0zpBcNM_phmY7PShDhn5k1gSHSVwvoyAB4NZ6-u6gl_IYyTYTPj2bo9YEfWyH23wTVgUAAA
+			</URL>
+			<WeaponSet1 nodes="11722,5704,38459,62431,19337,53539,31517,5988,52501,46705,61373,62166,60700,9275,46034,44974"/>
+			<WeaponSet2 nodes="61106,8194,54152,62464,20205,39839,49691,14340,17854,63981,43453,33059,59653,64050,35987,24656"/>
+			<Sockets/>
+			<Overrides>
+				<AttributeOverride strNodes="11825,26598,24287,28050,65009" dexNodes="63888,14340,26786,58329,21280,29517,49996,33463,30047,14658,31950,42250,21746,61196,32183,8569,46034,18882,43691,12253,24647,54984,56045" intNodes="60505,35901,32701,34015"/>
+			</Overrides>
+		</Spec>
+		<Spec classId="0" title="Atlas Progression" ascendancyInternalId="Ranger1" treeVersion="0_4" masteryEffects="" ascendClassId="1" nodes="61106,8194,54152,26786,5703,14226,17548,9472,31991,60505,35901,33463,30047,19880,24656,35234,3987,19337,11722,44573,5704,23508,47177,9185,18818,13828,12253,20205,47677,36070,56045,42250,28992,38459,34233,18548,37336,21280,24883,8569,14958,43877,59913,16367,32701,49165,9275,25170,34168,61196,30695,49461,65009,24287,57204,35987,43691,43082,32545,13783,14658,60692,28050,55377,56651,35801,50459,11825,49691,46990,52501,35660,14340,30820,46705,55088,19442,60700,14045,40760,5305,5257,17854,60735,61373,46034,51522,64050,21746,63981,5988,49220,29517,62166,13419,63888,33059,24295,26211,31950,14725,62431,55507,59653,49996,65176,34015,43453,31517,26598,19808,56493,38338,62464,30,18882,44974,53539,33848,11472,3431,40270,60107,24647,54984,32183,39839,58329" classInternalId="2" secondaryAscendClassId="nil">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgABfu6yIALTiGiiFkc3kkSMJQB89-xZjD2Ct3VfTahgUImiD5NLiS3Krh0WSFvUuEkj4UmCNgQv3U7tuj2M5trtpQpxQJY7hblIdJHYUyBhMyF5Om6rZeoJP-9_vcANJDtiUoV47wx358E1_fFe3990jJOqq6hKfyE11zlC7RRtkthR3UuL2S4xwhvNFYtMOAR4ZLZx1zBL8u0cNt2fOBS5FIlFvu0_772z0slC-jJU8vntF2TARHNN8tY0a_mQgSNe52ZjfM45hfPf2NPpBcNM_piE36m9ex1n5k1g3K2VwvQAAB5Jwq-u0SOEOCzQDWedTurLYEfWyH23m5_j2QAA
+			</URL>
+			<WeaponSet1 nodes="19337,11722,5704,38459,9275,52501,46705,60700,61373,46034,5988,62166,62431,31517,44974,53539"/>
+			<WeaponSet2 nodes="61106,8194,54152,24656,20205,35987,49691,14340,17854,64050,63981,33059,59653,43453,62464,39839"/>
+			<Sockets/>
+			<Overrides>
+				<AttributeOverride strNodes="11825,65009,26598,24287,28050" dexNodes="58329,14340,33463,30047,46034,47177,21746,29517,56045,63888,31950,21280,49996,61196,14658,43691,8569,26786,24647,54984,42250,32183,18882" intNodes="60505,35901,12253,32701,34015"/>
+			</Overrides>
+		</Spec>
+		<Spec classId="0" title="Late Atlas" ascendancyInternalId="Ranger1" treeVersion="0_4" masteryEffects="" ascendClassId="1" nodes="61106,54152,5703,35901,30047,19880,35234,11722,5704,23508,47177,13828,56045,42250,28992,37336,21280,64050,19337,49165,25170,61196,30695,28050,43691,9046,60692,35801,5802,8569,46990,52501,14340,11472,55088,19442,56651,18451,5305,5257,34168,61373,21746,49220,62166,13419,63888,33059,47374,31950,9275,49996,65176,26598,38338,44974,24647,54984,39839,8194,26786,58329,14226,56776,9472,60505,33463,32183,3987,56493,44573,9185,40270,63255,36070,38459,16367,32701,24287,43082,13783,3431,50459,49691,30820,7353,18882,14958,12253,47677,33848,57204,18049,60735,31517,46034,62431,59913,32545,63981,49461,55377,29517,20205,43453,34015,46705,24295,5988,14045,39569,24656,35660,59653,51522,40760,43877,17548,17854,62464,19808,35987,55507,13341,30,65009,60700,53539,18548,14725,11825,34233,60107,14658,26211,24883,18818,31991" classInternalId="2" secondaryAscendClassId="nil">
+			<URL>
+				https://www.pathofexile.com/passive-skill-tree/AAAABgABiO6y04gWR4w9dV9NqImiLcoWSFvUuEk2BNrtpQpxQJHYUyD6MkuJwA1iUu8Md-dtkqqrI1btFIvZFqohec0VOAQs0NcwS_LdS0gTFLkUiYV4771U8sBE8tY0a_mQgSO5DnzOJDvDTP6YZ-aVwq-uYEfWyJufIAJoouPZN5LdyCUA7FmCt323D5Pcra4dI-GdTvcXjOaWOz_vf71e36hKNdcNZ8IbeGQcuUnCOm4v3bo9hDjfdEaB7T97HbPS89_qCX8h-e3BNdhRc01O7am9hN-2cV7nF2Q23ZqRYFCLTOkFyUKfOKtlRIxFvvQATWCMk9jTNB0AHv3x7RzRI0h0OYUuMYW56ss5QmZjYTNJgnz3AAA=
+			</URL>
+			<WeaponSet1 nodes="11722,5704,19337,52501,61373,62166,9275,44974,38459,31517,46034,62431,46705,5988,60700,53539"/>
+			<WeaponSet2 nodes="61106,54152,64050,14340,33059,39839,8194,49691,63981,20205,43453,24656,59653,17854,62464,35987"/>
+			<Sockets/>
+			<Overrides>
+				<AttributeOverride strNodes="65009,24287,28050,11825,26598" dexNodes="8569,18882,14340,33463,30047,46034,47177,21746,29517,56045,63888,31950,21280,49996,14658,61196,58329,43691,24647,54984,42250,26786,32183" intNodes="60505,35901,12253,32701,34015"/>
+			</Overrides>
+		</Spec>
+	</Tree>
+	<Skills defaultGemQuality="0" sortGemsByDPSField="CombinedDPS" activeSkillSet="1" sortGemsByDPS="true" defaultGemLevel="normalMaximum" showSupportGemTypes="ALL">
+		<SkillSet id="1" title="Campaign Start">
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" slot="Weapon 1" includeInFullDPS="false">
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="WhirlingSlash" gemId="Metadata/Items/Gems/SkillGemWhirlingSlash" count="1" nameSpec="Whirling Slash" skillId="WhirlingSlashPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="RapidAttacksSupport" gemId="Metadata/Items/Gems/SupportGemMartialTempo" count="1" nameSpec="Rapid Attacks I" skillId="SupportRapidAttacksPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="RageSupport" gemId="Metadata/Items/Gems/SupportGemRage" count="1" nameSpec="Rage I" skillId="SupportRagePlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" slot="Weapon 1" includeInFullDPS="false">
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="Twister" gemId="Metadata/Items/Gem/SkillGemTwister" count="1" nameSpec="Twister" skillId="TwisterPlayer" level="4" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="RetreatSupport" gemId="Metadata/Items/Gem/SupportGemRetreat" count="1" nameSpec="Retreat I" skillId="SupportRetreatPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="ProlongedDurationSupport" gemId="Metadata/Items/Gems/SupportGemPersistence" count="1" nameSpec="Prolonged Duration I" skillId="ProlongedDurationSupportPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" slot="Weapon 1" includeInFullDPS="false">
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="FangsOfFrost" gemId="Metadata/Items/Gem/SkillGemFangsOfFrost" count="1" nameSpec="Fangs of Frost" skillId="FangsOfFrostPlayer" level="4" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="IceBiteSupport" gemId="Metadata/Items/Gems/SupportGemIceBite" count="1" nameSpec="Ice Bite I" skillId="SupportIceBitePlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" includeInFullDPS="false">
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="Parry" gemId="Metadata/Items/Gem/SkillGemParry" count="1" nameSpec="Parry" skillId="ParryPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="SteadfastSupport" gemId="Metadata/Items/Gem/SupportGemSteadfast" count="1" nameSpec="Steadfast I" skillId="SupportSteadfastPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" includeInFullDPS="false">
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="WindDancer" gemId="Metadata/Items/Gem/SkillGemWindDancer" count="1" nameSpec="Wind Dancer" skillId="WindDancerPlayer" level="4" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="nil" label="" enabled="true" mainActiveSkill="nil" slot="Weapon 1 Swap" includeInFullDPS="nil">
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="WolfShred" gemId="Metadata/Items/Gem/SkillGemWolfShred" count="1" nameSpec="Shred" skillId="WolfShredPlayer" level="4" enableGlobal2="true"/>
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="RapidAttacksSupport" gemId="Metadata/Items/Gems/SupportGemMartialTempo" count="1" nameSpec="Rapid Attacks I" skillId="SupportRapidAttacksPlayer" level="1" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="nil" label="" enabled="true" mainActiveSkill="nil" slot="Weapon 1 Swap" includeInFullDPS="nil">
+				<Gem quality="0" enabled="true" enableGlobal1="true" skillMinionSkill="1" variantId="WolfPounce" gemId="Metadata/Items/Gems/SkillGemWolfPounce" count="1" nameSpec="Pounce" skillId="WolfPouncePlayer" level="4" skillMinion="WolfMinion" skillMinionSkillCalcs="1" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="nil" label="" enabled="true" mainActiveSkill="nil" source="Tree:59913" includeInFullDPS="nil">
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="MetaDeadeyeMarks" gemId="Metadata/Items/Gem/SkillGemAscendanyMetaDeadeyeMarks" count="nil" nameSpec="Called Shots" skillId="MetaDeadeyeMarksPlayer" level="1" enableGlobal2="nil"/>
+			</Skill>
+		</SkillSet>
+		<SkillSet id="2" title="Early Campaign">
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" slot="Weapon 1" includeInFullDPS="false">
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="WhirlingSlash" gemId="Metadata/Items/Gems/SkillGemWhirlingSlash" count="1" nameSpec="Whirling Slash" skillId="WhirlingSlashPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="RapidAttacksSupport" gemId="Metadata/Items/Gems/SupportGemMartialTempo" count="1" nameSpec="Rapid Attacks I" skillId="SupportRapidAttacksPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="RageSupport" gemId="Metadata/Items/Gems/SupportGemRage" count="1" nameSpec="Rage I" skillId="SupportRagePlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" slot="Weapon 1" includeInFullDPS="false">
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="Twister" gemId="Metadata/Items/Gem/SkillGemTwister" count="1" nameSpec="Twister" skillId="TwisterPlayer" level="8" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="RetreatSupport" gemId="Metadata/Items/Gem/SupportGemRetreat" count="1" nameSpec="Retreat I" skillId="SupportRetreatPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="ProlongedDurationSupport" gemId="Metadata/Items/Gems/SupportGemPersistence" count="1" nameSpec="Prolonged Duration I" skillId="ProlongedDurationSupportPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="ChillingIceSupport" gemId="Metadata/Items/Gems/SupportGemFrostNexus" count="1" nameSpec="Frost Nexus" skillId="SupportChillingIcePlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" slot="Weapon 1" includeInFullDPS="false">
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="Barrage" gemId="Metadata/Items/Gems/SkillGemBarrage" count="1" nameSpec="Barrage" skillId="BarragePlayer" level="8" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="RapidCastingSupport" gemId="Metadata/Items/Gems/SupportGemArcaneTempo" count="1" nameSpec="Rapid Casting I" skillId="SupportRapidCastingPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="SecondWindSupport" gemId="Metadata/Items/Gems/SupportGemSecondWind" count="1" nameSpec="Second Wind I" skillId="SupportSecondWindPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" slot="Weapon 1" includeInFullDPS="false">
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" skillMinionSkill="1" variantId="IceTippedArrows" gemId="Metadata/Items/Gem/SkillGemIceTippedArrows" count="1" nameSpec="Ice-Tipped Arrows" skillId="IceTippedArrowsPlayer" level="8" skillMinion="BeetleMinion" skillMinionSkillCalcs="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="ShortFuseSupport" gemId="Metadata/Items/Gem/SupportGemExpedite" count="1" nameSpec="Short Fuse I" skillId="SupportShortFusePlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="ElementalArmamentSupportTwo" gemId="Metadata/Items/Gems/SupportGemPrimalArmamentTwo" count="1" nameSpec="Elemental Armament II" skillId="SupportElementalArmamentPlayerTwo" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" includeInFullDPS="false">
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="WindDancer" gemId="Metadata/Items/Gem/SkillGemWindDancer" count="1" nameSpec="Wind Dancer" skillId="WindDancerPlayer" level="8" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="MaimSupport" gemId="Metadata/Items/Gems/SupportGemMaim" count="1" nameSpec="Maim" skillId="SupportMaimPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="nil" label="" enabled="true" mainActiveSkill="nil" slot="Weapon 1 Swap" includeInFullDPS="nil">
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="WolfShred" gemId="Metadata/Items/Gem/SkillGemWolfShred" count="1" nameSpec="Shred" skillId="WolfShredPlayer" level="8" enableGlobal2="true"/>
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="RapidAttacksSupport" gemId="Metadata/Items/Gems/SupportGemMartialTempo" count="1" nameSpec="Rapid Attacks I" skillId="SupportRapidAttacksPlayer" level="1" enableGlobal2="true"/>
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="ElementalArmamentSupportTwo" gemId="Metadata/Items/Gems/SupportGemPrimalArmamentTwo" count="1" nameSpec="Elemental Armament II" skillId="SupportElementalArmamentPlayerTwo" level="1" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="nil" label="" enabled="true" mainActiveSkill="nil" slot="Weapon 1 Swap" includeInFullDPS="nil">
+				<Gem quality="0" enabled="true" enableGlobal1="true" skillMinionSkill="1" variantId="WolfPounce" gemId="Metadata/Items/Gems/SkillGemWolfPounce" count="1" nameSpec="Pounce" skillId="WolfPouncePlayer" level="8" skillMinion="WolfMinion" skillMinionSkillCalcs="1" enableGlobal2="true"/>
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="FreezingMark" gemId="Metadata/Items/Gem/SkillGemFreezingMark" count="1" nameSpec="Freezing Mark" skillId="FreezingMarkPlayer" level="20" enableGlobal2="true"/>
+			</Skill>
+		</SkillSet>
+		<SkillSet id="3" title="Campaign Progression">
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" slot="Weapon 1" includeInFullDPS="false">
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="WhirlingSlash" gemId="Metadata/Items/Gems/SkillGemWhirlingSlash" count="1" nameSpec="Whirling Slash" skillId="WhirlingSlashPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="AbidingHexSupport" gemId="Metadata/Items/Gem/SupportGemAbidingHex" count="1" nameSpec="Abiding Hex" skillId="SupportAbidingHexPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="RageSupport" gemId="Metadata/Items/Gems/SupportGemRage" count="1" nameSpec="Rage I" skillId="SupportRagePlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="KnockbackSupport" gemId="Metadata/Items/Gems/SupportGemBludgeon" count="1" nameSpec="Knockback" skillId="SupportKnockbackPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" slot="Weapon 1" includeInFullDPS="false">
+				<Gem quality="20" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="Twister" gemId="Metadata/Items/Gem/SkillGemTwister" count="1" nameSpec="Twister" skillId="TwisterPlayer" level="12" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="RetreatSupportTwo" gemId="Metadata/Items/Gem/SupportGemRetreatTwo" count="1" nameSpec="Retreat II" skillId="SupportRetreatPlayerTwo" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="ProlongedDurationSupportTwo" gemId="Metadata/Items/Gems/SupportGemPersistenceTwo" count="1" nameSpec="Prolonged Duration II" skillId="ProlongedDurationSupportPlayerTwo" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="ChillingIceSupport" gemId="Metadata/Items/Gems/SupportGemFrostNexus" count="1" nameSpec="Frost Nexus" skillId="SupportChillingIcePlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" slot="Weapon 1" includeInFullDPS="false">
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="Barrage" gemId="Metadata/Items/Gems/SkillGemBarrage" count="1" nameSpec="Barrage" skillId="BarragePlayer" level="12" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="RapidCastingSupport" gemId="Metadata/Items/Gems/SupportGemArcaneTempo" count="1" nameSpec="Rapid Casting I" skillId="SupportRapidCastingPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="SecondWindSupportTwo" gemId="Metadata/Items/Gems/SupportGemSecondWindTwo" count="1" nameSpec="Second Wind II" skillId="SupportSecondWindPlayerTwo" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="PerpetualCharge" gemId="Metadata/Items/Gems/SupportGemPerpetualCharge" count="1" nameSpec="Perpetual Charge" skillId="SupportPerpetualChargePlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" slot="Weapon 1" includeInFullDPS="false">
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="IceTippedArrows" gemId="Metadata/Items/Gem/SkillGemIceTippedArrows" count="1" nameSpec="Ice-Tipped Arrows" skillId="IceTippedArrowsPlayer" level="12" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="ShortFuseSupport" gemId="Metadata/Items/Gem/SupportGemExpedite" count="1" nameSpec="Short Fuse I" skillId="SupportShortFusePlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="ElementalArmamentSupportTwo" gemId="Metadata/Items/Gems/SupportGemPrimalArmamentTwo" count="1" nameSpec="Elemental Armament II" skillId="SupportElementalArmamentPlayerTwo" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="CooldownRecoverySupport" gemId="Metadata/Items/Gems/SupportGemIngenuity" count="1" nameSpec="Cooldown Recovery I" skillId="SupportCooldownRecoveryPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" includeInFullDPS="false">
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="WindDancer" gemId="Metadata/Items/Gem/SkillGemWindDancer" count="1" nameSpec="Wind Dancer" skillId="WindDancerPlayer" level="12" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="MaimSupport" gemId="Metadata/Items/Gems/SupportGemMaim" count="1" nameSpec="Maim" skillId="SupportMaimPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" includeInFullDPS="false">
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="CombatFrenzy" gemId="Metadata/Items/Gem/SkillGemCombatFrenzy" count="1" nameSpec="Combat Frenzy" skillId="CombatFrenzyPlayer" level="12" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="ChargeProfusionSupport" gemId="Metadata/Items/Gems/SupportGemProfusion" count="1" nameSpec="Charge Profusion I" skillId="SupportChargeProfusionPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="nil" label="" enabled="true" mainActiveSkill="nil" slot="Weapon 1 Swap" includeInFullDPS="nil">
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="WolfShred" gemId="Metadata/Items/Gem/SkillGemWolfShred" count="1" nameSpec="Shred" skillId="WolfShredPlayer" level="12" enableGlobal2="true"/>
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="RapidAttacksSupport" gemId="Metadata/Items/Gems/SupportGemMartialTempo" count="1" nameSpec="Rapid Attacks I" skillId="SupportRapidAttacksPlayer" level="1" enableGlobal2="true"/>
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="ElementalArmamentSupportTwo" gemId="Metadata/Items/Gems/SupportGemPrimalArmamentTwo" count="1" nameSpec="Elemental Armament II" skillId="SupportElementalArmamentPlayerTwo" level="1" enableGlobal2="true"/>
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="ElementalFocusSupport" gemId="Metadata/Items/Gems/SupportGemElementalFocus" count="1" nameSpec="Elemental Focus" skillId="SupportElementalFocusPlayer" level="1" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="nil" label="" enabled="true" mainActiveSkill="nil" slot="Weapon 2 Swap" includeInFullDPS="nil">
+				<Gem quality="0" enabled="true" enableGlobal1="true" skillMinionSkill="1" variantId="WolfPounce" gemId="Metadata/Items/Gems/SkillGemWolfPounce" count="1" nameSpec="Pounce" skillId="WolfPouncePlayer" level="12" skillMinion="WolfMinion" skillMinionSkillCalcs="1" enableGlobal2="true"/>
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="FreezingMark" gemId="Metadata/Items/Gem/SkillGemFreezingMark" count="1" nameSpec="Freezing Mark" skillId="FreezingMarkPlayer" level="20" enableGlobal2="true"/>
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="CooldownRecoverySupport" gemId="Metadata/Items/Gems/SupportGemIngenuity" count="1" nameSpec="Cooldown Recovery I" skillId="SupportCooldownRecoveryPlayer" level="1" enableGlobal2="true"/>
+			</Skill>
+		</SkillSet>
+		<SkillSet id="4" title="Late Campaign">
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" slot="Weapon 1" includeInFullDPS="false">
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="WhirlingSlash" gemId="Metadata/Items/Gems/SkillGemWhirlingSlash" count="1" nameSpec="Whirling Slash" skillId="WhirlingSlashPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="RapidAttacksSupportTwo" gemId="Metadata/Items/Gems/SupportGemMartialTempoTwo" count="1" nameSpec="Rapid Attacks II" skillId="SupportRapidAttacksPlayerTwo" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="RageSupportTwo" gemId="Metadata/Items/Gems/SupportGemRageTwo" count="1" nameSpec="Rage II" skillId="SupportRagePlayerTwo" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="KnockbackSupport" gemId="Metadata/Items/Gems/SupportGemBludgeon" count="1" nameSpec="Knockback" skillId="SupportKnockbackPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" slot="Weapon 1" includeInFullDPS="false">
+				<Gem quality="20" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="Twister" gemId="Metadata/Items/Gem/SkillGemTwister" count="1" nameSpec="Twister" skillId="TwisterPlayer" level="14" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="RetreatSupportTwo" gemId="Metadata/Items/Gem/SupportGemRetreatTwo" count="1" nameSpec="Retreat II" skillId="SupportRetreatPlayerTwo" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="ProlongedDurationSupportTwo" gemId="Metadata/Items/Gems/SupportGemPersistenceTwo" count="1" nameSpec="Prolonged Duration II" skillId="ProlongedDurationSupportPlayerTwo" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="ChillingIceSupport" gemId="Metadata/Items/Gems/SupportGemFrostNexus" count="1" nameSpec="Frost Nexus" skillId="SupportChillingIcePlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="SalvoSupport" gemId="Metadata/Items/Gem/SupportGemSalvo" count="1" nameSpec="Salvo" skillId="SupportSalvoPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" slot="Weapon 1" includeInFullDPS="false">
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="Barrage" gemId="Metadata/Items/Gems/SkillGemBarrage" count="1" nameSpec="Barrage" skillId="BarragePlayer" level="14" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="RapidCastingSupportTwo" gemId="Metadata/Items/Gems/SupportGemArcaneTempoTwo" count="1" nameSpec="Rapid Casting II" skillId="SupportRapidCastingPlayerTwo" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="SecondWindSupportTwo" gemId="Metadata/Items/Gems/SupportGemSecondWindTwo" count="1" nameSpec="Second Wind II" skillId="SupportSecondWindPlayerTwo" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="PerpetualCharge" gemId="Metadata/Items/Gems/SupportGemPerpetualCharge" count="1" nameSpec="Perpetual Charge" skillId="SupportPerpetualChargePlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" slot="Weapon 1" includeInFullDPS="false">
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" skillMinionSkill="1" variantId="IceTippedArrows" gemId="Metadata/Items/Gem/SkillGemIceTippedArrows" count="1" nameSpec="Ice-Tipped Arrows" skillId="IceTippedArrowsPlayer" level="14" skillMinion="BeetleMinion" skillMinionSkillCalcs="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="ShortFuseSupport" gemId="Metadata/Items/Gem/SupportGemExpedite" count="1" nameSpec="Short Fuse I" skillId="SupportShortFusePlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="ElementalArmamentSupportTwo" gemId="Metadata/Items/Gems/SupportGemPrimalArmamentTwo" count="1" nameSpec="Elemental Armament II" skillId="SupportElementalArmamentPlayerTwo" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="CooldownRecoverySupportTwo" gemId="Metadata/Items/Gems/SupportGemIngenuityTwo" count="1" nameSpec="Cooldown Recovery II" skillId="SupportCooldownRecoveryPlayerTwo" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" includeInFullDPS="false">
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="WindDancer" gemId="Metadata/Items/Gem/SkillGemWindDancer" count="1" nameSpec="Wind Dancer" skillId="WindDancerPlayer" level="14" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="MaimSupport" gemId="Metadata/Items/Gems/SupportGemMaim" count="1" nameSpec="Maim" skillId="SupportMaimPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" includeInFullDPS="false">
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="CombatFrenzy" gemId="Metadata/Items/Gem/SkillGemCombatFrenzy" count="1" nameSpec="Combat Frenzy" skillId="CombatFrenzyPlayer" level="14" statSetIndexCalcs="nil" enableGlobal2="true"/>
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="ChargeProfusionSupport" gemId="Metadata/Items/Gems/SupportGemProfusion" count="1" nameSpec="Charge Profusion I" skillId="SupportChargeProfusionPlayer" level="1" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="1" label="" enabled="true" mainActiveSkill="1" includeInFullDPS="false">
+				<Gem quality="0" statSetIndex="nil" enabled="true" enableGlobal1="true" variantId="ChargeRegulation" gemId="Metadata/Items/Gem/SkillGemChargeInfusion" count="1" nameSpec="Charge Regulation" skillId="ChargeRegulationPlayer" level="14" statSetIndexCalcs="nil" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="nil" label="" enabled="true" mainActiveSkill="nil" slot="Weapon 1 Swap" includeInFullDPS="nil">
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="WolfShred" gemId="Metadata/Items/Gem/SkillGemWolfShred" count="1" nameSpec="Shred" skillId="WolfShredPlayer" level="14" enableGlobal2="true"/>
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="RapidAttacksSupportTwo" gemId="Metadata/Items/Gems/SupportGemMartialTempoTwo" count="1" nameSpec="Rapid Attacks II" skillId="SupportRapidAttacksPlayerTwo" level="1" enableGlobal2="true"/>
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="ElementalArmamentSupportTwo" gemId="Metadata/Items/Gems/SupportGemPrimalArmamentTwo" count="1" nameSpec="Elemental Armament II" skillId="SupportElementalArmamentPlayerTwo" level="1" enableGlobal2="true"/>
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="ElementalFocusSupport" gemId="Metadata/Items/Gems/SupportGemElementalFocus" count="1" nameSpec="Elemental Focus" skillId="SupportElementalFocusPlayer" level="1" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="nil" label="" enabled="true" mainActiveSkill="nil" slot="Weapon 1 Swap" includeInFullDPS="nil">
+				<Gem quality="0" enabled="true" enableGlobal1="true" skillMinionSkill="1" variantId="WolfPounce" gemId="Metadata/Items/Gems/SkillGemWolfPounce" count="1" nameSpec="Pounce" skillId="WolfPouncePlayer" level="14" skillMinion="WolfMinion" skillMinionSkillCalcs="1" enableGlobal2="true"/>
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="FreezingMark" gemId="Metadata/Items/Gem/SkillGemFreezingMark" count="1" nameSpec="Freezing Mark" skillId="FreezingMarkPlayer" level="14" enableGlobal2="true"/>
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="CooldownRecoverySupportTwo" gemId="Metadata/Items/Gems/SupportGemIngenuityTwo" count="1" nameSpec="Cooldown Recovery II" skillId="SupportCooldownRecoveryPlayerTwo" level="1" enableGlobal2="true"/>
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="MarkOfSiphoningSupportTwo" gemId="Metadata/Items/Gems/SupportGemMarkOfSiphoningTwo" count="1" nameSpec="Mark of Siphoning II" skillId="SupportMarkOfSiphoningPlayerTwo" level="1" enableGlobal2="true"/>
+			</Skill>
+			<Skill mainActiveSkillCalcs="nil" label="" enabled="true" mainActiveSkill="nil" slot="Weapon 1 Swap" includeInFullDPS="nil">
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="WolfLunarBlessing" gemId="Metadata/Items/Gem/SkillGemWolfLunarBlessing" count="1" nameSpec="Lunar Blessing" skillId="WolfLunarBlessingPlayer" level="14" enableGlobal2="true"/>
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="ProlongedDurationSupportTwo" gemId="Metadata/Items/Gems/SupportGemPersistenceTwo" count="1" nameSpec="Prolonged Duration II" skillId="ProlongedDurationSupportPlayerTwo" level="1" enableGlobal2="true"/>
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="CooldownRecoverySupportTwo" gemId="Metadata/Items/Gems/SupportGemIngenuityTwo" count="1" nameSpec="Cooldown Recovery II" skillId="SupportCooldownRecoveryPlayerTwo" level="1" enableGlobal2="true"/>
+				<Gem quality="0" enabled="true" enableGlobal1="true" variantId="EfficiencySupportTwo" gemId="Metadata/Items/Gems/SupportGemInspirationTwo" count="1" nameSpec="Efficiency II" skillId="SupportEfficiencyPlayerTwo" level="1" enableGlobal2="true"/>
+			</Skill>
+		</SkillSet>
+	</Skills>
+	<Calcs>
+		<Input string="EFFECTIVE" name="misc_buffMode"/>
+		<Input number="2" name="skill_number"/>
+		<Section id="SkillSelect" subsection="ViewSkillDetails" collapsed="false"/>
+		<Section id="HitDamage" subsection="SkillHitDamage" collapsed="false"/>
+		<Section id="Warcries" subsection="ExertingWarcries" collapsed="false"/>
+		<Section id="Dot" subsection="SkillDamageoverTime" collapsed="false"/>
+		<Section id="Speed" subsection="AttackCastRate" collapsed="false"/>
+		<Section id="Crit" subsection="Crits" collapsed="false"/>
+		<Section id="Impale" subsection="Impale" collapsed="false"/>
+		<Section id="SkillTypeStats" subsection="SkilltypespecificStats" collapsed="false"/>
+		<Section id="HitChance" subsection="Accuracy" collapsed="false"/>
+		<Section id="Bleed" subsection="Bleed" collapsed="false"/>
+		<Section id="Poison" subsection="Poison" collapsed="false"/>
+		<Section id="Ignite" subsection="Ignite" collapsed="false"/>
+		<Section id="Decay" subsection="Decay" collapsed="false"/>
+		<Section id="LeechGain" subsection="LeechGainonHit" collapsed="false"/>
+		<Section id="EleAilments" subsection="NonDamagingAilments" collapsed="false"/>
+		<Section id="MiscEffects" subsection="OtherEffects" collapsed="false"/>
+		<Section id="Attributes" subsection="Attributes" collapsed="false"/>
+		<Section id="Life" subsection="Life" collapsed="false"/>
+		<Section id="Mana" subsection="Mana" collapsed="false"/>
+		<Section id="Spirit" subsection="Spirit" collapsed="false"/>
+		<Section id="EnergyShield" subsection="EnergyShield" collapsed="false"/>
+		<Section id="Resist" subsection="Resists" collapsed="false"/>
+		<Section id="Armour" subsection="Armour" collapsed="false"/>
+		<Section id="Evasion" subsection="Evasion" collapsed="false"/>
+		<Section id="DamageAvoidance" subsection="DamageAvoidance" collapsed="false"/>
+		<Section id="DamageAvoidance" subsection="Block" collapsed="false"/>
+		<Section id="DamageAvoidance" subsection="Dodge" collapsed="false"/>
+		<Section id="DamageAvoidance" subsection="Deflection" collapsed="false"/>
+		<Section id="Flasks" subsection="Flasks" collapsed="false"/>
+		<Section id="Flasks" subsection="UtilityFlasks" collapsed="true"/>
+		<Section id="Flasks" subsection="LifeFlasks" collapsed="true"/>
+		<Section id="Flasks" subsection="ManaFlasks" collapsed="true"/>
+		<Section id="Flasks" subsection="Charms" collapsed="true"/>
+		<Section id="Rage" subsection="Rage" collapsed="true"/>
+		<Section id="Charges" subsection="Charges" collapsed="true"/>
+		<Section id="Charges" subsection="Endurance" collapsed="true"/>
+		<Section id="Charges" subsection="Frenzy" collapsed="true"/>
+		<Section id="Charges" subsection="Power" collapsed="true"/>
+		<Section id="MiscDefences" subsection="OtherDefences" collapsed="false"/>
+		<Section id="MiscDefences" subsection="StunDuration" collapsed="false"/>
+		<Section id="MiscDefences" subsection="OtherAvoidance" collapsed="true"/>
+		<Section id="MiscDefences" subsection="OtherAilmentDefences" collapsed="true"/>
+		<Section id="DamageTaken" subsection="DamageTaken" collapsed="false"/>
+		<Section id="DamageTaken" subsection="DamagingHits" collapsed="false"/>
+		<Section id="DamageTaken" subsection="EffectiveHealthPool" collapsed="false"/>
+		<Section id="DamageTaken" subsection="MaximumHitTaken" collapsed="false"/>
+		<Section id="DamageTaken" subsection="RecoupandHitTakenOverTime" collapsed="true"/>
+		<Section id="DamageTaken" subsection="DotsandBuildDegens" collapsed="false"/>
+		<Section id="DamageTaken" subsection="EnemyDegens" collapsed="true"/>
+	</Calcs>
+	<Party destination="All" append="false" ShowAdvanceTools="false"/>
+	<Import exportParty="false"/>
+	<Items useSecondWeaponSet="false" showStatDifferences="true" activeItemSet="1">
+		<ItemSet id="1" useSecondWeaponSet="false">
+			<Slot itemPbURL="" name="Arm 2" itemId="0"/>
+			<Slot itemPbURL="" name="Flask 1" itemId="0"/>
+			<Slot itemPbURL="" name="Leg 2" itemId="0"/>
+			<Slot itemPbURL="" name="Charm 3" itemId="0"/>
+			<Slot itemPbURL="" name="Charm 1" itemId="0"/>
+			<Slot itemPbURL="" name="Weapon 1 Swap" itemId="0"/>
+			<SocketIdURL itemPbURL="" name="Jewel 60735" nodeId="60735"/>
+			<Slot itemPbURL="" name="Belt" itemId="0"/>
+			<Slot itemPbURL="" name="Gloves" itemId="0"/>
+			<Slot itemPbURL="" name="Weapon 1" itemId="0"/>
+			<Slot itemPbURL="" name="Amulet" itemId="0"/>
+			<Slot itemPbURL="" name="Helmet" itemId="0"/>
+			<Slot itemPbURL="" name="Weapon 2" itemId="0"/>
+			<Slot itemPbURL="" name="Body Armour" itemId="0"/>
+			<Slot itemPbURL="" name="Flask 2" itemId="0"/>
+			<Slot itemPbURL="" name="Boots" itemId="0"/>
+			<Slot itemPbURL="" name="Ring 1" itemId="0"/>
+			<Slot itemPbURL="" name="Ring 3" itemId="0"/>
+			<Slot itemPbURL="" name="Ring 2" itemId="0"/>
+			<Slot itemPbURL="" name="Charm 2" itemId="0"/>
+			<Slot itemPbURL="" name="Leg 1" itemId="0"/>
+			<Slot itemPbURL="" name="Weapon 2 Swap" itemId="0"/>
+			<Slot itemPbURL="" name="Arm 1" itemId="0"/>
+		</ItemSet>
+		<TradeSearchWeights/>
+	</Items>
+	<Config activeConfigSet="1">
+		<ConfigSet id="1" title="Default">
+			<Placeholder number="965" name="enemyFireDamage"/>
+			<Placeholder number="50" name="enemyLightningResist"/>
+			<Placeholder number="3" name="enemyColdPen"/>
+			<Placeholder number="3" name="enemyLightningPen"/>
+			<Placeholder number="700" name="enemySpeed"/>
+			<Placeholder number="0" name="enemyChaosResist"/>
+			<Placeholder number="386" name="enemyChaosDamage"/>
+			<Placeholder number="965" name="enemyColdDamage"/>
+			<Placeholder number="50" name="enemyColdResist"/>
+			<Placeholder number="5" name="enemyCritChance"/>
+			<Placeholder number="1175" name="enemyEvasion"/>
+			<Placeholder number="10" name="demonFormStacks"/>
+			<Placeholder number="82" name="enemyLevel"/>
+			<Placeholder number="1" name="ScorchStacks"/>
+			<Placeholder number="1" name="ChillStacks"/>
+			<Placeholder number="50" name="enemyFireResist"/>
+			<Placeholder number="965" name="enemyPhysicalDamage"/>
+			<Placeholder number="1" name="ShockStacks"/>
+			<Placeholder number="20" name="enemyCriticalWeaknessStacks"/>
+			<Placeholder number="15" name="multiplierWitheredStackCountSelf"/>
+			<Placeholder number="30" name="enemyCritDamage"/>
+			<Placeholder number="70" name="enemyDamageRollRange"/>
+			<Placeholder number="3" name="enemyFirePen"/>
+			<Placeholder number="1" name="sigilOfPowerStages"/>
+			<Placeholder number="1" name="multiplierDifferentGrenadeFired"/>
+			<Placeholder number="20" name="enemyDistance"/>
+			<Placeholder number="1" name="multiplierDifferentAmmoFired"/>
+			<Placeholder number="8063" name="enemyArmour"/>
+			<Placeholder number="1" name="multiplierWarcryUsedRecently"/>
+			<Placeholder number="965" name="enemyLightningDamage"/>
+			<Placeholder number="1" name="multiplierStunnedRecently"/>
+		</ConfigSet>
+	</Config>
+	<TreeView zoomLevel="6" zoomX="-391.25895598994" zoomY="-23.813256058524" searchStr="coold" showStatDifferences="true"/>
+	<Notes>
+		
+	</Notes>
+</PathOfBuilding2>
