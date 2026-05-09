@@ -83,15 +83,20 @@ The `additional_text` field in the schema supports inline markup:
 - `\n` for newlines
 - Tags can nest
 
-What we **don't know with certainty** — and should verify before designing
-heavily around it:
+**What GGG's reveal video tells us** (transcribed timestamps 1:10:32 –
+1:11:48): downloaded `.build` files appear in the in-game client; selecting
+one shows passives to allocate, ascendancy points, skill gems to equip,
+support gem recommendations, and per-slot item suggestions (unique items
+or loose notes about "what kind of item you need"). Build creators can
+add notes to "just about any of these areas." Level ranges per element
+are explicitly called out as supporting respec-at-level builds.
 
-- **Rendering surface.** Are these hints shown as hover tooltips on the
-  passive node / skill slot / item slot? Always-visible labels? A separate
-  "Build Plan" panel? GGG's dev docs describe the data but I haven't seen
-  authoritative documentation of the in-game UI.
-  **[exploratory — needs user input — ideally screenshots from someone
-  who's loaded a `.build` file in-game]**
+What we **still don't know** with screenshot-level certainty — drop
+captures into `docs/screenshots/` to nail these down:
+
+- **Rendering surface details.** Hover tooltips on the passive node /
+  skill slot / item slot? Always-visible labels? A separate "Build Plan"
+  panel? The reveal showed parts of this briefly; we want stills.
 - **How aggressively does the level-interval gate kick in?** When a hint's
   `level_interval` is `[25, 100]` and the character is level 24, is the
   hint hidden, dimmed, or just shown with a "future" badge?
