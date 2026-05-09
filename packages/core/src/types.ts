@@ -126,3 +126,63 @@ export interface Slot {
   /** PoB internal item id; 0 means unassigned. */
   itemId: number
 }
+
+// -----------------------------------------------------------------------------
+// .build file shape (consumer side of the mapper)
+// -----------------------------------------------------------------------------
+
+/**
+ * `.build` file shape, as accepted by PoE2's in-game Build Planner.
+ * Mirrors `packages/schema/src/poe2-build.schema.json`. Optional
+ * fields are omitted when empty so the emitted JSON is minimal.
+ *
+ * NOTE on naming: the dev docs and current schema use `name`; a
+ * frame from the GGG reveal video shows `id` instead. We follow the
+ * dev docs until ground truth is available. See
+ * `docs/ui-exploration.md` Section 2 for the conflict tracking.
+ */
+export interface BuildFile {
+  name: string
+  description?: string
+  ascendancy?: string
+  passives?: BuildPassive[]
+  skills?: BuildSkill[]
+  items?: BuildItem[]
+}
+
+/** Shorthand string id, or a fuller object form with metadata. */
+export type BuildPassive = string | BuildPassiveObject
+
+export interface BuildPassiveObject {
+  /** GGG `PassiveSkills` table id, e.g. "lightning14" or "AscendancyRanger1Notable3". */
+  id: string
+  level_interval?: [number, number]
+  weapon_set?: number
+  additional_text?: string
+}
+
+export type BuildSkill = string | BuildSkillObject
+
+export interface BuildSkillObject {
+  /** GGG `BaseItemTypes` id of the active skill gem. */
+  id: string
+  level_interval?: [number, number]
+  additional_text?: string
+  support_skills?: Array<string | BuildSupportObject>
+}
+
+export interface BuildSupportObject {
+  /** GGG `BaseItemTypes` id of a support gem. */
+  id: string
+  level_interval?: [number, number]
+  additional_text?: string
+}
+
+export interface BuildItem {
+  inventory_id: string
+  slot_x: number
+  slot_y: number
+  level_interval?: [number, number]
+  unique_name?: string
+  additional_text?: string
+}
