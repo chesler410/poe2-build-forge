@@ -169,21 +169,35 @@ Highlight       #facc15    yellow-400
 visitors who land on the app cold.
 **Cons:** Feels disconnected from the game; "another SaaS dashboard."
 
-**[exploratory — needs user input]** A common pattern is to ship one
-default and let users toggle to others. A or B as default with C
-available as an "accessibility mode" feels reasonable, but this is taste.
+**[decided]** No imitation of GGG's UI palette — the app should look
+clearly third-party. Brief is "clear, clean, concise, easy." That rules
+out scheme **B (in-game-matched)**. **C (neutral utility)** is the best
+fit for the brief; **A (PoE2-grimdark)** is acceptable as a restrained
+opt-in for users who want a more genre-flavored look but should not
+mimic the in-game UI.
+
+**[decided]** Accessibility is universal: WCAG AA contrast as a floor;
+respect the user's color-blind settings; allow the user to restyle
+both the page UI AND the markup-color tags emitted in `.build`
+`additional_text` so colorblind players reading the in-game tooltips
+can pick a palette that works for them.
 
 ## 4. Help / onboarding flow
 
-A first-time user, starting from "I have a pobb.in URL," to "I have a
-`.build` file in my BuildPlanner directory":
+There are **two parallel flows** — consumer (the common path) and
+creator (the power path). They share most of the UI but differ in
+editing depth and the final delivery affordances.
+
+### Consumer flow (pobb.in URL → playable in game)
 
 ```
 1. Land on app                     - one input box, one paste target.
    |
    v
-2. Paste pobb.in URL                - or upload .pob file, or paste raw
-   |                                  base64. Whichever, decoder runs.
+2. Paste pobb.in URL                - or upload .pob file, paste raw
+   |                                  base64, or eventually paste a
+   |                                  build-guide page URL we extract
+   |                                  from. Decoder runs.
    v
 3. Preview parsed build             - "We see: Ranger / Deadeye, level 89,
    |                                  142 passive allocations, 6 skill
@@ -192,23 +206,42 @@ A first-time user, starting from "I have a pobb.in URL," to "I have a
 4. (optional) Adjust metadata       - build name, description, level
    |                                  brackets, what to include/exclude.
    v
-5. Download .build file             - single button: get the file.
+5. Generate .build file             - single button.
    |
    v
-6. (instructions overlay)           - "Now drop this file into:
-   |                                  Documents\My Games\Path of Exile 2
-   |                                  \BuildPlanner\
-   |                                  Then in-game, go to Build Planner
-   |                                  and select your build."
+6. Pick delivery mode               - one of three:
+   |                                  (a) Auto-place into BuildPlanner
+   |                                      (browser asks once for a
+   |                                      directory handle, remembers it)
+   |                                  (b) Download raw file (universal)
+   |                                  (c) Scan for the install path and
+   |                                      offer to drop the file there
    v
-7. Done.
+7. Done — build appears in-game on next launch.
 ```
 
-**[exploratory — needs user input]** Steps 4 and 6 are the easiest places
-to fail. Step 4 because it tempts feature creep ("let users edit
-everything!"); step 6 because path conventions vary by OS and we'd want
-to detect and tailor (Windows path above; macOS and Linux have different
-locations or may not be supported by the game at all).
+### Creator flow (designing a guide for others)
+
+```
+A. Land on app, switch to "create" mode.
+B. Build the structure: pick class, ascendancy, target level, then
+   author per-bracket / per-act guidance for passives, skills, items,
+   and (open) atlas / breach trees.
+C. Preview as a consumer would see it (toggle to consumer view).
+D. Export — same delivery options as steps 6 above, plus a shareable
+   link the creator can publish.
+```
+
+**[exploratory — needs user input]** Step 6's option (a) needs the
+[File System Access API](https://developer.mozilla.org/en-US/docs/Web/API/File_System_Access_API)
+which is Chromium-only and gated; option (c) "scan local drives for
+PoE2/PoE1 install paths" can't be done freely from a browser — best the
+app can do is *suggest* canonical paths per OS and let the user click
+to copy. A small companion helper (Electron/Tauri) would be needed for
+true filesystem-scrubbing UX. Worth deferring past MVP.
+
+**[exploratory — needs user input]** Console players have no
+filesystem path at all — see follow-up question 2 in section 6.
 
 ## 5. Sound
 
@@ -218,47 +251,60 @@ that plays sound on download is annoying more often than it's
 delightful. **[exploratory — needs user input]** Reserve audio for a
 hypothetical desktop app that lives alongside the game.
 
-## 6. Open questions for the user
+## 6. Decisions (2026-05-09) and follow-up questions
 
-Concrete decisions worth weighing in on before any UI work begins:
+### Decisions locked in
 
-- **Audience.** Is the primary audience (a) build-guide *authors*
-  publishing `.build` files for others, or (b) build-guide *consumers*
-  who just want to follow someone else's plan? The two need very
-  different UIs (editor vs. one-shot converter).
-- **Library vs. converter.** Should the app remember builds the user has
-  downloaded ("My builds" page), or be entirely stateless?
-- **Authoring features.** If we let users edit the `.build` before
-  download, how much editing is in scope? Just metadata (name, brackets)?
-  Per-hint text? Full passive tree editing? Each step pulls scope
-  significantly.
-- **Pobb.in dependence.** Does the app accept *only* pobb.in URLs, or
-  also other PoB sources (maxroll.gg, raw PoB exports from PoB itself,
-  uploaded `.xml`)? The decoder is format-agnostic; UX of "paste this"
-  varies.
-- **Game-version handling.** PoE2 patches frequently revise the passive
-  tree. If a user's build was authored against `targetVersion=0_1` and
-  the current game patch is `0_3`, do we (a) refuse to convert, (b)
-  convert and warn, (c) convert silently? Each is defensible.
-- **In-game rendering ground truth.** Do you (or someone you know) have
-  a `.build` file actually loaded in-game? A few screenshots of how
-  hints render would meaningfully reduce design risk for this whole
-  document.
-- **Mobile.** Is "open the web app on a phone, paste a URL, download a
-  file" a real use case, or do we assume desktop-only since the game is
-  desktop-only?
-- **Branding stance.** Are we trying to look "official-adjacent"
-  (in-game palette, game-aware vocabulary) or "obviously third-party"
-  (neutral palette, plain language)? The legal risk is small either way
-  but the social posture differs.
-- **Accessibility floor.** WCAG AA contrast on text by default? Keyboard
-  navigation? Screen-reader labels on the build preview? Cheap to do
-  early, expensive to retrofit.
-- **Shareable links.** If a user converts a pobb.in build, should they
-  get a permalink that re-runs the conversion (`forge.example/b/<id>`)
-  so they can share the *converted* result, or is the canonical
-  shareable thing always the original pobb.in URL?
+| | |
+|---|---|
+| **Audience** | Both. Consumers are the primary audience; creators are a power-user path. Same app, different surfaces. |
+| **State** | Stateless by default. A "My builds" library may be added later as an opt-in. |
+| **Editing scope** | Beyond metadata: per-hint text, recommended *gear and stats*, plus paths for passives, atlas tree, breach tree, etc. (See Q1 — atlas/breach aren't in the GGG schema.) |
+| **PoB sources** | Multi-source. PoB is the entry point but the app should accept maxroll.gg, raw PoB exports, file uploads, and (future) extract from any guide URL. |
+| **Game version** | Stay current. When a build's `targetVersion` is incompatible with the current patch, error helpfully with an "upgrade to latest game version first" path. No silent conversion. |
+| **Mobile** | Required, not optional — serves console players who don't have a PC. (See Q2 — console delivery is non-trivial.) |
+| **Branding** | No game-style imitation. "Clear, clean, concise, easy." Recommend the neutral-utility palette (C in section 3). |
+| **Accessibility** | Universal. WCAG AA contrast floor; respect color-blind settings for both the UI and the `.build` markup-color output. |
+| **Shareable** | Multiple modes — upload file, share converted-build link, combine with original PoBB URL. Don't force one canonical share path. |
+| **In-game ground truth** | Pending — user to capture screenshots from a recent reveal. |
+
+### Follow-up questions surfaced by those answers
+
+1. **Atlas / breach / other endgame trees aren't in the GGG `.build`
+   schema.** GGG's format covers passives, skills, and inventory hints
+   only. Three options to cover the user's stated need to author
+   atlas/breach paths:
+   - **(a) Extend our own schema** with non-GGG fields. Our UI renders
+     them; the game ignores them. Cleanly typed, but no in-game effect
+     for those fields.
+   - **(b) Embed as `additional_text`** on the closest existing field.
+     The game renders the text verbatim; users follow it by reading the
+     tooltip. Lossy and unstructured, but works today.
+   - **(c) Sidecar files.** Generate `<name>.build` plus `<name>.atlas`
+     etc. Composable, but consumers need to know to grab all of them.
+   Decide before atlas/breach editing becomes real.
+2. **Console-side delivery.** PC user drops a `.build` into
+   `Documents\My Games\Path of Exile 2\BuildPlanner\`. Console (PS5,
+   Xbox) has no equivalent. Options to research:
+   - GGG account-side cloud sync — does the in-game BuildPlanner read
+     from a cloud location tied to the player's account?
+   - QR-code or code-pairing into a companion app — does GGG ship one?
+   - "PC-only auto-install; console users use the web app to *read*
+     and follow the build manually."
+   This needs research; promising console support without a delivery
+   path is a credibility hit.
+3. **Creator UI vs. consumer UI surface.** Same URL with a "creator
+   mode" toggle, two URLs (`/convert`, `/author`), or start
+   consumer-only and add the creator surface later? Affects information
+   architecture from day one.
+4. **Path A still has one open sub-question** (from section 1):
+   continuous slider, discrete brackets, or both?
+5. **GGG OAuth revisit watch.** The "auto-place into BuildPlanner"
+   delivery option and the console-cloud-delivery angle (Q2) might both
+   eventually want GGG API access. We previously deferred this — see
+   `memory/project_ggg_api_decision.md`. Re-evaluate if/when GGG ships
+   an endpoint to upload a `.build` to a player's account.
 
 ---
 
-Pick any of these you want to chase first. The rest can wait.
+Pick the next thread when you're ready.
