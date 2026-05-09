@@ -311,12 +311,16 @@ hypothetical desktop app that lives alongside the game.
      and follow the build manually."
    This needs research; promising console support without a delivery
    path is a credibility hit.
-3. **Creator UI vs. consumer UI surface.** Same URL with a "creator
-   mode" toggle, two URLs (`/convert`, `/author`), or start
-   consumer-only and add the creator surface later? Affects information
-   architecture from day one.
-4. **Path A still has one open sub-question** (from section 1):
-   continuous slider, discrete brackets, or both?
+3. **[decided 2026-05-09]** Creator UI vs. consumer UI surface →
+   **consumer-first, then add creator as a future plan.** Ship the
+   consumer experience as the entire MVP. Defer the creator surface
+   (likely a separate `/author` route) until consumers are working
+   well. This keeps day-one IA simple and prevents creator features
+   from creeping into the consumer flow's UX budget.
+4. **[deferred]** Path A: continuous slider, discrete brackets, or
+   both? User wants more time before deciding. Default behavior for
+   now: when we prototype Path A, ship discrete brackets first (lower
+   build cost) and revisit slider as an enhancement.
 5. **GGG OAuth revisit watch.** The "auto-place into BuildPlanner"
    delivery option and the console-cloud-delivery angle (Q2) might both
    eventually want GGG API access. We previously deferred this — see
