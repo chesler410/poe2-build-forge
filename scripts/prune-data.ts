@@ -121,6 +121,38 @@ const pruners: Pruner[] = [
   {
     filename: 'tree.json',
     prune: null // defer pruning until decoder consumes it
+  },
+  {
+    filename: 'passives_default.json',
+    prune: (raw: Record<string, any>) => {
+      // Source layout: { passives: { "4": { hash: 4, id: "lightning14", ... }, ... }, groups, art, ... }
+      // Keep only what the mapper needs: integer-keyed lookup of the
+      // GGG-format id plus a few useful classification flags. Drops
+      // groups/art/orbit metadata and per-node stats/icon/flavour.
+      const passives = raw.passives as Record<string, any>
+      const out: Record<
+        string,
+        {
+          id: string
+          name: string
+          is_notable: boolean
+          is_keystone: boolean
+          is_jewel_socket: boolean
+          ascendancy: string
+        }
+      > = {}
+      for (const [key, value] of Object.entries(passives)) {
+        out[key] = {
+          id: value.id,
+          name: value.name,
+          is_notable: value.is_notable === true,
+          is_keystone: value.is_keystone === true,
+          is_jewel_socket: value.is_jewel_socket === true,
+          ascendancy: value.ascendancy ?? ''
+        }
+      }
+      return out
+    }
   }
 ]
 

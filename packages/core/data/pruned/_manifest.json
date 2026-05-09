@@ -32,6 +32,14 @@
     "sha256": "de910ff003f6879723e3bc185c780834467f673bb5a1f71aefe34f1e7f8592ee"
   },
   {
+    "filename": "passives_default.json",
+    "raw_size": 4614578,
+    "pruned_size": 903766,
+    "reduction_pct": 80.4,
+    "pruned": true,
+    "sha256": "b2e2f2e19e632fcca26161dcbeb5c6939c3e305d1743a49a090bc25fa4dca777"
+  },
+  {
     "filename": "skill_gems.json",
     "raw_size": 1231888,
     "pruned_size": 56677,
