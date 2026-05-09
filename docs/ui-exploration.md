@@ -272,17 +272,35 @@ hypothetical desktop app that lives alongside the game.
 
 1. **Atlas / breach / other endgame trees aren't in the GGG `.build`
    schema.** GGG's format covers passives, skills, and inventory hints
-   only. Three options to cover the user's stated need to author
-   atlas/breach paths:
+   only.
+
+   **[decided 2026-05-09]** Embed as `additional_text` on existing
+   fields (option (b) below). The game renders the text verbatim; users
+   follow it by reading tooltips. Lossy and unstructured, but works
+   today and — the deciding factor — is the most *versatile* against
+   future PoE2 changes: any new game system (atlas, breach, ritual,
+   alva, whatever ships next) can be expressed as text without a
+   schema change on our side or a game-side update.
+
+   **Sub-decision still open:** *where* in the schema does
+   atlas/breach text attach? Candidates:
+   - Top-level `description` (single string, all guidance lives here).
+   - Per-skill `additional_text` (advice attached to the skill it
+     supports).
+   - Per-passive `additional_text` (advice keyed to a level bracket).
+   - A synthetic anchor entry (e.g. a placeholder passive with the
+     atlas plan as its text body). Lets us hang content without
+     pretending it modifies a real passive.
+
+   Defer this sub-decision until we have a concrete real-world build
+   to author against.
+
+   **Tabled (not deleted — revisit if GGG's format grows):**
    - **(a) Extend our own schema** with non-GGG fields. Our UI renders
      them; the game ignores them. Cleanly typed, but no in-game effect
      for those fields.
-   - **(b) Embed as `additional_text`** on the closest existing field.
-     The game renders the text verbatim; users follow it by reading the
-     tooltip. Lossy and unstructured, but works today.
-   - **(c) Sidecar files.** Generate `<name>.build` plus `<name>.atlas`
-     etc. Composable, but consumers need to know to grab all of them.
-   Decide before atlas/breach editing becomes real.
+   - **(c) Sidecar files** (`<name>.atlas` alongside `<name>.build`).
+     Composable, but consumers need to know to grab all of them.
 2. **Console-side delivery.** PC user drops a `.build` into
    `Documents\My Games\Path of Exile 2\BuildPlanner\`. Console (PS5,
    Xbox) has no equivalent. Options to research:
