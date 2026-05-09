@@ -12,7 +12,8 @@
     "build": "pnpm -r --parallel build",
     "test": "pnpm -r test",
     "typecheck": "tsc -b",
-    "spike:decode": "tsx scripts/decode-spike.ts"
+    "spike:decode": "tsx scripts/decode-spike.ts",
+    "fetch-data": "tsx scripts/fetch-data.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
