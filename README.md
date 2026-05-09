@@ -57,7 +57,7 @@ import schemaJson from '@poe2-build-forge/schema/poe2-build.schema.json'
 
 ## Development
 
-Requires Node 20+ and pnpm 11+.
+Requires Node 22.13+ (pnpm 11 needs `node:sqlite`) and pnpm 11+.
 
 ```sh
 pnpm install
