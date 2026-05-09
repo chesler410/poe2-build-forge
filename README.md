@@ -81,6 +81,10 @@ pnpm spike:decode <pobbBuildId>
 - [PathOfBuildingCommunity/PathOfBuilding-PoE2](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2) — PoE2 fork of Path of Building; source of versioned passive tree data.
 - [repoe-fork/poe2](https://github.com/repoe-fork/poe2) — auto-tracked dumps of PoE2 game tables (ascendancies, base items, gems, uniques).
 
+## Support
+
+This is a hobby project. If it saves you time, [buy me a coffee on Ko-fi](https://ko-fi.com/chesler410) — appreciated, never expected.
+
 ## License
 
 MIT.
