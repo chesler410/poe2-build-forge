@@ -1,0 +1,150 @@
+{
+  "Druid1": {
+    "name": "Oracle",
+    "class_number": 1
+  },
+  "Druid2": {
+    "name": "Shaman",
+    "class_number": 2
+  },
+  "Druid3": {
+    "name": "[DNT-UNUSED] Wildfowler",
+    "class_number": 3
+  },
+  "Duelist1": {
+    "name": "[DNT-UNUSED] Giller",
+    "class_number": 1
+  },
+  "Duelist2": {
+    "name": "[DNT-UNUSED] Filleter",
+    "class_number": 2
+  },
+  "Duelist3": {
+    "name": "[DNT-UNUSED] Waterman",
+    "class_number": 3
+  },
+  "Huntress1": {
+    "name": "Amazon",
+    "class_number": 1
+  },
+  "Huntress2": {
+    "name": "[DNT-UNUSED] Harpooner",
+    "class_number": 2
+  },
+  "Huntress3": {
+    "name": "Ritualist",
+    "class_number": 3
+  },
+  "Marauder1": {
+    "name": "[DNT-UNUSED] Bait Fisher",
+    "class_number": 1
+  },
+  "Marauder2": {
+    "name": "[DNT-UNUSED] Handliner",
+    "class_number": 2
+  },
+  "Marauder3": {
+    "name": "[DNT-UNUSED] Rodman",
+    "class_number": 3
+  },
+  "Mercenary1": {
+    "name": "Tactician",
+    "class_number": 1
+  },
+  "Mercenary2": {
+    "name": "Witchhunter",
+    "class_number": 2
+  },
+  "Mercenary3": {
+    "name": "Gemling Legionnaire",
+    "class_number": 3
+  },
+  "Monk1": {
+    "name": "[DNT-UNUSED] Kite Fisher",
+    "class_number": 1
+  },
+  "Monk2": {
+    "name": "Invoker",
+    "class_number": 2
+  },
+  "Monk3": {
+    "name": "Acolyte of Chayula",
+    "class_number": 3
+  },
+  "Ranger1": {
+    "name": "Deadeye",
+    "class_number": 1
+  },
+  "Ranger2": {
+    "name": "[DNT-UNUSED] Piscator",
+    "class_number": 2
+  },
+  "Ranger3": {
+    "name": "Pathfinder",
+    "class_number": 3
+  },
+  "Shadow1": {
+    "name": "[DNT-UNUSED] Ice Fisher",
+    "class_number": 1
+  },
+  "Shadow2": {
+    "name": "[DNT-UNUSED] Longliner",
+    "class_number": 2
+  },
+  "Shadow3": {
+    "name": "[DNT-UNUSED] Dredger",
+    "class_number": 3
+  },
+  "Sorceress1": {
+    "name": "Stormweaver",
+    "class_number": 1
+  },
+  "Sorceress2": {
+    "name": "Chronomancer",
+    "class_number": 2
+  },
+  "Sorceress3": {
+    "name": "Disciple of Varashta",
+    "class_number": 3
+  },
+  "Templar1": {
+    "name": "[DNT-UNUSED] Seaman",
+    "class_number": 1
+  },
+  "Templar2": {
+    "name": "[DNT-UNUSED] Trawler",
+    "class_number": 2
+  },
+  "Templar3": {
+    "name": "[DNT-UNUSED] Boatman",
+    "class_number": 3
+  },
+  "Warrior1": {
+    "name": "Titan",
+    "class_number": 1
+  },
+  "Warrior2": {
+    "name": "Warbringer",
+    "class_number": 2
+  },
+  "Warrior3": {
+    "name": "Smith of Kitava",
+    "class_number": 3
+  },
+  "Witch1": {
+    "name": "Infernalist",
+    "class_number": 1
+  },
+  "Witch2": {
+    "name": "Blood Mage",
+    "class_number": 2
+  },
+  "Witch3": {
+    "name": "Lich",
+    "class_number": 3
+  },
+  "Witch3b": {
+    "name": "Abyssal Lich",
+    "class_number": 6
+  }
+}

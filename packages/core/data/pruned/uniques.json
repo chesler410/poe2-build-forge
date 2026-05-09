@@ -1,0 +1,2017 @@
+{
+  "0": {
+    "name": "Bramblejack",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStr1"
+  },
+  "1": {
+    "name": "Blackbraid",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStr2"
+  },
+  "2": {
+    "name": "Edyrn's Tusks",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStr3"
+  },
+  "3": {
+    "name": "The Road Warrior",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStr4"
+  },
+  "4": {
+    "name": "Titanrot Cataphract",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStr5"
+  },
+  "5": {
+    "name": "Wandering Reliquary",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStr6"
+  },
+  "6": {
+    "name": "Kingsguard",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStr7"
+  },
+  "7": {
+    "name": "Greed's Embrace",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStr8"
+  },
+  "8": {
+    "name": "The Brass Dome",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStr12"
+  },
+  "9": {
+    "name": "Kaom's Heart",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStr14"
+  },
+  "10": {
+    "name": "Bristleboar",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyDex1___"
+  },
+  "11": {
+    "name": "Foxshade",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyDex2"
+  },
+  "12": {
+    "name": "Ashrend",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyDex3"
+  },
+  "13": {
+    "name": "Briskwrap",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyDex5"
+  },
+  "14": {
+    "name": "Dustbloom",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyDex6"
+  },
+  "15": {
+    "name": "The Rat Cage",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyDex7"
+  },
+  "16": {
+    "name": "Quatl's Molt",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyDex8"
+  },
+  "17": {
+    "name": "Queen of the Forest",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyDex10"
+  },
+  "18": {
+    "name": "Ghostwrithe",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyInt1_"
+  },
+  "19": {
+    "name": "Bitterbloom",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyInt2"
+  },
+  "20": {
+    "name": "The Black Doubt",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyInt3"
+  },
+  "21": {
+    "name": "Necromantle",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyInt4"
+  },
+  "22": {
+    "name": "Cloak of Flame",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyInt5"
+  },
+  "23": {
+    "name": "Prayers for Rain",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyInt6"
+  },
+  "24": {
+    "name": "Tetzlapokal's Desire",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyInt7"
+  },
+  "25": {
+    "name": "The Covenant",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyInt8"
+  },
+  "26": {
+    "name": "Coat of Red",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrDex1"
+  },
+  "27": {
+    "name": "The Barrow Dweller",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrDex2"
+  },
+  "28": {
+    "name": "Irongrasp",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrDex3_"
+  },
+  "29": {
+    "name": "Pariah's Embrace",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrDex4_"
+  },
+  "30": {
+    "name": "Belly of the Beast",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrDex5"
+  },
+  "31": {
+    "name": "Doryani's Prototype",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrDex6"
+  },
+  "32": {
+    "name": "Enfolding Dawn",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrInt1_"
+  },
+  "33": {
+    "name": "Icetomb",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrInt3"
+  },
+  "34": {
+    "name": "Husk of Dreams",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrInt4"
+  },
+  "35": {
+    "name": "Voll's Protector",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrInt5"
+  },
+  "36": {
+    "name": "Couture of Crimson",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrInt9"
+  },
+  "37": {
+    "name": "Apron of Emiran",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyDexInt1"
+  },
+  "38": {
+    "name": "Gloomform",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyDexInt2"
+  },
+  "39": {
+    "name": "Sierran Inheritance",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyDexInt3"
+  },
+  "40": {
+    "name": "The Dancing Mirage",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyDexInt4"
+  },
+  "41": {
+    "name": "Redflare Conduit",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyDexInt5"
+  },
+  "42": {
+    "name": "Horns of Bynden",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetStr1a"
+  },
+  "43": {
+    "name": "Wings of Caelyn",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetStr1b"
+  },
+  "44": {
+    "name": "Ezomyte Peak",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetStr2"
+  },
+  "45": {
+    "name": "Black Sun Crest",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetStr3"
+  },
+  "46": {
+    "name": "Thrillsteel",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetStr4"
+  },
+  "47": {
+    "name": "Deidbell",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetStr5"
+  },
+  "48": {
+    "name": "Corona of the Red Sun",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetStr6"
+  },
+  "49": {
+    "name": "Innsmouth",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetDex1"
+  },
+  "50": {
+    "name": "Goldrim",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetDex2"
+  },
+  "51": {
+    "name": "Radiant Grief",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetDex3"
+  },
+  "52": {
+    "name": "Elevore",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetDex5"
+  },
+  "53": {
+    "name": "Myris Uxor",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetDex10_"
+  },
+  "54": {
+    "name": "Alpha's Howl",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetDex11"
+  },
+  "55": {
+    "name": "Crown of Thorns",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetInt1"
+  },
+  "56": {
+    "name": "The Devouring Diadem",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetInt2_"
+  },
+  "57": {
+    "name": "Visage of Ayah",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetInt3"
+  },
+  "58": {
+    "name": "Forbidden Gaze",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetInt4"
+  },
+  "59": {
+    "name": "Mask of the Stitched Demon",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetInt5"
+  },
+  "60": {
+    "name": "Atziri's Disdain",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetInt6"
+  },
+  "61": {
+    "name": "Greymake",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetStrDex1_"
+  },
+  "62": {
+    "name": "Erian's Cobble",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetStrDex2"
+  },
+  "63": {
+    "name": "Ironride",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetStrDex3"
+  },
+  "64": {
+    "name": "The Smiling Knight",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetStrDex4"
+  },
+  "65": {
+    "name": "The Vile Knight",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetStrDex5"
+  },
+  "66": {
+    "name": "Crown of the Victor",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetStrInt1"
+  },
+  "67": {
+    "name": "Bronzebeard",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetStrInt2"
+  },
+  "68": {
+    "name": "Crown of the Pale King",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetStrInt3"
+  },
+  "69": {
+    "name": "Veil of the Night",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetStrInt4"
+  },
+  "70": {
+    "name": "Cornathaum",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetStrInt5_"
+  },
+  "71": {
+    "name": "The Hollow Mask",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetDexInt1"
+  },
+  "72": {
+    "name": "Mask of the Sanguimancer",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetDexInt2_"
+  },
+  "73": {
+    "name": "Leer Cast",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetDexInt3"
+  },
+  "74": {
+    "name": "Atsak's Sight",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetDexInt4"
+  },
+  "75": {
+    "name": "The Vertex",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetDexInt5__"
+  },
+  "76": {
+    "name": "The Three Dragons",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetDexInt6"
+  },
+  "77": {
+    "name": "Treefingers",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesStr2"
+  },
+  "78": {
+    "name": "Lochtonial Caress",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesStr3"
+  },
+  "79": {
+    "name": "Atziri's Acuity",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesStr5"
+  },
+  "80": {
+    "name": "Northpaw",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesDex1____"
+  },
+  "81": {
+    "name": "Grip of Winter",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesDex2"
+  },
+  "82": {
+    "name": "Idle Hands",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesDex4"
+  },
+  "83": {
+    "name": "Snakebite",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesDex5_"
+  },
+  "84": {
+    "name": "Maligaro's Virtuosity",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesDex6"
+  },
+  "85": {
+    "name": "Painter's Servant",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesInt1"
+  },
+  "86": {
+    "name": "Candlemaker",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesInt2"
+  },
+  "87": {
+    "name": "Doedre's Tenure",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesInt3"
+  },
+  "88": {
+    "name": "Kitoko's Current",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesInt4_"
+  },
+  "89": {
+    "name": "Demon Stitcher",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesInt5"
+  },
+  "90": {
+    "name": "Jarngreipr",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesStrDex1"
+  },
+  "91": {
+    "name": "Aurseize",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesStrDex2"
+  },
+  "92": {
+    "name": "Deathblow",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesStrDex3"
+  },
+  "93": {
+    "name": "Aerisvane's Wings",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesStrDex5"
+  },
+  "94": {
+    "name": "Gravebind",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesStrInt1_"
+  },
+  "95": {
+    "name": "Shackles of the Wretched",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesStrInt2"
+  },
+  "96": {
+    "name": "Blueflame Bracers",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesStrInt3"
+  },
+  "97": {
+    "name": "Plaguefinger",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesDexInt1"
+  },
+  "98": {
+    "name": "Killjoy",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesDexInt2"
+  },
+  "99": {
+    "name": "Legionstride",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsStr1"
+  },
+  "100": {
+    "name": "Corpsewade",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsStr2"
+  },
+  "101": {
+    "name": "The Infinite Pursuit",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsStr3"
+  },
+  "102": {
+    "name": "Trampletoe",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsStr4_"
+  },
+  "103": {
+    "name": "Birth of Fury",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsStr5"
+  },
+  "104": {
+    "name": "Briarpatch",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsDex2"
+  },
+  "105": {
+    "name": "Gamblesprint",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsDex3"
+  },
+  "106": {
+    "name": "Thunderstep",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsDex4"
+  },
+  "107": {
+    "name": "Bushwhack",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsDex5"
+  },
+  "108": {
+    "name": "Luminous Pace",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsInt1"
+  },
+  "109": {
+    "name": "Wanderlust",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsInt2"
+  },
+  "110": {
+    "name": "Bones of Ullr",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsInt3_"
+  },
+  "111": {
+    "name": "Wondertrap",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsInt4_"
+  },
+  "112": {
+    "name": "Windscream",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsInt5"
+  },
+  "113": {
+    "name": "The Knight-errant",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsStrDex1"
+  },
+  "114": {
+    "name": "Darkray Vectors",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsStrDex2"
+  },
+  "115": {
+    "name": "Obern's Bastion",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsStrDex3"
+  },
+  "116": {
+    "name": "Wake of Destruction",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsStrInt2"
+  },
+  "117": {
+    "name": "Ghostmarch",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsDexInt2"
+  },
+  "118": {
+    "name": "Powertread",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsDexInt3_"
+  },
+  "119": {
+    "name": "Dionadair",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldStr1"
+  },
+  "120": {
+    "name": "Wulfsbane",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldStr2"
+  },
+  "121": {
+    "name": "Doomgate",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldStr3"
+  },
+  "122": {
+    "name": "The Wailing Wall",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldStr5_"
+  },
+  "123": {
+    "name": "Lycosidae",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldStr6_"
+  },
+  "124": {
+    "name": "The Surrender",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldStr8"
+  },
+  "125": {
+    "name": "Arvil's Wheel",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldStrDex1"
+  },
+  "126": {
+    "name": "Merit of Service",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldStrDex2_"
+  },
+  "127": {
+    "name": "Feathered Fortress",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldStrDex4"
+  },
+  "128": {
+    "name": "Alkem Eira",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldStrInt1"
+  },
+  "129": {
+    "name": "Oaksworn",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldStrInt2"
+  },
+  "130": {
+    "name": "Saffell's Frame",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldStrInt3"
+  },
+  "131": {
+    "name": "Crest of Ardura",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldStrInt4"
+  },
+  "132": {
+    "name": "Rise of the Phoenix",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldStrInt6"
+  },
+  "133": {
+    "name": "Deathrattle",
+    "item_class": "Focii",
+    "visual_identity_id": "FourUniqueFocus1"
+  },
+  "134": {
+    "name": "Threaded Light",
+    "item_class": "Focii",
+    "visual_identity_id": "FourUniqueFocus2"
+  },
+  "135": {
+    "name": "Carrion Call",
+    "item_class": "Focii",
+    "visual_identity_id": "FourUniqueFocus4_"
+  },
+  "136": {
+    "name": "Serpent's Lesson",
+    "item_class": "Focii",
+    "visual_identity_id": "FourUniqueFocus5"
+  },
+  "137": {
+    "name": "The Eternal Spark",
+    "item_class": "Focii",
+    "visual_identity_id": "FourUniqueFocus6"
+  },
+  "138": {
+    "name": "Asphyxia's Wrath",
+    "item_class": "Quiver",
+    "visual_identity_id": "FourUniqueQuiver1"
+  },
+  "139": {
+    "name": "Blackgleam",
+    "item_class": "Quiver",
+    "visual_identity_id": "FourUniqueQuiver2_"
+  },
+  "140": {
+    "name": "Igniferis",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueAmulet1"
+  },
+  "141": {
+    "name": "Idol of Uldurn",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueAmulet2"
+  },
+  "142": {
+    "name": "The Everlasting Gaze",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueAmulet3"
+  },
+  "143": {
+    "name": "Ungil's Harmony",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueAmulet4"
+  },
+  "144": {
+    "name": "Revered Resin",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueAmulet5"
+  },
+  "145": {
+    "name": "Carnage Heart",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueAmulet6"
+  },
+  "146": {
+    "name": "Surefooted Sigil",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueAmulet7"
+  },
+  "147": {
+    "name": "Defiance of Destiny",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueAmulet8"
+  },
+  "148": {
+    "name": "Ligurium Talisman",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueAmulet10_"
+  },
+  "149": {
+    "name": "Rondel of Fragility",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueAmulet12"
+  },
+  "150": {
+    "name": "The Anvil",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueAmulet13"
+  },
+  "151": {
+    "name": "Astramentis",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueAmulet15"
+  },
+  "152": {
+    "name": "Fixation of Yix",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueAmulet16"
+  },
+  "153": {
+    "name": "Beacon of Azis",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueAmulet17"
+  },
+  "154": {
+    "name": "Fireflower",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueAmulet18"
+  },
+  "155": {
+    "name": "Eye of Chayula",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueAmulet19_"
+  },
+  "156": {
+    "name": "Serpent's Egg",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueAmulet20"
+  },
+  "157": {
+    "name": "Blackheart",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing1_"
+  },
+  "158": {
+    "name": "Glowswarm",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing4_"
+  },
+  "159": {
+    "name": "Doedre's Damning",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing5"
+  },
+  "160": {
+    "name": "Seed of Cataclysm",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing6"
+  },
+  "161": {
+    "name": "Cracklecreep",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing7"
+  },
+  "162": {
+    "name": "Blistering Bond",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing8"
+  },
+  "163": {
+    "name": "Polcirkeln",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing10"
+  },
+  "164": {
+    "name": "Dream Fragments",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing11"
+  },
+  "165": {
+    "name": "Whisper of the Brotherhood",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing12"
+  },
+  "166": {
+    "name": "Levinstone",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing13"
+  },
+  "167": {
+    "name": "The Burrower",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing14_"
+  },
+  "168": {
+    "name": "Call of the Brotherhood",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing15"
+  },
+  "169": {
+    "name": "Ming's Heart",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing16"
+  },
+  "170": {
+    "name": "Blackflame",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing17"
+  },
+  "171": {
+    "name": "Original Sin",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing18"
+  },
+  "172": {
+    "name": "Death Rush",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing20"
+  },
+  "173": {
+    "name": "Thief's Torment",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing21"
+  },
+  "174": {
+    "name": "Heartbound Loop",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing23"
+  },
+  "175": {
+    "name": "Snakepit",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing24"
+  },
+  "176": {
+    "name": "Perandus Seal",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing28"
+  },
+  "177": {
+    "name": "Andvarius",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing29"
+  },
+  "178": {
+    "name": "Ventor's Gamble",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing30"
+  },
+  "179": {
+    "name": "Kalandra's Touch",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing32_"
+  },
+  "180": {
+    "name": "Meginord's Girdle",
+    "item_class": "Belt",
+    "visual_identity_id": "FourUniqueBelt1"
+  },
+  "181": {
+    "name": "Midnight Braid",
+    "item_class": "Belt",
+    "visual_identity_id": "FourUniqueBelt2"
+  },
+  "182": {
+    "name": "Keelhaul",
+    "item_class": "Belt",
+    "visual_identity_id": "FourUniqueBelt3"
+  },
+  "183": {
+    "name": "Birthright Buckle",
+    "item_class": "Belt",
+    "visual_identity_id": "FourUniqueBelt5"
+  },
+  "184": {
+    "name": "Byrnabas",
+    "item_class": "Belt",
+    "visual_identity_id": "FourUniqueBelt6"
+  },
+  "185": {
+    "name": "Soul Tether",
+    "item_class": "Belt",
+    "visual_identity_id": "FourUniqueBelt8_"
+  },
+  "186": {
+    "name": "Infernoclasp",
+    "item_class": "Belt",
+    "visual_identity_id": "FourUniqueBelt9"
+  },
+  "187": {
+    "name": "Ryslatha's Coil",
+    "item_class": "Belt",
+    "visual_identity_id": "FourUniqueBelt12"
+  },
+  "188": {
+    "name": "Coward's Legacy",
+    "item_class": "Belt",
+    "visual_identity_id": "FourUniqueBelt13"
+  },
+  "189": {
+    "name": "Headhunter",
+    "item_class": "Belt",
+    "visual_identity_id": "FourUniqueBelt18__"
+  },
+  "190": {
+    "name": "Shavronne's Satchel",
+    "item_class": "Belt",
+    "visual_identity_id": "FourUniqueBelt21_"
+  },
+  "191": {
+    "name": "Brynhand's Mark",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueOneHandMace1"
+  },
+  "192": {
+    "name": "Wylund's Stake",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueOneHandMace2_"
+  },
+  "193": {
+    "name": "Frostbreath",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueOneHandMace3"
+  },
+  "194": {
+    "name": "Trenchtimbre",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueOneHandMace4"
+  },
+  "195": {
+    "name": "Seeing Stars",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueOneHandMace6_"
+  },
+  "196": {
+    "name": "Hoghunt",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueTwoHandMace1"
+  },
+  "197": {
+    "name": "Hrimnor's Hymn",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueTwoHandMace2"
+  },
+  "198": {
+    "name": "Trephina",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueTwoHandMace3"
+  },
+  "199": {
+    "name": "Brain Rattler",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueTwoHandMace4"
+  },
+  "200": {
+    "name": "Chober Chaber",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueTwoHandMace7"
+  },
+  "201": {
+    "name": "Quecholli",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueTwoHandMace8"
+  },
+  "202": {
+    "name": "The Blood Thorn",
+    "item_class": "Warstaff",
+    "visual_identity_id": "FourUniqueQuarterstaff1"
+  },
+  "203": {
+    "name": "Pillar of the Caged God",
+    "item_class": "Warstaff",
+    "visual_identity_id": "FourUniqueQuarterstaff2"
+  },
+  "204": {
+    "name": "The Sentry",
+    "item_class": "Warstaff",
+    "visual_identity_id": "FourUniqueQuarterstaff3"
+  },
+  "205": {
+    "name": "Matsya",
+    "item_class": "Warstaff",
+    "visual_identity_id": "FourUniqueQuarterstaff5"
+  },
+  "206": {
+    "name": "Nazir's Judgement",
+    "item_class": "Warstaff",
+    "visual_identity_id": "FourUniqueQuarterstaff6__"
+  },
+  "207": {
+    "name": "Sanguine Diviner",
+    "item_class": "Wand",
+    "visual_identity_id": "FourUniqueWand2"
+  },
+  "208": {
+    "name": "Lifesprig",
+    "item_class": "Wand",
+    "visual_identity_id": "FourUniqueWand3"
+  },
+  "209": {
+    "name": "Enezun's Charge",
+    "item_class": "Wand",
+    "visual_identity_id": "FourUniqueWand5"
+  },
+  "210": {
+    "name": "Dusk Vigil",
+    "item_class": "Staff",
+    "visual_identity_id": "FourUniqueStaff1"
+  },
+  "211": {
+    "name": "Taryn's Shiver",
+    "item_class": "Staff",
+    "visual_identity_id": "FourUniqueStaff2"
+  },
+  "212": {
+    "name": "Earthbound",
+    "item_class": "Staff",
+    "visual_identity_id": "FourUniqueStaff3"
+  },
+  "213": {
+    "name": "The Searing Touch",
+    "item_class": "Staff",
+    "visual_identity_id": "FourUniqueStaff5"
+  },
+  "214": {
+    "name": "Widowhail",
+    "item_class": "Bow",
+    "visual_identity_id": "FourUniqueBow1"
+  },
+  "215": {
+    "name": "Quill Rain",
+    "item_class": "Bow",
+    "visual_identity_id": "FourUniqueBow2"
+  },
+  "216": {
+    "name": "Splinterheart",
+    "item_class": "Bow",
+    "visual_identity_id": "FourUniqueBow4"
+  },
+  "217": {
+    "name": "Death's Harp",
+    "item_class": "Bow",
+    "visual_identity_id": "FourUniqueBow6"
+  },
+  "218": {
+    "name": "Mist Whisper",
+    "item_class": "Crossbow",
+    "visual_identity_id": "FourUniqueCrossbow1"
+  },
+  "219": {
+    "name": "Rampart Raptor",
+    "item_class": "Crossbow",
+    "visual_identity_id": "FourUniqueCrossbow2"
+  },
+  "220": {
+    "name": "The Dark Defiler",
+    "item_class": "Sceptre",
+    "visual_identity_id": "FourUniqueSceptre1"
+  },
+  "221": {
+    "name": "Font of Power",
+    "item_class": "Sceptre",
+    "visual_identity_id": "FourUniqueSceptre4"
+  },
+  "222": {
+    "name": "Guiding Palm of the Heart",
+    "item_class": "Sceptre",
+    "visual_identity_id": "FourUniqueSceptre6a__"
+  },
+  "223": {
+    "name": "Guiding Palm of the Eye",
+    "item_class": "Sceptre",
+    "visual_identity_id": "FourUniqueSceptre6b"
+  },
+  "224": {
+    "name": "Guiding Palm of the Mind",
+    "item_class": "Sceptre",
+    "visual_identity_id": "FourUniqueSceptre6c"
+  },
+  "225": {
+    "name": "Morior Invictus",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniquePinnacle1"
+  },
+  "226": {
+    "name": "Solus Ipse",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniquePinnacle2"
+  },
+  "227": {
+    "name": "Sine Aequo",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniquePinnacle3_"
+  },
+  "228": {
+    "name": "Ab Aeterno",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniquePinnacle4"
+  },
+  "229": {
+    "name": "Sacred Flame",
+    "item_class": "Sceptre",
+    "visual_identity_id": "FourUniquePinnacle5_"
+  },
+  "230": {
+    "name": "Temporalis",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueSanctum1"
+  },
+  "231": {
+    "name": "Sandstorm Visage",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueSanctum2"
+  },
+  "232": {
+    "name": "Blessed Bonds",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueSanctum3"
+  },
+  "233": {
+    "name": "Sekhema's Resolve",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueSanctum4a"
+  },
+  "234": {
+    "name": "Sekhema's Resolve",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueSanctum4b"
+  },
+  "235": {
+    "name": "Sekhema's Resolve",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueSanctum4c"
+  },
+  "236": {
+    "name": "Glimpse of Chaos",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueUltimatum1"
+  },
+  "237": {
+    "name": "Zerphi's Genesis",
+    "item_class": "Belt",
+    "visual_identity_id": "FourUniqueUltimatum2"
+  },
+  "238": {
+    "name": "Mahuxotl's Machination",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueUltimatum3"
+  },
+  "239": {
+    "name": "Hateforge",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueUltimatum4"
+  },
+  "240": {
+    "name": "Svalinn",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueExpedition1"
+  },
+  "241": {
+    "name": "Keeper of the Arc",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueExpedition2"
+  },
+  "242": {
+    "name": "Olroth's Resolve",
+    "item_class": "Flask",
+    "visual_identity_id": "FourUniqueExpedition3_"
+  },
+  "243": {
+    "name": "Olrovasara",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueExpedition4"
+  },
+  "244": {
+    "name": "Assailum",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueDelirium1"
+  },
+  "245": {
+    "name": "Perfidy",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueDelirium2"
+  },
+  "246": {
+    "name": "Melting Maelstrom",
+    "item_class": "Flask",
+    "visual_identity_id": "FourUniqueDelirium3"
+  },
+  "247": {
+    "name": "Collapsing Horizon",
+    "item_class": "Warstaff",
+    "visual_identity_id": "FourUniqueDelirium4__"
+  },
+  "248": {
+    "name": "The Burden of Shadows",
+    "item_class": "Staff",
+    "visual_identity_id": "FourUniqueRitual1"
+  },
+  "249": {
+    "name": "Beetlebite",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueRitual2"
+  },
+  "250": {
+    "name": "Ingenuity",
+    "item_class": "Belt",
+    "visual_identity_id": "FourUniqueRitual3"
+  },
+  "251": {
+    "name": "Pragmatism",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueRitual4"
+  },
+  "252": {
+    "name": "Skin of the Loyal",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBreach1_"
+  },
+  "253": {
+    "name": "Hand of Wisdom and Action",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueBreach2"
+  },
+  "254": {
+    "name": "Beyond Reach",
+    "item_class": "Quiver",
+    "visual_identity_id": "FourUniqueBreach3"
+  },
+  "255": {
+    "name": "Xoph's Blood",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueBreach4a"
+  },
+  "256": {
+    "name": "Choir of the Storm",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueBreach4b"
+  },
+  "257": {
+    "name": "The Pandemonius",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueBreach4c"
+  },
+  "258": {
+    "name": "Grand Spectrum",
+    "item_class": "Jewel",
+    "visual_identity_id": "FourUniqueJewel1"
+  },
+  "259": {
+    "name": "Grand Spectrum",
+    "item_class": "Jewel",
+    "visual_identity_id": "FourUniqueJewel2"
+  },
+  "260": {
+    "name": "Grand Spectrum",
+    "item_class": "Jewel",
+    "visual_identity_id": "FourUniqueJewel3_"
+  },
+  "261": {
+    "name": "Megalomaniac",
+    "item_class": "Jewel",
+    "visual_identity_id": "FourUniqueJewel4"
+  },
+  "262": {
+    "name": "Heroic Tragedy",
+    "item_class": "Jewel",
+    "visual_identity_id": "FourUniqueJewel5"
+  },
+  "263": {
+    "name": "From Nothing",
+    "item_class": "Jewel",
+    "visual_identity_id": "FourUniqueJewel6"
+  },
+  "264": {
+    "name": "Controlled Metamorphosis",
+    "item_class": "Jewel",
+    "visual_identity_id": "FourUniqueJewel7"
+  },
+  "265": {
+    "name": "Prism of Belief",
+    "item_class": "Jewel",
+    "visual_identity_id": "FourUniqueJewel8"
+  },
+  "266": {
+    "name": "The Adorned",
+    "item_class": "Jewel",
+    "visual_identity_id": "FourUniqueJewel9"
+  },
+  "267": {
+    "name": "Against the Darkness",
+    "item_class": "Jewel",
+    "visual_identity_id": "FourUniqueJewel10"
+  },
+  "268": {
+    "name": "Strugglescream",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueDelirium5"
+  },
+  "269": {
+    "name": "Stone of Lazhwar",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueAmulet9"
+  },
+  "270": {
+    "name": "Yoke of Suffering",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueAmulet14"
+  },
+  "271": {
+    "name": "Venopuncture",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing2b"
+  },
+  "272": {
+    "name": "Icefang Orbit",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing2a"
+  },
+  "273": {
+    "name": "Prized Pain",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing3"
+  },
+  "274": {
+    "name": "Vigilant View",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing19"
+  },
+  "275": {
+    "name": "Evergrasping Ring",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing22"
+  },
+  "276": {
+    "name": "Gifts from Above",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing25"
+  },
+  "277": {
+    "name": "Goregirdle",
+    "item_class": "Belt",
+    "visual_identity_id": "FourUniqueBelt10"
+  },
+  "278": {
+    "name": "Bijouborne",
+    "item_class": "Belt",
+    "visual_identity_id": "FourUniqueBelt15"
+  },
+  "279": {
+    "name": "Waistgate",
+    "item_class": "Belt",
+    "visual_identity_id": "FourUniqueBelt17_"
+  },
+  "280": {
+    "name": "Sands of Silk",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyDex4"
+  },
+  "281": {
+    "name": "Soul Mantle",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrInt6"
+  },
+  "282": {
+    "name": "Zerphi's Serape",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyDexInt6"
+  },
+  "283": {
+    "name": "Yriel's Fostering",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyDex11"
+  },
+  "284": {
+    "name": "The Fallen Formation",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrDex9"
+  },
+  "285": {
+    "name": "The Coming Calamity",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrDex11"
+  },
+  "286": {
+    "name": "Waveshaper",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrInt8"
+  },
+  "287": {
+    "name": "The Mutable Star",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrInt7"
+  },
+  "288": {
+    "name": "Gloamgown",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyInt9_"
+  },
+  "289": {
+    "name": "Sacrosanctum",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrInt12"
+  },
+  "290": {
+    "name": "Cloak of Defiance",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyInt13"
+  },
+  "291": {
+    "name": "Hyrri's Ire",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyDex15"
+  },
+  "292": {
+    "name": "Tabula Rasa",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrDexInt1"
+  },
+  "293": {
+    "name": "Widow's Reign",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrDex7"
+  },
+  "294": {
+    "name": "Silks of Veneration",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyInt14"
+  },
+  "295": {
+    "name": "Vis Mortis",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyInt12"
+  },
+  "296": {
+    "name": "The Deepest Tower",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetStrInt6"
+  },
+  "297": {
+    "name": "Scold's Bridle",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetInt8"
+  },
+  "298": {
+    "name": "The Black Insignia",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetDex7_"
+  },
+  "299": {
+    "name": "Crown of Eyes",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetInt7"
+  },
+  "300": {
+    "name": "Blood Price",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetStr8"
+  },
+  "301": {
+    "name": "Starkonja's Head",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetDex8"
+  },
+  "302": {
+    "name": "Heatshiver",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetDex9"
+  },
+  "303": {
+    "name": "Indigon",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetInt11"
+  },
+  "304": {
+    "name": "The Bringer of Rain",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetStrDex7"
+  },
+  "305": {
+    "name": "Dreadfist",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesStr4"
+  },
+  "306": {
+    "name": "Nightscale",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesInt6"
+  },
+  "307": {
+    "name": "The Prisoner's Manacles",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesStrInt4"
+  },
+  "308": {
+    "name": "Valako's Vice",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesStrDex4"
+  },
+  "309": {
+    "name": "Empire's Grasp",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesStr7"
+  },
+  "310": {
+    "name": "Essentia Sanguis",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesDexInt5"
+  },
+  "311": {
+    "name": "Leopold's Applause",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesInt7"
+  },
+  "312": {
+    "name": "Effigy of Cruelty",
+    "item_class": "Focii",
+    "visual_identity_id": "FourUniqueFocus3"
+  },
+  "313": {
+    "name": "Apep's Supremacy",
+    "item_class": "Focii",
+    "visual_identity_id": "FourUniqueFocus7_"
+  },
+  "314": {
+    "name": "Rathpith Globe",
+    "item_class": "Focii",
+    "visual_identity_id": "FourUniqueFocus8"
+  },
+  "315": {
+    "name": "Prism Guardian",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldStrInt5"
+  },
+  "316": {
+    "name": "Window to Paradise",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldStr4"
+  },
+  "317": {
+    "name": "Redblade Banner",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldStr7"
+  },
+  "318": {
+    "name": "Chernobog's Pillar",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldStr13"
+  },
+  "319": {
+    "name": "Dunkelhalt",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldDex1"
+  },
+  "320": {
+    "name": "Nocturne",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldDex2"
+  },
+  "321": {
+    "name": "Rondel de Ezo",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldDex3"
+  },
+  "322": {
+    "name": "Bloodbarrier",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldDex4"
+  },
+  "323": {
+    "name": "Silverthorne",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldDex6_"
+  },
+  "324": {
+    "name": "Calgyra's Arc",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldDex11_"
+  },
+  "325": {
+    "name": "Sunsplinter",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldDex12"
+  },
+  "326": {
+    "name": "Sire of Shards",
+    "item_class": "Staff",
+    "visual_identity_id": "FourUniqueStaff6"
+  },
+  "327": {
+    "name": "The Wicked Quill",
+    "item_class": "Wand",
+    "visual_identity_id": "FourUniqueWand1"
+  },
+  "328": {
+    "name": "Cursecarver",
+    "item_class": "Wand",
+    "visual_identity_id": "FourUniqueWand7"
+  },
+  "329": {
+    "name": "Sculpted Suffering",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueOneHandMace5__"
+  },
+  "330": {
+    "name": "Nebuloch",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueOneHandMace7"
+  },
+  "331": {
+    "name": "Mjölner",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueOneHandMace13"
+  },
+  "332": {
+    "name": "The Empty Roar",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueTwoHandMace5_"
+  },
+  "333": {
+    "name": "Shyaba",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueTwoHandMace6"
+  },
+  "334": {
+    "name": "Tidebreaker",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueTwoHandMace9"
+  },
+  "335": {
+    "name": "The Hammer of Faith",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueTwoHandMace13"
+  },
+  "336": {
+    "name": "Splinter of Lorrata",
+    "item_class": "Spear",
+    "visual_identity_id": "FourUniqueSpear1"
+  },
+  "337": {
+    "name": "Tyranny's Grip",
+    "item_class": "Spear",
+    "visual_identity_id": "FourUniqueSpear2"
+  },
+  "338": {
+    "name": "Chainsting",
+    "item_class": "Spear",
+    "visual_identity_id": "FourUniqueSpear3"
+  },
+  "339": {
+    "name": "Skysliver",
+    "item_class": "Spear",
+    "visual_identity_id": "FourUniqueSpear4_"
+  },
+  "340": {
+    "name": "Daevata's Wind",
+    "item_class": "Spear",
+    "visual_identity_id": "FourUniqueSpear5"
+  },
+  "341": {
+    "name": "Tangletongue",
+    "item_class": "Spear",
+    "visual_identity_id": "FourUniqueSpear6"
+  },
+  "342": {
+    "name": "Saitha's Spear",
+    "item_class": "Spear",
+    "visual_identity_id": "FourUniqueSpear7"
+  },
+  "343": {
+    "name": "Spire of Ire",
+    "item_class": "Spear",
+    "visual_identity_id": "FourUniqueSpear13"
+  },
+  "344": {
+    "name": "Doomfletch",
+    "item_class": "Bow",
+    "visual_identity_id": "FourUniqueBow5"
+  },
+  "345": {
+    "name": "Voltaxic Rift",
+    "item_class": "Bow",
+    "visual_identity_id": "FourUniqueBow7"
+  },
+  "346": {
+    "name": "Slivertongue",
+    "item_class": "Bow",
+    "visual_identity_id": "FourUniqueBow8_"
+  },
+  "347": {
+    "name": "The Lethal Draw",
+    "item_class": "Quiver",
+    "visual_identity_id": "FourUniqueQuiver3"
+  },
+  "348": {
+    "name": "Rearguard",
+    "item_class": "Quiver",
+    "visual_identity_id": "FourUniqueQuiver5__"
+  },
+  "349": {
+    "name": "Ngamahu's Chosen",
+    "item_class": "Charm",
+    "visual_identity_id": "FourUniqueCharm8"
+  },
+  "350": {
+    "name": "Breath of the Mountains",
+    "item_class": "Charm",
+    "visual_identity_id": "FourUniqueCharm9"
+  },
+  "351": {
+    "name": "Valako's Roar",
+    "item_class": "Charm",
+    "visual_identity_id": "FourUniqueCharm10"
+  },
+  "352": {
+    "name": "For Utopia",
+    "item_class": "Charm",
+    "visual_identity_id": "FourUniqueCharm6_"
+  },
+  "353": {
+    "name": "The Fall of the Axe",
+    "item_class": "Charm",
+    "visual_identity_id": "FourUniqueCharm7_"
+  },
+  "354": {
+    "name": "Nascent Hope",
+    "item_class": "Charm",
+    "visual_identity_id": "FourUniqueCharm1_"
+  },
+  "355": {
+    "name": "Sanguis Heroum",
+    "item_class": "Charm",
+    "visual_identity_id": "FourUniqueCharm2"
+  },
+  "356": {
+    "name": "Arakaali's Gift",
+    "item_class": "Charm",
+    "visual_identity_id": "FourUniqueCharm3"
+  },
+  "357": {
+    "name": "Beira's Anguish",
+    "item_class": "Charm",
+    "visual_identity_id": "FourUniqueCharm4"
+  },
+  "358": {
+    "name": "The Black Cat",
+    "item_class": "Charm",
+    "visual_identity_id": "FourUniqueCharm5"
+  },
+  "359": {
+    "name": "Forsaken Bangle",
+    "item_class": "Charm",
+    "visual_identity_id": "FourUniqueCharm11"
+  },
+  "360": {
+    "name": "Rite of Passage",
+    "item_class": "Charm",
+    "visual_identity_id": "FourUniqueSpirit1"
+  },
+  "361": {
+    "name": "The Gnashing Sash",
+    "item_class": "Belt",
+    "visual_identity_id": "FourUniqueCorruption1"
+  },
+  "362": {
+    "name": "Bursting Decay",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueCorruption2_"
+  },
+  "363": {
+    "name": "Death Articulated",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueCorruption3_"
+  },
+  "364": {
+    "name": "Guiding Palm",
+    "item_class": "Sceptre",
+    "visual_identity_id": "FourUniqueSceptre6a__"
+  },
+  "365": {
+    "name": "Guiding Palm",
+    "item_class": "Sceptre",
+    "visual_identity_id": "FourUniqueSceptre6b"
+  },
+  "366": {
+    "name": "Guiding Palm",
+    "item_class": "Sceptre",
+    "visual_identity_id": "FourUniqueSceptre6c"
+  },
+  "367": {
+    "name": "The Last Lament",
+    "item_class": "Crossbow",
+    "visual_identity_id": "FourUniqueCrossbow13"
+  },
+  "368": {
+    "name": "Cadiro's Gambit",
+    "item_class": "Quiver",
+    "visual_identity_id": "FourUniqueQuiver8_"
+  },
+  "369": {
+    "name": "Murkshaft",
+    "item_class": "Quiver",
+    "visual_identity_id": "FourUniqueQuiver6_"
+  },
+  "370": {
+    "name": "Constricting Command",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetDex6"
+  },
+  "371": {
+    "name": "Adonia's Ego",
+    "item_class": "Wand",
+    "visual_identity_id": "FourUniqueWand4"
+  },
+  "372": {
+    "name": "The Whispering Ice",
+    "item_class": "Staff",
+    "visual_identity_id": "FourUniqueStaff14__"
+  },
+  "373": {
+    "name": "Lioneye's Glare",
+    "item_class": "Bow",
+    "visual_identity_id": "FourUniqueBow13_"
+  },
+  "374": {
+    "name": "Palm of the Dreamer",
+    "item_class": "Sceptre",
+    "visual_identity_id": "FourUniqueSceptre6d_"
+  },
+  "375": {
+    "name": "Mind of the Council",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetDexInt8"
+  },
+  "376": {
+    "name": "Lightning Coil",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrDex8"
+  },
+  "377": {
+    "name": "Cospri's Will",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyDexInt13"
+  },
+  "378": {
+    "name": "Thunderfist",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesDexInt6"
+  },
+  "379": {
+    "name": "Shankgonne",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsStrDex4"
+  },
+  "380": {
+    "name": "Kaltenhalt",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldDex5"
+  },
+  "381": {
+    "name": "Hinekora's Sight",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueAmulet21"
+  },
+  "382": {
+    "name": "Umbilicus Immortalis",
+    "item_class": "Belt",
+    "visual_identity_id": "FourUniqueBelt4"
+  },
+  "383": {
+    "name": "Darkness Enthroned",
+    "item_class": "Belt",
+    "visual_identity_id": "FourUniqueBelt23"
+  },
+  "384": {
+    "name": "Blood of the Warrior",
+    "item_class": "Flask",
+    "visual_identity_id": "FourUniqueLifeFlask1_"
+  },
+  "385": {
+    "name": "Marohi Erqi",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueTwoHandMace10"
+  },
+  "386": {
+    "name": "The Unborn Lich",
+    "item_class": "Staff",
+    "visual_identity_id": "FourUniqueStaff13"
+  },
+  "387": {
+    "name": "Fairgraves' Curse",
+    "item_class": "Bow",
+    "visual_identity_id": "FourUniqueBow9"
+  },
+  "388": {
+    "name": "Double Vision",
+    "item_class": "Crossbow",
+    "visual_identity_id": "FourUniqueCrossbow5_"
+  },
+  "389": {
+    "name": "Undying Hate",
+    "item_class": "Jewel",
+    "visual_identity_id": "FourUniqueJewel11"
+  },
+  "390": {
+    "name": "Heart of the Well",
+    "item_class": "Jewel",
+    "visual_identity_id": "FourUniqueJewel12_"
+  },
+  "391": {
+    "name": "Grip of Kulemak",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing33_a"
+  },
+  "392": {
+    "name": "Lavianga's Spirits",
+    "item_class": "Flask",
+    "visual_identity_id": "FourUniqueManaFlask1"
+  },
+  "393": {
+    "name": "Atziri's Rule",
+    "item_class": "Staff",
+    "visual_identity_id": "FourUniqueStaff17"
+  },
+  "394": {
+    "name": "Amor Mandragora",
+    "item_class": "Talisman",
+    "visual_identity_id": "FourUniqueTalisman1"
+  },
+  "395": {
+    "name": "The Flesh Poppet",
+    "item_class": "Talisman",
+    "visual_identity_id": "FourUniqueTalisman8_"
+  },
+  "396": {
+    "name": "Atziri's Splendour",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrDexInt2"
+  },
+  "397": {
+    "name": "Atziri's Step",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsDex9"
+  },
+  "398": {
+    "name": "Drillneck",
+    "item_class": "Quiver",
+    "visual_identity_id": "FourUniqueQuiver12"
+  },
+  "399": {
+    "name": "Atziri's Contempt",
+    "item_class": "Spear",
+    "visual_identity_id": "FourUniqueSpear14_"
+  },
+  "400": {
+    "name": "Hysseg's Claw",
+    "item_class": "Talisman",
+    "visual_identity_id": "FourUniqueTalisman4"
+  },
+  "401": {
+    "name": "Fury of the King",
+    "item_class": "Talisman",
+    "visual_identity_id": "FourUniqueTalisman14"
+  },
+  "402": {
+    "name": "Flesh Crucible",
+    "item_class": "Jewel",
+    "visual_identity_id": "FourUniqueJewel13"
+  }
+}

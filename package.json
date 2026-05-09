@@ -13,7 +13,8 @@
     "test": "pnpm -r test",
     "typecheck": "tsc -b",
     "spike:decode": "tsx scripts/decode-spike.ts",
-    "fetch-data": "tsx scripts/fetch-data.ts"
+    "fetch-data": "tsx scripts/fetch-data.ts",
+    "prune-data": "tsx scripts/prune-data.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

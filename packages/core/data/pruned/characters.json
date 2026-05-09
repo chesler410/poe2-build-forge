@@ -1,0 +1,62 @@
+[
+  {
+    "name": "Marauder",
+    "metadata_id": "Metadata/Characters/Str/StrFour",
+    "integer_id": 0
+  },
+  {
+    "name": "Witch",
+    "metadata_id": "Metadata/Characters/Int/IntFour",
+    "integer_id": 1
+  },
+  {
+    "name": "Ranger",
+    "metadata_id": "Metadata/Characters/Dex/DexFour",
+    "integer_id": 2
+  },
+  {
+    "name": "Duelist",
+    "metadata_id": "Metadata/Characters/StrDex/StrDexFour",
+    "integer_id": 3
+  },
+  {
+    "name": "Shadow",
+    "metadata_id": "Metadata/Characters/DexInt/DexIntFour",
+    "integer_id": 4
+  },
+  {
+    "name": "Templar",
+    "metadata_id": "Metadata/Characters/StrInt/StrIntFour",
+    "integer_id": 5
+  },
+  {
+    "name": "Warrior",
+    "metadata_id": "Metadata/Characters/Str/StrFourb",
+    "integer_id": 6
+  },
+  {
+    "name": "Sorceress",
+    "metadata_id": "Metadata/Characters/Int/IntFourb",
+    "integer_id": 7
+  },
+  {
+    "name": "Huntress",
+    "metadata_id": "Metadata/Characters/Dex/DexFourb",
+    "integer_id": 8
+  },
+  {
+    "name": "Mercenary",
+    "metadata_id": "Metadata/Characters/StrDex/StrDexFourb",
+    "integer_id": 9
+  },
+  {
+    "name": "Monk",
+    "metadata_id": "Metadata/Characters/DexInt/DexIntFourb",
+    "integer_id": 10
+  },
+  {
+    "name": "Druid",
+    "metadata_id": "Metadata/Characters/StrInt/StrIntFourb",
+    "integer_id": 11
+  }
+]

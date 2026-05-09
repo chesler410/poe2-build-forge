@@ -1,0 +1,58 @@
+[
+  {
+    "filename": "ascendancies.json",
+    "raw_size": 3413768,
+    "pruned_size": 2734,
+    "reduction_pct": 99.9,
+    "pruned": true,
+    "sha256": "b515a907e13a1b2a3722f14f8fa45cd199e8cfc3d7b0e1cbcc2220c77a75163a"
+  },
+  {
+    "filename": "base_items.json",
+    "raw_size": 5841967,
+    "pruned_size": 727751,
+    "reduction_pct": 87.5,
+    "pruned": true,
+    "sha256": "52d2956422b49f7890b07d369d27c93377193346792c730229f595c47d0cc2fb"
+  },
+  {
+    "filename": "characters.json",
+    "raw_size": 7233,
+    "pruned_size": 1316,
+    "reduction_pct": 81.8,
+    "pruned": true,
+    "sha256": "9c4e9aeb5e6bdcf13a90cfa7b1deb40636734f5c007a1037b24dd84295b5d91d"
+  },
+  {
+    "filename": "item_classes.json",
+    "raw_size": 15405,
+    "pruned_size": 15405,
+    "reduction_pct": 0,
+    "pruned": false,
+    "sha256": "de910ff003f6879723e3bc185c780834467f673bb5a1f71aefe34f1e7f8592ee"
+  },
+  {
+    "filename": "skill_gems.json",
+    "raw_size": 1231888,
+    "pruned_size": 56677,
+    "reduction_pct": 95.4,
+    "pruned": true,
+    "sha256": "a390521f76d3cc2a48fe2b2277864b0049d45a89a7995930ae7b6f724e2fd84d"
+  },
+  {
+    "filename": "tree.json",
+    "raw_size": 1114258,
+    "pruned_size": 1114258,
+    "reduction_pct": 0,
+    "pruned": false,
+    "sha256": "873e8f0df7140c9330b82a5ab897c292a7cdcc6533f197ffd73fdfab442c27c0"
+  },
+  {
+    "filename": "uniques.json",
+    "raw_size": 153483,
+    "pruned_size": 49112,
+    "reduction_pct": 68,
+    "pruned": true,
+    "sha256": "525650bb54392d58f85b14230d887f0d3c53e95300192ade2048ba20ac7e9d5a"
+  }
+]
