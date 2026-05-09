@@ -9,34 +9,69 @@ pobb.in URL (or raw PoB code) and downloads a `.build` file ready to drop
 into `Documents/My Games/Path of Exile 2/BuildPlanner/`. This document
 sketches the *user-facing* shape of that experience.
 
-## 1. Level group brackets
+## 1. Dual viewing paths — by level *and* by act
 
-The user suggested grouping build hints by character level into three
-brackets: **1–12 / 13–30 / 31–90**. The `.build` schema already supports
-this at the data layer — `level_interval: [min, max]` lives on every
-passive, skill, and item hint. The UI is just a presentation layer over
-those intervals.
+**[decided]** The UI must support two parallel ways of slicing the same
+underlying data (per-hint `level_interval: [min, max]`). Acts give a
+narrative anchor ("I just hit Act 3, what changes?"); levels give a
+precise tool ("what does my level-67 character need next?"). Build
+authors write hints in level terms (the schema's native unit); consumers
+experience the game in act terms. Supporting both sidesteps the
+impedance mismatch.
 
-Approximate mapping to PoE2 progression *(some uncertainty here — verify
-against actual game)*:
+### Path A — by character level (1–100)
 
-| Bracket | PoE2 content (approx.) | Player needs change because... |
+A continuous or bracketed view of the build. User picks a level (or
+bracket) and sees only the hints whose `level_interval` covers it.
+
+**[exploratory — needs user input]** Two sub-options for the level path:
+
+- **Continuous slider.** Scrub 1→100, hints fade in/out as their
+  intervals come into / out of range. Honest to the data, very
+  scrubbable, feels like a tool.
+- **Discrete brackets.** Tabs like *1–12 / 13–30 / 31–90* (or whatever
+  cuts feel right). Easier to scan, feels more like a tutorial outline.
+
+Brackets and slider aren't mutually exclusive — a bracketed sidebar with
+a slider scrubber is a valid hybrid.
+
+### Path B — by act
+
+A section per act, showing the hints that apply during that act. PoE2 is
+in Early Access — only acts 1–4 currently exist; acts 5 and 6 ship with
+the 1.0 release. The UI should reflect the eventual structure:
+
+| Act | Status | Approx. level range |
 |---|---|---|
-| **1–12** | Act 1 (Clearfell, Mud Burrow, Ogham Manor) | Skill gem unlocks every few levels; very limited build identity yet. Hints should focus on "which skill to slot first" and "what to take in the early tree." |
-| **13–30** | Acts 2–3 + early Cruel | Build identity solidifying. Ascendancy chosen at the trial. Hints shift to "which support gem to add next" and "transition skill X to skill Y." |
-| **31–90** | Late Cruel through endgame Maps and beyond | Endgame content. Hints become "BiS unique to chase," "min-maxing the tree," and "which ascendancy notable to take last." |
+| Act 1 | live | early game |
+| Act 2 | live | early-mid |
+| Act 3 | live | mid |
+| Act 4 | live | late campaign |
+| Act 5 | **placeholder — coming with PoE2 1.0** | — |
+| Act 6 | **placeholder — coming with PoE2 1.0** | — |
+| Maps / endgame | live | post-campaign |
 
-**[exploratory — needs user input]** Three brackets is opinionated; the
-schema supports any `[min, max]` interval. We could also offer:
+Acts 5 and 6 render as visible-but-disabled tabs with a *"Coming with
+PoE2 1.0"* badge. This way users see the eventual structure today and
+nothing visually moves when 1.0 lands.
 
-- **Per-act brackets** (more granular, more clutter): `1–4`, `5–8`, …
-- **User-configurable brackets** (player picks where the lines go).
-- **Continuous slider** ("show me hints active at level X") — bracket-free,
-  reflects the underlying interval-based data more honestly.
+**[exploratory — needs user input]** The level ranges per act above are
+intentionally vague because they need verification against the current
+patch and may shift between EA patches. A small `acts.json` data file
+mapping act → `[minLevel, maxLevel]` would let the UI compute the
+mapping deterministically and would be easy to update per patch.
 
-A continuous slider feels more like a tool, less like a guide. Brackets
-feel more like a tutorial. Pick one based on whether the audience is
-"someone learning the build" or "someone playing the build."
+### How the two paths interact
+
+Both paths view the same underlying data, so a hint visible on Path A's
+"level 22" view should also be visible on Path B's "Act 3" view (assuming
+level 22 falls in Act 3's range). The UI can either:
+
+- **Switch** between paths via a toggle (radio: "by act" / "by level"),
+- Or **layer** them — e.g. show act badges on the level slider.
+
+Toggle is simpler; layering is more powerful. Pick when there's a
+prototype to react to.
 
 ## 2. In-game appearance
 
