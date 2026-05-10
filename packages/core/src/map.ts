@@ -198,8 +198,8 @@ function translateSlotName(name: string): string {
     Amulet: 'Amulet',
     'Ring 1': 'Ring',
     'Ring 2': 'Ring2',
-    'Flask 1': 'Flask',
-    'Flask 2': 'Flask'
+    'Flask 1': 'Flask1',
+    'Flask 2': 'Flask2'
   }
   return map[name] ?? name.replace(/\s+/g, '')
 }

@@ -96,6 +96,31 @@ describe('mapPobToBuild', () => {
     expect(result.items).toBeUndefined()
   })
 
+  it('disambiguates Flask 1 / Flask 2 to distinct inventory_ids', () => {
+    // Regression: previously both mapped to "Flask" and collided in
+    // builds that actually had flasks selected.
+    const synthetic = {
+      ...pob,
+      items: {
+        activeItemSet: 1,
+        itemSets: [
+          {
+            id: 1,
+            slots: [
+              { name: 'Flask 1', itemId: 100 },
+              { name: 'Flask 2', itemId: 101 }
+            ]
+          }
+        ]
+      }
+    }
+    const result = mapPobToBuild(synthetic, { passives: passivesLookup })
+    const ids = (result.items ?? []).map((i) => i.inventory_id)
+    expect(ids).toContain('Flask1')
+    expect(ids).toContain('Flask2')
+    expect(new Set(ids).size).toBe(ids.length) // no duplicates
+  })
+
   it('produces output that validates against @poe2-build-forge/schema', () => {
     const result = mapPobToBuild(pob, {
       passives: passivesLookup,
