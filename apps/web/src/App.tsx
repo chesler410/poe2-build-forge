@@ -56,6 +56,7 @@ interface ConvertResult {
 type AppError =
   | { kind: 'plain'; message: string }
   | { kind: 'cors-failure'; rawUrl: string }
+  | { kind: 'unsupported-url'; attemptedUrl: string }
 
 const POBB_URL_RE = /^https?:\/\/(?:www\.)?pobb\.in\/([\w-]+)(?:\/raw)?\/?$/i
 
@@ -111,8 +112,16 @@ export function App() {
     try {
       const lookups = await loadLookups()
       if (looksLikeUrl(raw)) {
-        const rawUrl = toPobbRawUrl(raw) ?? raw
-        await fetchAndDecode(rawUrl, lookups)
+        const rawUrl = toPobbRawUrl(raw)
+        if (rawUrl === null) {
+          // We only know how to extract a raw PoB code from pobb.in
+          // URLs. For other hosts (poe.ninja, maxroll.gg, etc.) the
+          // raw code isn't exposed in a predictable way, so guide the
+          // user toward pasting the code directly.
+          setError({ kind: 'unsupported-url', attemptedUrl: raw })
+        } else {
+          await fetchAndDecode(rawUrl, lookups)
+        }
       } else {
         decodeAndShow(raw, lookups)
       }
@@ -191,6 +200,19 @@ export function App() {
             </a>{' '}
             in a new tab, select all the text, copy, and paste it back
             here. Then click Convert again.
+          </p>
+        </section>
+      )}
+
+      {error?.kind === 'unsupported-url' && (
+        <section className="error" role="alert">
+          <strong>That URL isn't directly supported yet:</strong>
+          <p>
+            URL fetching only works for <code>pobb.in</code> right now.
+            For other sources (poe.ninja, maxroll.gg, exported{' '}
+            <code>.pob</code> files, etc.), copy the raw PoB code from
+            the site's share/export UI and paste it into the textarea
+            above instead.
           </p>
         </section>
       )}
