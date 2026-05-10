@@ -9,9 +9,10 @@
     "node": ">=22.13"
   },
   "scripts": {
-    "build": "pnpm -r --parallel build",
+    "build": "pnpm -r build",
     "test": "pnpm -r test",
     "typecheck": "tsc -b",
+    "dev": "pnpm --filter @poe2-build-forge/web dev",
     "spike:decode": "tsx scripts/decode-spike.ts",
     "fetch-data": "tsx scripts/fetch-data.ts",
     "prune-data": "tsx scripts/prune-data.ts"
