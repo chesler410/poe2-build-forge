@@ -3,6 +3,9 @@ export const VERSION = '0.0.0' as const
 export { decodePobCode } from './decode'
 export { parsePobXml } from './parse'
 export { mapPobToBuild } from './map'
+export { emitBuildFile, deriveBuildFilename } from './emit'
+
+export type { EmitOptions, EmitResult } from './emit'
 
 export type {
   Build,
