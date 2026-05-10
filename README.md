@@ -12,44 +12,80 @@ keyed to character-level ranges.
 
 ## Status
 
-Early development. Nothing is published to npm yet.
+Early development. Nothing is published to npm yet, but the library is
+functional locally.
 
 | Package | Status | Purpose |
 |---|---|---|
 | [`@poe2-build-forge/schema`](packages/schema) | scaffolded, tested | JSON Schema for `.build` files + Ajv-backed `validate()` |
-| `@poe2-build-forge/core` | planned | Decode PoB exports, emit `.build` |
+| [`@poe2-build-forge/core`](packages/core) | scaffolded, tested | PoB decoder, parser, mapper, emitter — full pipeline working |
 | Web app | planned | Static client-side UI |
 
-The PoB → `.build` conversion has been spec'd at the format level — see
-[`scripts/decode-spike.ts`](scripts/decode-spike.ts) — but the mapping
-layer (PoB display names ↔ GGG table IDs) is not yet implemented.
+The full PoB-code → `.build` pipeline works end-to-end and the output
+validates against the schema. There's an outstanding question about
+whether the dev docs or the GGG reveal video correctly describes the
+top-level `.build` field names — see
+[`docs/ui-exploration.md`](docs/ui-exploration.md) section 2 for the
+conflict catalogue.
 
-## How it will work
+## How it works
 
-1. Take a `pobb.in/<id>` URL or a raw PoB export string.
-2. Decode the PoB envelope: URL-safe base64 → zlib-inflate → XML
-   rooted at `<PathOfBuilding2>`.
-3. Map PoB's display names and tree allocations to GGG's internal table
-   IDs (`Ascendancy`, `PassiveSkills`, `BaseItemTypes`, `Words`).
-4. Emit a JSON `.build` file the in-game Build Planner accepts.
+1. **Get** a `pobb.in/<id>` URL, raw PoB export string, or `.pob` file content.
+2. **Decode** the PoB envelope: URL-safe base64 → zlib-inflate → XML rooted at `<PathOfBuilding2>` (`decodePobCode`).
+3. **Parse** the XML into a typed AST with `Build`, `Tree`, `Skills`, `Items`, `Notes` (`parsePobXml`).
+4. **Map** PoB's display names and tree allocations to GGG's internal table IDs using bundled lookup tables (`mapPobToBuild`).
+5. **Emit** a validated JSON `.build` file ready to drop into PoE2's BuildPlanner directory (`emitBuildFile`).
 
-## Usage (planned, once published)
+## Usage
+
+End-to-end: turn a pobb.in URL into a `.build` file the in-game Build
+Planner can load.
+
+```ts
+import {
+  decodePobCode,
+  parsePobXml,
+  mapPobToBuild,
+  emitBuildFile
+} from '@poe2-build-forge/core'
+import passives from '@poe2-build-forge/core/data/passives_default.json'
+import ascendancies from '@poe2-build-forge/core/data/ascendancies.json'
+
+// 1. Get the PoB code (here from pobb.in's /raw endpoint).
+//    pobb.in requires a real browser User-Agent.
+const code = await fetch('https://pobb.in/90pcuxN4XtJG/raw', {
+  headers: { 'User-Agent': 'Mozilla/5.0 (...) Chrome/131.0.0.0 Safari/537.36' }
+}).then((r) => r.text())
+
+// 2. Decode the wire format and parse the XML into a typed AST.
+const xml = decodePobCode(code)
+const pob = parsePobXml(xml)
+
+// 3. Translate into the .build schema shape.
+const build = mapPobToBuild(pob, { passives, ascendancies })
+
+// 4. Serialize. Validation against the schema runs automatically.
+const { filename, content } = emitBuildFile(build)
+//   filename === 'Ranger - Deadeye.build'
+//   content  === '{\n  "name": "Ranger - Deadeye", ... }\n'
+
+// 5. Up to you: write `content` to `<filename>` inside
+//    Documents/My Games/Path of Exile 2/BuildPlanner/
+```
+
+The pipeline functions are pure and cross-runtime — Node 22+ and modern
+browsers — so the same code works in a static web app or a CLI.
+
+If you only want to **validate** an existing `.build` file:
 
 ```ts
 import { validate } from '@poe2-build-forge/schema'
 
-const buildFile = {
-  name: 'Tutorial Mercenary - Shield Wall',
-  ascendancy: 'Mercenary2',
-  passives: ['projectiles18'],
-  skills: [{ id: 'Metadata/Items/Gem/SkillGemShieldWall' }]
-}
-
-const result = validate(buildFile)
+const result = validate(JSON.parse(fileContent))
 if (!result.valid) console.error(result.errors)
 ```
 
-The raw schema is also exported as a static asset for non-TS consumers:
+The raw JSON Schema is exported as a static asset for non-TS consumers:
 
 ```ts
 import schemaJson from '@poe2-build-forge/schema/poe2-build.schema.json'
