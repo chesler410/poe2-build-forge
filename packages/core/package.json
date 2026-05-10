@@ -17,10 +17,12 @@
         "types": "./dist/index.d.ts",
         "default": "./dist/index.cjs"
       }
-    }
+    },
+    "./data/*.json": "./data/pruned/*.json"
   },
   "files": [
-    "dist"
+    "dist",
+    "data/pruned"
   ],
   "publishConfig": {
     "access": "public"
