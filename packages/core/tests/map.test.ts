@@ -96,6 +96,23 @@ describe('mapPobToBuild', () => {
     expect(result.items).toBeUndefined()
   })
 
+  it('treats ascendClassName "None" as no ascendancy', () => {
+    // PoB stores the literal string "None" when the player has no
+    // ascendancy selected. The mapper should not propagate it into
+    // the build name or the ascendancy field.
+    const noneBuild = {
+      ...pob,
+      build: {
+        ...pob.build,
+        className: 'Witch',
+        ascendClassName: 'None'
+      }
+    }
+    const result = mapPobToBuild(noneBuild, { passives: passivesLookup })
+    expect(result.name).toBe('Witch')
+    expect(result.ascendancy).toBeUndefined()
+  })
+
   it('disambiguates Flask 1 / Flask 2 to distinct inventory_ids', () => {
     // Regression: previously both mapped to "Flask" and collided in
     // builds that actually had flasks selected.

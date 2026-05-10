@@ -91,10 +91,18 @@ export function mapPobToBuild(
   return out
 }
 
+// PoB stores "None" as the placeholder ascendClassName when the
+// player hasn't picked an ascendancy yet. Treat it as equivalent
+// to absent so we don't emit "Witch - None" build names or
+// `ascendancy: "None"` fields.
+function isMeaningfulAscendancy(value: string | undefined): value is string {
+  return !!value && value !== 'None'
+}
+
 function deriveName(pob: PathOfBuilding2): string {
   const className = pob.build.className || 'Build'
   const ascend = pob.build.ascendClassName
-  return ascend ? `${className} - ${ascend}` : className
+  return isMeaningfulAscendancy(ascend) ? `${className} - ${ascend}` : className
 }
 
 function mapAscendancy(
@@ -102,7 +110,7 @@ function mapAscendancy(
   lookup: AscendancyLookup | undefined
 ): string | undefined {
   const display = pob.build.ascendClassName
-  if (!display) return undefined
+  if (!isMeaningfulAscendancy(display)) return undefined
   if (!lookup) return display // pass-through (screenshot-format fallback)
 
   const className = pob.build.className
