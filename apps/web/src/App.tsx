@@ -23,22 +23,71 @@ interface ConvertResult {
   content: string
 }
 
+type AppError =
+  | { kind: 'plain'; message: string }
+  | { kind: 'cors-failure'; rawUrl: string }
+
+const POBB_URL_RE = /^https?:\/\/(?:www\.)?pobb\.in\/([\w-]+)(?:\/raw)?\/?$/i
+
+function looksLikeUrl(input: string): boolean {
+  return /^https?:\/\//i.test(input)
+}
+
+function toPobbRawUrl(input: string): string | null {
+  const m = input.match(POBB_URL_RE)
+  if (!m) return null
+  return `https://pobb.in/${m[1]}/raw`
+}
+
 export function App() {
   const [input, setInput] = useState('')
+  const [busy, setBusy] = useState(false)
   const [result, setResult] = useState<ConvertResult | null>(null)
-  const [error, setError] = useState<string | null>(null)
+  const [error, setError] = useState<AppError | null>(null)
 
-  function handleConvert() {
-    setError(null)
-    setResult(null)
+  function decodeAndShow(code: string) {
     try {
-      const xml = decodePobCode(input.trim())
+      const xml = decodePobCode(code)
       const pob = parsePobXml(xml)
       const build = mapPobToBuild(pob, { passives, ascendancies })
       const { filename, content } = emitBuildFile(build)
       setResult({ build, filename, content })
     } catch (err) {
-      setError(err instanceof Error ? err.message : String(err))
+      setError({
+        kind: 'plain',
+        message: err instanceof Error ? err.message : String(err)
+      })
+    }
+  }
+
+  async function fetchAndDecode(rawUrl: string) {
+    try {
+      const res = await fetch(rawUrl)
+      if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`)
+      const code = (await res.text()).trim()
+      decodeAndShow(code)
+    } catch {
+      // CORS / network error. Show a recoverable instruction.
+      setError({ kind: 'cors-failure', rawUrl })
+    }
+  }
+
+  async function handleConvert() {
+    setError(null)
+    setResult(null)
+    const raw = input.trim()
+    if (!raw) return
+
+    if (looksLikeUrl(raw)) {
+      const rawUrl = toPobbRawUrl(raw) ?? raw
+      setBusy(true)
+      try {
+        await fetchAndDecode(rawUrl)
+      } finally {
+        setBusy(false)
+      }
+    } else {
+      decodeAndShow(raw)
     }
   }
 
@@ -66,34 +115,48 @@ export function App() {
       </header>
 
       <section className="input-section">
-        <label htmlFor="pob-code">PoB code</label>
+        <label htmlFor="pob-code">PoB code or pobb.in URL</label>
         <p className="hint">
-          Paste the raw export string from <a href="https://pobb.in">pobb.in</a>{' '}
-          (open a build, click the share/copy button) or any PoB-format
-          export. URL-based fetching directly from pobb.in is blocked by
-          browser CORS, so manual copy is the path for now.
+          Paste a raw PoB export (long URL-safe base64 string) or a{' '}
+          <code>pobb.in/&lt;id&gt;</code> URL. Conversion runs in your
+          browser; nothing is sent to a server.
         </p>
         <textarea
           id="pob-code"
           value={input}
           onChange={(e) => setInput(e.target.value)}
-          placeholder="eNrtXVtX4krTvt7vr2B5rdscIXmX834LUEYcTgL..."
+          placeholder="https://pobb.in/90pcuxN4XtJG  —or—  eNrtXVtX4krTvt7vr2B5rdscIXmX..."
           rows={6}
           spellCheck={false}
         />
         <button
           type="button"
           onClick={handleConvert}
-          disabled={input.trim().length === 0}
+          disabled={busy || input.trim().length === 0}
         >
-          Convert
+          {busy ? 'Fetching…' : 'Convert'}
         </button>
       </section>
 
-      {error && (
+      {error?.kind === 'plain' && (
         <section className="error" role="alert">
           <strong>Conversion failed:</strong>
-          <pre>{error}</pre>
+          <pre>{error.message}</pre>
+        </section>
+      )}
+
+      {error?.kind === 'cors-failure' && (
+        <section className="error" role="alert">
+          <strong>One extra step:</strong>
+          <p>
+            pobb.in's server doesn't allow cross-origin browser fetches, so
+            we can't grab the code directly. Open{' '}
+            <a href={error.rawUrl} target="_blank" rel="noreferrer">
+              {error.rawUrl}
+            </a>{' '}
+            in a new tab, select all the text, copy it, and paste it back
+            here. Then click Convert again.
+          </p>
         </section>
       )}
 
