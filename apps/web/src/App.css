@@ -180,6 +180,12 @@ footer {
   color: var(--text-muted);
 }
 
+footer .version {
+  font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  font-size: 0.8rem;
+  white-space: nowrap;
+}
+
 @media (max-width: 640px) {
   main {
     padding: 1rem 0.75rem 3rem;

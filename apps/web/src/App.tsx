@@ -227,6 +227,18 @@ export function App() {
         <a href="https://github.com/chesler410/poe2-build-forge">GitHub</a>
         {' · '}
         <a href="https://ko-fi.com/chesler410">Tip jar</a>
+        {' · '}
+        <span className="version">
+          v{__APP_VERSION__}
+          {' · '}
+          <a
+            href={`https://github.com/chesler410/poe2-build-forge/commit/${__APP_SHA__}`}
+          >
+            {__APP_SHA__}
+          </a>
+          {' · '}
+          {__APP_BUILD_DATE__}
+        </span>
       </footer>
     </main>
   )
