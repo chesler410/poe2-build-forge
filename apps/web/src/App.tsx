@@ -8,14 +8,44 @@ import {
   type BuildFile,
   type PassiveLookup
 } from '@poe2-build-forge/core'
-import passivesJson from '@poe2-build-forge/core/data/passives_default.json'
-import ascendanciesJson from '@poe2-build-forge/core/data/ascendancies.json'
 import './App.css'
 
-// Cast the imported JSON once. Avoids TS trying to infer types from
-// the multi-thousand-key data objects on every render.
-const passives = passivesJson as PassiveLookup
-const ascendancies = ascendanciesJson as AscendancyLookup
+// Lazily-loaded lookup tables. Bundling them statically would push the
+// initial JS payload to ~220 KB gzipped (most of it the passive node
+// table). Dynamic import splits them into separate chunks that load
+// only when the user actually clicks Convert. After the first click
+// they're cached in-module for the rest of the session.
+interface Lookups {
+  passives: PassiveLookup
+  ascendancies: AscendancyLookup
+}
+
+let lookupsCache: Lookups | null = null
+let lookupsInFlight: Promise<Lookups> | null = null
+
+async function loadLookups(): Promise<Lookups> {
+  if (lookupsCache) return lookupsCache
+  if (lookupsInFlight) return lookupsInFlight
+
+  lookupsInFlight = (async () => {
+    const [passivesModule, ascendanciesModule] = await Promise.all([
+      import('@poe2-build-forge/core/data/passives_default.json'),
+      import('@poe2-build-forge/core/data/ascendancies.json')
+    ])
+    const lookups: Lookups = {
+      passives: passivesModule.default as PassiveLookup,
+      ascendancies: ascendanciesModule.default as AscendancyLookup
+    }
+    lookupsCache = lookups
+    return lookups
+  })()
+
+  try {
+    return await lookupsInFlight
+  } finally {
+    lookupsInFlight = null
+  }
+}
 
 interface ConvertResult {
   build: BuildFile
@@ -45,11 +75,11 @@ export function App() {
   const [result, setResult] = useState<ConvertResult | null>(null)
   const [error, setError] = useState<AppError | null>(null)
 
-  function decodeAndShow(code: string) {
+  function decodeAndShow(code: string, lookups: Lookups) {
     try {
       const xml = decodePobCode(code)
       const pob = parsePobXml(xml)
-      const build = mapPobToBuild(pob, { passives, ascendancies })
+      const build = mapPobToBuild(pob, lookups)
       const { filename, content } = emitBuildFile(build)
       setResult({ build, filename, content })
     } catch (err) {
@@ -60,14 +90,13 @@ export function App() {
     }
   }
 
-  async function fetchAndDecode(rawUrl: string) {
+  async function fetchAndDecode(rawUrl: string, lookups: Lookups) {
     try {
       const res = await fetch(rawUrl)
       if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`)
       const code = (await res.text()).trim()
-      decodeAndShow(code)
+      decodeAndShow(code, lookups)
     } catch {
-      // CORS / network error. Show a recoverable instruction.
       setError({ kind: 'cors-failure', rawUrl })
     }
   }
@@ -78,16 +107,22 @@ export function App() {
     const raw = input.trim()
     if (!raw) return
 
-    if (looksLikeUrl(raw)) {
-      const rawUrl = toPobbRawUrl(raw) ?? raw
-      setBusy(true)
-      try {
-        await fetchAndDecode(rawUrl)
-      } finally {
-        setBusy(false)
+    setBusy(true)
+    try {
+      const lookups = await loadLookups()
+      if (looksLikeUrl(raw)) {
+        const rawUrl = toPobbRawUrl(raw) ?? raw
+        await fetchAndDecode(rawUrl, lookups)
+      } else {
+        decodeAndShow(raw, lookups)
       }
-    } else {
-      decodeAndShow(raw)
+    } catch (err) {
+      setError({
+        kind: 'plain',
+        message: err instanceof Error ? err.message : String(err)
+      })
+    } finally {
+      setBusy(false)
     }
   }
 
@@ -134,7 +169,7 @@ export function App() {
           onClick={handleConvert}
           disabled={busy || input.trim().length === 0}
         >
-          {busy ? 'Fetching…' : 'Convert'}
+          {busy ? 'Converting…' : 'Convert'}
         </button>
       </section>
 
@@ -154,7 +189,7 @@ export function App() {
             <a href={error.rawUrl} target="_blank" rel="noreferrer">
               {error.rawUrl}
             </a>{' '}
-            in a new tab, select all the text, copy it, and paste it back
+            in a new tab, select all the text, copy, and paste it back
             here. Then click Convert again.
           </p>
         </section>
