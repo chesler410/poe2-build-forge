@@ -1,5 +1,10 @@
 # poe2-build-forge
 
+[![CI](https://github.com/chesler410/poe2-build-forge/actions/workflows/ci.yml/badge.svg)](https://github.com/chesler410/poe2-build-forge/actions/workflows/ci.yml)
+[![Deploy](https://github.com/chesler410/poe2-build-forge/actions/workflows/deploy.yml/badge.svg)](https://github.com/chesler410/poe2-build-forge/actions/workflows/deploy.yml)
+
+**Try it now → [chesler410.github.io/poe2-build-forge](https://chesler410.github.io/poe2-build-forge/)**
+
 Convert Path of Exile 2 build guides — PoB codes from
 [pobb.in](https://pobb.in) and similar sources — into the official in-game
 `.build` file format consumed by PoE 2's
@@ -12,14 +17,14 @@ keyed to character-level ranges.
 
 ## Status
 
-Early development. Nothing is published to npm yet, but the library is
-functional locally.
+Early development. The web app is live; the libraries are not yet
+published to npm.
 
 | Package | Status | Purpose |
 |---|---|---|
 | [`@poe2-build-forge/schema`](packages/schema) | scaffolded, tested | JSON Schema for `.build` files + Ajv-backed `validate()` |
 | [`@poe2-build-forge/core`](packages/core) | scaffolded, tested | PoB decoder, parser, mapper, emitter — full pipeline working |
-| Web app | planned | Static client-side UI |
+| [`@poe2-build-forge/web`](apps/web) | **live** at [chesler410.github.io/poe2-build-forge](https://chesler410.github.io/poe2-build-forge/) | Static client-side converter UI |
 
 The full PoB-code → `.build` pipeline works end-to-end and the output
 validates against the schema. There's an outstanding question about
