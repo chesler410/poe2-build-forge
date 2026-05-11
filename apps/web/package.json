@@ -1,6 +1,6 @@
 {
   "name": "@poe2-build-forge/web",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "private": true,
   "type": "module",
   "description": "Static web UI for poe2-build-forge — paste a PoB code, download a .build file.",

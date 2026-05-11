@@ -8,6 +8,7 @@ import {
   type BuildFile,
   type PassiveLookup
 } from '@poe2-build-forge/core'
+import { EXAMPLE_BUILD_CODE } from './exampleBuild'
 import './App.css'
 
 // Lazily-loaded lookup tables. Bundling them statically would push the
@@ -154,6 +155,12 @@ export function App() {
     }
   }
 
+  function handleLoadExample() {
+    setError(null)
+    setResult(null)
+    setInput(EXAMPLE_BUILD_CODE)
+  }
+
   function handleDownload() {
     if (!result) return
     const blob = new Blob([result.content], { type: 'application/json' })
@@ -176,6 +183,38 @@ export function App() {
           the in-game Build Planner can load.
         </p>
       </header>
+
+      <section className="quick-start">
+        <h2>How to use</h2>
+        <ol>
+          <li>
+            Copy a PoB code from your build of choice — from{' '}
+            <a href="https://pobb.in" target="_blank" rel="noreferrer">
+              pobb.in
+            </a>
+            , a maxroll.gg guide, your own Path of Building app, etc.
+          </li>
+          <li>Paste it in the box below.</li>
+          <li>Click <strong>Convert</strong>.</li>
+          <li>Click <strong>Download</strong> to save the <code>.build</code> file.</li>
+          <li>
+            Drop the file into{' '}
+            <code>Documents\My Games\Path of Exile 2\BuildPlanner\</code> and
+            pick it from the in-game Build Planner.
+          </li>
+        </ol>
+        <p className="example-prompt">
+          First time here?{' '}
+          <button
+            type="button"
+            className="link-button"
+            onClick={handleLoadExample}
+          >
+            Load an example build
+          </button>{' '}
+          to see what the result looks like.
+        </p>
+      </section>
 
       <section className="input-section">
         <label htmlFor="pob-code">PoB code or pobb.in URL</label>
