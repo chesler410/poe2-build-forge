@@ -53,10 +53,12 @@ interface ConvertResult {
   content: string
 }
 
+type KnownHost = 'maxroll' | 'poeninja' | 'generic'
+
 type AppError =
   | { kind: 'plain'; message: string }
   | { kind: 'cors-failure'; rawUrl: string }
-  | { kind: 'unsupported-url'; attemptedUrl: string }
+  | { kind: 'unsupported-url'; attemptedUrl: string; host: KnownHost }
 
 const POBB_URL_RE = /^https?:\/\/(?:www\.)?pobb\.in\/([\w-]+)(?:\/raw)?\/?$/i
 
@@ -68,6 +70,17 @@ function toPobbRawUrl(input: string): string | null {
   const m = input.match(POBB_URL_RE)
   if (!m) return null
   return `https://pobb.in/${m[1]}/raw`
+}
+
+function classifyHost(input: string): KnownHost {
+  try {
+    const host = new URL(input).host.toLowerCase().replace(/^www\./, '')
+    if (host === 'maxroll.gg' || host.endsWith('.maxroll.gg')) return 'maxroll'
+    if (host === 'poe.ninja' || host.endsWith('.poe.ninja')) return 'poeninja'
+    return 'generic'
+  } catch {
+    return 'generic'
+  }
 }
 
 export function App() {
@@ -117,8 +130,14 @@ export function App() {
           // We only know how to extract a raw PoB code from pobb.in
           // URLs. For other hosts (poe.ninja, maxroll.gg, etc.) the
           // raw code isn't exposed in a predictable way, so guide the
-          // user toward pasting the code directly.
-          setError({ kind: 'unsupported-url', attemptedUrl: raw })
+          // user toward pasting the code directly. Host-specific
+          // messages tell them exactly where to find the code on
+          // popular sites.
+          setError({
+            kind: 'unsupported-url',
+            attemptedUrl: raw,
+            host: classifyHost(raw)
+          })
         } else {
           await fetchAndDecode(rawUrl, lookups)
         }
@@ -206,14 +225,46 @@ export function App() {
 
       {error?.kind === 'unsupported-url' && (
         <section className="error" role="alert">
-          <strong>That URL isn't directly supported yet:</strong>
-          <p>
-            URL fetching only works for <code>pobb.in</code> right now.
-            For other sources (poe.ninja, maxroll.gg, exported{' '}
-            <code>.pob</code> files, etc.), copy the raw PoB code from
-            the site's share/export UI and paste it into the textarea
-            above instead.
-          </p>
+          <strong>That URL needs a manual step:</strong>
+          {error.host === 'maxroll' && (
+            <p>
+              <a
+                href={error.attemptedUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                maxroll.gg
+              </a>{' '}
+              build guides include a <strong>Path of Building</strong>{' '}
+              section. Open the page, scroll to that section, copy the
+              export code from it, and paste it into the textarea above.
+            </p>
+          )}
+          {error.host === 'poeninja' && (
+            <p>
+              <a
+                href={error.attemptedUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                poe.ninja
+              </a>{' '}
+              build pages have a copy-code button near the build view.
+              Open the page, copy the PoB export, and paste it into the
+              textarea above.
+            </p>
+          )}
+          {error.host === 'generic' && (
+            <p>
+              URL fetching only works for <code>pobb.in</code> right
+              now. For other sources (
+              <a href={error.attemptedUrl} target="_blank" rel="noreferrer">
+                {error.attemptedUrl}
+              </a>
+              ), copy the raw PoB code from the site's share/export UI
+              and paste it into the textarea above.
+            </p>
+          )}
         </section>
       )}
 
