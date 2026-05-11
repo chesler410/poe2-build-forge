@@ -27,11 +27,9 @@ published to npm.
 | [`@poe2-build-forge/web`](apps/web) | **live** at [chesler410.github.io/poe2-build-forge](https://chesler410.github.io/poe2-build-forge/) | Static client-side converter UI |
 
 The full PoB-code → `.build` pipeline works end-to-end and the output
-validates against the schema. There's an outstanding question about
-whether the dev docs or the GGG reveal video correctly describes the
-top-level `.build` field names — see
-[`docs/ui-exploration.md`](docs/ui-exploration.md) section 2 for the
-conflict catalogue.
+validates against the schema, which follows the
+[GGG developer docs](https://www.pathofexile.com/developer/docs/game)
+verbatim.
 
 ## How it works
 

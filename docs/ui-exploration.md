@@ -141,12 +141,12 @@ renders as)
   than your current."* The same annotation pattern works for flask
   slots, not just armor/weapons.
 
-**JSON file format** — see "Schema conflicts" below.
+**JSON file format**
 
 - [`sampleBuildFileJson.png`](screenshots/sampleBuildFileJson.png) —
-  shows the literal JSON content of a Ranger build file. Contents are
-  the most authoritative format reference we have, and conflict with
-  the published dev docs in three places.
+  shows the literal JSON content of a Ranger build file. A few fields
+  in this frame don't quite match the published dev docs; see
+  "Schema interpretation" below for how we resolved it.
 
 **Community context**
 
@@ -158,31 +158,32 @@ renders as)
   existing passive-tree designer view. Reference for what
   build-design tools look like today.
 
-### Schema conflicts: dev docs vs. reveal screenshot
+### Schema interpretation: defer to dev docs **[resolved 2026-05-11]**
 
-The reveal-video screenshot of `Ranger.build` shows fields that conflict
-with the published dev docs (re-verified 2026-05-09). Both sources are
-from GGG; one is stale. **The schema isn't fixed yet — needs ground
-truth.**
+The reveal-video screenshot of `Ranger.build` had fields that
+*appeared* to conflict with the published dev docs in three places:
 
-| Field | Dev docs say | Screenshot shows |
+| Field | Dev docs say | Reveal screenshot showed |
 |---|---|---|
 | Top-level identifier | `name` (required) | `id` |
 | `ascendancy` value format | `"Mercenary2"` (table-id) | `"Pathfinder"` (display name) |
 | `unique_name` location | `BuildItem` only | also seen on a `BuildPassive` |
 
-If the screenshot wins on (1)/(2), our mapping plan simplifies — no
-ascendancy ID lookup needed; we'd just pass through the display name.
-If the dev docs win, our existing schema is correct and we keep our
-ascendancies.json mapping logic.
+**Verdict: we follow the dev docs.** They're the formal published
+spec; the reveal screenshot was almost certainly a dev-time artifact
+(early build, demo content, or a different format from what shipped).
+Our schema, mapper, and emitter all match the docs.
 
-**[exploratory — needs ground truth]** Best resolution: install PoE2,
-create a build via a community tool that supports `.build` export,
-open the resulting file in a text editor, see which form is real. Or
-ask in the official PoE2 Discord. Until resolved, the schema
-(`packages/schema/src/poe2-build.schema.json`) follows the dev docs;
-the mapper will need a defensive fallback for whichever form turns
-out to be wrong.
+**Re-open trigger:** a real `.build` file produced by the in-game
+Build Planner (or one our emitter wrote and the game rejected) that
+contradicts our output. Revisit the failing fields against the docs
+then. Until that happens, treat this as settled.
+
+History — what we tried before resolving:
+- Emailed GGG support (declined; dev-docs queries aren't their remit).
+- Searched PathOfBuilding-PoE2 issues — no `.build`-export work yet.
+- Searched community sites for in-the-wild `.build` files — none
+  found (feature too new).
 
 ### Other rendering details
 
