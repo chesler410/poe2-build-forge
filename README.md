@@ -18,7 +18,9 @@ keyed to character-level ranges.
 ## Status
 
 Early development. The web app is live; the libraries are not yet
-published to npm.
+published to npm. **PoE2's in-game Build Planner ships May 29, 2026** —
+until then, generated `.build` files validate against the published
+schema and can be inspected, but can't actually be loaded in-game yet.
 
 | Package | Status | Purpose |
 |---|---|---|
@@ -30,6 +32,24 @@ The full PoB-code → `.build` pipeline works end-to-end and the output
 validates against the schema, which follows the
 [GGG developer docs](https://www.pathofexile.com/developer/docs/game)
 verbatim.
+
+### What the converter handles
+
+- Accepts pobb.in URLs (via paste-the-code) and raw PoB export strings
+- Decodes PoB's wire format: URL-safe base64 → zlib → `<PathOfBuilding2>` XML
+- Maps PoB integer tree-node ids to GGG `PassiveSkills.id` strings
+  (e.g. `28992` → `lightning14`, `AscendancyRanger1Notable3`)
+- Derives per-passive `level_interval` from PoB's tree-spec ordering
+  (Campaign Start / Mid / Endgame specs distribute across levels 1–100)
+- Resolves ascendancy display names ("Deadeye") to GGG table-ids
+  ("Ranger2") via a bundled lookup
+- Surfaces equipped items: uniques as `unique_name`, rares/magics as
+  `additional_text` with rarity + base type + rolled name
+- Disambiguates multi-slot inventory positions (`Flask 1` / `Flask 2`
+  → `Flask1` / `Flask2`; `Weapon 1 Swap` → `Offhand1`)
+- Validates final output against the JSON Schema before download
+- Runs entirely client-side: no signup, no backend, no data leaves
+  your browser
 
 ## How it works
 
@@ -105,12 +125,13 @@ pnpm build      # tsup (JS) + tsc -b (types)
 pnpm typecheck  # tsc -b only
 ```
 
-A throwaway script for inspecting pobb.in payloads lives at
-[`scripts/decode-spike.ts`](scripts/decode-spike.ts):
+Useful scripts under [`scripts/`](scripts/):
 
 ```sh
-pnpm spike:decode <pobbBuildId>
-# e.g. pnpm spike:decode 90pcuxN4XtJG
+pnpm dev                       # run the web app locally at http://localhost:5173/
+pnpm spike:decode <pobbBuildId> # inspect a pobb.in payload (decode + dump XML head/tail)
+pnpm fetch-data                 # refresh the bundled GGG data tables in core
+pnpm prune-data                 # prune the raw data snapshot to the mapper essentials
 ```
 
 ## References
@@ -119,6 +140,10 @@ pnpm spike:decode <pobbBuildId>
 - [pobb.in](https://pobb.in) — hosts PoE2 builds; `/{id}/raw` returns the encoded payload (requires a real browser User-Agent).
 - [PathOfBuildingCommunity/PathOfBuilding-PoE2](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2) — PoE2 fork of Path of Building; source of versioned passive tree data.
 - [repoe-fork/poe2](https://github.com/repoe-fork/poe2) — auto-tracked dumps of PoE2 game tables (ascendancies, base items, gems, uniques).
+
+### Upstream coordination
+
+- [PathOfBuildingCommunity/PathOfBuilding-PoE2#1829](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/issues/1829) — feature request asking PoB to export to `.build` natively. If they integrate it, this tool becomes redundant in the best possible way.
 
 ## Support
 
