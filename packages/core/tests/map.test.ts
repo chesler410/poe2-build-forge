@@ -62,12 +62,41 @@ describe('mapPobToBuild', () => {
     expect(Array.isArray(result.passives)).toBe(true)
     expect(result.passives!.length).toBeGreaterThan(0)
     for (const p of result.passives!) {
-      // Every emitted passive should be the shorthand string form here.
-      expect(typeof p).toBe('string')
-      // No empty strings, and ids look like the GGG format
-      // (alphanumeric/underscore, sometimes with a numeric suffix).
-      expect(p as string).toMatch(/^[A-Za-z][A-Za-z0-9_]+$/)
+      // Each entry is either a shorthand string id (for nodes in the
+      // first spec) or an object { id, level_interval } (for nodes
+      // introduced in later specs). Both forms carry a GGG-format id.
+      const id = typeof p === 'string' ? p : p.id
+      expect(id).toMatch(/^[A-Za-z][A-Za-z0-9_]+$/)
     }
+  })
+
+  it('derives level_interval per passive from PoB spec ordering', () => {
+    const result = mapPobToBuild(pob, { passives: passivesLookup })
+    expect(result.passives).toBeDefined()
+
+    const withIntervals = result.passives!.filter(
+      (p): p is { id: string; level_interval?: [number, number] } =>
+        typeof p !== 'string' && p.level_interval !== undefined
+    )
+    // The fixture has multiple specs, so we expect at least some
+    // passives to carry a level_interval (those introduced after
+    // the first spec).
+    expect(withIntervals.length).toBeGreaterThan(0)
+
+    for (const p of withIntervals) {
+      const [start, end] = p.level_interval!
+      expect(start).toBeGreaterThan(1)
+      expect(start).toBeLessThanOrEqual(100)
+      expect(end).toBe(100)
+    }
+  })
+
+  it('emits shorthand strings for nodes that appear in the first spec', () => {
+    // First-spec nodes should always show in-game from level 1, so
+    // we emit them without a level_interval (shorthand string form).
+    const result = mapPobToBuild(pob, { passives: passivesLookup })
+    const shorthand = result.passives!.filter((p) => typeof p === 'string')
+    expect(shorthand.length).toBeGreaterThan(0)
   })
 
   it('emits skills as gem-id strings or {id, support_skills} objects', () => {

@@ -127,16 +127,62 @@ function mapPassives(
   lookup: PassiveLookup
 ): BuildPassive[] | undefined {
   if (!pob.tree) return undefined
-  const spec =
-    pob.tree.specs[pob.tree.activeSpec - 1] ?? pob.tree.specs[0]
-  if (!spec) return undefined
+  const specs = pob.tree.specs
+  if (specs.length === 0) return undefined
+
+  // The LAST spec is taken as the canonical "final" allocation set
+  // — build creators add specs progressively, so the last spec
+  // contains every node the build eventually picks up.
+  const finalSpec = specs[specs.length - 1]
+
+  // Single-spec builds: no progression info to derive. Emit shorthand
+  // strings (always-shown hints) — same behaviour as before.
+  if (specs.length === 1) {
+    const out: BuildPassive[] = []
+    for (const nodeId of finalSpec.nodes) {
+      const entry = lookup[String(nodeId)]
+      if (!entry) continue
+      if (entry.is_jewel_socket) continue
+      out.push(entry.id)
+    }
+    return out
+  }
+
+  // Multi-spec builds: derive a level_interval per node from the
+  // earliest spec it appears in. Spec 0 starts at level 1 (no
+  // interval emitted, so the hint always shows); each later spec's
+  // start level is distributed evenly across 1–100 — a deliberately
+  // simple heuristic that conveys relative ordering without
+  // pretending we know the exact levels the build creator intended.
+  const startLevelForSpec = (specIndex: number): number => {
+    if (specIndex === 0) return 1
+    return Math.round((100 * specIndex) / specs.length)
+  }
+
+  // First (earliest) spec index each node appears in.
+  const earliestSpecForNode = new Map<number, number>()
+  for (let i = 0; i < specs.length; i++) {
+    for (const nodeId of specs[i].nodes) {
+      if (!earliestSpecForNode.has(nodeId)) {
+        earliestSpecForNode.set(nodeId, i)
+      }
+    }
+  }
 
   const out: BuildPassive[] = []
-  for (const nodeId of spec.nodes) {
+  for (const nodeId of finalSpec.nodes) {
     const entry = lookup[String(nodeId)]
-    if (!entry) continue // node id not in lookup (rare; possibly stale data)
-    if (entry.is_jewel_socket) continue // sockets aren't allocations
-    out.push(entry.id)
+    if (!entry) continue
+    if (entry.is_jewel_socket) continue
+
+    const earliestSpec = earliestSpecForNode.get(nodeId) ?? specs.length - 1
+    const startLevel = startLevelForSpec(earliestSpec)
+
+    if (startLevel <= 1) {
+      out.push(entry.id)
+    } else {
+      out.push({ id: entry.id, level_interval: [startLevel, 100] })
+    }
   }
   return out
 }
