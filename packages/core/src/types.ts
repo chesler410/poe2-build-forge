@@ -110,6 +110,31 @@ export interface Gem {
 export interface Items {
   activeItemSet: number
   itemSets: ItemSet[]
+  /**
+   * Per-id catalog of items referenced by `ItemSet.slots[].itemId`.
+   * Keyed by id-as-string (matching the wire format and JSON conventions).
+   * Empty if the build has no items selected.
+   */
+  catalog: Record<string, PobItem>
+}
+
+/**
+ * A single equipped item parsed from PoB's text-format `<Item>` block.
+ * PoB serialises items as multi-line text starting with `Rarity: <X>`,
+ * followed by the item name and base type, then implicits/mods.
+ */
+export interface PobItem {
+  /** PoB internal id; matches `Slot.itemId`. */
+  id: number
+  /** `UNIQUE` / `RARE` / `MAGIC` / `NORMAL`, or empty if unparseable. */
+  rarity: string
+  /**
+   * Item name. For uniques this is the unique's name ("Seed of Cataclysm").
+   * For rares it's the rolled name. For normals it equals `baseType`.
+   */
+  name: string
+  /** Item base type ("Lazuli Ring", "Vaal Regalia"). */
+  baseType: string
 }
 
 export interface ItemSet {

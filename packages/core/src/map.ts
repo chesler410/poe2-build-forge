@@ -224,11 +224,31 @@ function mapItems(pob: PathOfBuilding2): BuildItem[] | undefined {
   const out: BuildItem[] = []
   for (const slot of itemSet.slots) {
     if (slot.itemId === 0) continue // empty slot, no hint to emit
-    out.push({
+    const buildItem: BuildItem = {
       inventory_id: translateSlotName(slot.name),
       slot_x: 0,
       slot_y: 0
-    })
+    }
+
+    // Enrich with item info from the catalog if available. Uniques go
+    // into the schema's structured `unique_name`; rares/magics/normals
+    // surface as a free-form `additional_text` hint since the schema
+    // doesn't model them structurally.
+    const item = pob.items.catalog[String(slot.itemId)]
+    if (item) {
+      if (item.rarity === 'UNIQUE' && item.name) {
+        buildItem.unique_name = item.name
+      } else if (item.rarity && (item.baseType || item.name)) {
+        const label = item.baseType || item.name
+        const hint =
+          item.name && item.baseType && item.name !== item.baseType
+            ? `${item.rarity}: ${label} ("${item.name}")`
+            : `${item.rarity}: ${label}`
+        buildItem.additional_text = hint
+      }
+    }
+
+    out.push(buildItem)
   }
   return out
 }

@@ -21,6 +21,7 @@ export type {
   Items,
   PathOfBuilding2,
   PlayerStat,
+  PobItem,
   Skill,
   SkillSet,
   Skills,

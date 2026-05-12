@@ -6,6 +6,7 @@ import type {
   Items,
   PathOfBuilding2,
   PlayerStat,
+  PobItem,
   Skill,
   SkillSet,
   Skills,
@@ -24,7 +25,8 @@ const ALWAYS_ARRAYS = new Set([
   'Gem',
   'ItemSet',
   'Slot',
-  'SocketIdURL'
+  'SocketIdURL',
+  'Item'
 ])
 
 const parser = new XMLParser({
@@ -196,10 +198,51 @@ function parseGem(g: RawElement): Gem {
 
 function parseItems(i: RawElement | undefined): Items | undefined {
   if (!i) return undefined
+  const catalog: Record<string, PobItem> = {}
+  for (const rawItem of arr(i.Item)) {
+    const parsed = parsePobItem(rawItem)
+    if (parsed.id > 0) {
+      catalog[String(parsed.id)] = parsed
+    }
+  }
   return {
     activeItemSet: num(i['@_activeItemSet'], 1),
-    itemSets: arr(i.ItemSet).map(parseItemSet)
+    itemSets: arr(i.ItemSet).map(parseItemSet),
+    catalog
   }
+}
+
+function parsePobItem(raw: RawElement): PobItem {
+  const id = num(raw['@_id'])
+  // PoB serialises Item bodies as text. fxp puts text under `#text` when the
+  // element also has attributes; otherwise the whole value is a string.
+  const text =
+    typeof raw === 'string'
+      ? raw
+      : str((raw as RawElement)['#text'])
+
+  const lines = text
+    .split('\n')
+    .map((l) => l.trim())
+    .filter((l) => l.length > 0)
+
+  let rarity = ''
+  let name = ''
+  let baseType = ''
+
+  for (let idx = 0; idx < lines.length; idx++) {
+    const line = lines[idx]
+    if (line.startsWith('Rarity:')) {
+      rarity = line.slice('Rarity:'.length).trim()
+      // PoB convention: the next two non-blank lines are the item's display
+      // name and its base type, in that order.
+      if (idx + 1 < lines.length) name = lines[idx + 1]
+      if (idx + 2 < lines.length) baseType = lines[idx + 2]
+      break
+    }
+  }
+
+  return { id, rarity, name, baseType }
 }
 
 function parseItemSet(s: RawElement): ItemSet {

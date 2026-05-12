@@ -157,7 +157,8 @@ describe('mapPobToBuild', () => {
               { name: 'Flask 2', itemId: 101 }
             ]
           }
-        ]
+        ],
+        catalog: {}
       }
     }
     const result = mapPobToBuild(synthetic, { passives: passivesLookup })
@@ -165,6 +166,72 @@ describe('mapPobToBuild', () => {
     expect(ids).toContain('Flask1')
     expect(ids).toContain('Flask2')
     expect(new Set(ids).size).toBe(ids.length) // no duplicates
+  })
+
+  it('emits unique_name when a slot references a unique in the catalog', () => {
+    const synthetic = {
+      ...pob,
+      items: {
+        activeItemSet: 1,
+        itemSets: [
+          { id: 1, slots: [{ name: 'Amulet', itemId: 1 }] }
+        ],
+        catalog: {
+          '1': {
+            id: 1,
+            rarity: 'UNIQUE',
+            name: 'Seed of Cataclysm',
+            baseType: 'Lazuli Ring'
+          }
+        }
+      }
+    }
+    const result = mapPobToBuild(synthetic, { passives: passivesLookup })
+    expect(result.items).toHaveLength(1)
+    expect(result.items![0].unique_name).toBe('Seed of Cataclysm')
+    expect(result.items![0].additional_text).toBeUndefined()
+  })
+
+  it('emits additional_text with rarity+base for non-unique items', () => {
+    const synthetic = {
+      ...pob,
+      items: {
+        activeItemSet: 1,
+        itemSets: [
+          { id: 1, slots: [{ name: 'Helmet', itemId: 1 }] }
+        ],
+        catalog: {
+          '1': {
+            id: 1,
+            rarity: 'RARE',
+            name: 'Soul Whisper Maw',
+            baseType: 'Cultist Crown'
+          }
+        }
+      }
+    }
+    const result = mapPobToBuild(synthetic, { passives: passivesLookup })
+    expect(result.items![0].unique_name).toBeUndefined()
+    expect(result.items![0].additional_text).toContain('RARE')
+    expect(result.items![0].additional_text).toContain('Cultist Crown')
+  })
+
+  it('emits bare slot entry when catalog lookup misses (corrupt or out-of-sync data)', () => {
+    const synthetic = {
+      ...pob,
+      items: {
+        activeItemSet: 1,
+        itemSets: [
+          { id: 1, slots: [{ name: 'Belt', itemId: 999 }] }
+        ],
+        catalog: {} // itemId 999 not present
+      }
+    }
+    const result = mapPobToBuild(synthetic, { passives: passivesLookup })
+    expect(result.items).toHaveLength(1)
+    expect(result.items![0].inventory_id).toBe('Belt')
+    expect(result.items![0].unique_name).toBeUndefined()
+    expect(result.items![0].additional_text).toBeUndefined()
   })
 
   it('produces output that validates against @poe2-build-forge/schema', () => {
