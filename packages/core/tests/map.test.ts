@@ -216,6 +216,37 @@ describe('mapPobToBuild', () => {
     expect(result.items![0].additional_text).toContain('Cultist Crown')
   })
 
+  it('emits additional_text without metadata leakage for magic items', () => {
+    // Regression: previously the parser took line+2 as the base type
+    // for every rarity, but MAGIC items have no separate base-type
+    // line — line+2 is "Unique ID: ..." metadata. Result was nonsense
+    // like 'MAGIC: Unique ID: 63727b... ("Bubbling Ultimate Life Flask
+    // of the Ample")'.
+    const synthetic = {
+      ...pob,
+      items: {
+        activeItemSet: 1,
+        itemSets: [
+          { id: 1, slots: [{ name: 'Flask 1', itemId: 1 }] }
+        ],
+        catalog: {
+          '1': {
+            id: 1,
+            rarity: 'MAGIC',
+            name: 'Bubbling Ultimate Life Flask of the Ample',
+            // Parser correctly leaves baseType empty for magic items.
+            baseType: ''
+          }
+        }
+      }
+    }
+    const result = mapPobToBuild(synthetic, { passives: passivesLookup })
+    expect(result.items![0].additional_text).toBe(
+      'MAGIC: Bubbling Ultimate Life Flask of the Ample'
+    )
+    expect(result.items![0].additional_text).not.toContain('Unique ID')
+  })
+
   it('emits bare slot entry when catalog lookup misses (corrupt or out-of-sync data)', () => {
     const synthetic = {
       ...pob,

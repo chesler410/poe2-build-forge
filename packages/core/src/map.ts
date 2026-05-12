@@ -239,11 +239,18 @@ function mapItems(pob: PathOfBuilding2): BuildItem[] | undefined {
       if (item.rarity === 'UNIQUE' && item.name) {
         buildItem.unique_name = item.name
       } else if (item.rarity && (item.baseType || item.name)) {
-        const label = item.baseType || item.name
-        const hint =
-          item.name && item.baseType && item.name !== item.baseType
-            ? `${item.rarity}: ${label} ("${item.name}")`
-            : `${item.rarity}: ${label}`
+        // RARE items have separate name + baseType ("Sol Paw" /
+        // "Opulent Gloves") — surface both. MAGIC and NORMAL items
+        // don't have a separate base-type line in PoB's text format
+        // (the name itself contains the base), so just surface name.
+        let hint: string
+        if (item.baseType && item.name && item.name !== item.baseType) {
+          hint = `${item.rarity}: ${item.baseType} ("${item.name}")`
+        } else if (item.name) {
+          hint = `${item.rarity}: ${item.name}`
+        } else {
+          hint = `${item.rarity}: ${item.baseType}`
+        }
         buildItem.additional_text = hint
       }
     }

@@ -234,15 +234,37 @@ function parsePobItem(raw: RawElement): PobItem {
     const line = lines[idx]
     if (line.startsWith('Rarity:')) {
       rarity = line.slice('Rarity:'.length).trim()
-      // PoB convention: the next two non-blank lines are the item's display
-      // name and its base type, in that order.
+      // PoB layout per rarity:
+      //   UNIQUE/RARE: line+1 = display name, line+2 = base type
+      //   MAGIC:       line+1 = full magic name (includes base);
+      //                line+2 jumps straight to metadata (Unique ID: ...)
+      //   NORMAL:      line+1 = base type (used as name); no separate base
+      // We always treat line+1 as the display name, then accept line+2
+      // as the base type only if it doesn't look like a metadata line
+      // (key: value form or a `--------` separator).
       if (idx + 1 < lines.length) name = lines[idx + 1]
-      if (idx + 2 < lines.length) baseType = lines[idx + 2]
+      if (idx + 2 < lines.length && looksLikeBaseType(lines[idx + 2])) {
+        baseType = lines[idx + 2]
+      }
       break
     }
   }
 
   return { id, rarity, name, baseType }
+}
+
+/**
+ * True iff a PoB-format line plausibly names an item base type
+ * (e.g. "Lazuli Ring", "Vaal Regalia") rather than metadata like
+ * "Unique ID: ...", "Item Level: 80", or a `--------` separator.
+ *
+ * Heuristic: real base types are short, capitalised, and don't
+ * contain a "key: value" colon pattern.
+ */
+function looksLikeBaseType(line: string): boolean {
+  if (line.startsWith('-')) return false // separator (--------)
+  if (line.includes(': ')) return false // metadata ("Unique ID: ...")
+  return true
 }
 
 function parseItemSet(s: RawElement): ItemSet {
