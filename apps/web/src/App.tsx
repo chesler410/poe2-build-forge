@@ -52,7 +52,7 @@ async function loadLookups(): Promise<Lookups> {
   }
 }
 
-type KnownHost = 'maxroll' | 'poeninja' | 'generic'
+type KnownHost = 'maxroll' | 'poeninja' | 'mobalytics' | 'generic'
 
 type AppError =
   | { kind: 'plain'; message: string }
@@ -96,6 +96,7 @@ function classifyHost(input: string): KnownHost {
     const host = new URL(input).host.toLowerCase().replace(/^www\./, '')
     if (host === 'maxroll.gg' || host.endsWith('.maxroll.gg')) return 'maxroll'
     if (host === 'poe.ninja' || host.endsWith('.poe.ninja')) return 'poeninja'
+    if (host === 'mobalytics.gg' || host.endsWith('.mobalytics.gg')) return 'mobalytics'
     return 'generic'
   } catch {
     return 'generic'
@@ -482,6 +483,37 @@ export function App() {
           </button>{' '}
           to see what the result looks like.
         </p>
+        <p className="example-prompt">
+          Don't have a build yet? Try{' '}
+          <a href="https://pobb.in" target="_blank" rel="noreferrer">
+            pobb.in
+          </a>
+          ,{' '}
+          <a
+            href="https://maxroll.gg/poe2/build-guides"
+            target="_blank"
+            rel="noreferrer"
+          >
+            maxroll.gg/poe2
+          </a>
+          ,{' '}
+          <a
+            href="https://poe.ninja/poe2/builds"
+            target="_blank"
+            rel="noreferrer"
+          >
+            poe.ninja/poe2
+          </a>
+          , or{' '}
+          <a
+            href="https://mobalytics.gg/poe-2/builds"
+            target="_blank"
+            rel="noreferrer"
+          >
+            mobalytics.gg/poe-2
+          </a>
+          .
+        </p>
       </section>
 
       <section className="input-section">
@@ -584,6 +616,21 @@ export function App() {
               build pages have a copy-code button near the build view.
               Open the page, copy the PoB export, and paste it into the
               textarea above.
+            </p>
+          )}
+          {error.host === 'mobalytics' && (
+            <p>
+              <a
+                href={error.attemptedUrl}
+                target="_blank"
+                rel="noreferrer"
+              >
+                mobalytics.gg
+              </a>{' '}
+              build pages have a <strong>Path of Building Code</strong>{' '}
+              section with a <strong>Copy Code</strong> button. Open the
+              page, click Copy Code, and paste the result into the textarea
+              above.
             </p>
           )}
           {error.host === 'generic' && (

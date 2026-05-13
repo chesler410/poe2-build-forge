@@ -60,6 +60,15 @@ verbatim.
 - **Share link**: encode the (compressed) build in the URL hash so a
   single link captures the entire annotated build — no backend, no
   account. Visiting the link decodes straight into the editor.
+- **Live markup preview** under description and `additional_text`
+  textareas, rendering `<bold>{...}`, `<italics>{...}`,
+  `<underline>{...}`, named colors, and `<rgb(r, g, b)>{...}` (with
+  nesting) so guide authors see what players will see.
+- **Build source hints** for users without a PoB code yet — pobb.in,
+  maxroll.gg/poe2, poe.ninja/poe2, mobalytics.gg/poe-2. Pasting URLs
+  from any of those gets a host-specific hint on how to copy the code.
+- **Mobile-friendly layout** at narrow viewports — buttons stretch to
+  full width, number inputs shrink, toasts span edge-to-edge.
 - **Drag-and-drop** a `.pob` file (treated as a PoB code) or a `.build`
   file (loaded directly into the editor, bypassing conversion) onto the
   page.

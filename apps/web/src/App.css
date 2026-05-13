@@ -645,7 +645,63 @@ details.editor-section[open] {
     font-size: 1.5rem;
   }
 
+  .quick-start {
+    padding: 0.85rem 1rem 1rem;
+  }
+
   .result {
     padding: 1rem;
+  }
+
+  .editor-section {
+    padding: 0.65rem 0.75rem;
+  }
+
+  .entry-row {
+    padding: 0.5rem 0.55rem;
+  }
+
+  .toast-stack {
+    bottom: 0.5rem;
+    right: 0.5rem;
+    left: 0.5rem;
+    max-width: none;
+  }
+
+  .drop-overlay {
+    outline-offset: -0.5rem;
+  }
+
+  .drop-overlay-message {
+    margin: 0 0.75rem;
+    text-align: center;
+  }
+
+  .placement-hint code,
+  .drop-overlay-message code {
+    word-break: break-all;
+  }
+
+  details pre {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 420px) {
+  /* Narrow phone tweaks — keep number inputs from forcing horizontal scroll. */
+  .level-interval input[type='number'] {
+    width: 3.5rem;
+  }
+
+  .result-actions,
+  .input-actions,
+  .editor-toolbar {
+    width: 100%;
+  }
+
+  .result-actions > button,
+  .input-actions > button,
+  .editor-toolbar > button {
+    flex: 1 1 auto;
   }
 }
