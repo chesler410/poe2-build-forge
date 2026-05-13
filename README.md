@@ -48,13 +48,15 @@ verbatim.
 - Disambiguates multi-slot inventory positions (`Flask 1` / `Flask 2`
   → `Flask1` / `Flask2`; `Weapon 1 Swap` → `Offhand1`)
 - **Edit before download**: in-browser form for build name, description,
-  and per-passive/skill/item `additional_text` + `level_interval`. JSON
+  per-passive `weapon_set` + `unique_name`, per-item `unique_name`, and
+  per-entry `additional_text` + `level_interval` on everything. JSON
   preview updates live; downloaded file reflects edits. Ascendancy
   passives are grouped into their own collapsible section.
 - **Readable labels** in the editor: passives show their game name
-  ("Shock Chance" alongside `lightning14`), skill gems show
-  prefix-stripped names ("Sigil Of Power" instead of the full
-  `Metadata/Items/Gem/SkillGemSigilOfPower`).
+  ("Shock Chance" alongside `lightning14`), skill gems show authoritative
+  names sourced from PoB's `Gems.lua` ("Sigil of Power" — proper casing,
+  not a CamelCase guess), item rows lift `RARE: BaseType ("Name")`
+  / `MAGIC: …` strings into a readable two-line header.
 - **Copy JSON** alongside Download for pasting into chat, gists, or
   hand-merging into an existing `.build`.
 - **Share link**: encode the (compressed) build in the URL hash so a
@@ -69,6 +71,10 @@ verbatim.
   from any of those gets a host-specific hint on how to copy the code.
 - **Mobile-friendly layout** at narrow viewports — buttons stretch to
   full width, number inputs shrink, toasts span edge-to-edge.
+- **Resilient**: a root error boundary catches render crashes and offers
+  Reload / Reset-saved-state recovery instead of a blank page.
+
+Recent changes are tracked in [`CHANGELOG.md`](CHANGELOG.md).
 - **Drag-and-drop** a `.pob` file (treated as a PoB code) or a `.build`
   file (loaded directly into the editor, bypassing conversion) onto the
   page.
@@ -157,7 +163,7 @@ Requires Node 22.13+ (pnpm 11 needs `node:sqlite`) and pnpm 11+.
 
 ```sh
 pnpm install
-pnpm test       # vitest across all packages
+pnpm test       # vitest across schema + core + web (69 tests)
 pnpm build      # tsup (JS) + tsc -b (types)
 pnpm typecheck  # tsc -b only
 ```
