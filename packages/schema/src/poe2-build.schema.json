@@ -84,6 +84,10 @@
           "minimum": 0,
           "description": "Weapon-set this passive applies to. PoE2 supports two weapon sets; typical values are 1 or 2."
         },
+        "unique_name": {
+          "type": "string",
+          "description": "Optional display label for this passive in the build's context (not the node's canonical name). Confirmed via the Return of the Ancients reveal video, where a Ranger.build entry uses 'unique_name': 'A passive!'."
+        },
         "additional_text": { "$ref": "#/$defs/AdditionalText" }
       }
     },
@@ -183,6 +187,8 @@
         {
           "id": "armour_and_evasion2",
           "level_interval": [25, 100],
+          "weapon_set": 2,
+          "unique_name": "Evasion swap point",
           "additional_text": "Allocate after transitioning to Shield Wall."
         }
       ],

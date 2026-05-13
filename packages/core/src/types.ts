@@ -183,6 +183,7 @@ export interface BuildPassiveObject {
   id: string
   level_interval?: [number, number]
   weapon_set?: number
+  unique_name?: string
   additional_text?: string
 }
 
