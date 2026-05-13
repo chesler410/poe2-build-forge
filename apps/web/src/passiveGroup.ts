@@ -22,3 +22,13 @@ export function prefixLabel(prefix: string): string {
     .replace(/_/g, ' ')
     .replace(/\b\w/g, (c) => c.toUpperCase())
 }
+
+/**
+ * `attributes` is the only generic "pick one of Str/Int/Dex" prefix on
+ * the tree. The other attribute prefixes (`strength`, `intelligence`,
+ * `dexterity`) are fixed to that stat. Used to decide which passive
+ * rows get the quick-pick chip row.
+ */
+export function isAttributeChoiceGroup(prefix: string): boolean {
+  return prefix === 'attributes'
+}

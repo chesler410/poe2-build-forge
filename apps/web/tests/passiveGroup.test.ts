@@ -1,5 +1,9 @@
 import { describe, it, expect } from 'vitest'
-import { passivePrefix, prefixLabel } from '../src/passiveGroup'
+import {
+  passivePrefix,
+  prefixLabel,
+  isAttributeChoiceGroup
+} from '../src/passiveGroup'
 
 describe('passivePrefix', () => {
   it('strips trailing digits', () => {
@@ -49,5 +53,22 @@ describe('prefixLabel', () => {
     expect(prefixLabel('duelist_mercenary_notable')).toBe(
       'Duelist Mercenary Notable'
     )
+  })
+})
+
+describe('isAttributeChoiceGroup', () => {
+  it('is true for the generic attributes prefix', () => {
+    expect(isAttributeChoiceGroup('attributes')).toBe(true)
+  })
+
+  it('is false for the stat-locked prefixes', () => {
+    expect(isAttributeChoiceGroup('strength')).toBe(false)
+    expect(isAttributeChoiceGroup('intelligence')).toBe(false)
+    expect(isAttributeChoiceGroup('dexterity')).toBe(false)
+  })
+
+  it('is false for unrelated prefixes', () => {
+    expect(isAttributeChoiceGroup('two_handed')).toBe(false)
+    expect(isAttributeChoiceGroup('passive_keystone_zeal')).toBe(false)
   })
 })

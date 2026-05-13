@@ -3,6 +3,22 @@
 All notable changes to poe2-build-forge. Versions track the web app at
 `apps/web`; the libraries follow alongside.
 
+## [0.9.2] — 2026-05-13
+
+**Added**
+
+- Quick-pick **Str / Int / Dex chip row** on `attributes`-prefix passive
+  rows. Clicking a chip sets the entry's `additional_text` to
+  `Pick Strength` / `Pick Intelligence` / `Pick Dexterity` — the canonical
+  way a guide author marks "pick this stat at this attribute node." The
+  × chip clears the note. Active chip highlights when the note matches.
+
+**Changed**
+
+- Entries within each passive type group now sort by `level_interval[0]`
+  ascending (allocation order), with id alphabetical as the tiebreak.
+  Entries without a `level_interval` go to the bottom of their group.
+
 ## [0.9.1] — 2026-05-13
 
 Cut the scrolling impact of large passive lists.

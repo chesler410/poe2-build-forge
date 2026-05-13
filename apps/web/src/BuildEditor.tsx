@@ -9,7 +9,21 @@ import type {
 } from '@poe2-build-forge/core'
 import { renderMarkup } from './markup'
 import { parseItemAnnotation } from './itemAnnotation'
-import { passivePrefix, prefixLabel } from './passiveGroup'
+import {
+  passivePrefix,
+  prefixLabel,
+  isAttributeChoiceGroup
+} from './passiveGroup'
+
+const ATTRIBUTE_CHOICES: Array<{ full: string; short: string }> = [
+  { full: 'Strength', short: 'Str' },
+  { full: 'Intelligence', short: 'Int' },
+  { full: 'Dexterity', short: 'Dex' }
+]
+
+function attributeChoiceNote(full: string): string {
+  return `Pick ${full}`
+}
 
 export interface EditorLabels {
   /** Map from GGG passive id (e.g. "armour21_") to display name ("Strength"). */
@@ -173,8 +187,20 @@ function PassivesSection({
           </summary>
           <div className="passive-groups">
             {sortedPrefixes.map((prefix) => {
-              const indices = groups.get(prefix)!
-              const entries = indices.map((i) => passives[i])
+              const rawIndices = groups.get(prefix)!
+              // Sort by level_interval[0] ascending (allocation order in a
+              // leveling guide). Entries without level_interval go last;
+              // id alphabetical breaks ties for determinism.
+              const sortedIndices = [...rawIndices].sort((a, b) => {
+                const pa = normalizePassive(passives[a])
+                const pb = normalizePassive(passives[b])
+                const la = pa.level_interval?.[0] ?? Number.POSITIVE_INFINITY
+                const lb = pb.level_interval?.[0] ?? Number.POSITIVE_INFINITY
+                if (la !== lb) return la - lb
+                return pa.id.localeCompare(pb.id)
+              })
+              const entries = sortedIndices.map((i) => passives[i])
+              const isChoice = isAttributeChoiceGroup(prefix)
               return (
                 <details
                   key={prefix}
@@ -186,14 +212,24 @@ function PassivesSection({
                   </summary>
                   <ul className="entry-list">
                     {entries.map((entry, k) => (
-                      <li key={indices[k]} className="entry-row">
+                      <li key={sortedIndices[k]} className="entry-row">
                         {passiveHeader(entry, labels)}
+                        {isChoice && (
+                          <AttributeChipRow
+                            passive={normalizePassive(entry)}
+                            onChange={(next) => {
+                              const copy = entries.slice()
+                              copy[k] = collapseObj(next)
+                              applyGroup(sortedIndices, copy)
+                            }}
+                          />
+                        )}
                         <PassiveRowEditor
                           passive={normalizePassive(entry)}
                           onChange={(next) => {
                             const copy = entries.slice()
                             copy[k] = collapseObj(next)
-                            applyGroup(indices, copy)
+                            applyGroup(sortedIndices, copy)
                           }}
                         />
                       </li>
@@ -435,6 +471,46 @@ function SkillRow({
   onChange: (next: BuildSkillObject) => void
 }) {
   return <AnnotationRow obj={skill} onChange={(next) => onChange({ ...skill, ...next })} />
+}
+
+function AttributeChipRow({
+  passive,
+  onChange
+}: {
+  passive: BuildPassiveObject
+  onChange: (next: BuildPassiveObject) => void
+}) {
+  const current = passive.additional_text
+  return (
+    <div className="attribute-chips">
+      <span className="attribute-chips-label">Recommend</span>
+      {ATTRIBUTE_CHOICES.map(({ full, short }) => {
+        const isActive = current === attributeChoiceNote(full)
+        return (
+          <button
+            key={full}
+            type="button"
+            className={`chip${isActive ? ' chip-active' : ''}`}
+            onClick={() =>
+              onChange({ ...passive, additional_text: attributeChoiceNote(full) })
+            }
+            title={`Set note to "${attributeChoiceNote(full)}"`}
+          >
+            {short}
+          </button>
+        )
+      })}
+      <button
+        type="button"
+        className="chip chip-clear"
+        onClick={() => onChange({ ...passive, additional_text: undefined })}
+        title="Clear the note"
+        disabled={!current}
+      >
+        ×
+      </button>
+    </div>
+  )
 }
 
 function PassiveRowEditor({

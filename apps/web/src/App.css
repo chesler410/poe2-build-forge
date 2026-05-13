@@ -611,6 +611,61 @@ details.editor-section[open] {
   word-break: break-all;
 }
 
+.attribute-chips {
+  display: flex;
+  gap: 0.35rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 0.35rem;
+}
+
+.attribute-chips-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-right: 0.25rem;
+}
+
+.chip {
+  padding: 0.2rem 0.55rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  background: var(--surface-2);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.1s ease, color 0.1s ease, border-color 0.1s ease;
+}
+
+.chip:hover:not(:disabled) {
+  background: var(--surface);
+  border-color: var(--accent);
+}
+
+.chip:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.chip-active {
+  background: var(--accent);
+  color: #ffffff;
+  border-color: var(--accent);
+}
+
+.chip-active:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.chip-clear {
+  margin-left: auto;
+  font-weight: 700;
+  line-height: 1;
+}
+
 .extras-row {
   display: flex;
   gap: 0.5rem;
