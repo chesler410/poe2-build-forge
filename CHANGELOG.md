@@ -3,6 +3,27 @@
 All notable changes to poe2-build-forge. Versions track the web app at
 `apps/web`; the libraries follow alongside.
 
+## [0.9.1] — 2026-05-13
+
+Cut the scrolling impact of large passive lists.
+
+**Changed**
+
+- Regular passives now group by id-prefix (`intelligence`, `attributes`,
+  `two_handed`, `armour_and_evasion`, …). A 169-passive Witchhunter build
+  collapses to ~25 type sections — each independently collapsible.
+- The outer Passives disclosure auto-collapses when the build has more
+  than 12 regular passives. Inner type groups auto-expand only when they
+  have ≤3 entries.
+- Ascendancy passives stay in their own single block (small enough that
+  grouping is noise).
+
+**Added**
+
+- `apps/web/src/passiveGroup.ts` with `passivePrefix` (trailing
+  digits/underscores/dashes stripped) and `prefixLabel` (Title-Case with
+  spaces). 10 unit tests cover both.
+
 ## [0.9.0] — 2026-05-13
 
 Feedback milestone — converter is feature-complete for what can be built

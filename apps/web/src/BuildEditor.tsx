@@ -9,6 +9,7 @@ import type {
 } from '@poe2-build-forge/core'
 import { renderMarkup } from './markup'
 import { parseItemAnnotation } from './itemAnnotation'
+import { passivePrefix, prefixLabel } from './passiveGroup'
 
 export interface EditorLabels {
   /** Map from GGG passive id (e.g. "armour21_") to display name ("Strength"). */
@@ -132,13 +133,25 @@ function PassivesSection({
   const isAscendancy = (p: BuildPassive) =>
     normalizePassive(p).id.startsWith('Ascendancy')
 
-  const regularIdx: number[] = []
+  // Bucket regular passives by id-prefix so a 169-entry list collapses
+  // to ~20 type groups. Ascendancy entries stay in one block; they're
+  // small enough that grouping adds noise.
   const ascendancyIdx: number[] = []
+  const groups = new Map<string, number[]>()
   passives.forEach((p, i) => {
-    ;(isAscendancy(p) ? ascendancyIdx : regularIdx).push(i)
+    if (isAscendancy(p)) {
+      ascendancyIdx.push(i)
+      return
+    }
+    const prefix = passivePrefix(normalizePassive(p).id)
+    if (!groups.has(prefix)) groups.set(prefix, [])
+    groups.get(prefix)!.push(i)
   })
-  const regular = regularIdx.map((i) => passives[i])
-  const ascendancy = ascendancyIdx.map((i) => passives[i])
+  const sortedPrefixes = [...groups.keys()].sort()
+  const regularCount = sortedPrefixes.reduce(
+    (s, k) => s + groups.get(k)!.length,
+    0
+  )
 
   function applyGroup(originalIndices: number[], nextSubset: BuildPassive[]) {
     const copy = passives.slice()
@@ -150,28 +163,52 @@ function PassivesSection({
 
   return (
     <>
-      {regular.length > 0 && (
-        <EntryListEditor
-          title={`Passives (${regular.length})`}
-          entries={regular}
-          renderHeader={(p) => passiveHeader(p, labels)}
-          renderRow={(p, onEntryChange) => (
-            <PassiveRowEditor
-              passive={normalizePassive(p)}
-              onChange={(next) => onEntryChange(collapseObj(next))}
-            />
-          )}
-          searchableText={(p) => {
-            const obj = normalizePassive(p)
-            return `${obj.id} ${labels?.passiveNameById[obj.id] ?? ''}`
-          }}
-          onChange={(next) => applyGroup(regularIdx, next)}
-        />
+      {regularCount > 0 && (
+        <details
+          className="editor-section"
+          open={regularCount <= 12}
+        >
+          <summary className="editor-section-title">
+            Passives ({regularCount}, {sortedPrefixes.length} types)
+          </summary>
+          <div className="passive-groups">
+            {sortedPrefixes.map((prefix) => {
+              const indices = groups.get(prefix)!
+              const entries = indices.map((i) => passives[i])
+              return (
+                <details
+                  key={prefix}
+                  className="editor-subsection"
+                  open={entries.length <= 3}
+                >
+                  <summary className="editor-subsection-title">
+                    {prefixLabel(prefix)} ({entries.length})
+                  </summary>
+                  <ul className="entry-list">
+                    {entries.map((entry, k) => (
+                      <li key={indices[k]} className="entry-row">
+                        {passiveHeader(entry, labels)}
+                        <PassiveRowEditor
+                          passive={normalizePassive(entry)}
+                          onChange={(next) => {
+                            const copy = entries.slice()
+                            copy[k] = collapseObj(next)
+                            applyGroup(indices, copy)
+                          }}
+                        />
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              )
+            })}
+          </div>
+        </details>
       )}
-      {ascendancy.length > 0 && (
+      {ascendancyIdx.length > 0 && (
         <EntryListEditor
-          title={`Ascendancy passives (${ascendancy.length})`}
-          entries={ascendancy}
+          title={`Ascendancy passives (${ascendancyIdx.length})`}
+          entries={ascendancyIdx.map((i) => passives[i])}
           renderHeader={(p) => passiveHeader(p, labels)}
           renderRow={(p, onEntryChange) => (
             <PassiveRowEditor

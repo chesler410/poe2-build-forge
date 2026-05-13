@@ -548,6 +548,31 @@ details.editor-section[open] {
   font-size: 0.85em;
 }
 
+.passive-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.editor-subsection {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 0.4rem 0.6rem;
+}
+
+.editor-subsection[open] {
+  padding-bottom: 0.6rem;
+}
+
+.editor-subsection-title {
+  cursor: pointer;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
 .entry-list {
   list-style: none;
   margin: 0.75rem 0 0;
