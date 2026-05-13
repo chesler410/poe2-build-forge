@@ -11,6 +11,7 @@ import {
 import { BuildEditor, type EditorLabels } from './BuildEditor'
 import { useEmittedContent } from './useEmittedContent'
 import { buildShareUrl, decodeHashToBuild } from './shareLink'
+import { ToastStack, type Toast } from './Toast'
 import { EXAMPLE_BUILD_CODE } from './exampleBuild'
 import './App.css'
 
@@ -116,6 +117,17 @@ export function App() {
   const [error, setError] = useState<AppError | null>(null)
   const [dragging, setDragging] = useState(false)
   const dragDepthRef = useRef(0)
+  const [toasts, setToasts] = useState<Toast[]>([])
+  const nextToastIdRef = useRef(0)
+
+  function pushToast(message: React.ReactNode, kind: Toast['kind'] = 'info') {
+    const id = ++nextToastIdRef.current
+    setToasts((current) => [...current, { id, message, kind }])
+  }
+
+  function dismissToast(id: number) {
+    setToasts((current) => current.filter((t) => t.id !== id))
+  }
 
   useEffect(() => {
     try {
@@ -150,19 +162,20 @@ export function App() {
           '',
           window.location.pathname + window.location.search
         )
+        pushToast('Loaded shared build from URL.', 'success')
       } catch (err) {
-        setError({
-          kind: 'plain',
-          message: `Shared link decoded but failed validation: ${
+        pushToast(
+          `Shared link decoded but failed validation: ${
             err instanceof Error ? err.message : String(err)
-          }`
-        })
+          }`,
+          'error'
+        )
       }
     } else {
-      setError({
-        kind: 'plain',
-        message: 'Shared link is malformed; nothing to load from the URL.'
-      })
+      pushToast(
+        'Shared link is malformed; nothing to load from the URL.',
+        'error'
+      )
     }
     // Intentionally empty deps — runs once on mount only.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -287,18 +300,23 @@ export function App() {
         emitBuildFile(parsed)
         setResult({ build: parsed })
         setInput('')
+        pushToast(`Loaded ${file.name} into the editor.`, 'success')
       } catch (err) {
-        setError({
-          kind: 'plain',
-          message: `Couldn't load .build file: ${
+        pushToast(
+          `Couldn't load ${file.name}: ${
             err instanceof Error ? err.message : String(err)
-          }`
-        })
+          }`,
+          'error'
+        )
       }
     } else {
       // Treat as a raw PoB code (.pob, .txt, anything else).
       setInput(text.trim())
       setResult(null)
+      pushToast(
+        `Loaded ${file.name} into the input — click Convert.`,
+        'info'
+      )
     }
   }
 
@@ -537,8 +555,11 @@ export function App() {
           labels={labels}
           onBuildChange={(b) => setResult({ build: b })}
           onDownload={downloadEdited}
+          onToast={pushToast}
         />
       )}
+
+      <ToastStack toasts={toasts} onDismiss={dismissToast} />
 
       <footer>
         <a href="https://github.com/chesler410/poe2-build-forge">GitHub</a>
@@ -566,13 +587,15 @@ interface ResultPanelProps {
   labels: EditorLabels | null
   onBuildChange: (next: BuildFile) => void
   onDownload: (filename: string, content: string) => void
+  onToast: (message: React.ReactNode, kind?: Toast['kind']) => void
 }
 
 function ResultPanel({
   build,
   labels,
   onBuildChange,
-  onDownload
+  onDownload,
+  onToast
 }: ResultPanelProps) {
   const { content, filename, error } = useEmittedContent(build)
   const [copied, setCopied] = useState(false)
@@ -603,6 +626,8 @@ function ResultPanel({
     if (await writeToClipboard(url)) {
       setShared(true)
       window.setTimeout(() => setShared(false), 1500)
+    } else {
+      onToast('Could not copy to clipboard. The URL is in your address bar.', 'info')
     }
   }
 
