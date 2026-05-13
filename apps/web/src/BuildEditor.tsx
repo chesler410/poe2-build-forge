@@ -7,6 +7,7 @@ import type {
   BuildSkillObject,
   BuildItem
 } from '@poe2-build-forge/core'
+import { renderMarkup } from './markup'
 
 export interface EditorLabels {
   /** Map from GGG passive id (e.g. "armour21_") to display name ("Strength"). */
@@ -48,6 +49,9 @@ export function BuildEditor({ build, onChange, labels }: Props) {
               })
             }
           />
+          {build.description && (
+            <MarkupPreview value={build.description} />
+          )}
         </label>
         <p className="editor-markup-hint">
           Markup tags can nest, e.g. <code>{'<underline>{<red>{Warning}}'}</code>.
@@ -334,6 +338,16 @@ function AnnotationRow<T extends Annotatable>({
           })
         }
       />
+      {obj.additional_text && <MarkupPreview value={obj.additional_text} />}
+    </div>
+  )
+}
+
+function MarkupPreview({ value }: { value: string }) {
+  return (
+    <div className="markup-preview">
+      <span className="markup-preview-label">Preview</span>
+      <div className="markup-preview-body">{renderMarkup(value)}</div>
     </div>
   )
 }

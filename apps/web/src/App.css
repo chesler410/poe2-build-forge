@@ -614,6 +614,28 @@ details.editor-section[open] {
   border-color: transparent;
 }
 
+.markup-preview {
+  margin-top: 0.35rem;
+  padding: 0.4rem 0.6rem;
+  background: var(--surface-2);
+  border-radius: 4px;
+}
+
+.markup-preview-label {
+  display: block;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.15rem;
+}
+
+.markup-preview-body {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
 @media (max-width: 640px) {
   main {
     padding: 1rem 0.75rem 3rem;
