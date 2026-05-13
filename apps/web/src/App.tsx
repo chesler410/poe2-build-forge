@@ -52,10 +52,6 @@ async function loadLookups(): Promise<Lookups> {
   }
 }
 
-interface ConvertResult {
-  build: BuildFile
-}
-
 type KnownHost = 'maxroll' | 'poeninja' | 'generic'
 
 type AppError =
@@ -109,10 +105,43 @@ function classifyHost(input: string): KnownHost {
 export function App() {
   const [input, setInput] = useState<string>(loadStoredInput)
   const [busy, setBusy] = useState(false)
-  const [result, setResult] = useState<ConvertResult | null>(() => {
-    const stored = loadStoredBuild()
-    return stored ? { build: stored } : null
-  })
+  // The current build lives at history.stack[history.index]. Treating it as
+  // a stack lets us do Ctrl+Z / Ctrl+Y for free; treating it as the source
+  // of truth (rather than a separate `result` state) keeps things consistent.
+  const [history, setHistory] = useState<{ stack: BuildFile[]; index: number }>(
+    () => {
+      const stored = loadStoredBuild()
+      return stored ? { stack: [stored], index: 0 } : { stack: [], index: -1 }
+    }
+  )
+  const currentBuild: BuildFile | null =
+    history.index >= 0 ? history.stack[history.index] : null
+  const canUndo = history.index > 0
+  const canRedo = history.index < history.stack.length - 1
+
+  function resetHistory(build: BuildFile) {
+    setHistory({ stack: [build], index: 0 })
+  }
+  function pushEdit(build: BuildFile) {
+    setHistory((h) => {
+      const truncated = h.stack.slice(0, h.index + 1)
+      const last = truncated[truncated.length - 1]
+      if (last && JSON.stringify(last) === JSON.stringify(build)) return h
+      return { stack: [...truncated, build], index: h.index + 1 }
+    })
+  }
+  function clearHistory() {
+    setHistory({ stack: [], index: -1 })
+  }
+  function undo() {
+    setHistory((h) => (h.index > 0 ? { ...h, index: h.index - 1 } : h))
+  }
+  function redo() {
+    setHistory((h) =>
+      h.index < h.stack.length - 1 ? { ...h, index: h.index + 1 } : h
+    )
+  }
+
   const [labels, setLabels] = useState<EditorLabels | null>(null)
   const [error, setError] = useState<AppError | null>(null)
   const [dragging, setDragging] = useState(false)
@@ -138,10 +167,10 @@ export function App() {
 
   useEffect(() => {
     try {
-      if (result) localStorage.setItem(STORAGE_BUILD, JSON.stringify(result.build))
+      if (currentBuild) localStorage.setItem(STORAGE_BUILD, JSON.stringify(currentBuild))
       else localStorage.removeItem(STORAGE_BUILD)
     } catch { /* quota or denied — ignore */ }
-  }, [result])
+  }, [currentBuild])
 
   // On first mount, if the URL has a #b=... hash, decode it into the
   // result and consume the hash so subsequent reloads use LocalStorage
@@ -155,7 +184,7 @@ export function App() {
     if (fromHash) {
       try {
         emitBuildFile(fromHash)
-        setResult({ build: fromHash })
+        resetHistory(fromHash)
         setInput('')
         window.history.replaceState(
           null,
@@ -186,7 +215,7 @@ export function App() {
   // without going through Convert — fetch the lookup tables and derive
   // labels so the editor can render readable names.
   useEffect(() => {
-    if (!result || labels) return
+    if (!currentBuild || labels) return
     let cancelled = false
     void (async () => {
       const lookups = await loadLookups()
@@ -200,7 +229,7 @@ export function App() {
     return () => {
       cancelled = true
     }
-  }, [result, labels])
+  }, [currentBuild, labels])
 
   function decodeAndShow(code: string, lookups: Lookups) {
     try {
@@ -211,7 +240,7 @@ export function App() {
       // editor opens. The editor re-emits on every change with its own
       // graceful handling of mid-edit validation errors.
       emitBuildFile(build)
-      setResult({ build })
+      resetHistory(build)
     } catch (err) {
       setError({
         kind: 'plain',
@@ -233,7 +262,7 @@ export function App() {
 
   async function handleConvert() {
     setError(null)
-    setResult(null)
+    clearHistory()
     const raw = input.trim()
     if (!raw) return
 
@@ -279,13 +308,13 @@ export function App() {
 
   function handleLoadExample() {
     setError(null)
-    setResult(null)
+    clearHistory()
     setInput(EXAMPLE_BUILD_CODE)
   }
 
   function handleStartOver() {
     setInput('')
-    setResult(null)
+    clearHistory()
     setError(null)
   }
 
@@ -298,7 +327,7 @@ export function App() {
       try {
         const parsed = JSON.parse(text) as BuildFile
         emitBuildFile(parsed)
-        setResult({ build: parsed })
+        resetHistory(parsed)
         setInput('')
         pushToast(`Loaded ${file.name} into the editor.`, 'success')
       } catch (err) {
@@ -312,7 +341,7 @@ export function App() {
     } else {
       // Treat as a raw PoB code (.pob, .txt, anything else).
       setInput(text.trim())
-      setResult(null)
+      clearHistory()
       pushToast(
         `Loaded ${file.name} into the input — click Convert.`,
         'info'
@@ -348,23 +377,43 @@ export function App() {
     if (file) void loadDroppedFile(file)
   }
 
-  // Global Ctrl/Cmd+S → download the current build (preventing the browser's
-  // "save page" dialog). No-op when there's no result yet.
+  // Global keyboard shortcuts:
+  //   Ctrl/Cmd+S        → download (anywhere, including form fields)
+  //   Ctrl/Cmd+Z        → undo (only outside editable elements so the
+  //                       browser's native textarea undo still works
+  //                       while you're typing)
+  //   Ctrl/Cmd+Y or
+  //   Ctrl/Cmd+Shift+Z  → redo (same focus rule)
   useEffect(() => {
     function onKey(e: KeyboardEvent) {
-      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's' && result) {
+      if (!(e.ctrlKey || e.metaKey)) return
+      const key = e.key.toLowerCase()
+      if (key === 's' && currentBuild) {
         e.preventDefault()
         try {
-          const { filename, content } = emitBuildFile(result.build)
+          const { filename, content } = emitBuildFile(currentBuild)
           downloadEdited(filename, content)
-        } catch {
-          // Validation error; let the user see it in the UI instead of stealing focus.
-        }
+        } catch { /* validation error surfaces in the UI */ }
+        return
+      }
+      const target = e.target as HTMLElement | null
+      const inEditable =
+        !!target &&
+        (target.tagName === 'INPUT' ||
+          target.tagName === 'TEXTAREA' ||
+          target.isContentEditable)
+      if (inEditable) return
+      if (key === 'z' && !e.shiftKey && canUndo) {
+        e.preventDefault()
+        undo()
+      } else if ((key === 'y' || (key === 'z' && e.shiftKey)) && canRedo) {
+        e.preventDefault()
+        redo()
       }
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [result])
+  }, [currentBuild, canUndo, canRedo])
 
   function downloadEdited(filename: string, content: string) {
     const blob = new Blob([content], { type: 'application/json' })
@@ -378,7 +427,7 @@ export function App() {
     URL.revokeObjectURL(url)
   }
 
-  const hasState = input.length > 0 || result !== null
+  const hasState = input.length > 0 || currentBuild !== null
 
   return (
     <main
@@ -476,9 +525,11 @@ export function App() {
           )}
         </div>
         <p className="hint shortcuts-hint">
-          Shortcuts: <kbd>Ctrl</kbd>+<kbd>Enter</kbd> to convert,{' '}
-          <kbd>Ctrl</kbd>+<kbd>S</kbd> to download. You can also drag a{' '}
-          <code>.pob</code> or <code>.build</code> file onto the page.
+          Shortcuts: <kbd>Ctrl</kbd>+<kbd>Enter</kbd> convert,{' '}
+          <kbd>Ctrl</kbd>+<kbd>S</kbd> download,{' '}
+          <kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd> undo / redo
+          (outside text fields). Drag a <code>.pob</code> or{' '}
+          <code>.build</code> file onto the page to load it.
         </p>
       </section>
 
@@ -549,11 +600,15 @@ export function App() {
         </section>
       )}
 
-      {result && (
+      {currentBuild && (
         <ResultPanel
-          build={result.build}
+          build={currentBuild}
           labels={labels}
-          onBuildChange={(b) => setResult({ build: b })}
+          canUndo={canUndo}
+          canRedo={canRedo}
+          onBuildChange={pushEdit}
+          onUndo={undo}
+          onRedo={redo}
           onDownload={downloadEdited}
           onToast={pushToast}
         />
@@ -585,7 +640,11 @@ export function App() {
 interface ResultPanelProps {
   build: BuildFile
   labels: EditorLabels | null
+  canUndo: boolean
+  canRedo: boolean
   onBuildChange: (next: BuildFile) => void
+  onUndo: () => void
+  onRedo: () => void
   onDownload: (filename: string, content: string) => void
   onToast: (message: React.ReactNode, kind?: Toast['kind']) => void
 }
@@ -593,7 +652,11 @@ interface ResultPanelProps {
 function ResultPanel({
   build,
   labels,
+  canUndo,
+  canRedo,
   onBuildChange,
+  onUndo,
+  onRedo,
   onDownload,
   onToast
 }: ResultPanelProps) {
@@ -693,6 +756,27 @@ function ResultPanel({
           <code>Documents\My Games\Path of Exile 2\BuildPlanner\</code>
           {' '}and select the build in-game.
         </p>
+      </div>
+
+      <div className="editor-toolbar">
+        <button
+          type="button"
+          className="secondary-button"
+          onClick={onUndo}
+          disabled={!canUndo}
+          title="Undo last edit (Ctrl+Z)"
+        >
+          ↶ Undo
+        </button>
+        <button
+          type="button"
+          className="secondary-button"
+          onClick={onRedo}
+          disabled={!canRedo}
+          title="Redo (Ctrl+Y or Ctrl+Shift+Z)"
+        >
+          ↷ Redo
+        </button>
       </div>
 
       <BuildEditor

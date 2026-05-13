@@ -64,7 +64,9 @@ verbatim.
   file (loaded directly into the editor, bypassing conversion) onto the
   page.
 - **Keyboard shortcuts**: <kbd>Ctrl</kbd>+<kbd>Enter</kbd> to convert,
-  <kbd>Ctrl</kbd>+<kbd>S</kbd> to download.
+  <kbd>Ctrl</kbd>+<kbd>S</kbd> to download, <kbd>Ctrl</kbd>+<kbd>Z</kbd>
+  / <kbd>Ctrl</kbd>+<kbd>Y</kbd> to undo/redo edits (outside text fields,
+  so native textarea undo still works while typing).
 - **Search/filter** inside long passive, skill, and item lists by name
   or id.
 - **Auto-resume**: paste and edits persist in LocalStorage so a refresh
