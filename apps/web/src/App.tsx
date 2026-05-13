@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import {
   decodePobCode,
   parsePobXml,
@@ -62,6 +62,26 @@ type AppError =
   | { kind: 'unsupported-url'; attemptedUrl: string; host: KnownHost }
 
 const POBB_URL_RE = /^https?:\/\/(?:www\.)?pobb\.in\/([\w-]+)(?:\/raw)?\/?$/i
+const STORAGE_INPUT = 'poe2bf.input'
+const STORAGE_BUILD = 'poe2bf.build'
+
+function loadStoredInput(): string {
+  try {
+    return localStorage.getItem(STORAGE_INPUT) ?? ''
+  } catch {
+    return ''
+  }
+}
+
+function loadStoredBuild(): BuildFile | null {
+  try {
+    const raw = localStorage.getItem(STORAGE_BUILD)
+    if (!raw) return null
+    return JSON.parse(raw) as BuildFile
+  } catch {
+    return null
+  }
+}
 
 function looksLikeUrl(input: string): boolean {
   return /^https?:\/\//i.test(input)
@@ -85,11 +105,30 @@ function classifyHost(input: string): KnownHost {
 }
 
 export function App() {
-  const [input, setInput] = useState('')
+  const [input, setInput] = useState<string>(loadStoredInput)
   const [busy, setBusy] = useState(false)
-  const [result, setResult] = useState<ConvertResult | null>(null)
+  const [result, setResult] = useState<ConvertResult | null>(() => {
+    const stored = loadStoredBuild()
+    return stored ? { build: stored } : null
+  })
   const [labels, setLabels] = useState<EditorLabels | null>(null)
   const [error, setError] = useState<AppError | null>(null)
+  const [dragging, setDragging] = useState(false)
+  const dragDepthRef = useRef(0)
+
+  useEffect(() => {
+    try {
+      if (input) localStorage.setItem(STORAGE_INPUT, input)
+      else localStorage.removeItem(STORAGE_INPUT)
+    } catch { /* quota or denied — ignore */ }
+  }, [input])
+
+  useEffect(() => {
+    try {
+      if (result) localStorage.setItem(STORAGE_BUILD, JSON.stringify(result.build))
+      else localStorage.removeItem(STORAGE_BUILD)
+    } catch { /* quota or denied — ignore */ }
+  }, [result])
 
   function decodeAndShow(code: string, lookups: Lookups) {
     try {
@@ -172,6 +211,84 @@ export function App() {
     setInput(EXAMPLE_BUILD_CODE)
   }
 
+  function handleStartOver() {
+    setInput('')
+    setResult(null)
+    setError(null)
+  }
+
+  async function loadDroppedFile(file: File) {
+    setError(null)
+    const name = file.name.toLowerCase()
+    const text = await file.text()
+    if (name.endsWith('.build')) {
+      // Skip PoB conversion entirely; treat as an existing build to edit.
+      try {
+        const parsed = JSON.parse(text) as BuildFile
+        emitBuildFile(parsed)
+        setResult({ build: parsed })
+        setInput('')
+      } catch (err) {
+        setError({
+          kind: 'plain',
+          message: `Couldn't load .build file: ${
+            err instanceof Error ? err.message : String(err)
+          }`
+        })
+      }
+    } else {
+      // Treat as a raw PoB code (.pob, .txt, anything else).
+      setInput(text.trim())
+      setResult(null)
+    }
+  }
+
+  function handleDragEnter(e: React.DragEvent) {
+    if (!e.dataTransfer.types.includes('Files')) return
+    e.preventDefault()
+    dragDepthRef.current += 1
+    if (dragDepthRef.current === 1) setDragging(true)
+  }
+
+  function handleDragLeave(e: React.DragEvent) {
+    if (!e.dataTransfer.types.includes('Files')) return
+    e.preventDefault()
+    dragDepthRef.current = Math.max(0, dragDepthRef.current - 1)
+    if (dragDepthRef.current === 0) setDragging(false)
+  }
+
+  function handleDragOver(e: React.DragEvent) {
+    if (!e.dataTransfer.types.includes('Files')) return
+    e.preventDefault()
+    e.dataTransfer.dropEffect = 'copy'
+  }
+
+  function handleDrop(e: React.DragEvent) {
+    e.preventDefault()
+    dragDepthRef.current = 0
+    setDragging(false)
+    const file = e.dataTransfer.files[0]
+    if (file) void loadDroppedFile(file)
+  }
+
+  // Global Ctrl/Cmd+S → download the current build (preventing the browser's
+  // "save page" dialog). No-op when there's no result yet.
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 's' && result) {
+        e.preventDefault()
+        try {
+          const { filename, content } = emitBuildFile(result.build)
+          downloadEdited(filename, content)
+        } catch {
+          // Validation error; let the user see it in the UI instead of stealing focus.
+        }
+      }
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [result])
+
   function downloadEdited(filename: string, content: string) {
     const blob = new Blob([content], { type: 'application/json' })
     const url = URL.createObjectURL(blob)
@@ -184,8 +301,23 @@ export function App() {
     URL.revokeObjectURL(url)
   }
 
+  const hasState = input.length > 0 || result !== null
+
   return (
-    <main>
+    <main
+      onDragEnter={handleDragEnter}
+      onDragLeave={handleDragLeave}
+      onDragOver={handleDragOver}
+      onDrop={handleDrop}
+    >
+      {dragging && (
+        <div className="drop-overlay" aria-hidden="true">
+          <div className="drop-overlay-message">
+            Drop a <code>.pob</code> or <code>.build</code> file
+          </div>
+        </div>
+      )}
+
       <header>
         <h1>poe2-build-forge</h1>
         <p className="tagline">
@@ -237,17 +369,40 @@ export function App() {
           id="pob-code"
           value={input}
           onChange={(e) => setInput(e.target.value)}
+          onKeyDown={(e) => {
+            if ((e.ctrlKey || e.metaKey) && e.key === 'Enter' && !busy) {
+              e.preventDefault()
+              handleConvert()
+            }
+          }}
           placeholder="https://pobb.in/90pcuxN4XtJG  —or—  eNrtXVtX4krTvt7vr2B5rdscIXmX..."
           rows={6}
           spellCheck={false}
         />
-        <button
-          type="button"
-          onClick={handleConvert}
-          disabled={busy || input.trim().length === 0}
-        >
-          {busy ? 'Converting…' : 'Convert'}
-        </button>
+        <div className="input-actions">
+          <button
+            type="button"
+            onClick={handleConvert}
+            disabled={busy || input.trim().length === 0}
+          >
+            {busy ? 'Converting…' : 'Convert'}
+          </button>
+          {hasState && (
+            <button
+              type="button"
+              className="secondary-button"
+              onClick={handleStartOver}
+              title="Clear the input and any in-progress edits."
+            >
+              Start over
+            </button>
+          )}
+        </div>
+        <p className="hint shortcuts-hint">
+          Shortcuts: <kbd>Ctrl</kbd>+<kbd>Enter</kbd> to convert,{' '}
+          <kbd>Ctrl</kbd>+<kbd>S</kbd> to download. You can also drag a{' '}
+          <code>.pob</code> or <code>.build</code> file onto the page.
+        </p>
       </section>
 
       {error?.kind === 'plain' && (

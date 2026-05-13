@@ -57,6 +57,15 @@ verbatim.
   `Metadata/Items/Gem/SkillGemSigilOfPower`).
 - **Copy JSON** alongside Download for pasting into chat, gists, or
   hand-merging into an existing `.build`.
+- **Drag-and-drop** a `.pob` file (treated as a PoB code) or a `.build`
+  file (loaded directly into the editor, bypassing conversion) onto the
+  page.
+- **Keyboard shortcuts**: <kbd>Ctrl</kbd>+<kbd>Enter</kbd> to convert,
+  <kbd>Ctrl</kbd>+<kbd>S</kbd> to download.
+- **Search/filter** inside long passive, skill, and item lists by name
+  or id.
+- **Auto-resume**: paste and edits persist in LocalStorage so a refresh
+  doesn't lose work. Use the **Start over** button to clear.
 - Validates final output against the JSON Schema before download
 - Runs entirely client-side: no signup, no backend, no data leaves
   your browser

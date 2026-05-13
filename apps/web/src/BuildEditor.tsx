@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import type {
   BuildFile,
   BuildPassive,
@@ -72,6 +73,10 @@ export function BuildEditor({ build, onChange, labels }: Props) {
               onChange={(next) => onEntryChange(collapseSkill(next))}
             />
           )}
+          searchableText={(s) => {
+            const obj = normalizeSkill(s)
+            return `${obj.id} ${formatGemId(obj.id)}`
+          }}
           onChange={(next) => onChange({ ...build, skills: next })}
         />
       )}
@@ -87,6 +92,9 @@ export function BuildEditor({ build, onChange, labels }: Props) {
               onChange={(next) => onEntryChange(next as BuildItem)}
             />
           )}
+          searchableText={(it) =>
+            `${it.inventory_id} ${it.unique_name ?? ''} ${it.additional_text ?? ''}`
+          }
           onChange={(next) => onChange({ ...build, items: next })}
         />
       )}
@@ -135,6 +143,10 @@ function PassivesSection({
               onChange={(next) => onEntryChange(collapseObj(next))}
             />
           )}
+          searchableText={(p) => {
+            const obj = normalizePassive(p)
+            return `${obj.id} ${labels?.passiveNameById[obj.id] ?? ''}`
+          }}
           onChange={(next) => applyGroup(regularIdx, next)}
         />
       )}
@@ -149,6 +161,10 @@ function PassivesSection({
               onChange={(next) => onEntryChange(collapseObj(next))}
             />
           )}
+          searchableText={(p) => {
+            const obj = normalizePassive(p)
+            return `${obj.id} ${labels?.passiveNameById[obj.id] ?? ''}`
+          }}
           onChange={(next) => applyGroup(ascendancyIdx, next)}
         />
       )}
@@ -204,6 +220,7 @@ interface EntryListProps<T> {
   entries: T[]
   renderHeader: (entry: T) => React.ReactNode
   renderRow: (entry: T, onEntryChange: (next: T) => void) => React.ReactNode
+  searchableText?: (entry: T) => string
   onChange: (next: T[]) => void
 }
 
@@ -212,23 +229,48 @@ function EntryListEditor<T>({
   entries,
   renderHeader,
   renderRow,
+  searchableText,
   onChange
 }: EntryListProps<T>) {
+  const [query, setQuery] = useState('')
+  const showSearch = !!searchableText && entries.length > 6
+  const q = query.trim().toLowerCase()
+  const visible = entries
+    .map((entry, idx) => ({ entry, idx }))
+    .filter(({ entry }) =>
+      q === '' || !searchableText
+        ? true
+        : searchableText(entry).toLowerCase().includes(q)
+    )
+
   return (
     <details className="editor-section" open={entries.length <= 8}>
       <summary className="editor-section-title">{title}</summary>
-      <ul className="entry-list">
-        {entries.map((entry, idx) => (
-          <li key={idx} className="entry-row">
-            {renderHeader(entry)}
-            {renderRow(entry, (next) => {
-              const copy = entries.slice()
-              copy[idx] = next
-              onChange(copy)
-            })}
-          </li>
-        ))}
-      </ul>
+      {showSearch && (
+        <input
+          type="search"
+          className="entry-search"
+          value={query}
+          placeholder="Filter by name or id…"
+          onChange={(e) => setQuery(e.target.value)}
+        />
+      )}
+      {visible.length === 0 ? (
+        <p className="entry-no-match">No entries match "{query}".</p>
+      ) : (
+        <ul className="entry-list">
+          {visible.map(({ entry, idx }) => (
+            <li key={idx} className="entry-row">
+              {renderHeader(entry)}
+              {renderRow(entry, (next) => {
+                const copy = entries.slice()
+                copy[idx] = next
+                onChange(copy)
+              })}
+            </li>
+          ))}
+        </ul>
+      )}
     </details>
   )
 }
