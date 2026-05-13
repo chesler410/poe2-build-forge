@@ -676,7 +676,9 @@ export function App() {
             {__APP_SHA__}
           </a>
           {' · '}
-          {__APP_BUILD_DATE__}
+          built {__APP_BUILD_DATE__}
+          {' · '}
+          data {__APP_DATA_DATE__}
         </span>
       </footer>
     </main>

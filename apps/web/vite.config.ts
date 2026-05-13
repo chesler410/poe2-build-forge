@@ -27,6 +27,26 @@ function todayUtcDate(): string {
   return new Date().toISOString().slice(0, 10)
 }
 
+// Read the most recent fetched_at from the bundled raw data manifest so
+// the footer can show users how fresh their lookup tables are. Returns
+// 'unknown' if the manifest is missing or malformed.
+function latestDataRefresh(): string {
+  try {
+    const raw = readFileSync(
+      '../../packages/core/data/raw/_manifest.json',
+      'utf8'
+    )
+    const entries: Array<{ fetched_at?: string }> = JSON.parse(raw)
+    const max = entries.reduce(
+      (m, e) => (e.fetched_at && e.fetched_at > m ? e.fetched_at : m),
+      ''
+    )
+    return max ? max.slice(0, 10) : 'unknown'
+  } catch {
+    return 'unknown'
+  }
+}
+
 // Vite config for the static web app. `base: './'` makes the built
 // site work when served from a sub-path like
 // https://chesler410.github.io/poe2-build-forge/.
@@ -68,6 +88,7 @@ export default defineConfig({
   define: {
     __APP_VERSION__: JSON.stringify(pkg.version),
     __APP_SHA__: JSON.stringify(gitShortSha()),
-    __APP_BUILD_DATE__: JSON.stringify(todayUtcDate())
+    __APP_BUILD_DATE__: JSON.stringify(todayUtcDate()),
+    __APP_DATA_DATE__: JSON.stringify(latestDataRefresh())
   }
 })

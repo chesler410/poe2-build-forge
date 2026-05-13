@@ -1,0 +1,76 @@
+name: Refresh game data
+
+# Re-pulls bundled lookup tables from upstream (repoe-fork/poe2 and
+# PathOfBuilding-PoE2) and opens a PR when anything changed. Runs every
+# Monday at 06:00 UTC and on demand via the Actions tab. PR-based so a
+# human eyeballs the diff before it ships.
+
+on:
+  schedule:
+    - cron: '0 6 * * 1'
+  workflow_dispatch:
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.0.8
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+
+      - run: pnpm install --frozen-lockfile
+
+      - name: Fetch raw data
+        run: pnpm fetch-data
+
+      - name: Prune to bundled shape
+        run: pnpm prune-data
+
+      - name: Open PR if data changed
+        uses: peter-evans/create-pull-request@v6
+        with:
+          title: 'chore(data): refresh from upstream'
+          branch: data-refresh
+          base: main
+          delete-branch: true
+          commit-message: 'chore(data): refresh from upstream'
+          labels: data, automated
+          body: |
+            Automated refresh of bundled game data, triggered by the
+            **Refresh game data** workflow.
+
+            ## What changed
+
+            The diff shows which raw/ and pruned/ files moved since the
+            last refresh. Most refreshes only touch `_manifest.json` if
+            upstream data is byte-for-byte stable; meaningful diffs in
+            the JSON payloads indicate a real upstream patch.
+
+            ## Sources pulled
+
+            - `repoe-fork/poe2` (master) — auto-tracking dumps of PoE2
+              game tables.
+            - `PathOfBuilding-PoE2` (dev) — versioned passive tree data
+              (currently `0_4`) and the canonical gem-name lookup from
+              `src/Data/Gems.lua`.
+
+            ## Reviewer checklist
+
+            - [ ] `_manifest.json` `fetched_at` advances.
+            - [ ] Workspace tests still pass (CI will run on this PR).
+            - [ ] If a passive-id format changed (rare), the converter
+              may need a mapper tweak — check `packages/core/src/map.ts`.

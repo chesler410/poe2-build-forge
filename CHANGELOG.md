@@ -3,6 +3,20 @@
 All notable changes to poe2-build-forge. Versions track the web app at
 `apps/web`; the libraries follow alongside.
 
+## [0.9.4] — 2026-05-13
+
+**Added**
+
+- `.github/workflows/data-refresh.yml` — runs every Monday 06:00 UTC (and
+  on demand). Re-fetches raw/ from `repoe-fork/poe2` and
+  `PathOfBuilding-PoE2`, re-prunes, and opens a PR when anything moved.
+  PR-based so a human reviews the diff before it ships. Keeps bundled
+  lookups within ~1 week of upstream patches without manual cadence.
+- **Data freshness in the footer** — alongside the version, SHA, and
+  build date the footer now shows `data <YYYY-MM-DD>` sourced from the
+  most recent `fetched_at` in `raw/_manifest.json`. Visible signal for
+  users (and for spotting stale-data bug reports).
+
 ## [0.9.3] — 2026-05-13
 
 **Changed**
