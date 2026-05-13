@@ -3,6 +3,20 @@
 All notable changes to poe2-build-forge. Versions track the web app at
 `apps/web`; the libraries follow alongside.
 
+## [0.9.5] — 2026-05-13
+
+**Added**
+
+- Build-summary's Ascendancy line now reads
+  `Witchhunter (Mercenary)` instead of just `Mercenary2`. The parent
+  class is derived from the ascendancy key (e.g. `Mercenary2` →
+  `Mercenary`) so we get a free join via key-prefix without bundling
+  the characters table for this purpose. Works whether the build's
+  `ascendancy` field is a GGG key (`Mercenary2`) or PoB's display
+  passthrough (`Witchhunter`).
+- New `apps/web/src/ascendancyLabel.ts` with `formatAscendancy()` and
+  6 unit tests. Web suite now at 47 tests.
+
 ## [0.9.4] — 2026-05-13
 
 **Added**

@@ -36,6 +36,12 @@ export interface EditorLabels {
    * correct lowercase "of", which CamelCase splitting can't produce).
    */
   gemNameById: Record<string, string>
+  /**
+   * GGG ascendancy table — keys are "Mercenary2" / "Ranger1" etc., values
+   * are { name, class_number }. Used to format the ascendancy summary
+   * line as "Witchhunter (Mercenary)" rather than just "Mercenary2".
+   */
+  ascendancies: import('@poe2-build-forge/core').AscendancyLookup
 }
 
 interface Props {

@@ -12,6 +12,7 @@ import { BuildEditor, type EditorLabels } from './BuildEditor'
 import { useEmittedContent } from './useEmittedContent'
 import { buildShareUrl, decodeHashToBuild } from './shareLink'
 import { ToastStack, type Toast } from './Toast'
+import { formatAscendancy } from './ascendancyLabel'
 import { EXAMPLE_BUILD_CODE } from './exampleBuild'
 import './App.css'
 
@@ -228,7 +229,11 @@ export function App() {
       for (const v of Object.values(lookups.passives)) {
         passiveNameById[v.id] = v.name
       }
-      setLabels({ passiveNameById, gemNameById: lookups.gemLabels })
+      setLabels({
+        passiveNameById,
+        gemNameById: lookups.gemLabels,
+        ascendancies: lookups.ascendancies
+      })
     })()
     return () => {
       cancelled = true
@@ -755,7 +760,11 @@ function ResultPanel({
         <h2>{build.name || '(unnamed build)'}</h2>
         <dl>
           <dt>Ascendancy</dt>
-          <dd>{build.ascendancy ?? '—'}</dd>
+          <dd>
+            {build.ascendancy
+              ? formatAscendancy(build.ascendancy, labels?.ascendancies)
+              : '—'}
+          </dd>
           <dt>Passives allocated</dt>
           <dd>{build.passives?.length ?? 0}</dd>
           <dt>Skill groups</dt>
