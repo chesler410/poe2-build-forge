@@ -47,6 +47,16 @@ verbatim.
   `additional_text` with rarity + base type + rolled name
 - Disambiguates multi-slot inventory positions (`Flask 1` / `Flask 2`
   → `Flask1` / `Flask2`; `Weapon 1 Swap` → `Offhand1`)
+- **Edit before download**: in-browser form for build name, description,
+  and per-passive/skill/item `additional_text` + `level_interval`. JSON
+  preview updates live; downloaded file reflects edits. Ascendancy
+  passives are grouped into their own collapsible section.
+- **Readable labels** in the editor: passives show their game name
+  ("Shock Chance" alongside `lightning14`), skill gems show
+  prefix-stripped names ("Sigil Of Power" instead of the full
+  `Metadata/Items/Gem/SkillGemSigilOfPower`).
+- **Copy JSON** alongside Download for pasting into chat, gists, or
+  hand-merging into an existing `.build`.
 - Validates final output against the JSON Schema before download
 - Runs entirely client-side: no signup, no backend, no data leaves
   your browser
