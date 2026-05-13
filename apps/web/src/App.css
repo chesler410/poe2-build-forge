@@ -253,6 +253,23 @@ footer .version {
   margin-bottom: 1.25rem;
 }
 
+.result-actions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.secondary-button {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.secondary-button:hover:not(:disabled) {
+  background: var(--accent);
+  color: #ffffff;
+}
+
 .validation-error {
   margin: 0.5rem 0 0;
   padding: 0.5rem 0.75rem;

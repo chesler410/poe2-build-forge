@@ -54,16 +54,9 @@ export function BuildEditor({ build, onChange, labels }: Props) {
       </div>
 
       {passives.length > 0 && (
-        <EntryListEditor
-          title={`Passives (${passives.length})`}
-          entries={passives}
-          renderHeader={(p) => passiveHeader(p, labels)}
-          renderRow={(p, onEntryChange) => (
-            <AnnotationRow
-              obj={normalizePassive(p)}
-              onChange={(next) => onEntryChange(collapseObj(next))}
-            />
-          )}
+        <PassivesSection
+          passives={passives}
+          labels={labels}
           onChange={(next) => onChange({ ...build, passives: next })}
         />
       )}
@@ -98,6 +91,68 @@ export function BuildEditor({ build, onChange, labels }: Props) {
         />
       )}
     </div>
+  )
+}
+
+function PassivesSection({
+  passives,
+  labels,
+  onChange
+}: {
+  passives: BuildPassive[]
+  labels?: EditorLabels
+  onChange: (next: BuildPassive[]) => void
+}) {
+  const isAscendancy = (p: BuildPassive) =>
+    normalizePassive(p).id.startsWith('Ascendancy')
+
+  const regularIdx: number[] = []
+  const ascendancyIdx: number[] = []
+  passives.forEach((p, i) => {
+    ;(isAscendancy(p) ? ascendancyIdx : regularIdx).push(i)
+  })
+  const regular = regularIdx.map((i) => passives[i])
+  const ascendancy = ascendancyIdx.map((i) => passives[i])
+
+  function applyGroup(originalIndices: number[], nextSubset: BuildPassive[]) {
+    const copy = passives.slice()
+    originalIndices.forEach((origIdx, k) => {
+      copy[origIdx] = nextSubset[k]
+    })
+    onChange(copy)
+  }
+
+  return (
+    <>
+      {regular.length > 0 && (
+        <EntryListEditor
+          title={`Passives (${regular.length})`}
+          entries={regular}
+          renderHeader={(p) => passiveHeader(p, labels)}
+          renderRow={(p, onEntryChange) => (
+            <AnnotationRow
+              obj={normalizePassive(p)}
+              onChange={(next) => onEntryChange(collapseObj(next))}
+            />
+          )}
+          onChange={(next) => applyGroup(regularIdx, next)}
+        />
+      )}
+      {ascendancy.length > 0 && (
+        <EntryListEditor
+          title={`Ascendancy passives (${ascendancy.length})`}
+          entries={ascendancy}
+          renderHeader={(p) => passiveHeader(p, labels)}
+          renderRow={(p, onEntryChange) => (
+            <AnnotationRow
+              obj={normalizePassive(p)}
+              onChange={(next) => onEntryChange(collapseObj(next))}
+            />
+          )}
+          onChange={(next) => applyGroup(ascendancyIdx, next)}
+        />
+      )}
+    </>
   )
 }
 

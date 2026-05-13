@@ -361,6 +361,32 @@ function ResultPanel({
   onDownload
 }: ResultPanelProps) {
   const { content, filename, error } = useEmittedContent(build)
+  const [copied, setCopied] = useState(false)
+
+  async function handleCopy() {
+    try {
+      await navigator.clipboard.writeText(content)
+      setCopied(true)
+      window.setTimeout(() => setCopied(false), 1500)
+    } catch {
+      // Clipboard API unavailable (e.g. insecure context). Fall back to
+      // a hidden textarea + execCommand so older or non-HTTPS deploys
+      // still work.
+      const ta = document.createElement('textarea')
+      ta.value = content
+      ta.style.position = 'fixed'
+      ta.style.opacity = '0'
+      document.body.appendChild(ta)
+      ta.select()
+      try {
+        document.execCommand('copy')
+        setCopied(true)
+        window.setTimeout(() => setCopied(false), 1500)
+      } finally {
+        document.body.removeChild(ta)
+      }
+    }
+  }
 
   return (
     <section className="result">
@@ -376,14 +402,25 @@ function ResultPanel({
           <dt>Item-slot hints</dt>
           <dd>{build.items?.length ?? 0}</dd>
         </dl>
-        <button
-          type="button"
-          onClick={() => onDownload(filename, content)}
-          disabled={error !== null}
-          title={error ?? undefined}
-        >
-          Download {filename}
-        </button>
+        <div className="result-actions">
+          <button
+            type="button"
+            onClick={() => onDownload(filename, content)}
+            disabled={error !== null}
+            title={error ?? undefined}
+          >
+            Download {filename}
+          </button>
+          <button
+            type="button"
+            className="secondary-button"
+            onClick={handleCopy}
+            disabled={error !== null}
+            title={error ?? 'Copy the .build JSON to the clipboard'}
+          >
+            {copied ? 'Copied ✓' : 'Copy JSON'}
+          </button>
+        </div>
         {error && (
           <p className="validation-error" role="alert">
             <strong>Validation:</strong> {error}
