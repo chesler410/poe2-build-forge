@@ -97,9 +97,9 @@ export function BuildEditor({ build, onChange, labels }: Props) {
           entries={items}
           renderHeader={(it) => itemHeader(it)}
           renderRow={(it, onEntryChange) => (
-            <AnnotationRow
-              obj={it}
-              onChange={(next) => onEntryChange(next as BuildItem)}
+            <ItemRowEditor
+              item={it}
+              onChange={(next) => onEntryChange(next)}
             />
           )}
           searchableText={(it) =>
@@ -148,8 +148,8 @@ function PassivesSection({
           entries={regular}
           renderHeader={(p) => passiveHeader(p, labels)}
           renderRow={(p, onEntryChange) => (
-            <AnnotationRow
-              obj={normalizePassive(p)}
+            <PassiveRowEditor
+              passive={normalizePassive(p)}
               onChange={(next) => onEntryChange(collapseObj(next))}
             />
           )}
@@ -166,8 +166,8 @@ function PassivesSection({
           entries={ascendancy}
           renderHeader={(p) => passiveHeader(p, labels)}
           renderRow={(p, onEntryChange) => (
-            <AnnotationRow
-              obj={normalizePassive(p)}
+            <PassiveRowEditor
+              passive={normalizePassive(p)}
               onChange={(next) => onEntryChange(collapseObj(next))}
             />
           )}
@@ -368,6 +368,83 @@ function SkillRow({
   onChange: (next: BuildSkillObject) => void
 }) {
   return <AnnotationRow obj={skill} onChange={(next) => onChange({ ...skill, ...next })} />
+}
+
+function PassiveRowEditor({
+  passive,
+  onChange
+}: {
+  passive: BuildPassiveObject
+  onChange: (next: BuildPassiveObject) => void
+}) {
+  return (
+    <>
+      <div className="extras-row">
+        <label className="extras-field">
+          <span className="extras-label">Display name</span>
+          <input
+            type="text"
+            value={passive.unique_name ?? ''}
+            placeholder="Optional"
+            onChange={(e) =>
+              onChange({
+                ...passive,
+                unique_name: e.target.value === '' ? undefined : e.target.value
+              })
+            }
+          />
+        </label>
+        <label className="extras-field extras-field-narrow">
+          <span className="extras-label">Weapon set</span>
+          <select
+            value={passive.weapon_set ?? ''}
+            onChange={(e) =>
+              onChange({
+                ...passive,
+                weapon_set:
+                  e.target.value === '' ? undefined : Number(e.target.value)
+              })
+            }
+          >
+            <option value="">—</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </label>
+      </div>
+      <AnnotationRow obj={passive} onChange={(next) => onChange({ ...passive, ...next })} />
+    </>
+  )
+}
+
+function ItemRowEditor({
+  item,
+  onChange
+}: {
+  item: BuildItem
+  onChange: (next: BuildItem) => void
+}) {
+  return (
+    <>
+      <div className="extras-row">
+        <label className="extras-field">
+          <span className="extras-label">Suggested unique</span>
+          <input
+            type="text"
+            value={item.unique_name ?? ''}
+            placeholder="e.g. The Searing Touch"
+            onChange={(e) =>
+              onChange({
+                ...item,
+                unique_name: e.target.value === '' ? undefined : e.target.value
+              })
+            }
+          />
+        </label>
+      </div>
+      <AnnotationRow obj={item} onChange={(next) => onChange({ ...item, ...next })} />
+    </>
+  )
 }
 
 function normalizePassive(p: BuildPassive): BuildPassiveObject {

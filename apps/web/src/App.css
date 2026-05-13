@@ -561,6 +561,51 @@ details.editor-section[open] {
   word-break: break-all;
 }
 
+.extras-row {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.35rem;
+}
+
+.extras-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1 1 12rem;
+  min-width: 0;
+}
+
+.extras-field-narrow {
+  flex: 0 0 5.5rem;
+}
+
+.extras-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.extras-field input[type='text'],
+.extras-field select {
+  width: 100%;
+  font-family: inherit;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--code-bg);
+  color: var(--text);
+}
+
+.extras-field input[type='text']:focus,
+.extras-field select:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+  border-color: transparent;
+}
+
 .annotation-row {
   display: flex;
   flex-direction: column;
