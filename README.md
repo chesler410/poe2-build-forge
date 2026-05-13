@@ -57,6 +57,9 @@ verbatim.
   `Metadata/Items/Gem/SkillGemSigilOfPower`).
 - **Copy JSON** alongside Download for pasting into chat, gists, or
   hand-merging into an existing `.build`.
+- **Share link**: encode the (compressed) build in the URL hash so a
+  single link captures the entire annotated build — no backend, no
+  account. Visiting the link decodes straight into the editor.
 - **Drag-and-drop** a `.pob` file (treated as a PoB code) or a `.build`
   file (loaded directly into the editor, bypassing conversion) onto the
   page.

@@ -1,6 +1,6 @@
 {
   "name": "@poe2-build-forge/web",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "private": true,
   "type": "module",
   "description": "Static web UI for poe2-build-forge — paste a PoB code, download a .build file.",
@@ -13,10 +13,12 @@
   "dependencies": {
     "@poe2-build-forge/core": "workspace:*",
     "@poe2-build-forge/schema": "workspace:*",
+    "pako": "^2.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@types/pako": "^2.0.4",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^4.3.4",

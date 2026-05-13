@@ -10,6 +10,7 @@ import {
 } from '@poe2-build-forge/core'
 import { BuildEditor, type EditorLabels } from './BuildEditor'
 import { useEmittedContent } from './useEmittedContent'
+import { buildShareUrl, decodeHashToBuild } from './shareLink'
 import { EXAMPLE_BUILD_CODE } from './exampleBuild'
 import './App.css'
 
@@ -129,6 +130,64 @@ export function App() {
       else localStorage.removeItem(STORAGE_BUILD)
     } catch { /* quota or denied — ignore */ }
   }, [result])
+
+  // On first mount, if the URL has a #b=... hash, decode it into the
+  // result and consume the hash so subsequent reloads use LocalStorage
+  // rather than this snapshot. Hash takes precedence over LocalStorage
+  // because following a shared link is a deliberate signal.
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const hash = window.location.hash
+    if (!hash || hash === '#') return
+    const fromHash = decodeHashToBuild(hash)
+    if (fromHash) {
+      try {
+        emitBuildFile(fromHash)
+        setResult({ build: fromHash })
+        setInput('')
+        window.history.replaceState(
+          null,
+          '',
+          window.location.pathname + window.location.search
+        )
+      } catch (err) {
+        setError({
+          kind: 'plain',
+          message: `Shared link decoded but failed validation: ${
+            err instanceof Error ? err.message : String(err)
+          }`
+        })
+      }
+    } else {
+      setError({
+        kind: 'plain',
+        message: 'Shared link is malformed; nothing to load from the URL.'
+      })
+    }
+    // Intentionally empty deps — runs once on mount only.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  // Whenever a build exists but labels haven't been built yet — common
+  // when the build was restored from LocalStorage or a shared link
+  // without going through Convert — fetch the lookup tables and derive
+  // labels so the editor can render readable names.
+  useEffect(() => {
+    if (!result || labels) return
+    let cancelled = false
+    void (async () => {
+      const lookups = await loadLookups()
+      if (cancelled) return
+      const passiveNameById: Record<string, string> = {}
+      for (const v of Object.values(lookups.passives)) {
+        passiveNameById[v.id] = v.name
+      }
+      setLabels({ passiveNameById })
+    })()
+    return () => {
+      cancelled = true
+    }
+  }, [result, labels])
 
   function decodeAndShow(code: string, lookups: Lookups) {
     try {
@@ -517,29 +576,40 @@ function ResultPanel({
 }: ResultPanelProps) {
   const { content, filename, error } = useEmittedContent(build)
   const [copied, setCopied] = useState(false)
+  const [shared, setShared] = useState(false)
 
-  async function handleCopy() {
+  async function writeToClipboard(text: string) {
     try {
-      await navigator.clipboard.writeText(content)
-      setCopied(true)
-      window.setTimeout(() => setCopied(false), 1500)
+      await navigator.clipboard.writeText(text)
+      return true
     } catch {
-      // Clipboard API unavailable (e.g. insecure context). Fall back to
-      // a hidden textarea + execCommand so older or non-HTTPS deploys
-      // still work.
       const ta = document.createElement('textarea')
-      ta.value = content
+      ta.value = text
       ta.style.position = 'fixed'
       ta.style.opacity = '0'
       document.body.appendChild(ta)
       ta.select()
       try {
-        document.execCommand('copy')
-        setCopied(true)
-        window.setTimeout(() => setCopied(false), 1500)
+        return document.execCommand('copy')
       } finally {
         document.body.removeChild(ta)
       }
+    }
+  }
+
+  async function handleShareLink() {
+    const url = buildShareUrl(build)
+    window.history.replaceState(null, '', url)
+    if (await writeToClipboard(url)) {
+      setShared(true)
+      window.setTimeout(() => setShared(false), 1500)
+    }
+  }
+
+  async function handleCopy() {
+    if (await writeToClipboard(content)) {
+      setCopied(true)
+      window.setTimeout(() => setCopied(false), 1500)
     }
   }
 
@@ -574,6 +644,18 @@ function ResultPanel({
             title={error ?? 'Copy the .build JSON to the clipboard'}
           >
             {copied ? 'Copied ✓' : 'Copy JSON'}
+          </button>
+          <button
+            type="button"
+            className="secondary-button"
+            onClick={handleShareLink}
+            disabled={error !== null}
+            title={
+              error ??
+              'Copy a shareable URL with the build encoded in the page hash'
+            }
+          >
+            {shared ? 'Link copied ✓' : 'Share link'}
           </button>
         </div>
         {error && (
