@@ -15,7 +15,8 @@
     "dev": "pnpm --filter @poe2-build-forge/web dev",
     "spike:decode": "tsx scripts/decode-spike.ts",
     "fetch-data": "tsx scripts/fetch-data.ts",
-    "prune-data": "tsx scripts/prune-data.ts"
+    "prune-data": "tsx scripts/prune-data.ts",
+    "watch-docs": "tsx scripts/watch-buildplanner-docs.ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",

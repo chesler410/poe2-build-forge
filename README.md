@@ -132,6 +132,7 @@ pnpm dev                       # run the web app locally at http://localhost:517
 pnpm spike:decode <pobbBuildId> # inspect a pobb.in payload (decode + dump XML head/tail)
 pnpm fetch-data                 # refresh the bundled GGG data tables in core
 pnpm prune-data                 # prune the raw data snapshot to the mapper essentials
+pnpm watch-docs                 # poll GGG dev-docs for Build Planner section changes (exit code 1 on change)
 ```
 
 ## References

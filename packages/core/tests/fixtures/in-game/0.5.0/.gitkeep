@@ -1,0 +1,7 @@
+Captured-from-game `.build` files for PoE2 0.5.0 go here.
+
+These are GGG's own output from the in-game Build Planner — the gold-standard
+reference for what a valid `.build` looks like. Use them as regression fixtures
+for the emit pipeline and as schema-validation inputs.
+
+Naming: `<archetype>-<source>.build` (e.g. `blood-mage-from-game.build`).
