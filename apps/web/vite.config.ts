@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
@@ -69,5 +70,12 @@ export default defineConfig({
     __APP_VERSION__: JSON.stringify(pkg.version),
     __APP_SHA__: JSON.stringify(gitShortSha()),
     __APP_BUILD_DATE__: JSON.stringify(todayUtcDate())
+  },
+  test: {
+    // No DOM needed — tests focus on pure functions (shareLink) and
+    // server-side rendering (markup via renderToStaticMarkup). Keep
+    // the test environment lean.
+    environment: 'node',
+    include: ['tests/**/*.test.{ts,tsx}']
   }
 })
