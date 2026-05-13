@@ -26,7 +26,15 @@ const RAW_DIR = join(REPO_ROOT, 'packages/core/data/raw')
 const PRUNED_DIR = join(REPO_ROOT, 'packages/core/data/pruned')
 
 interface Pruner {
+  /** Raw input filename under packages/core/data/raw/. */
   filename: string
+  /** Pruned output filename. Defaults to the input filename. */
+  outputFilename?: string
+  /**
+   * Prune function. For JSON inputs the raw is pre-parsed; for non-JSON
+   * inputs (.lua, etc.) the raw is the utf8 string. Return any
+   * JSON-serializable value. Pass `null` to copy the raw bytes through.
+   */
   prune: ((raw: any) => any) | null
 }
 
@@ -123,6 +131,24 @@ const pruners: Pruner[] = [
     prune: null // defer pruning until decoder consumes it
   },
   {
+    // PoB's Gems.lua is the canonical source of gem display names
+    // (e.g. "Sigil of Power" instead of CamelCase-derived approximations).
+    // We extract just gameId -> display name; the Lua file has type tags,
+    // stats, requirements, etc. that the converter doesn't need.
+    filename: 'gems.lua',
+    outputFilename: 'gem_labels.json',
+    prune: (text: string) => {
+      const out: Record<string, string> = {}
+      const pattern =
+        /\["(Metadata\/Items\/Gems?\/(?:Skill|Support)Gem[^"]+)"\]\s*=\s*\{\s*name\s*=\s*"([^"]+)"/g
+      let m: RegExpExecArray | null
+      while ((m = pattern.exec(text)) !== null) {
+        out[m[1]] = m[2]
+      }
+      return out
+    }
+  },
+  {
     filename: 'passives_default.json',
     prune: (raw: Record<string, any>) => {
       // Source layout: { passives: { "4": { hash: 4, id: "lightning14", ... }, ... }, groups, art, ... }
@@ -167,7 +193,8 @@ interface ManifestEntry {
 
 async function processOne(p: Pruner): Promise<ManifestEntry> {
   const rawPath = join(RAW_DIR, p.filename)
-  const outPath = join(PRUNED_DIR, p.filename)
+  const outFilename = p.outputFilename ?? p.filename
+  const outPath = join(PRUNED_DIR, outFilename)
   const rawBuf = await readFile(rawPath)
 
   let outBuf: Buffer
@@ -176,6 +203,13 @@ async function processOne(p: Pruner): Promise<ManifestEntry> {
   if (p.prune === null) {
     outBuf = rawBuf
     pruned = false
+  } else if (p.filename.endsWith('.lua')) {
+    // Non-JSON input: hand the raw utf8 string to the pruner, which is
+    // expected to return a JSON-serializable value.
+    const text = rawBuf.toString('utf8')
+    const prunedJson = p.prune(text)
+    outBuf = Buffer.from(JSON.stringify(prunedJson, null, 2) + '\n', 'utf8')
+    pruned = true
   } else {
     const rawJson = JSON.parse(rawBuf.toString('utf8'))
     const prunedJson = p.prune(rawJson)
@@ -190,13 +224,14 @@ async function processOne(p: Pruner): Promise<ManifestEntry> {
   const tag = pruned ? 'pruned' : 'copied'
   const rawKib = (rawBuf.length / 1024).toFixed(0).padStart(5)
   const outKib = (outBuf.length / 1024).toFixed(0).padStart(5)
+  const label = p.filename === outFilename ? p.filename : `${p.filename} → ${outFilename}`
   console.log(
-    `  + ${tag.padEnd(7)} ${p.filename.padEnd(20)}  ` +
+    `  + ${tag.padEnd(7)} ${label.padEnd(30)}  ` +
       `${rawKib} KiB -> ${outKib} KiB  (-${reduction.toFixed(1)}%)`
   )
 
   return {
-    filename: p.filename,
+    filename: outFilename,
     raw_size: rawBuf.length,
     pruned_size: outBuf.length,
     reduction_pct: Math.round(reduction * 10) / 10,

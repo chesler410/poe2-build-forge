@@ -51,11 +51,15 @@ const SOURCES: Source[] = [
   },
   {
     filename: 'tree.json',
-    url: 'https://raw.githubusercontent.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/dev/src/TreeData/0_1/tree.json'
+    url: 'https://raw.githubusercontent.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/dev/src/TreeData/0_4/tree.json'
   },
   {
     filename: 'passives_default.json',
     url: 'https://raw.githubusercontent.com/repoe-fork/poe2/master/data/passive_skill_trees/Default.json'
+  },
+  {
+    filename: 'gems.lua',
+    url: 'https://raw.githubusercontent.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/dev/src/Data/Gems.lua'
   }
 ]
 

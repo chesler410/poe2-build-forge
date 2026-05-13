@@ -2,56 +2,63 @@
   {
     "filename": "ascendancies.json",
     "source_url": "https://raw.githubusercontent.com/repoe-fork/poe2/master/data/ascendancies.json",
-    "fetched_at": "2026-05-09T22:15:15.859Z",
+    "fetched_at": "2026-05-13T14:17:58.193Z",
     "size_bytes": 3413768,
     "sha256": "93eb1300a5b6d2ea7ef3b00f1cc17edac2569aea6d16bfc4cb64433939cbae64"
   },
   {
     "filename": "base_items.json",
     "source_url": "https://raw.githubusercontent.com/repoe-fork/poe2/master/data/base_items.json",
-    "fetched_at": "2026-05-09T22:15:15.885Z",
+    "fetched_at": "2026-05-13T14:17:58.218Z",
     "size_bytes": 5841967,
     "sha256": "13e52267e058ef2a9d3a9a7d242f1635e8faadc15a7613b13cbe2b96486fbd37"
   },
   {
     "filename": "characters.json",
     "source_url": "https://raw.githubusercontent.com/repoe-fork/poe2/master/data/characters.json",
-    "fetched_at": "2026-05-09T22:15:15.883Z",
+    "fetched_at": "2026-05-13T14:17:58.217Z",
     "size_bytes": 7233,
     "sha256": "a10fc5bc7b3da0a5644ad5a1ca76b4189065977aec3fdc202617392d0ad8cc3f"
   },
   {
+    "filename": "gems.lua",
+    "source_url": "https://raw.githubusercontent.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/dev/src/Data/Gems.lua",
+    "fetched_at": "2026-05-13T14:17:58.220Z",
+    "size_bytes": 471390,
+    "sha256": "b25220d6cf20b37c68747f22b1d51bf29272f4974f2d8504f5c5002e82d46eb0"
+  },
+  {
     "filename": "item_classes.json",
     "source_url": "https://raw.githubusercontent.com/repoe-fork/poe2/master/data/item_classes.json",
-    "fetched_at": "2026-05-09T22:15:15.885Z",
+    "fetched_at": "2026-05-13T14:17:58.218Z",
     "size_bytes": 15405,
     "sha256": "de910ff003f6879723e3bc185c780834467f673bb5a1f71aefe34f1e7f8592ee"
   },
   {
     "filename": "passives_default.json",
     "source_url": "https://raw.githubusercontent.com/repoe-fork/poe2/master/data/passive_skill_trees/Default.json",
-    "fetched_at": "2026-05-09T22:15:15.886Z",
+    "fetched_at": "2026-05-13T14:17:58.219Z",
     "size_bytes": 4614578,
     "sha256": "52a7e25a81d81d3809b0cde29e3da0da3571520d52ca5033617d1996ca2d20c7"
   },
   {
     "filename": "skill_gems.json",
     "source_url": "https://raw.githubusercontent.com/repoe-fork/poe2/master/data/skill_gems.json",
-    "fetched_at": "2026-05-09T22:15:15.884Z",
+    "fetched_at": "2026-05-13T14:17:58.217Z",
     "size_bytes": 1231888,
     "sha256": "6dafc4153ccf3f03ab963d291d01d98d20eb1d68e843aae6f47e9759485e6c2a"
   },
   {
     "filename": "tree.json",
-    "source_url": "https://raw.githubusercontent.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/dev/src/TreeData/0_1/tree.json",
-    "fetched_at": "2026-05-09T22:15:15.886Z",
-    "size_bytes": 1114258,
-    "sha256": "873e8f0df7140c9330b82a5ab897c292a7cdcc6533f197ffd73fdfab442c27c0"
+    "source_url": "https://raw.githubusercontent.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/dev/src/TreeData/0_4/tree.json",
+    "fetched_at": "2026-05-13T14:17:58.219Z",
+    "size_bytes": 1812234,
+    "sha256": "0e316ffb8e953125f2e72ea4e8479e18ea2bd8a2058016f38b83ef09bac35eed"
   },
   {
     "filename": "uniques.json",
     "source_url": "https://raw.githubusercontent.com/repoe-fork/poe2/master/data/uniques.json",
-    "fetched_at": "2026-05-09T22:15:15.885Z",
+    "fetched_at": "2026-05-13T14:17:58.219Z",
     "size_bytes": 153483,
     "sha256": "8cc5e3bd58e5c0a54b4ba1fb5dbcb493a1f1a215125b57ec1de2c2737838b1a2"
   }

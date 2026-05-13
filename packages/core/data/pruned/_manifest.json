@@ -24,6 +24,14 @@
     "sha256": "9c4e9aeb5e6bdcf13a90cfa7b1deb40636734f5c007a1037b24dd84295b5d91d"
   },
   {
+    "filename": "gem_labels.json",
+    "raw_size": 471390,
+    "pruned_size": 61298,
+    "reduction_pct": 87,
+    "pruned": true,
+    "sha256": "2d5f76428697bbb2779ed81bdfed785e76cd4a7e503a089dd9e09e740497447a"
+  },
+  {
     "filename": "item_classes.json",
     "raw_size": 15405,
     "pruned_size": 15405,
@@ -49,11 +57,11 @@
   },
   {
     "filename": "tree.json",
-    "raw_size": 1114258,
-    "pruned_size": 1114258,
+    "raw_size": 1812234,
+    "pruned_size": 1812234,
     "reduction_pct": 0,
     "pruned": false,
-    "sha256": "873e8f0df7140c9330b82a5ab897c292a7cdcc6533f197ffd73fdfab442c27c0"
+    "sha256": "0e316ffb8e953125f2e72ea4e8479e18ea2bd8a2058016f38b83ef09bac35eed"
   },
   {
     "filename": "uniques.json",
