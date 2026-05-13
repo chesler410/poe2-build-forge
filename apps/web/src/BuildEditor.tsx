@@ -8,6 +8,7 @@ import type {
   BuildItem
 } from '@poe2-build-forge/core'
 import { renderMarkup } from './markup'
+import { parseItemAnnotation } from './itemAnnotation'
 
 export interface EditorLabels {
   /** Map from GGG passive id (e.g. "armour21_") to display name ("Strength"). */
@@ -102,9 +103,16 @@ export function BuildEditor({ build, onChange, labels }: Props) {
               onChange={(next) => onEntryChange(next)}
             />
           )}
-          searchableText={(it) =>
-            `${it.inventory_id} ${it.unique_name ?? ''} ${it.additional_text ?? ''}`
-          }
+          searchableText={(it) => {
+            const parsed = parseItemAnnotation(it.additional_text)
+            return [
+              it.inventory_id,
+              it.unique_name ?? '',
+              parsed?.name ?? '',
+              parsed?.baseType ?? '',
+              it.additional_text ?? ''
+            ].join(' ')
+          }}
           onChange={(next) => onChange({ ...build, items: next })}
         />
       )}
@@ -207,10 +215,32 @@ function skillHeader(s: BuildSkill, labels?: EditorLabels): React.ReactNode {
 }
 
 function itemHeader(it: BuildItem): React.ReactNode {
+  const parsed = parseItemAnnotation(it.additional_text)
+
+  let primary: string
+  let secondary: string
+
+  if (it.unique_name) {
+    primary = it.unique_name
+    secondary = `Unique · ${it.inventory_id}`
+  } else if (parsed?.rarity === 'RARE' && parsed.name) {
+    primary = parsed.name
+    secondary = `Rare ${parsed.baseType ?? ''} · ${it.inventory_id}`.trim()
+  } else if (parsed?.rarity === 'MAGIC' && parsed.baseType) {
+    primary = parsed.baseType
+    secondary = `Magic · ${it.inventory_id}`
+  } else if (parsed?.rarity === 'NORMAL' && parsed.baseType) {
+    primary = parsed.baseType
+    secondary = `Normal · ${it.inventory_id}`
+  } else {
+    primary = it.inventory_id
+    secondary = `at (${it.slot_x}, ${it.slot_y})`
+  }
+
   return (
     <div className="entry-header">
-      <span className="entry-name">{it.inventory_id}</span>
-      <code className="entry-id">at ({it.slot_x}, {it.slot_y})</code>
+      <span className="entry-name">{primary}</span>
+      <code className="entry-id">{secondary}</code>
     </div>
   )
 }
