@@ -12,6 +12,12 @@ import { renderMarkup } from './markup'
 export interface EditorLabels {
   /** Map from GGG passive id (e.g. "armour21_") to display name ("Strength"). */
   passiveNameById: Record<string, string>
+  /**
+   * Map from gem `Metadata/Items/Gems/...` id to authoritative display
+   * name extracted from PoB's Gems.lua (e.g. "Sigil of Power" with the
+   * correct lowercase "of", which CamelCase splitting can't produce).
+   */
+  gemNameById: Record<string, string>
 }
 
 interface Props {
@@ -70,7 +76,7 @@ export function BuildEditor({ build, onChange, labels }: Props) {
         <EntryListEditor
           title={`Skill groups (${skills.length})`}
           entries={skills}
-          renderHeader={(s) => skillHeader(s)}
+          renderHeader={(s) => skillHeader(s, labels)}
           renderRow={(s, onEntryChange) => (
             <SkillRow
               skill={normalizeSkill(s)}
@@ -79,7 +85,7 @@ export function BuildEditor({ build, onChange, labels }: Props) {
           )}
           searchableText={(s) => {
             const obj = normalizeSkill(s)
-            return `${obj.id} ${formatGemId(obj.id)}`
+            return `${obj.id} ${labels?.gemNameById[obj.id] ?? formatGemId(obj.id)}`
           }}
           onChange={(next) => onChange({ ...build, skills: next })}
         />
@@ -187,9 +193,11 @@ function passiveHeader(p: BuildPassive, labels?: EditorLabels): React.ReactNode 
   )
 }
 
-function skillHeader(s: BuildSkill): React.ReactNode {
+function skillHeader(s: BuildSkill, labels?: EditorLabels): React.ReactNode {
   const obj = normalizeSkill(s)
-  const pretty = formatGemId(obj.id)
+  // PoB's gem name is authoritative; fall back to CamelCase splitting
+  // when the gem isn't in the bundled lookup (data drift, new gems).
+  const pretty = labels?.gemNameById[obj.id] ?? formatGemId(obj.id)
   return (
     <div className="entry-header">
       {pretty !== obj.id && <span className="entry-name">{pretty}</span>}

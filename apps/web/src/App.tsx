@@ -23,6 +23,7 @@ import './App.css'
 interface Lookups {
   passives: PassiveLookup
   ascendancies: AscendancyLookup
+  gemLabels: Record<string, string>
 }
 
 let lookupsCache: Lookups | null = null
@@ -33,13 +34,15 @@ async function loadLookups(): Promise<Lookups> {
   if (lookupsInFlight) return lookupsInFlight
 
   lookupsInFlight = (async () => {
-    const [passivesModule, ascendanciesModule] = await Promise.all([
+    const [passivesModule, ascendanciesModule, gemLabelsModule] = await Promise.all([
       import('@poe2-build-forge/core/data/passives_default.json'),
-      import('@poe2-build-forge/core/data/ascendancies.json')
+      import('@poe2-build-forge/core/data/ascendancies.json'),
+      import('@poe2-build-forge/core/data/gem_labels.json')
     ])
     const lookups: Lookups = {
       passives: passivesModule.default as PassiveLookup,
-      ascendancies: ascendanciesModule.default as AscendancyLookup
+      ascendancies: ascendanciesModule.default as AscendancyLookup,
+      gemLabels: gemLabelsModule.default as Record<string, string>
     }
     lookupsCache = lookups
     return lookups
@@ -225,7 +228,7 @@ export function App() {
       for (const v of Object.values(lookups.passives)) {
         passiveNameById[v.id] = v.name
       }
-      setLabels({ passiveNameById })
+      setLabels({ passiveNameById, gemNameById: lookups.gemLabels })
     })()
     return () => {
       cancelled = true
@@ -270,13 +273,9 @@ export function App() {
     setBusy(true)
     try {
       const lookups = await loadLookups()
-      if (labels === null) {
-        const passiveNameById: Record<string, string> = {}
-        for (const v of Object.values(lookups.passives)) {
-          passiveNameById[v.id] = v.name
-        }
-        setLabels({ passiveNameById })
-      }
+      // Labels are derived by the [currentBuild, labels] effect — single
+      // source of truth keeps the gemNameById/passiveNameById build path
+      // from drifting across two locations.
       if (looksLikeUrl(raw)) {
         const rawUrl = toPobbRawUrl(raw)
         if (rawUrl === null) {
