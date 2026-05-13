@@ -1,6 +1,6 @@
 {
   "name": "@poe2-build-forge/web",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "private": true,
   "type": "module",
   "description": "Static web UI for poe2-build-forge — paste a PoB code, download a .build file.",
@@ -22,6 +22,7 @@
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
     "@vitejs/plugin-react": "^4.3.4",
-    "vite": "^6.0.5"
+    "vite": "^6.0.5",
+    "vite-plugin-pwa": "^1.3.0"
   }
 }

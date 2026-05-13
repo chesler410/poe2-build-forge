@@ -69,6 +69,10 @@ verbatim.
   or id.
 - **Auto-resume**: paste and edits persist in LocalStorage so a refresh
   doesn't lose work. Use the **Start over** button to clear.
+- **Installable / offline**: a [PWA](https://web.dev/progressive-web-apps/)
+  manifest and service worker make the app installable as a desktop or
+  mobile app and keep it working without an internet connection after
+  the first visit.
 - Validates final output against the JSON Schema before download
 - Runs entirely client-side: no signup, no backend, no data leaves
   your browser

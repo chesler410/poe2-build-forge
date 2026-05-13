@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { VitePWA } from 'vite-plugin-pwa'
 import { execSync } from 'node:child_process'
 import { readFileSync } from 'node:fs'
 
@@ -30,7 +31,39 @@ function todayUtcDate(): string {
 // site work when served from a sub-path like
 // https://chesler410.github.io/poe2-build-forge/.
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    VitePWA({
+      registerType: 'autoUpdate',
+      includeAssets: ['icon.svg'],
+      manifest: {
+        name: 'poe2-build-forge',
+        short_name: 'Build Forge',
+        description:
+          'Convert Path of Building 2 codes into PoE2 .build files. ' +
+          'Annotate, share, and download — entirely in-browser.',
+        theme_color: '#2563eb',
+        background_color: '#ffffff',
+        display: 'standalone',
+        start_url: '.',
+        scope: './',
+        icons: [
+          {
+            src: 'icon.svg',
+            sizes: '192x192 512x512 any',
+            type: 'image/svg+xml',
+            purpose: 'any maskable'
+          }
+        ]
+      },
+      workbox: {
+        // Precache everything Vite emits so the converter works offline
+        // after the first visit. The passives_default chunk is ~80KB
+        // gzipped — fine for precache.
+        globPatterns: ['**/*.{js,css,html,svg,ico,json}']
+      }
+    })
+  ],
   base: './',
   define: {
     __APP_VERSION__: JSON.stringify(pkg.version),
