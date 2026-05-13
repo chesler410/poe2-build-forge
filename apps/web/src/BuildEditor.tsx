@@ -1,5 +1,3 @@
-import { useMemo } from 'react'
-import { emitBuildFile } from '@poe2-build-forge/core'
 import type {
   BuildFile,
   BuildPassive,
@@ -9,12 +7,18 @@ import type {
   BuildItem
 } from '@poe2-build-forge/core'
 
+export interface EditorLabels {
+  /** Map from GGG passive id (e.g. "armour21_") to display name ("Strength"). */
+  passiveNameById: Record<string, string>
+}
+
 interface Props {
   build: BuildFile
   onChange: (next: BuildFile) => void
+  labels?: EditorLabels
 }
 
-export function BuildEditor({ build, onChange }: Props) {
+export function BuildEditor({ build, onChange, labels }: Props) {
   const passives = build.passives ?? []
   const skills = build.skills ?? []
   const items = build.items ?? []
@@ -53,7 +57,7 @@ export function BuildEditor({ build, onChange }: Props) {
         <EntryListEditor
           title={`Passives (${passives.length})`}
           entries={passives}
-          renderId={(p) => normalizePassive(p).id}
+          renderHeader={(p) => passiveHeader(p, labels)}
           renderRow={(p, onEntryChange) => (
             <AnnotationRow
               obj={normalizePassive(p)}
@@ -68,7 +72,7 @@ export function BuildEditor({ build, onChange }: Props) {
         <EntryListEditor
           title={`Skill groups (${skills.length})`}
           entries={skills}
-          renderId={(s) => normalizeSkill(s).id}
+          renderHeader={(s) => skillHeader(s)}
           renderRow={(s, onEntryChange) => (
             <SkillRow
               skill={normalizeSkill(s)}
@@ -83,7 +87,7 @@ export function BuildEditor({ build, onChange }: Props) {
         <EntryListEditor
           title={`Item-slot hints (${items.length})`}
           entries={items}
-          renderId={(it) => `${it.inventory_id} @ ${it.slot_x},${it.slot_y}`}
+          renderHeader={(it) => itemHeader(it)}
           renderRow={(it, onEntryChange) => (
             <AnnotationRow
               obj={it}
@@ -97,10 +101,53 @@ export function BuildEditor({ build, onChange }: Props) {
   )
 }
 
+function passiveHeader(p: BuildPassive, labels?: EditorLabels): React.ReactNode {
+  const obj = normalizePassive(p)
+  const name = labels?.passiveNameById[obj.id]
+  return (
+    <div className="entry-header">
+      {name && <span className="entry-name">{name}</span>}
+      <code className="entry-id">{obj.id}</code>
+    </div>
+  )
+}
+
+function skillHeader(s: BuildSkill): React.ReactNode {
+  const obj = normalizeSkill(s)
+  const pretty = formatGemId(obj.id)
+  return (
+    <div className="entry-header">
+      {pretty !== obj.id && <span className="entry-name">{pretty}</span>}
+      <code className="entry-id">{obj.id}</code>
+    </div>
+  )
+}
+
+function itemHeader(it: BuildItem): React.ReactNode {
+  return (
+    <div className="entry-header">
+      <span className="entry-name">{it.inventory_id}</span>
+      <code className="entry-id">at ({it.slot_x}, {it.slot_y})</code>
+    </div>
+  )
+}
+
+// Turn "Metadata/Items/Gem/SkillGemSigilOfPower" into "Sigil Of Power".
+// Handles both singular Gem/ and plural Gems/ paths and SkillGem/SupportGem
+// prefixes. Falls back to the raw id when the shape doesn't match.
+function formatGemId(id: string): string {
+  const m = id.match(/^Metadata\/Items\/Gems?\/(?:Skill|Support)Gem(.+)$/)
+  if (!m) return id
+  return m[1]
+    .replace(/([a-z])([A-Z])/g, '$1 $2')
+    .replace(/([A-Z])([A-Z][a-z])/g, '$1 $2')
+    .trim()
+}
+
 interface EntryListProps<T> {
   title: string
   entries: T[]
-  renderId: (entry: T) => string
+  renderHeader: (entry: T) => React.ReactNode
   renderRow: (entry: T, onEntryChange: (next: T) => void) => React.ReactNode
   onChange: (next: T[]) => void
 }
@@ -108,7 +155,7 @@ interface EntryListProps<T> {
 function EntryListEditor<T>({
   title,
   entries,
-  renderId,
+  renderHeader,
   renderRow,
   onChange
 }: EntryListProps<T>) {
@@ -118,7 +165,7 @@ function EntryListEditor<T>({
       <ul className="entry-list">
         {entries.map((entry, idx) => (
           <li key={idx} className="entry-row">
-            <code className="entry-id">{renderId(entry)}</code>
+            {renderHeader(entry)}
             {renderRow(entry, (next) => {
               const copy = entries.slice()
               copy[idx] = next
@@ -236,21 +283,3 @@ function pairOrUndef(
   return [a ?? 0, b ?? 100]
 }
 
-export function useEmittedContent(build: BuildFile): {
-  content: string
-  filename: string
-  error: string | null
-} {
-  return useMemo(() => {
-    try {
-      const { content, filename } = emitBuildFile(build)
-      return { content, filename, error: null }
-    } catch (err) {
-      return {
-        content: JSON.stringify(build, null, 2) + '\n',
-        filename: build.name ? `${build.name}.build` : 'build.build',
-        error: err instanceof Error ? err.message : String(err)
-      }
-    }
-  }, [build])
-}

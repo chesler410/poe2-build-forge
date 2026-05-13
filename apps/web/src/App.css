@@ -359,8 +359,20 @@ details.editor-section[open] {
   border: 1px solid var(--border);
 }
 
+.entry-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.entry-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
 .entry-id {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: var(--text-muted);
   font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace;
   word-break: break-all;

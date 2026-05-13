@@ -8,7 +8,8 @@ import {
   type BuildFile,
   type PassiveLookup
 } from '@poe2-build-forge/core'
-import { BuildEditor, useEmittedContent } from './BuildEditor'
+import { BuildEditor, type EditorLabels } from './BuildEditor'
+import { useEmittedContent } from './useEmittedContent'
 import { EXAMPLE_BUILD_CODE } from './exampleBuild'
 import './App.css'
 
@@ -87,6 +88,7 @@ export function App() {
   const [input, setInput] = useState('')
   const [busy, setBusy] = useState(false)
   const [result, setResult] = useState<ConvertResult | null>(null)
+  const [labels, setLabels] = useState<EditorLabels | null>(null)
   const [error, setError] = useState<AppError | null>(null)
 
   function decodeAndShow(code: string, lookups: Lookups) {
@@ -127,6 +129,13 @@ export function App() {
     setBusy(true)
     try {
       const lookups = await loadLookups()
+      if (labels === null) {
+        const passiveNameById: Record<string, string> = {}
+        for (const v of Object.values(lookups.passives)) {
+          passiveNameById[v.id] = v.name
+        }
+        setLabels({ passiveNameById })
+      }
       if (looksLikeUrl(raw)) {
         const rawUrl = toPobbRawUrl(raw)
         if (rawUrl === null) {
@@ -311,6 +320,7 @@ export function App() {
       {result && (
         <ResultPanel
           build={result.build}
+          labels={labels}
           onBuildChange={(b) => setResult({ build: b })}
           onDownload={downloadEdited}
         />
@@ -339,11 +349,17 @@ export function App() {
 
 interface ResultPanelProps {
   build: BuildFile
+  labels: EditorLabels | null
   onBuildChange: (next: BuildFile) => void
   onDownload: (filename: string, content: string) => void
 }
 
-function ResultPanel({ build, onBuildChange, onDownload }: ResultPanelProps) {
+function ResultPanel({
+  build,
+  labels,
+  onBuildChange,
+  onDownload
+}: ResultPanelProps) {
   const { content, filename, error } = useEmittedContent(build)
 
   return (
@@ -380,7 +396,11 @@ function ResultPanel({ build, onBuildChange, onDownload }: ResultPanelProps) {
         </p>
       </div>
 
-      <BuildEditor build={build} onChange={onBuildChange} />
+      <BuildEditor
+        build={build}
+        labels={labels ?? undefined}
+        onChange={onBuildChange}
+      />
 
       <details>
         <summary>JSON preview</summary>
