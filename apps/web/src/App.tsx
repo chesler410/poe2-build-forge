@@ -8,6 +8,7 @@ import {
   type BuildFile,
   type PassiveLookup
 } from '@poe2-build-forge/core'
+import { BuildEditor, useEmittedContent } from './BuildEditor'
 import { EXAMPLE_BUILD_CODE } from './exampleBuild'
 import './App.css'
 
@@ -50,8 +51,6 @@ async function loadLookups(): Promise<Lookups> {
 
 interface ConvertResult {
   build: BuildFile
-  filename: string
-  content: string
 }
 
 type KnownHost = 'maxroll' | 'poeninja' | 'generic'
@@ -95,8 +94,11 @@ export function App() {
       const xml = decodePobCode(code)
       const pob = parsePobXml(xml)
       const build = mapPobToBuild(pob, lookups)
-      const { filename, content } = emitBuildFile(build)
-      setResult({ build, filename, content })
+      // Validate up front so a broken initial build is surfaced before the
+      // editor opens. The editor re-emits on every change with its own
+      // graceful handling of mid-edit validation errors.
+      emitBuildFile(build)
+      setResult({ build })
     } catch (err) {
       setError({
         kind: 'plain',
@@ -161,13 +163,12 @@ export function App() {
     setInput(EXAMPLE_BUILD_CODE)
   }
 
-  function handleDownload() {
-    if (!result) return
-    const blob = new Blob([result.content], { type: 'application/json' })
+  function downloadEdited(filename: string, content: string) {
+    const blob = new Blob([content], { type: 'application/json' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
     a.href = url
-    a.download = result.filename
+    a.download = filename
     document.body.appendChild(a)
     a.click()
     document.body.removeChild(a)
@@ -308,31 +309,11 @@ export function App() {
       )}
 
       {result && (
-        <section className="result">
-          <h2>{result.build.name}</h2>
-          <dl>
-            <dt>Ascendancy</dt>
-            <dd>{result.build.ascendancy ?? '—'}</dd>
-            <dt>Passives allocated</dt>
-            <dd>{result.build.passives?.length ?? 0}</dd>
-            <dt>Skill groups</dt>
-            <dd>{result.build.skills?.length ?? 0}</dd>
-            <dt>Item-slot hints</dt>
-            <dd>{result.build.items?.length ?? 0}</dd>
-          </dl>
-          <button type="button" onClick={handleDownload}>
-            Download {result.filename}
-          </button>
-          <p className="placement-hint">
-            Drop the downloaded file into{' '}
-            <code>Documents\My Games\Path of Exile 2\BuildPlanner\</code>
-            {' '}and select the build in-game.
-          </p>
-          <details>
-            <summary>JSON preview</summary>
-            <pre>{result.content}</pre>
-          </details>
-        </section>
+        <ResultPanel
+          build={result.build}
+          onBuildChange={(b) => setResult({ build: b })}
+          onDownload={downloadEdited}
+        />
       )}
 
       <footer>
@@ -353,5 +334,58 @@ export function App() {
         </span>
       </footer>
     </main>
+  )
+}
+
+interface ResultPanelProps {
+  build: BuildFile
+  onBuildChange: (next: BuildFile) => void
+  onDownload: (filename: string, content: string) => void
+}
+
+function ResultPanel({ build, onBuildChange, onDownload }: ResultPanelProps) {
+  const { content, filename, error } = useEmittedContent(build)
+
+  return (
+    <section className="result">
+      <div className="result-summary">
+        <h2>{build.name || '(unnamed build)'}</h2>
+        <dl>
+          <dt>Ascendancy</dt>
+          <dd>{build.ascendancy ?? '—'}</dd>
+          <dt>Passives allocated</dt>
+          <dd>{build.passives?.length ?? 0}</dd>
+          <dt>Skill groups</dt>
+          <dd>{build.skills?.length ?? 0}</dd>
+          <dt>Item-slot hints</dt>
+          <dd>{build.items?.length ?? 0}</dd>
+        </dl>
+        <button
+          type="button"
+          onClick={() => onDownload(filename, content)}
+          disabled={error !== null}
+          title={error ?? undefined}
+        >
+          Download {filename}
+        </button>
+        {error && (
+          <p className="validation-error" role="alert">
+            <strong>Validation:</strong> {error}
+          </p>
+        )}
+        <p className="placement-hint">
+          Drop the downloaded file into{' '}
+          <code>Documents\My Games\Path of Exile 2\BuildPlanner\</code>
+          {' '}and select the build in-game.
+        </p>
+      </div>
+
+      <BuildEditor build={build} onChange={onBuildChange} />
+
+      <details>
+        <summary>JSON preview</summary>
+        <pre>{content}</pre>
+      </details>
+    </section>
   )
 }
