@@ -15,10 +15,12 @@ import {
   isAttributeChoiceGroup
 } from './passiveGroup'
 
-const ATTRIBUTE_CHOICES: Array<{ full: string; short: string }> = [
-  { full: 'Strength', short: 'Str' },
-  { full: 'Intelligence', short: 'Int' },
-  { full: 'Dexterity', short: 'Dex' }
+// Canonical PoE attribute colors. Red = Strength, Blue = Intelligence,
+// Green = Dexterity — matches the in-game gem tag conventions.
+const ATTRIBUTE_CHOICES: Array<{ full: string; short: string; cls: string }> = [
+  { full: 'Strength', short: 'Str', cls: 'chip-str' },
+  { full: 'Intelligence', short: 'Int', cls: 'chip-int' },
+  { full: 'Dexterity', short: 'Dex', cls: 'chip-dex' }
 ]
 
 function attributeChoiceNote(full: string): string {
@@ -226,6 +228,9 @@ function PassivesSection({
                         )}
                         <PassiveRowEditor
                           passive={normalizePassive(entry)}
+                          defaultName={
+                            labels?.passiveNameById[normalizePassive(entry).id]
+                          }
                           onChange={(next) => {
                             const copy = entries.slice()
                             copy[k] = collapseObj(next)
@@ -249,6 +254,7 @@ function PassivesSection({
           renderRow={(p, onEntryChange) => (
             <PassiveRowEditor
               passive={normalizePassive(p)}
+              defaultName={labels?.passiveNameById[normalizePassive(p).id]}
               onChange={(next) => onEntryChange(collapseObj(next))}
             />
           )}
@@ -484,13 +490,13 @@ function AttributeChipRow({
   return (
     <div className="attribute-chips">
       <span className="attribute-chips-label">Recommend</span>
-      {ATTRIBUTE_CHOICES.map(({ full, short }) => {
+      {ATTRIBUTE_CHOICES.map(({ full, short, cls }) => {
         const isActive = current === attributeChoiceNote(full)
         return (
           <button
             key={full}
             type="button"
-            className={`chip${isActive ? ' chip-active' : ''}`}
+            className={`chip ${cls}${isActive ? ' chip-active' : ''}`}
             onClick={() =>
               onChange({ ...passive, additional_text: attributeChoiceNote(full) })
             }
@@ -515,9 +521,17 @@ function AttributeChipRow({
 
 function PassiveRowEditor({
   passive,
+  defaultName,
   onChange
 }: {
   passive: BuildPassiveObject
+  /**
+   * Node's display name from the bundled lookup ("Strength",
+   * "Shock Chance", "Sustainable Practices"). Used as the Display Name
+   * input's placeholder so authors see the canonical label and can
+   * choose to override it with a build-specific note.
+   */
+  defaultName?: string
   onChange: (next: BuildPassiveObject) => void
 }) {
   return (
@@ -528,7 +542,7 @@ function PassiveRowEditor({
           <input
             type="text"
             value={passive.unique_name ?? ''}
-            placeholder="Optional"
+            placeholder={defaultName ?? 'Optional'}
             onChange={(e) =>
               onChange({
                 ...passive,

@@ -3,6 +3,24 @@
 All notable changes to poe2-build-forge. Versions track the web app at
 `apps/web`; the libraries follow alongside.
 
+## [0.9.3] — 2026-05-13
+
+**Changed**
+
+- Str / Int / Dex chips are now color-coded to the canonical PoE
+  attribute palette: red for Strength, blue for Intelligence, green for
+  Dexterity. Inactive chips tint the letter; active chips fill with the
+  attribute color.
+- Display Name input on passive rows now shows the node's lookup name as
+  the placeholder (e.g. "Strength", "Shock Chance", "Sustainable
+  Practices") so authors see the canonical label and only override it
+  when they want a build-specific label.
+
+Note: the Display Name + Weapon Set row stays visible for every passive
+even when both fields are empty — it's a deliberate jumping-off point
+for authors to add their own annotation, not a leak of editor surface
+to hide.
+
 ## [0.9.2] — 2026-05-13
 
 **Added**

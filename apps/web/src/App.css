@@ -660,6 +660,47 @@ details.editor-section[open] {
   border-color: var(--accent-hover);
 }
 
+/* Canonical PoE attribute colors. Inactive state tints the letter so the
+ * chip is recognizable even before clicking. Active state fills the chip. */
+.chip-str {
+  color: #dc2626;
+}
+.chip-int {
+  color: #2563eb;
+}
+.chip-dex {
+  color: #16a34a;
+}
+
+.chip-str.chip-active {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: #ffffff;
+}
+.chip-int.chip-active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: #ffffff;
+}
+.chip-dex.chip-active {
+  background: #16a34a;
+  border-color: #16a34a;
+  color: #ffffff;
+}
+
+.chip-str.chip-active:hover {
+  background: #b91c1c;
+  border-color: #b91c1c;
+}
+.chip-int.chip-active:hover {
+  background: #1d4ed8;
+  border-color: #1d4ed8;
+}
+.chip-dex.chip-active:hover {
+  background: #15803d;
+  border-color: #15803d;
+}
+
 .chip-clear {
   margin-left: auto;
   font-weight: 700;
