@@ -11508,6 +11508,7 @@
       "SupportAbidingHexPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PowerChargetogiveCurseDurationSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -11539,6 +11540,7 @@
       "SupportSacrificalOfferingPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AblationSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -11569,6 +11571,7 @@
       "SupportAcrimonyPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AcrimonySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -11599,6 +11602,7 @@
       "SupportAdhesiveGrenadesPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/StickyBombSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -11628,6 +11632,7 @@
       "SupportAdhesiveGrenadesPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/StickyBombSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -11659,6 +11664,7 @@
       "SupportAdhesiveGrenadesPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/StickyBombSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -11690,6 +11696,7 @@
       "SupportAdmixturePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MixedMaladiesSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -11722,6 +11729,7 @@
       "SupportAdvancingStormPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MovingStorms.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -11754,6 +11762,7 @@
       "SupportAlignmentPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AlignmentSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -11786,6 +11795,7 @@
       "SupportAlignmentPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AlignmentSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -11818,6 +11828,7 @@
       "SupportAlignmentPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AlignmentSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -11848,6 +11859,7 @@
       "SupportAmanamusTithePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankRedSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -11881,6 +11893,7 @@
       "SupportAmbrosiaPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AmbrosiaSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -11911,6 +11924,7 @@
       "SupportAmbrosiaPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AmbrosiaSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -11941,6 +11955,7 @@
       "SupportAmmoConservationPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChanceToNotConsumeAmmoSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -11971,6 +11986,7 @@
       "SupportAmmoConservationPlayerFour"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChanceToNotConsumeAmmoSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -12004,6 +12020,7 @@
       "SupportAmmoConservationPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChanceToNotConsumeAmmoSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -12036,6 +12053,7 @@
       "SupportAmmoConservationPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChanceToNotConsumeAmmoSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -12066,6 +12084,7 @@
       "SupportAncestralAidPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AncestralAidSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -12100,6 +12119,7 @@
       "SupportAncestralCallPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AncestralCallSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -12131,6 +12151,7 @@
       "SupportAncestralCallPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AncestralCallSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -12164,6 +12185,7 @@
       "SupportAncestralCallPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AncestralCallSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -12197,6 +12219,7 @@
       "SupportUrgentTotemsPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/TotemPlacementSpeedSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -12228,6 +12251,7 @@
       "SupportUrgentTotemsPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/TotemPlacementSpeedSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -12259,6 +12283,7 @@
       "SupportUrgentTotemsPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/TotemPlacementSpeedSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -12288,6 +12313,7 @@
       "SupportArakaalisLustPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankGreenSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -12317,6 +12343,7 @@
       "SupportArbitersIgnitionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankBlueSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -12351,6 +12378,7 @@
       "ArmourExplosionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ArmourExplosionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -12386,6 +12414,7 @@
       "SupportArmsLengthPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ArmsLengthSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -12416,6 +12445,7 @@
       "SupportAstralProjectionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AstralProjectionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -12444,6 +12474,7 @@
       "SupportAtzirisAllurePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankBlueSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -12475,6 +12506,7 @@
       "TriggeredAtzirisCallPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankBlueSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -12508,6 +12540,7 @@
       "SupportAtzirisCommunionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankBlueSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -12539,6 +12572,7 @@
       "SupportAtzirisImpatiencePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankGreenSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -12568,6 +12602,7 @@
       "SupportAutoReloadPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AutoReloadSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -12600,6 +12635,7 @@
       "SupportBarbsPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BarbsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -12633,6 +12669,7 @@
       "SupportBarbsPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BarbsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -12666,6 +12703,7 @@
       "SupportBarbsPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BarbsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -12700,6 +12738,7 @@
       "TriggeredBattershoutExplosionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BattershoutSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -12736,6 +12775,7 @@
       "SupportBiddingPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BiddingSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -12768,6 +12808,7 @@
       "SupportBiddingPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BiddingSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -12800,6 +12841,7 @@
       "SupportBiddingPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BiddingSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -12832,6 +12874,7 @@
       "SupportBlindsidePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlindsideSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -12860,6 +12903,7 @@
       "SupportHobblePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BloodintheEyesSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -12892,6 +12936,7 @@
       "TriggeredBoneShrapnelPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BoneShrapnelSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -12927,6 +12972,7 @@
       "TriggeredBrambleslamPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BriarpatchSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -12966,6 +13012,7 @@
       "SupportBranchingFissuresPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BranchingFissuresSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -12996,6 +13043,7 @@
       "SupportBranchingFissuresPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BranchingFissuresSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -13024,6 +13072,7 @@
       "SupportEnduranceChargeOnArmourBreak"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BreakEndurance.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -13054,6 +13103,7 @@
       "SupportBrinkPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BrinkSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -13086,6 +13136,7 @@
       "SupportBrinkPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BrinkSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -13118,6 +13169,7 @@
       "SupportBurgeonPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChannellingDamageSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -13149,6 +13201,7 @@
       "SupportBurgeonPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChannellingDamageSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -13180,6 +13233,7 @@
       "SupportCadencePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MeasuredSpeedSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -13212,6 +13266,7 @@
       "TriggeredCaltropsPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CaltropsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -13249,6 +13304,7 @@
       "SupportEnergyCapacitorPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CapacitorSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -13279,6 +13335,7 @@
       "SupportCatharsisPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CleanseSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -13312,6 +13369,7 @@
       "SupportChaoticFreezePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChaoticFreezeSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -13344,6 +13402,7 @@
       "SupportChargedShotsPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChargedShotsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -13376,6 +13435,7 @@
       "SupportChargedShotsPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChargedShotsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -13406,6 +13466,7 @@
       "SupportCharmBountyPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CharmBountySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -13436,6 +13497,7 @@
       "SupportClashPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ClashSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -13466,6 +13528,7 @@
       "SupportCombatReloadPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CombatReloadSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -13497,6 +13560,7 @@
       "SupportCommandment"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PureCommandSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -13529,6 +13593,7 @@
       "SupportCommiseratePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CommiserateSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -13559,6 +13624,7 @@
       "SupportConcoctPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ConcoctSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -13589,6 +13655,7 @@
       "SupportConcoctPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ConcoctSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -13619,6 +13686,7 @@
       "SupportConsideredCastingPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ConsideredCastingSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -13650,6 +13718,7 @@
       "SupportCoolheadedPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CoolHeadedSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -13682,6 +13751,7 @@
       "SupportCorpseConservationPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CorpseConservationSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -13712,6 +13782,7 @@
       "SupportCracklingBarrierPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LightningThornsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -13745,6 +13816,7 @@
       "TriggeredCraterPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FissureOnLandingSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -13782,6 +13854,7 @@
       "SupportCrazedMinionsPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CrazedMinionsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -13814,6 +13887,7 @@
       "SupportCrystallineShardsPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CrystallineShardsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -13844,6 +13918,7 @@
       "SupportCullingStrikePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CullingStrikeSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -13875,6 +13950,7 @@
       "SupportCullingStrikePlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CullingStrikeSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -13906,6 +13982,7 @@
       "SupportCulminationPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CulminationSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -13939,6 +14016,7 @@
       "SupportCulminationPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CulminationSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -13972,6 +14050,7 @@
       "SupportCursedGroundPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CursedGroundSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -14003,6 +14082,7 @@
       "SupportDanseMacabrePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DanseMacabreSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -14031,6 +14111,7 @@
       "SupportDaressosPassionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankRedSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -14061,6 +14142,7 @@
       "SupportDauntlessPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/UnmovingSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -14090,6 +14172,7 @@
       "SupportDazingCryPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DazingCrySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -14119,6 +14202,7 @@
       "SupportDazzlePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DazzleSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -14151,6 +14235,7 @@
       "TriggeredDeadlyResolvePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DangerousResolveSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -14188,6 +14273,7 @@
       "SupportDeathmarchPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CleansingSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -14220,6 +14306,7 @@
       "SupportDecayingHexPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DecayingHexSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -14252,6 +14339,7 @@
       "SupportDefyPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DefySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -14283,6 +14371,7 @@
       "SupportDefyPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DefySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -14314,6 +14403,7 @@
       "SupportDelayedGratificationPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AdversitySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -14344,6 +14434,7 @@
       "SupportDelayedReactionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DelayedReactionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -14375,6 +14466,7 @@
       "SupportDeliberationPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CessationSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -14405,6 +14497,7 @@
       "SupportDerangePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DerangeSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -14433,6 +14526,7 @@
       "SupportDesperationPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DesperationSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -14463,6 +14557,7 @@
       "SupportDiallasDesirePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankBlueSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -14494,6 +14589,7 @@
       "SupportDirestrikePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DireStrikeSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -14526,6 +14622,7 @@
       "SupportDirestrikePlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DireStrikeSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -14558,6 +14655,7 @@
       "SupportFleetingRemnantsPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RushedRemnantsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -14589,6 +14687,7 @@
       "SupportFleetingRemnantsPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RushedRemnantsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -14619,6 +14718,7 @@
       "TriggeredCurseZoneHazardExplosionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CursedGroundSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -14657,6 +14757,7 @@
       "SupportPersistentGroundPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DomainSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -14687,6 +14788,7 @@
       "SupportPersistentGroundPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DomainSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -14717,6 +14819,7 @@
       "SupportPersistentGroundPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DomainSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -14747,6 +14850,7 @@
       "SupportDoubleBarrelPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DoubleBarrelSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -14779,6 +14883,7 @@
       "SupportDoubleBarrelPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DoubleBarrelSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -14811,6 +14916,7 @@
       "SupportDoubleBarrelPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DoubleBarrelSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -14842,6 +14948,7 @@
       "TriggeredDreamersKnellPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankGreenSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -14879,6 +14986,7 @@
       "SupportDurabilityPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DurabilitySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -14909,6 +15017,7 @@
       "SupportEmbitterPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/EmbitterSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -14940,6 +15049,7 @@
       "SupportHeavyStunEndurancePlayerOne"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/EnduranceOnHeavyStunSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -14970,6 +15080,7 @@
       "SupportHeavyStunEndurancePlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/EnduranceOnHeavyStunSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -15000,6 +15111,7 @@
       "SupportEnergyRetentionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/EnergyRetentionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -15031,6 +15143,7 @@
       "SupportHulkingMinionsPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/EnormitySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -15061,6 +15174,7 @@
       "SupportEshsRadiancePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankBlueSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -15094,6 +15208,7 @@
       "SupportExcisePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ExciseSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -15122,6 +15237,7 @@
       "SupportExcoriatePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ElementalAssaultSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -15154,6 +15270,7 @@
       "SupportExecratePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ExpanseSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -15184,6 +15301,7 @@
       "SupportExpansePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ExecrateSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -15215,6 +15333,7 @@
       "SupportShortFusePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ExpediteSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -15245,6 +15364,7 @@
       "SupportShortFusePlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ExpediteSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -15275,6 +15395,7 @@
       "SupportExtractionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ExtractionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -15305,6 +15426,7 @@
       "SupportFerocityPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FerocitySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -15335,6 +15457,7 @@
       "SupportSelflessRemnantsPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FigureheadSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -15364,6 +15487,7 @@
       "SupportFirstBloodPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FirstBloodSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -15395,6 +15519,7 @@
       "TriggeredFlamePillarPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PillarofFireSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -15427,6 +15552,7 @@
       "SupportFlamepiercePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FlamepierceSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -15457,6 +15583,7 @@
       "SupportFlowPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LingeringComboSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -15487,6 +15614,7 @@
       "SupportFlukePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RandomisedTriggerSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -15516,6 +15644,7 @@
       "SupportFlukePlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RandomisedTriggerSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -15548,6 +15677,7 @@
       "SupportFocusedCursePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FocusedHexSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -15577,6 +15707,7 @@
       "SupportFreezeforkPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FreezeforkSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -15609,6 +15740,7 @@
       "SupportFreshClipPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DamagePerBoltReloadedRecentlySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -15639,6 +15771,7 @@
       "SupportFreshClipPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DamagePerBoltReloadedRecentlySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -15668,6 +15801,7 @@
       "TriggeredSupportFromTheGraveIceFragmentPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankRedSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -15705,6 +15839,7 @@
       "TriggeredSupportFrozenSpiteIceFragmentPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FrozenSpiteSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -15740,6 +15875,7 @@
       "SupportGambleshotPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/GambleshotSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -15769,6 +15905,7 @@
       "SupportGarukhansResolvePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankGreenSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -15801,6 +15938,7 @@
       "SupportGlacierPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/IceCrystalMoreLifeSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -15829,6 +15967,7 @@
       "SupportCirelsCultivationPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/GreatwoodSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -15859,6 +15998,7 @@
       "SupportGreatwoodPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/GreatwoodSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -15888,6 +16028,7 @@
       "SupportRelentlessRagePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/GrudgeSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -15916,6 +16057,7 @@
       "SupportGuatelitzisAblationPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankBlueSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -15948,6 +16090,7 @@
       "TriggeredHaemocrystalsPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/HaemocrystalsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -15983,6 +16126,7 @@
       "SupportHardyTotemsPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MoreTotemLifeSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -16013,6 +16157,7 @@
       "TriggeredSplinterExplosionHardyTotems"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MoreTotemLifeSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -16049,6 +16194,7 @@
       "SupportHardyTotemsPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MoreTotemLifeSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -16079,6 +16225,7 @@
       "SupportTriggeredAnnihilationPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankBlueSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -16120,6 +16267,7 @@
       "SupportHeftPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/HeftSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -16149,6 +16297,7 @@
       "SupportHideOfHelbrymPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankRedSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -16180,6 +16329,7 @@
       "SupportHinderPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/HinderSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -16212,6 +16362,7 @@
       "SupportHitAndRunPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MobileAssaultSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -16243,6 +16394,7 @@
       "TriggeredHoarfrostPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/HoarfrostSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -16279,6 +16431,7 @@
       "SupportHolyDescentPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/HolyDescentSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -16311,6 +16464,7 @@
       "SupportIciclePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/IceCrystalLessLifeSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -16341,6 +16495,7 @@
       "SupportImpalePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ImpaleSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -16373,6 +16528,7 @@
       "SupportBoundlessEnergyPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ImpetusSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -16403,6 +16559,7 @@
       "SupportBoundlessEnergyPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ImpetusSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -16433,6 +16590,7 @@
       "SupportIncisionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/IncisionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -16465,6 +16623,7 @@
       "SupportChargeInhibitionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/InhibitorSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -16496,6 +16655,7 @@
       "SupportInnervatePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/Innervate.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -16529,6 +16689,7 @@
       "SupportIntenseAgonyPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/IntenseAgonySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -16561,6 +16722,7 @@
       "SupportInterludePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/InterludeSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -16592,6 +16754,7 @@
       "SupportInterludePlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/InterludeSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -16623,6 +16786,7 @@
       "SupportInterludePlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/InterludeSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -16652,6 +16816,7 @@
       "SupportIronGripPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankRedSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -16683,6 +16848,7 @@
       "SupportIronWillPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankRedSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -16715,6 +16881,7 @@
       "SupportReinforcedTotemsPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/IronwoodSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -16746,6 +16913,7 @@
       "SupportReinforcedTotemsPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/IronwoodSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -16775,6 +16943,7 @@
       "SupportKalisasCrescendoPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankBlueSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -16804,6 +16973,7 @@
       "SupportKaomsMadnessPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/UpheavalSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -16835,6 +17005,7 @@
       "SupportKhatalsRejuvenationPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankBlueSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -16865,6 +17036,7 @@
       "SupportKulemaksDominionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankGreenSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -16894,6 +17066,7 @@
       "SupportKurgalsLeashPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankGreenSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -16927,6 +17100,7 @@
       "SupportLastGaspPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LastGaspSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -16958,6 +17132,7 @@
       "SupportLeveragePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LeverageSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -16989,6 +17164,7 @@
       "TriggeredLivingLightningPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LivingLightningSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -17025,6 +17201,7 @@
       "TriggeredLivingLightningPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LivingLightningSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -17060,6 +17237,7 @@
       "SupportLongFusePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LongFuseSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -17090,6 +17268,7 @@
       "SupportLongFusePlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LongFuseSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -17120,6 +17299,7 @@
       "SupportLoyaltyPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/TrustyCompanionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -17149,6 +17329,7 @@
       "SupportMagneticRemnantsPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RemnantReachSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -17177,6 +17358,7 @@
       "SupportMaladyPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MaladySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -17207,6 +17389,7 @@
       "SupportMinionInstabilityPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MinionInstabilitySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -17239,6 +17422,7 @@
       "SupportMinionPactPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MinionPactSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -17270,6 +17454,7 @@
       "SupportMinionPactPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MinionPactSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -17299,6 +17484,7 @@
       "SupportMorganasTempestPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankBlueSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -17332,6 +17518,7 @@
       "SupportMusterPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/VariedTroopsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -17363,6 +17550,7 @@
       "SupportMysticismPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MysticismSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -17395,6 +17583,7 @@
       "SupportMysticismPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MysticismSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -17425,6 +17614,7 @@
       "SupportNadirPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/NadirSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -17456,6 +17646,7 @@
       "SupportNimbleReloadPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ReloadSpeedSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -17486,6 +17677,7 @@
       "SupportOutmaneuverPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/OutmaneuverSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -17517,6 +17709,7 @@
       "SupportOverextendPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/OverextendSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -17548,6 +17741,7 @@
       "SupportPayloadPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PayloadSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -17579,6 +17773,7 @@
       "SupportPerfectEndurancePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/EnduranceChargeonPerfectTimingSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -17610,6 +17805,7 @@
       "SupportPerfectionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PerfectionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -17638,6 +17834,7 @@
       "SupportPietysMercyPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankGreenSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -17672,6 +17869,7 @@
       "TriggeredPoisonSporesPustule"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PoisonSporesSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -17709,6 +17907,7 @@
       "SupportPotentialPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PotentialSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -17739,6 +17938,7 @@
       "SupportPracticedComboPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PracticedComboSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -17772,6 +17972,7 @@
       "SupportProfanityPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ProfanitySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -17803,6 +18004,7 @@
       "SupportProfanityPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ProfanitySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -17834,6 +18036,7 @@
       "SupportPunchThroughPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PunchThroughSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -17866,6 +18069,7 @@
       "SupportPursuitPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PursuitSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -17898,6 +18102,7 @@
       "SupportPursuitPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PursuitSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -17930,6 +18135,7 @@
       "SupportPursuitPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PursuitSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -17963,6 +18169,7 @@
       "TriggeredQuillburstPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SpikedGauntletsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -17999,6 +18206,7 @@
       "SupportRageforgedPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RageforgedSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -18029,6 +18237,7 @@
       "SupportRageforgedPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RageforgedSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -18059,6 +18268,7 @@
       "SupportRagingCryPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RagingCrySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -18088,6 +18298,7 @@
       "SupportRakiatasFlowPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankGreenSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -18117,6 +18328,7 @@
       "SupportRallyPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RallySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -18149,6 +18361,7 @@
       "SupportOverreachPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ReachSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -18181,6 +18394,7 @@
       "SupportRearmPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RearmSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -18212,6 +18426,7 @@
       "SupportRearmPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RearmSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -18243,6 +18458,7 @@
       "SupportRefractionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/TemperedValourSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -18275,6 +18491,7 @@
       "SupportRefractionPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/TemperedValourSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -18307,6 +18524,7 @@
       "SupportRefractionPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/TemperedValourSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -18339,6 +18557,7 @@
       "SupportRetaliatePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SteelyNerveSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -18371,6 +18590,7 @@
       "SupportRetaliatePlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SteelyNerveSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -18403,6 +18623,7 @@
       "SupportFrenziedRipostePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RetortSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -18434,6 +18655,7 @@
       "SupportRetreatPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RetreatingAssaultSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -18465,6 +18687,7 @@
       "SupportRetreatPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RetreatingAssaultSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -18496,6 +18719,7 @@
       "SupportRetreatPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RetreatingAssaultSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -18525,6 +18749,7 @@
       "SupportReveberatePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ReverberateSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -18558,6 +18783,7 @@
       "SupportRicochetPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/TerrainChainSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -18587,6 +18813,7 @@
       "SupportRicochetPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/TerrainChainSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -18618,6 +18845,7 @@
       "SupportRicochetPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/TerrainChainSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -18647,6 +18875,7 @@
       "SupportRigwaldsFerocityPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankGreenSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -18677,6 +18906,7 @@
       "SupportRimePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/WinterblastSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -18708,6 +18938,7 @@
       "SupportRipPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RipSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -18743,6 +18974,7 @@
       "SupportRitualisticCursePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RitualisticCurseSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -18773,6 +19005,7 @@
       "SupportRomirasRequitalPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/TrustyCompanionSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -18805,6 +19038,7 @@
       "SupportRupturePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RuptureSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -18834,6 +19068,7 @@
       "SupportRustedSpikesPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RustedSpikesSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -18864,6 +19099,7 @@
       "SupportSacrificialLambPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SacrificalLambSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -18895,6 +19131,7 @@
       "SupportSacrificialLambPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SacrificalLambSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -18926,6 +19163,7 @@
       "SupportSalvoPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SalvoSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -18956,6 +19194,7 @@
       "SupportSeeRedPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SeeRedSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -18988,6 +19227,7 @@
       "SupportShockingLeapPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ShockingLeapSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -19021,6 +19261,7 @@
       "TriggeredShockingRiftPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ShockingRiftSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -19058,6 +19299,7 @@
       "SupportMarkForDeathPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SingleOutSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -19090,6 +19332,7 @@
       "SupportMarkForDeathPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SingleOutSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -19123,6 +19366,7 @@
       "TriggeredSkitteringStonePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SkitteringStone.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -19159,6 +19403,7 @@
       "TriggeredSkitteringStonePlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SkitteringStone.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -19193,6 +19438,7 @@
       "TriggeredSoulbreakerPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SoulbreakerSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -19224,6 +19470,7 @@
       "SupportSparPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SparSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -19254,6 +19501,7 @@
       "SupportSpectralPalmPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SpectralPalmSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -19284,6 +19532,7 @@
       "SupportSpectralVolleyPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SpectralArrowsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -19316,6 +19565,7 @@
       "SupportSpellCascadePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SpellCascadeSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -19347,6 +19597,7 @@
       "SupportSplinteringTotemPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SplinterTotemSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -19378,6 +19629,7 @@
       "SupportSplinteringTotemPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SplinterTotemSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -19410,6 +19662,7 @@
       "TriggeredStaticShocksPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/GroundingShocksSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -19447,6 +19700,7 @@
       "SupportSteadfastPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChannellingAilmentThresholdSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -19478,6 +19732,7 @@
       "SupportSteadfastPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChannellingAilmentThresholdSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -19509,6 +19764,7 @@
       "SupportStoicismPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/NoFearSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -19539,6 +19795,7 @@
       "SupportStoicismPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/NoFearSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -19570,6 +19827,7 @@
       "StompingGroundShockwavePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/StompingGroundSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -19602,6 +19860,7 @@
       "SupportStoneSlamAegisPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankWhiteSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -19630,6 +19889,7 @@
       "SupportStormchainPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/StormchainSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -19663,6 +19923,7 @@
       "SupportStreamlinedRoundsPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AutoShotgunSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -19695,6 +19956,7 @@
       "SupportPotentExposurePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/StripAwaySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -19726,6 +19988,7 @@
       "SupportStrongHeartedPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/StrongHeartedSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -19758,6 +20021,7 @@
       "SupportEncroachingGroundPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ExpandingGroundSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -19789,6 +20053,7 @@
       "SupportSwiftAfflictionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SwiftAfflictionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -19820,6 +20085,7 @@
       "SupportSwiftAfflictionPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SwiftAfflictionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -19851,6 +20117,7 @@
       "SupportSwiftAfflictionPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SwiftAfflictionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -19882,6 +20149,7 @@
       "SupportSyzygyPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SyzygySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -19914,6 +20182,7 @@
       "SupportTacatisIrePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankGreenSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -19944,6 +20213,7 @@
       "SupportTangmazuLineagePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankGreenSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -19975,6 +20245,7 @@
       "SupportTasaliosRhythmPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankGreenSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -20006,6 +20277,7 @@
       "SupportTearPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/TearSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -20037,6 +20309,7 @@
       "SupportTecrodsRevengePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LastGaspSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -20071,6 +20344,7 @@
       "SupportThornskinPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ThornskinSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -20103,6 +20377,7 @@
       "SupportThornskinPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ThornskinSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -20133,6 +20408,7 @@
       "SupportTimerotPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/TimerotSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -20164,6 +20440,7 @@
       "SupportTirelessPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/TirelessSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -20194,6 +20471,7 @@
       "TriggeredTitanicArrowsPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/TitanicArrowsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -20227,6 +20505,7 @@
       "TriggeredSupportTotemicAegisPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankRedSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -20262,6 +20541,7 @@
       "SupportTremorsPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/UnstableEarthSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -20293,6 +20573,7 @@
       "SupportTulsStillnessPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankBlueSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -20324,6 +20605,7 @@
       "SupportTumultPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/TumultSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -20355,6 +20637,7 @@
       "SupportHeightenedChargesPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PotencySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -20383,6 +20666,7 @@
       "SupportUhtredAuguryPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankRedSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -20412,6 +20696,7 @@
       "SupportUhtredExodusPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankRedSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -20441,6 +20726,7 @@
       "SupportUhtredOmenPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankRedSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -20470,6 +20756,7 @@
       "SupportUnabatingPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/UnabatingSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -20499,6 +20786,7 @@
       "SupportUnbendingPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/UnbendingSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -20528,6 +20816,7 @@
       "SupportUnderminePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/UndermineSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -20557,6 +20846,7 @@
       "SupportUnerringPowerPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DiscountSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -20586,6 +20876,7 @@
       "SupportUnsteadyTempoPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/UnsteadyTempoSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -20616,6 +20907,7 @@
       "SupportUntouchablePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/UntouchableSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -20645,6 +20937,7 @@
       "SupportUnyieldingPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/UnyieldingSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -20677,6 +20970,7 @@
       "SupportUpheavalPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/UpheavalSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -20707,6 +21001,7 @@
       "SupportUpheavalPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/UpheavalSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -20737,6 +21032,7 @@
       "SupportUpwellingPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/UpwellingSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -20769,6 +21065,7 @@
       "SupportUpwellingPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/UpwellingSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -20799,6 +21096,7 @@
       "SupportUulNetolsEmbracePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankBlueSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -20832,6 +21130,7 @@
       "SupportVanguardPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/GuardonStunSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -20862,6 +21161,7 @@
       "SupportVanguardPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/GuardonStunSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -20890,6 +21190,7 @@
       "SupportVarashtasBlessingPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankBlueSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -20921,6 +21222,7 @@
       "SupportVerglasPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/VerglasSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -20950,6 +21252,7 @@
       "SupportVolatilePowerPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/VolatilePowerSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -20982,6 +21285,7 @@
       "SupportVolatilityPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/InstabilitySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -21015,6 +21319,7 @@
       "TriggeredVolcanicEruptionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/VolcanicEruptionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -21053,6 +21358,7 @@
       "SupportVoltPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/VoltSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -21087,6 +21393,7 @@
       "SupportWarmbloodedPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/WarmBloodedSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -21119,6 +21426,7 @@
       "SupportWildshardsPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/WildshardsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -21149,6 +21457,7 @@
       "SupportWildshardsPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/WildshardsSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -21182,6 +21491,7 @@
       "SupportWildshardsPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/WildshardsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -21213,6 +21523,7 @@
       "TriggeredXibaquasRendingPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankBlueSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -21246,6 +21557,7 @@
       "SupportXophsPyrePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankBlueSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -21277,6 +21589,7 @@
       "SupportZarokhsRefrainPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankBlueSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -21310,6 +21623,7 @@
       "SupportZenithPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ManatenanceSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -21341,6 +21655,7 @@
       "SupportZenithPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ManatenanceSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -21370,6 +21685,7 @@
       "SupportZerphisLegacyPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankRedSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -24407,7 +24723,7 @@
     "grants_skills": [
       "DodgeRollPlayer"
     ],
-    "icon_dds_file": "Art/2DArt/SkillIcons/4k/Rolldodge.dds",
+    "icon_dds_file": "Art/2DArt/SkillIcons/Rolldodge.dds",
     "recommended_supports": [],
     "requirement_weights": {
       "dexterity": 0,
@@ -25630,7 +25946,7 @@
     "grants_skills": [
       "FungalTerrainPlayer"
     ],
-    "icon_dds_file": "Art/2DArt/SkillIcons/4k/holygroundfire.dds",
+    "icon_dds_file": "Art/2DArt/SkillIcons/holygroundfire.dds",
     "recommended_supports": [],
     "requirement_weights": {
       "dexterity": 0,
@@ -32370,6 +32686,7 @@
       "SupportShockManaRegenerationPlayer"
     ],
     "icon_dds_file": null,
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 40,
       "intelligence": 60,
@@ -32400,6 +32717,7 @@
       "SupportProjectileAccelerationPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FasterProjectilesSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -32431,6 +32749,7 @@
       "SupportProjectileAccelerationPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FasterProjectilesSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -32462,6 +32781,7 @@
       "SupportProjectileAccelerationPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FasterProjectilesSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -32493,6 +32813,7 @@
       "SupportAftershockChancePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AftershockSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -32524,6 +32845,7 @@
       "SupportAftershockChancePlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AftershockSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -32557,6 +32879,7 @@
       "SupportAftershockChancePlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AftershockSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -32588,6 +32911,7 @@
       "SupportAhnsCitadelPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/WallFortressSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -32617,6 +32941,7 @@
       "SupportAilithLineagePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ComboFinisherSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -32648,6 +32973,7 @@
       "SupportAmbushPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AmbushSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -32678,6 +33004,7 @@
       "SupportArcaneSurgePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ArcaneSurgeSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -32710,6 +33037,7 @@
       "SupportRapidCastingPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FasterCastSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -32741,6 +33069,7 @@
       "SupportRapidCastingPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FasterCastSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -32772,6 +33101,7 @@
       "SupportRapidCastingPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FasterCastSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -32801,6 +33131,7 @@
       "SupportAtaluiBloodlettingPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BloodMagicSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -32833,6 +33164,7 @@
       "SupportBeheadPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BeheadSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -32866,6 +33198,7 @@
       "SupportBeheadPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BeheadSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -32897,6 +33230,7 @@
       "SupportBhatairsVengeancePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/IceBiteSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -32931,6 +33265,7 @@
       "SupportBitingFrostPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BitingFrostSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -32963,6 +33298,7 @@
       "SupportBitingFrostPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BitingFrostSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -32995,6 +33331,7 @@
       "SupportBlazingCriticalPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlazingCritsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -33028,6 +33365,7 @@
       "SupportBlindPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlindSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -33058,6 +33396,7 @@
       "SupportBlindPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlindSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -33086,6 +33425,7 @@
       "SupportBloodlustPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BloodlustSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -33119,6 +33459,7 @@
       "SupportKnockbackPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/KnockbackSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -33149,6 +33490,7 @@
       "SupportBountyPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LifeFlaskSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -33179,6 +33521,7 @@
       "SupportBountyPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LifeFlaskSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -33207,6 +33550,7 @@
       "SupportDazedBreakPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DazedBreakSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -33238,6 +33582,7 @@
       "SupportBrittleArmourPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BrittleArmour.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -33270,6 +33615,7 @@
       "SupportBrutalityPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BrutalitySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -33301,6 +33647,7 @@
       "SupportBrutalityPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BrutalitySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -33332,6 +33679,7 @@
       "SupportBrutalityPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BrutalitySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -33361,6 +33709,7 @@
       "SupportBrutusBrainPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MeatShield.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -33393,6 +33742,7 @@
       "SupportHeightenedAccuracyPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AdditionalAccuracy.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -33424,6 +33774,7 @@
       "SupportHeightenedAccuracyPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AdditionalAccuracy.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -33456,6 +33807,7 @@
       "TriggeredBurningRunesPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BurningRunesSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -33491,6 +33843,7 @@
       "PlagueBurstPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BurstingPlagueSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -33526,6 +33879,7 @@
       "SupportCannibalismPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CannibalismSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -33558,6 +33912,7 @@
       "SupportCannibalismPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CannibalismSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -33591,6 +33946,7 @@
       "TriggeredCatalysingDischargePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CatalysingElementsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -33628,6 +33984,7 @@
       "SupportChainPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChainSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -33660,6 +34017,7 @@
       "SupportChainPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChainSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -33692,6 +34050,7 @@
       "SupportChainPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChainSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -33722,6 +34081,7 @@
       "SupportChanceToFreezePlayer"
     ],
     "icon_dds_file": null,
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 60,
       "intelligence": 40,
@@ -33752,6 +34112,7 @@
       "SupportAddedChaosDamagePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AddedChaosDamageSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -33784,6 +34145,7 @@
       "SupportChaosMasteryPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChaosMasterySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -33816,6 +34178,7 @@
       "TriggeredChargedMarkPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChargedMark.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -33852,6 +34215,7 @@
       "SupportClarityPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ClaritySupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -33884,6 +34248,7 @@
       "SupportClarityPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ClaritySupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -33916,6 +34281,7 @@
       "SupportCloseCombatPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CloseCombatSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -33947,6 +34313,7 @@
       "SupportCloseCombatPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CloseCombatSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -33978,6 +34345,7 @@
       "SupportColdExposurePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ColdExposureSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -34010,6 +34378,7 @@
       "SupportAddedColdDamagePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AddedColdDamageSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -34042,6 +34411,7 @@
       "SupportColdMasteryPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ColdMasterySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -34073,6 +34443,7 @@
       "SupportColdPenetrationPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ColdPenetrationSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -34104,6 +34475,7 @@
       "SupportComboFinisherPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ComboFinisherSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -34138,6 +34510,7 @@
       "SupportComboFinisherPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ComboFinisherSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -34172,6 +34545,7 @@
       "SupportEscalatingPoisonPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MultiplePoisonSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -34203,6 +34577,7 @@
       "SupportConcentratedAreaPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ConcentratedEffectSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -34234,6 +34609,7 @@
       "SupportConcussiveSpellsPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DazeonCrit.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -34266,6 +34642,7 @@
       "SupportShockPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ConductionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -34297,6 +34674,7 @@
       "SupportControlledDestructionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ControlledDestructionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -34328,6 +34706,7 @@
       "SupportControlledHazardPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ControlledHazard.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -34359,6 +34738,7 @@
       "SupportCorrosionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CorrosionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -34391,6 +34771,7 @@
       "SupportCorruptingCryPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CorruptingCrySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -34422,6 +34803,7 @@
       "SupportCorruptingCryPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CorruptingCrySupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -34456,6 +34838,7 @@
       "SupportCorruptingCryPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CorruptingCrySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -34489,6 +34872,7 @@
       "SupportShockConductionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ShockingProliferationSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -34521,6 +34905,7 @@
       "SupportShockConductionPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ShockingProliferationSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -34554,6 +34939,7 @@
       "TriggeredCreepingChillPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CreepingChillSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -34588,6 +34974,7 @@
       "SupportCrescendoPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ExtendedCombo.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -34621,6 +35008,7 @@
       "SupportCrescendoPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ExtendedCombo.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -34654,6 +35042,7 @@
       "SupportCrescendoPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ExtendedCombo.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -34688,6 +35077,7 @@
       "TriggeredDeadlyCurrentPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DeadlyCurrent.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -34724,6 +35114,7 @@
       "SupportDeadlyHeraldsPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DeadlyHeraldsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -34755,6 +35146,7 @@
       "SupportDeadlyPoisonPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DeadlyPoisonSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -34786,6 +35178,7 @@
       "SupportDeadlyPoisonPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DeadlyPoisonSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -34817,6 +35210,7 @@
       "SupportProjectileDecelerationPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SlowerProjectilesSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -34848,6 +35242,7 @@
       "SupportProjectileDecelerationPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SlowerProjectilesSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -34879,6 +35274,7 @@
       "SupportDeepCutsPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DeepCutsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -34910,6 +35306,7 @@
       "SupportDeepCutsPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DeepCutsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -34941,6 +35338,7 @@
       "SupportLastingFrostPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DeepFreezeSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -34972,6 +35370,7 @@
       "SupportArmourDemolisherPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/IncreasedArmourBreakSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -35002,6 +35401,7 @@
       "SupportArmourDemolisherPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/IncreasedArmourBreakSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -35030,6 +35430,7 @@
       "SupportLastingGroundPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/GroundEffectDurationSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -35058,6 +35459,7 @@
       "SupportDevastatePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DevastateSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -35086,6 +35488,7 @@
       "SupportDazePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DazingSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -35118,6 +35521,7 @@
       "SupportDrainedAilmentPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/DrainedAilmentSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -35149,6 +35553,7 @@
       "SupportEchoingCryPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/EchoingCrySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -35179,6 +35584,7 @@
       "SupportEinharsBeastritePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BeheadSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -35213,6 +35619,7 @@
       "SupportElectrocutePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ElectrocuteSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -35242,6 +35649,7 @@
       "SupportElectrocuteLineagePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankGreenSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -35275,6 +35683,7 @@
       "SupportElementalArmyPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ElementalArmySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -35307,6 +35716,7 @@
       "TriggeredElementalDischargePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ElementalDischargeSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -35345,6 +35755,7 @@
       "SupportElementalFocusPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ElementalFocusSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -35377,6 +35788,7 @@
       "TriggeredEmpoweredSparkPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/EmpoweredSparks.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -35410,6 +35822,7 @@
       "TriggeredEmpoweredSparkPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/EmpoweredSparks.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -35441,6 +35854,7 @@
       "SupportSlowPotencyPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/EncumberanceSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -35470,6 +35884,7 @@
       "SupportEnergyBarrierPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/EnergyBarrierSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -35500,6 +35915,7 @@
       "SupportEnragedWarcryPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/EnragedWarcrySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -35531,6 +35947,7 @@
       "SupportEnragedWarcryPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/EnragedWarcrySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -35562,6 +35979,7 @@
       "SupportPoisonPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChanceToPoisonSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -35593,6 +36011,7 @@
       "SupportPoisonPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChanceToPoisonSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -35624,6 +36043,7 @@
       "SupportPoisonPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChanceToPoisonSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -35655,6 +36075,7 @@
       "SupportEssenceHarvestPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/EssenceHarvestSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -35687,6 +36108,7 @@
       "SupportIgniteDurationPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/EternalFlameSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -35718,6 +36140,7 @@
       "SupportIgniteDurationPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/EternalFlameSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -35749,6 +36172,7 @@
       "SupportIgniteDurationPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/EternalFlameSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -35780,6 +36204,7 @@
       "SupportEternalMarkPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/Undeterred.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -35811,6 +36236,7 @@
       "SupportExecutePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ExecuteSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -35841,6 +36267,7 @@
       "SupportExecutePlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ExecuteSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -35871,6 +36298,7 @@
       "SupportExecutePlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ExecuteSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -35901,6 +36329,7 @@
       "SupportExpandPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ExpandSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -35933,6 +36362,7 @@
       "SupportExploitWeaknessPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ExploitWeaknessSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -35965,6 +36395,7 @@
       "TriggeredExplosiveGrowthPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ExplosiveGrowth.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -36001,6 +36432,7 @@
       "TriggeredExplosiveGrowthPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ExplosiveGrowth.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -36036,6 +36468,7 @@
       "SupportExposingCryPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ExpositionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -36069,6 +36502,7 @@
       "TriggeredFanTheFlamesPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FanTheFlames.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -36105,6 +36539,7 @@
       "TriggeredFanTheFlamesPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FanTheFlames.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -36140,6 +36575,7 @@
       "CompressedDurationSupportPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LessDurationSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -36171,6 +36607,7 @@
       "CompressedDurationSupportPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LessDurationSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -36202,6 +36639,7 @@
       "SupportFeedingFrenzyPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FeedingFrenzySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -36233,6 +36671,7 @@
       "SupportFeedingFrenzyPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FeedingFrenzySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -36265,6 +36704,7 @@
       "TriggeredFieryDeathPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FieryDeathSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -36300,6 +36740,7 @@
       "SupportFireExposurePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FireExposureSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -36332,6 +36773,7 @@
       "SupportAddedFireDamagePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AddedFireDamageSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -36364,6 +36806,7 @@
       "SupportFireMasteryPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FireMasterySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -36395,6 +36838,7 @@
       "SupportFirePenetrationPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FirePenetrationSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -36426,6 +36870,7 @@
       "SupportFirePenetrationPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FirePenetrationSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -36457,6 +36902,7 @@
       "FistOfWarSupportPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FistOfWarSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -36490,6 +36936,7 @@
       "FistOfWarSupportPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FistOfWarSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -36523,6 +36970,7 @@
       "FistOfWarSupportPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FistOfWarSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -36556,6 +37004,7 @@
       "SupportBloodFountainPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FontOfBloodSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -36587,6 +37036,7 @@
       "SupportManaFountainPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ManaFountainSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -36616,6 +37066,7 @@
       "SupportRageFountainPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FontOfRageSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -36647,6 +37098,7 @@
       "SupportForkPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ForkSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -36678,6 +37130,7 @@
       "SupportWallFortressPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/WallFortressSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -36708,6 +37161,7 @@
       "SupportWallFortressPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/WallFortressSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -36738,6 +37192,7 @@
       "SupportChillingIcePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FrozenNexusSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -36770,6 +37225,7 @@
       "SupportFrostfirePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FrostfireSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -36802,6 +37258,7 @@
       "TriggeredFrozenVortexPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FrozenVortexSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -36835,6 +37292,7 @@
       "SupportFusilladePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FusilladeSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -36868,6 +37326,7 @@
       "SupportFreezePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/HypothermiaSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -36899,6 +37358,7 @@
       "SupportGorgePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/Mortuary.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -36929,6 +37389,7 @@
       "SupportMeleePhysicalDamagePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MeleePhysicalDamageSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -36962,6 +37423,7 @@
       "SupportCurseEffectPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CurseEffectSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -36993,6 +37455,7 @@
       "SupportHerbalismPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/HerbalismSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -37025,6 +37488,7 @@
       "SupportHerbalismPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/HerbalismSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -37057,6 +37521,7 @@
       "SupportHexBloomPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/HexBloomSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -37089,6 +37554,7 @@
       "SupportHourglassPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/HourglassSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -37119,6 +37585,7 @@
       "SupportIceBitePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/IceBiteSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -37153,6 +37620,7 @@
       "SupportIceBitePlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/IceBiteSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -37187,6 +37655,7 @@
       "SupportIgnitePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/IgnitionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -37218,6 +37687,7 @@
       "SupportIgnitePlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/IgnitionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -37249,6 +37719,7 @@
       "SupportIgnitePlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/IgnitionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -37280,6 +37751,7 @@
       "SupportImmolatePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ImmolationSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -37312,6 +37784,7 @@
       "ImpactShockwaveSupportPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ImpactShockwaveSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -37347,6 +37820,7 @@
       "DoomBlastPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ImpendingDoomSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -37382,6 +37856,7 @@
       "SupportInevitableCriticalsPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/InevitableCriticalsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -37412,6 +37887,7 @@
       "SupportInevitableCriticalsPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/InevitableCriticalsSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -37442,6 +37918,7 @@
       "SupportInfernalLegionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/InfernalLegionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -37475,6 +37952,7 @@
       "SupportInfernalLegionPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/InfernalLegionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -37508,6 +37986,7 @@
       "SupportInfernalLegionPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/InfernalLegionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -37539,6 +38018,7 @@
       "SupportBuffedHeraldPlayer"
     ],
     "icon_dds_file": null,
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -37570,6 +38050,7 @@
       "SupportCooldownRecoveryPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CooldownReductionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -37600,6 +38081,7 @@
       "SupportCooldownRecoveryPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CooldownReductionSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -37630,6 +38112,7 @@
       "SupportEfficiencyPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/Inspiration.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -37660,6 +38143,7 @@
       "SupportEfficiencyPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/Inspiration.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -37688,6 +38172,7 @@
       "SupportInvocationPlayer"
     ],
     "icon_dds_file": null,
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -37720,6 +38205,7 @@
       "SupportJaggedGroundPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/JaggedGroundSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -37755,6 +38241,7 @@
       "SupportJaggedGroundPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/JaggedGroundSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -37790,6 +38277,7 @@
       "SupportBleedPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChanceToBleedSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -37821,6 +38309,7 @@
       "SupportBleedPlayerFour"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChanceToBleedSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -37852,6 +38341,7 @@
       "SupportBleedPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChanceToBleedSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -37883,6 +38373,7 @@
       "SupportBleedPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ChanceToBleedSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -37914,6 +38405,7 @@
       "SupportLastingShockPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LastingShockSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -37943,6 +38435,7 @@
       "SupportLifeFlaskPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LifeFlaskSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -37973,6 +38466,7 @@
       "SupportLifeOnCullPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LifeOnCull.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -38003,6 +38497,7 @@
       "SupportLifeLeechPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LifeLeechSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -38035,6 +38530,7 @@
       "SupportLifeLeechPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LifeLeechSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -38067,6 +38563,7 @@
       "SupportLifeLeechPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LifeLeechSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -38099,6 +38596,7 @@
       "SupportBloodMagicPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BloodMagicSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -38129,6 +38627,7 @@
       "SupportLightningExposurePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LightningExposureSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -38161,6 +38660,7 @@
       "SupportAddedLightningDamagePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/AddedLightningDamageSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -38193,6 +38693,7 @@
       "SupportLightningMasteryPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LightningMasterySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -38224,6 +38725,7 @@
       "SupportLightningPenetrationPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LightningPenetrationSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -38253,6 +38755,7 @@
       "SupportLockdownPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/LockdownSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -38283,6 +38786,7 @@
       "SupportFarCombatPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FarCombatSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -38314,6 +38818,7 @@
       "SupportFarCombatPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FarCombatSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -38345,6 +38850,7 @@
       "SupportMagnifiedAreaPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/IncreasedAreaOfEffectSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -38376,6 +38882,7 @@
       "SupportMagnifiedAreaPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/IncreasedAreaOfEffectSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -38407,6 +38914,7 @@
       "SupportMaimPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MaimSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -38436,6 +38944,7 @@
       "SupportManaFlaskPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ManaFlaskSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -38467,6 +38976,7 @@
       "TriggeredManaFlarePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ManaFlareSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -38502,6 +39012,7 @@
       "SupportMarkOfSiphoningPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MarkedForDrain.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -38533,6 +39044,7 @@
       "SupportMarkOfSiphoningPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MarkedForDrain.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -38564,6 +39076,7 @@
       "SupportRapidAttacksPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FasterAttack.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -38595,6 +39108,7 @@
       "SupportRapidAttacksPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FasterAttack.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -38626,6 +39140,7 @@
       "SupportRapidAttacksPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/FasterAttack.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -38657,6 +39172,7 @@
       "SupportMeatShieldPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MeatShield.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -38688,6 +39204,7 @@
       "SupportMeatShieldPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MeatShield.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -38719,6 +39236,7 @@
       "SupportMinionMasteryPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PhysicalMasterySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -38750,6 +39268,7 @@
       "SupportMobilityPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MobilitySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -38780,6 +39299,7 @@
       "SupportMomentumPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MomentumSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -38808,6 +39328,7 @@
       "SupportEmpoweredCullPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/EmpoweredCullSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -38838,6 +39359,7 @@
       "SupportNeuralOverloadPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/NeuralOverloadSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -38869,6 +39391,7 @@
       "SupportNovaProjectilesPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/NovaProjectilesSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -38900,6 +39423,7 @@
       "SupportNovaProjectilesTwoPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/NovaProjectilesSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -38928,7 +39452,8 @@
     "grants_skills": [
       "SupportOisinsOathPlayer"
     ],
-    "icon_dds_file": "Art/2DItems/Gems/New/NewSupport/Lineage/4k/WalkeroftheWilds.dds",
+    "icon_dds_file": "Art/2DItems/Gems/New/NewSupport/Lineage/WalkeroftheWilds.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -38961,6 +39486,7 @@
       "SupportOpeningMovePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/OpeningMoveSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -38991,6 +39517,7 @@
       "SupportIncreaseLimitPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/IncreaseLimitSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -39019,6 +39546,7 @@
       "SupportIncreaseLimitPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/IncreaseLimitSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -39050,6 +39578,7 @@
       "SupportIncreaseLimitPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/IncreaseLimitSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -39080,6 +39609,7 @@
       "SupportOverchargePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/OverchargeSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -39111,6 +39641,7 @@
       "SupportStunPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/OverpowerSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -39141,6 +39672,7 @@
       "SupportStunPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/OverpowerSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -39171,6 +39703,7 @@
       "SupportStunPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/OverpowerSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -39201,6 +39734,7 @@
       "SupportPerpetualChargePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PerpetualChargeSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -39231,6 +39765,7 @@
       "ProlongedDurationSupportPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MoreDurationSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -39260,6 +39795,7 @@
       "ProlongedDurationSupportPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MoreDurationSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -39291,6 +39827,7 @@
       "ProlongedDurationSupportPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MoreDurationSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -39322,6 +39859,7 @@
       "SupportPhysicalMasteryPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PhysicalMasterySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -39353,6 +39891,7 @@
       "SupportPiercePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PierceSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -39384,6 +39923,7 @@
       "SupportPiercePlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PierceSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -39415,6 +39955,7 @@
       "SupportPiercePlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PierceSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -39446,6 +39987,7 @@
       "SupportPinPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PinSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -39477,6 +40019,7 @@
       "SupportPinPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PinSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -39508,6 +40051,7 @@
       "SupportPinPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PinSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -39539,6 +40083,7 @@
       "SupportPinpointCriticalPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PinpointCriticalSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -39569,6 +40114,7 @@
       "SupportPracticalMagicPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/StunningMagic.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -39601,6 +40147,7 @@
       "SupportPracticalMagicPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/StunningMagic.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -39633,6 +40180,7 @@
       "SupportPrecisionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PrecisionSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -39665,6 +40213,7 @@
       "SupportPrecisionPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/PrecisionSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -39695,6 +40244,7 @@
       "SupportEmpoweredDamagePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/EmpoweredDamageSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -39725,6 +40275,7 @@
       "SupportElementalArmamentPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/WeaponElementalDamageSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -39756,6 +40307,7 @@
       "SupportElementalArmamentPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/WeaponElementalDamageSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -39787,6 +40339,7 @@
       "SupportElementalArmamentPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/WeaponElementalDamageSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -39818,6 +40371,7 @@
       "SupportChargeProfusionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MultipleChargesSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -39848,6 +40402,7 @@
       "SupportChargeProfusionPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MultipleChargesSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -39878,6 +40433,7 @@
       "SupportRagePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RageSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -39910,6 +40466,7 @@
       "SupportRagePlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RageSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -39942,6 +40499,7 @@
       "SupportRagePlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RageSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -39974,6 +40532,7 @@
       "SupportRendingApexPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ApexBoostSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -40007,6 +40566,7 @@
       "SupportTempestuousTempoPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/TempestTempoSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -40035,6 +40595,7 @@
       "RuthlessSupportPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/RuthlessSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -40065,6 +40626,7 @@
       "SupportMultishotPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MultipleProjectilesSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -40096,6 +40658,7 @@
       "SupportMultishotPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/MultipleProjectilesSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -40127,6 +40690,7 @@
       "SupportDeadlyIgnitesPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SearingFlameSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -40158,6 +40722,7 @@
       "SupportDeadlyIgnitesPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SearingFlameSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -40189,6 +40754,7 @@
       "SupportSecondWindPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SecondWindSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -40219,6 +40785,7 @@
       "SupportSecondWindPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SecondWindSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -40249,6 +40816,7 @@
       "SupportSecondWindPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SecondWindSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -40277,6 +40845,7 @@
       "SupportEnergyShieldOnShockKillPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ShockSiphonSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -40308,6 +40877,7 @@
       "SupportSlamAftershocksPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/CascadingSlams.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -40341,6 +40911,7 @@
       "SupportManaOnCullPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ManaOnCull.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -40371,6 +40942,7 @@
       "SupportManaLeechPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ManaLeechSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -40403,6 +40975,7 @@
       "SupportSpellEchoPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SpellEchoSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -40433,6 +41006,7 @@
       "SupportSpiralProjectilesPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SpiralProjectilesSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -40464,6 +41038,7 @@
       "SupportArmourBreakPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ArmourBreakSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -40495,6 +41070,7 @@
       "SupportArmourBreakPlayerThree"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ArmourBreakSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -40526,6 +41102,7 @@
       "SupportArmourBreakPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ArmourBreakSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -40555,6 +41132,7 @@
       "SupportSpreadingFrostPlayer"
     ],
     "icon_dds_file": null,
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -40586,6 +41164,7 @@
       "SupportStormfirePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/StormfireSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -40618,6 +41197,7 @@
       "SupportIncreasedCriticalDamagePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/IncreasedCritDamageSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -40648,6 +41228,7 @@
       "SupportThrillOfTheKillPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ThrilloftheKillSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -40681,6 +41262,7 @@
       "SupportThrillOfTheKillPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/ThrilloftheKillSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -40712,6 +41294,7 @@
       "UnbreakableSupportPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/UnbreakableSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -40740,6 +41323,7 @@
       "DoLiterallyNothingPlayer"
     ],
     "icon_dds_file": "4k/",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -40768,6 +41352,7 @@
       "DoLiterallyNothingPlayer"
     ],
     "icon_dds_file": "4k/",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -40796,6 +41381,7 @@
       "DoLiterallyNothingPlayer"
     ],
     "icon_dds_file": "4k/",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -40824,6 +41410,7 @@
       "DoLiterallyNothingPlayer"
     ],
     "icon_dds_file": "4k/",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -40852,6 +41439,7 @@
       "DoLiterallyNothingPlayer"
     ],
     "icon_dds_file": "4k/",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -40880,6 +41468,7 @@
       "DoLiterallyNothingPlayer"
     ],
     "icon_dds_file": "4k/",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -40908,6 +41497,7 @@
       "DoLiterallyNothingPlayer"
     ],
     "icon_dds_file": "4k/",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -40936,6 +41526,7 @@
       "DoLiterallyNothingPlayer"
     ],
     "icon_dds_file": "4k/",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -40964,6 +41555,7 @@
       "DoLiterallyNothingPlayer"
     ],
     "icon_dds_file": "4k/",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -40994,6 +41586,7 @@
       "SupportUnleashPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/UnleashSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -41023,6 +41616,7 @@
       "SupportUruksSmeltingPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/IncreasedArmourBreakSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -41053,6 +41647,7 @@
       "SupportVilentasPropulsionPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/SlowerProjectilesSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -41086,6 +41681,7 @@
       "SupportVitalityPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/VitalitySupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -41118,6 +41714,7 @@
       "SupportVitalityPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/VitalitySupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 0,
@@ -41150,6 +41747,7 @@
       "SupportWildfirePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/IgniteProliferationSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -41181,6 +41779,7 @@
       "KnockbackWavePlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/KnockbackWaveSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -41214,6 +41813,7 @@
       "SupportWindowOfOpportunityPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/WindowOfOpportunitySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -41245,6 +41845,7 @@
       "SupportWindowOfOpportunityPlayerTwo"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/WindowOfOpportunitySupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 100,
       "intelligence": 0,
@@ -41276,6 +41877,7 @@
       "SupportWitheringTouchPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/WitheringTouchSupport.dds",
+    "is_lineage": false,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,
@@ -41306,6 +41908,7 @@
       "SupportZarokhsRevoltPlayer"
     ],
     "icon_dds_file": "Art/2DArt/SkillIcons/Support/4k/BlankBlueSupport.dds",
+    "is_lineage": true,
     "requirement_weights": {
       "dexterity": 0,
       "intelligence": 100,

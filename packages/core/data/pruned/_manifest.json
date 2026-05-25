@@ -1,9 +1,9 @@
 [
   {
     "filename": "ascendancies.json",
-    "raw_size": 3413768,
+    "raw_size": 12173855,
     "pruned_size": 2734,
-    "reduction_pct": 99.9,
+    "reduction_pct": 100,
     "pruned": true,
     "sha256": "b515a907e13a1b2a3722f14f8fa45cd199e8cfc3d7b0e1cbcc2220c77a75163a"
   },
@@ -25,11 +25,11 @@
   },
   {
     "filename": "gem_labels.json",
-    "raw_size": 471390,
-    "pruned_size": 61298,
+    "raw_size": 471820,
+    "pruned_size": 61366,
     "reduction_pct": 87,
     "pruned": true,
-    "sha256": "2d5f76428697bbb2779ed81bdfed785e76cd4a7e503a089dd9e09e740497447a"
+    "sha256": "119a721dbf8fab1f9bacbd1ac896534b2f8a12d721786d5bbe2c7252f6572f60"
   },
   {
     "filename": "item_classes.json",
@@ -49,9 +49,9 @@
   },
   {
     "filename": "skill_gems.json",
-    "raw_size": 1231888,
+    "raw_size": 1246875,
     "pruned_size": 56677,
-    "reduction_pct": 95.4,
+    "reduction_pct": 95.5,
     "pruned": true,
     "sha256": "a390521f76d3cc2a48fe2b2277864b0049d45a89a7995930ae7b6f724e2fd84d"
   },
