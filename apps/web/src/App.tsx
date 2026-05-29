@@ -457,6 +457,25 @@ export function App() {
         </p>
       </header>
 
+      <aside className="winddown-notice" role="note">
+        <strong>This project is no longer maintained.</strong> Since Path of
+        Exile 2 0.5.0, the major build sites export <code>.build</code> files
+        natively — use{' '}
+        <a href="https://maxroll.gg/poe2" target="_blank" rel="noreferrer">
+          maxroll.gg/poe2
+        </a>
+        ,{' '}
+        <a href="https://mobalytics.gg/poe-2" target="_blank" rel="noreferrer">
+          mobalytics.gg/poe-2
+        </a>
+        , or{' '}
+        <a href="https://poe.ninja/poe2/builds" target="_blank" rel="noreferrer">
+          poe.ninja/poe2
+        </a>
+        . The converter below still works for any standalone PoB code, but won't
+        be updated for future patches. Thanks for using it.
+      </aside>
+
       <section className="quick-start">
         <h2>How to use</h2>
         <ol>

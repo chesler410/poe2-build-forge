@@ -3,6 +3,18 @@
 [![CI](https://github.com/chesler410/poe2-build-forge/actions/workflows/ci.yml/badge.svg)](https://github.com/chesler410/poe2-build-forge/actions/workflows/ci.yml)
 [![Deploy](https://github.com/chesler410/poe2-build-forge/actions/workflows/deploy.yml/badge.svg)](https://github.com/chesler410/poe2-build-forge/actions/workflows/deploy.yml)
 
+> ## ⚠️ No longer maintained
+>
+> Path of Exile 2 0.5.0 (May 2026) shipped a native in-game Build Planner, and
+> the major build sites now export `.build` files directly. For PoB → `.build`
+> conversion, use **[maxroll.gg/poe2](https://maxroll.gg/poe2)**,
+> **[mobalytics.gg/poe-2](https://mobalytics.gg/poe-2)**, or
+> **[poe.ninja/poe2](https://poe.ninja/poe2/builds)** — they pull from build
+> catalogs and live characters via the GGG API, which this solo tool can't match.
+>
+> The converter still works for any standalone PoB code, but it's no longer
+> updated for new patches. Thanks to everyone who used it. 🫡
+
 **Try it now → [chesler410.github.io/poe2-build-forge](https://chesler410.github.io/poe2-build-forge/)**
 
 Convert Path of Exile 2 build guides — PoB codes from
@@ -24,10 +36,11 @@ keyed to character-level ranges.
 
 ## Status
 
-Early development. The web app is live; the libraries are not yet
-published to npm. **PoE2's in-game Build Planner ships May 29, 2026** —
-until then, generated `.build` files validate against the published
-schema and can be inspected, but can't actually be loaded in-game yet.
+**Archived / no longer maintained** (see notice above). The web app stays
+live and the full PoB → `.build` pipeline works: generated files load in the
+in-game Build Planner — validated against GGG's format and three third-party
+generators (maxroll, mobalytics, poe.ninja) on 0.5.0 launch day, 2026-05-29.
+It simply won't be updated for future patches.
 
 | Package | Status | Purpose |
 |---|---|---|

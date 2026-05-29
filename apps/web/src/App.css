@@ -111,6 +111,16 @@ header h1 {
   word-break: break-all;
 }
 
+.winddown-notice {
+  background: var(--surface);
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  padding: 0.85rem 1.25rem;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
 .link-button {
   display: inline;
   padding: 0;
