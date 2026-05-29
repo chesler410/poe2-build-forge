@@ -119,6 +119,44 @@ describe('mapPobToBuild', () => {
     }
   })
 
+  it('dedupes identical skill groups socketed more than once', () => {
+    // Regression: PoB can socket the same gem in multiple groups (e.g.
+    // across weapon sets), which emitted the same hint twice in-game.
+    // Identical groups collapse; a different setup of the same gem stays.
+    const gem = (gemId: string) => ({
+      gemId,
+      variantId: '',
+      nameSpec: '',
+      skillId: '',
+      level: 1,
+      quality: 0,
+      enabled: true
+    })
+    const synthetic = {
+      ...pob,
+      skills: {
+        activeSkillSet: 1,
+        skillSets: [
+          {
+            id: 1,
+            title: '',
+            skills: [
+              { enabled: true, gems: [gem('Metadata/Items/Gem/SkillGemDemonForm')] },
+              { enabled: true, gems: [gem('Metadata/Items/Gem/SkillGemDemonForm')] },
+              { enabled: true, gems: [gem('Metadata/Items/Gems/SkillGemSpark')] }
+            ]
+          }
+        ]
+      }
+    }
+    const result = mapPobToBuild(synthetic, { passives: passivesLookup })
+    const ids = (result.skills ?? []).map((s) => (typeof s === 'string' ? s : s.id))
+    expect(ids).toEqual([
+      'Metadata/Items/Gem/SkillGemDemonForm',
+      'Metadata/Items/Gems/SkillGemSpark'
+    ])
+  })
+
   it('omits items entirely when no slots are filled in the fixture', () => {
     // The 90pcuxN4XtJG fixture has all slots empty (itemId=0).
     const result = mapPobToBuild(pob, { passives: passivesLookup })

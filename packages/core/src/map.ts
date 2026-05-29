@@ -207,6 +207,7 @@ function mapSkills(pob: PathOfBuilding2): BuildSkill[] | undefined {
   if (!skillSet) return undefined
 
   const out: BuildSkill[] = []
+  const seen = new Set<string>()
   for (const skill of skillSet.skills) {
     if (!skill.enabled || skill.gems.length === 0) continue
     const main = skill.gems[0]
@@ -215,6 +216,14 @@ function mapSkills(pob: PathOfBuilding2): BuildSkill[] | undefined {
       .slice(1)
       .filter((g) => g.enabled && g.gemId)
       .map((g) => ({ id: g.gemId, level_interval: ALWAYS_SHOWN }))
+    // Dedupe identical skill groups. PoB can socket the same gem in
+    // multiple groups (e.g. across both weapon sets), which would
+    // otherwise emit the same hint twice. Key on the main gem + its
+    // support ids so genuinely-different setups of the same skill are
+    // still kept; only exact repeats are dropped.
+    const key = main.gemId + '|' + supports.map((s) => s.id).join(',')
+    if (seen.has(key)) continue
+    seen.add(key)
     const built: BuildSkillObject = {
       id: main.gemId,
       level_interval: ALWAYS_SHOWN
