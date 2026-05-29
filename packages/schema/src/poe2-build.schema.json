@@ -12,6 +12,10 @@
       "minLength": 1,
       "description": "Build display name shown in-game."
     },
+    "author": {
+      "type": "string",
+      "description": "Build author / creator name. Optional."
+    },
     "description": {
       "type": "string",
       "description": "Build description. Supports markup tags (see $defs/AdditionalText)."
@@ -46,9 +50,9 @@
         ]
       }
     },
-    "items": {
+    "inventory_slots": {
       "type": "array",
-      "description": "Inventory slot hints. Used to show tips on equipment slots in the character panel; does not provide actual items.",
+      "description": "Inventory slot hints. Used to show tips on equipment slots in the character panel; does not provide actual items. (0.5 renamed this from 'items'.)",
       "items": { "$ref": "#/$defs/BuildItem" }
     }
   },
@@ -206,7 +210,7 @@
           ]
         }
       ],
-      "items": [
+      "inventory_slots": [
         {
           "inventory_id": "Weapon1",
           "slot_x": 0,

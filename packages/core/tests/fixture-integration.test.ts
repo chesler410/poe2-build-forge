@@ -51,12 +51,12 @@ describe('Blood Mage end-to-end (real data with items)', () => {
     expect(result.valid).toBe(true)
     expect(build.passives?.length).toBeGreaterThan(50)
     expect(build.skills?.length).toBeGreaterThan(5)
-    expect(build.items?.length).toBeGreaterThan(0)
+    expect(build.inventory_slots?.length).toBeGreaterThan(0)
   })
 
   it('every emitted item carries either unique_name or additional_text', () => {
     // Regression: previously item slots emitted bare (no item info at all).
-    for (const item of build.items ?? []) {
+    for (const item of build.inventory_slots ?? []) {
       const hasContent =
         typeof item.unique_name === 'string' ||
         typeof item.additional_text === 'string'
@@ -70,7 +70,7 @@ describe('Blood Mage end-to-end (real data with items)', () => {
     // Regression on the v0.5.1 fix: magic items used to surface
     // "MAGIC: Unique ID: 63727b..." because the parser took the
     // metadata line as the base type.
-    for (const item of build.items ?? []) {
+    for (const item of build.inventory_slots ?? []) {
       if (typeof item.additional_text === 'string') {
         expect(item.additional_text).not.toMatch(/Unique ID:/i)
         expect(item.additional_text).not.toMatch(/Item Level:/i)

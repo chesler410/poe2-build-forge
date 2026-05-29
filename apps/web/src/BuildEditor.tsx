@@ -53,7 +53,7 @@ interface Props {
 export function BuildEditor({ build, onChange, labels }: Props) {
   const passives = build.passives ?? []
   const skills = build.skills ?? []
-  const items = build.items ?? []
+  const items = build.inventory_slots ?? []
 
   return (
     <div className="build-editor">
@@ -136,7 +136,7 @@ export function BuildEditor({ build, onChange, labels }: Props) {
               it.additional_text ?? ''
             ].join(' ')
           }}
-          onChange={(next) => onChange({ ...build, items: next })}
+          onChange={(next) => onChange({ ...build, inventory_slots: next })}
         />
       )}
     </div>

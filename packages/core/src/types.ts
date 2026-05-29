@@ -168,11 +168,14 @@ export interface Slot {
  */
 export interface BuildFile {
   name: string
+  /** Build author / creator name. Optional (0.5 top-level field). */
+  author?: string
   description?: string
   ascendancy?: string
   passives?: BuildPassive[]
   skills?: BuildSkill[]
-  items?: BuildItem[]
+  /** Inventory-slot hints. Renamed from `items` in PoE2 0.5. */
+  inventory_slots?: BuildItem[]
 }
 
 /** Shorthand string id, or a fuller object form with metadata. */

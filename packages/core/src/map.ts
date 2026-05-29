@@ -2,9 +2,20 @@ import type {
   BuildFile,
   BuildPassive,
   BuildSkill,
+  BuildSkillObject,
+  BuildSupportObject,
   BuildItem,
   PathOfBuilding2
 } from './types'
+
+/**
+ * "Always show" level range. Real 0.5 `.build` files from Mobalytics and
+ * Maxroll tag every skill, support, and item with a level_interval; the
+ * in-game planner needs it to surface the hint across all levels (without
+ * it, skills anchor to each gem's unlock level — the "one gem per tier"
+ * behaviour observed in testing). `[1, 100]` spans the whole level range.
+ */
+const ALWAYS_SHOWN: [number, number] = [1, 100]
 
 /**
  * Lookup table mapping PoB integer node IDs (as string keys) to GGG
@@ -86,7 +97,7 @@ export function mapPobToBuild(
   if (skills && skills.length > 0) out.skills = skills
 
   const items = mapItems(pob)
-  if (items && items.length > 0) out.items = items
+  if (items && items.length > 0) out.inventory_slots = items
 
   return out
 }
@@ -200,15 +211,16 @@ function mapSkills(pob: PathOfBuilding2): BuildSkill[] | undefined {
     if (!skill.enabled || skill.gems.length === 0) continue
     const main = skill.gems[0]
     if (!main.gemId) continue
-    const supports = skill.gems
+    const supports: BuildSupportObject[] = skill.gems
       .slice(1)
       .filter((g) => g.enabled && g.gemId)
-      .map((g) => g.gemId)
-    if (supports.length === 0) {
-      out.push(main.gemId)
-    } else {
-      out.push({ id: main.gemId, support_skills: supports })
+      .map((g) => ({ id: g.gemId, level_interval: ALWAYS_SHOWN }))
+    const built: BuildSkillObject = {
+      id: main.gemId,
+      level_interval: ALWAYS_SHOWN
     }
+    if (supports.length > 0) built.support_skills = supports
+    out.push(built)
   }
   return out
 }
@@ -227,7 +239,8 @@ function mapItems(pob: PathOfBuilding2): BuildItem[] | undefined {
     const buildItem: BuildItem = {
       inventory_id: translateSlotName(slot.name),
       slot_x: 0,
-      slot_y: 0
+      slot_y: 0,
+      level_interval: ALWAYS_SHOWN
     }
 
     // Enrich with item info from the catalog if available. Uniques go

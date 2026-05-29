@@ -33,7 +33,7 @@ describe('shareLink encode/decode', () => {
           support_skills: ['Metadata/Items/Gems/SupportGemBrutality']
         }
       ],
-      items: [
+      inventory_slots: [
         {
           inventory_id: 'Weapon1',
           slot_x: 0,

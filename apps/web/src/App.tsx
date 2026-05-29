@@ -796,7 +796,7 @@ function ResultPanel({
           <dt>Skill groups</dt>
           <dd>{build.skills?.length ?? 0}</dd>
           <dt>Item-slot hints</dt>
-          <dd>{build.items?.length ?? 0}</dd>
+          <dd>{build.inventory_slots?.length ?? 0}</dd>
         </dl>
         <div className="result-actions">
           <button

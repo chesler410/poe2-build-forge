@@ -122,7 +122,7 @@ describe('mapPobToBuild', () => {
   it('omits items entirely when no slots are filled in the fixture', () => {
     // The 90pcuxN4XtJG fixture has all slots empty (itemId=0).
     const result = mapPobToBuild(pob, { passives: passivesLookup })
-    expect(result.items).toBeUndefined()
+    expect(result.inventory_slots).toBeUndefined()
   })
 
   it('treats ascendClassName "None" as no ascendancy', () => {
@@ -162,7 +162,7 @@ describe('mapPobToBuild', () => {
       }
     }
     const result = mapPobToBuild(synthetic, { passives: passivesLookup })
-    const ids = (result.items ?? []).map((i) => i.inventory_id)
+    const ids = (result.inventory_slots ?? []).map((i) => i.inventory_id)
     expect(ids).toContain('Flask1')
     expect(ids).toContain('Flask2')
     expect(new Set(ids).size).toBe(ids.length) // no duplicates
@@ -187,9 +187,9 @@ describe('mapPobToBuild', () => {
       }
     }
     const result = mapPobToBuild(synthetic, { passives: passivesLookup })
-    expect(result.items).toHaveLength(1)
-    expect(result.items![0].unique_name).toBe('Seed of Cataclysm')
-    expect(result.items![0].additional_text).toBeUndefined()
+    expect(result.inventory_slots).toHaveLength(1)
+    expect(result.inventory_slots![0].unique_name).toBe('Seed of Cataclysm')
+    expect(result.inventory_slots![0].additional_text).toBeUndefined()
   })
 
   it('emits additional_text with rarity+base for non-unique items', () => {
@@ -211,9 +211,9 @@ describe('mapPobToBuild', () => {
       }
     }
     const result = mapPobToBuild(synthetic, { passives: passivesLookup })
-    expect(result.items![0].unique_name).toBeUndefined()
-    expect(result.items![0].additional_text).toContain('RARE')
-    expect(result.items![0].additional_text).toContain('Cultist Crown')
+    expect(result.inventory_slots![0].unique_name).toBeUndefined()
+    expect(result.inventory_slots![0].additional_text).toContain('RARE')
+    expect(result.inventory_slots![0].additional_text).toContain('Cultist Crown')
   })
 
   it('emits additional_text without metadata leakage for magic items', () => {
@@ -241,10 +241,10 @@ describe('mapPobToBuild', () => {
       }
     }
     const result = mapPobToBuild(synthetic, { passives: passivesLookup })
-    expect(result.items![0].additional_text).toBe(
+    expect(result.inventory_slots![0].additional_text).toBe(
       'MAGIC: Bubbling Ultimate Life Flask of the Ample'
     )
-    expect(result.items![0].additional_text).not.toContain('Unique ID')
+    expect(result.inventory_slots![0].additional_text).not.toContain('Unique ID')
   })
 
   it('emits bare slot entry when catalog lookup misses (corrupt or out-of-sync data)', () => {
@@ -259,10 +259,10 @@ describe('mapPobToBuild', () => {
       }
     }
     const result = mapPobToBuild(synthetic, { passives: passivesLookup })
-    expect(result.items).toHaveLength(1)
-    expect(result.items![0].inventory_id).toBe('Belt')
-    expect(result.items![0].unique_name).toBeUndefined()
-    expect(result.items![0].additional_text).toBeUndefined()
+    expect(result.inventory_slots).toHaveLength(1)
+    expect(result.inventory_slots![0].inventory_id).toBe('Belt')
+    expect(result.inventory_slots![0].unique_name).toBeUndefined()
+    expect(result.inventory_slots![0].additional_text).toBeUndefined()
   })
 
   it('produces output that validates against @poe2-build-forge/schema', () => {
