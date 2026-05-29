@@ -157,6 +157,29 @@ The raw JSON Schema is exported as a static asset for non-TS consumers:
 import schemaJson from '@poe2-build-forge/schema/poe2-build.schema.json'
 ```
 
+## Roadmap
+
+Ideas under consideration — not commitments. Most are gated on PoE2
+**0.5.0** (May 29, 2026) landing first, so they're built against stable
+game data rather than a moving target.
+
+- **Inverse conversion: `.build` → PoB code** *(community-requested)*.
+  Take a `.build` — your own, or one a build creator shared — back into
+  [Path of Building](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2)
+  to theorycraft, check DPS/defenses, tweak, and re-export. Closes the
+  round-trip loop and would be the mirror of the existing pipeline.
+  Feasibility hinges on how items are stored in the `.build` format;
+  being scoped once 0.5.0 data settles.
+- **Direct save to the BuildPlanner folder.** Skip the
+  download-then-drag step by writing straight to
+  `Documents/My Games/Path of Exile 2/BuildPlanner/` via the File System
+  Access API on supported browsers (the download path stays as the
+  fallback). Needs the in-game planner to exist first.
+- **Round-trip regression suite.** Capture a real `.build` from the
+  in-game planner and confirm our parser/emitter reproduce it faithfully.
+
+Have an idea or a request? [Open an issue](https://github.com/chesler410/poe2-build-forge/issues).
+
 ## Development
 
 Requires Node 22.13+ (pnpm 11 needs `node:sqlite`) and pnpm 11+.
