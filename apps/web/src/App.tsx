@@ -476,6 +476,32 @@ export function App() {
             pick it from the in-game Build Planner.
           </li>
         </ol>
+        <details className="platform-note">
+          <summary>On Steam Deck, OneDrive, or console?</summary>
+          <ul>
+            <li>
+              <strong>Documents synced to OneDrive?</strong> The folder is under{' '}
+              <code>
+                OneDrive\Documents\My Games\Path of Exile 2\BuildPlanner\
+              </code>{' '}
+              instead — navigating via “Documents” in Explorer lands you in the
+              right place automatically.
+            </li>
+            <li>
+              <strong>Steam Deck</strong> (Proton):{' '}
+              <code>
+                ~/.local/share/Steam/steamapps/compatdata/2315204395/pfx/drive_c/users/steamuser/Documents/My
+                Games/Path of Exile 2/BuildPlanner/
+              </code>
+            </li>
+            <li>
+              <strong>PlayStation / Xbox:</strong> not supported yet. The in-game
+              Build Planner only reads <code>.build</code> files from disk, which
+              consoles don't expose — so it's PC and Steam Deck only for now (a
+              Path of Exile 2 limitation, not this tool's).
+            </li>
+          </ul>
+        </details>
         <p className="example-prompt">
           First time here?{' '}
           <button
@@ -811,7 +837,9 @@ function ResultPanel({
         <p className="placement-hint">
           Drop the downloaded file into{' '}
           <code>Documents\My Games\Path of Exile 2\BuildPlanner\</code>
-          {' '}and select the build in-game.
+          {' '}and select the build in-game. Documents synced to OneDrive? It's
+          under <code>OneDrive\Documents\…</code> instead. Console isn't
+          supported yet — PC and Steam Deck only.
         </p>
       </div>
 

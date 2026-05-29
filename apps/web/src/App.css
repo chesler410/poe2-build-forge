@@ -86,6 +86,31 @@ header h1 {
   color: var(--text-muted);
 }
 
+.platform-note {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.platform-note > summary {
+  cursor: pointer;
+  color: var(--accent);
+  text-underline-offset: 2px;
+}
+
+.platform-note ul {
+  margin: 0.5rem 0 0;
+  padding-left: 1.25rem;
+}
+
+.platform-note li {
+  margin: 0.35rem 0;
+}
+
+.platform-note code {
+  word-break: break-all;
+}
+
 .link-button {
   display: inline;
   padding: 0;

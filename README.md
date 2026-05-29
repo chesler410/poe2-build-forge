@@ -15,6 +15,13 @@ and let players drop in-game annotations onto their character panel:
 passive nodes to allocate, gem combinations to slot, items to chase, all
 keyed to character-level ranges.
 
+> **Platforms:** the in-game Build Planner reads `.build` files from disk, so
+> it works on **PC (Windows) and Steam Deck** only — PlayStation/Xbox aren't
+> supported by GGG yet. On Steam Deck (Proton) the folder is under
+> `~/.local/share/Steam/steamapps/compatdata/2315204395/pfx/drive_c/users/steamuser/Documents/My Games/Path of Exile 2/BuildPlanner/`.
+> If your Documents folder syncs to OneDrive, it's under
+> `OneDrive\Documents\...` instead.
+
 ## Status
 
 Early development. The web app is live; the libraries are not yet
