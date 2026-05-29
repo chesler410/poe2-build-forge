@@ -11,6 +11,11 @@ on:
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: 'true'
 
+# Least privilege: CI only reads the repo to test it. Nothing here
+# pushes commits, opens PRs, or deploys.
+permissions:
+  contents: read
+
 jobs:
   test:
     name: test (node ${{ matrix.node }})

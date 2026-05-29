@@ -40,7 +40,23 @@ jobs:
       - name: Prune to bundled shape
         run: pnpm prune-data
 
+      - name: Verify the refreshed data (typecheck, build, test)
+        # Mirrors ci.yml. Auto-PRs opened with the default GITHUB_TOKEN do
+        # NOT trigger the separate CI workflow — GitHub blocks token-created
+        # events from starting new runs to prevent recursion — so we verify
+        # here instead. A red run means the new upstream data broke
+        # something, usually a passive-id format change that needs a tweak
+        # in packages/core/src/map.ts.
+        run: |
+          pnpm typecheck
+          pnpm build
+          pnpm test
+
       - name: Open PR if data changed
+        # always() so the diff PR still opens even when verification above
+        # went red — you want to see what upstream changed in order to fix
+        # it. The red workflow run is the signal that a fix is needed.
+        if: always()
         uses: peter-evans/create-pull-request@v6
         with:
           title: 'chore(data): refresh from upstream'
@@ -48,6 +64,9 @@ jobs:
           base: main
           delete-branch: true
           commit-message: 'chore(data): refresh from upstream'
+          # Only ever commit data files — keeps build artifacts (dist/) and
+          # anything else out of the auto-PR.
+          add-paths: packages/core/data/**
           labels: data, automated
           body: |
             Automated refresh of bundled game data, triggered by the
@@ -71,6 +90,9 @@ jobs:
             ## Reviewer checklist
 
             - [ ] `_manifest.json` `fetched_at` advances.
-            - [ ] Workspace tests still pass (CI will run on this PR).
+            - [ ] The refresh workflow run that opened this PR is green —
+              typecheck/build/test ran against this data inside the
+              workflow (auto-PRs can't trigger the separate CI workflow).
+              A red run means the new data broke something.
             - [ ] If a passive-id format changed (rare), the converter
               may need a mapper tweak — check `packages/core/src/map.ts`.
