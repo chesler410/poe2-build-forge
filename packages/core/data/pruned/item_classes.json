@@ -443,6 +443,12 @@
     "name": "Expedition Logbooks",
     "influence_tags": null
   },
+  "Expedition2Logbooks": {
+    "category": "Map Fragment",
+    "category_id": "MapFragment",
+    "name": "Expedition Logbook",
+    "influence_tags": null
+  },
   "IncubatorStackable": {
     "category": "Incubator",
     "category_id": "Incubator",
@@ -641,10 +647,10 @@
     "name": "Omen",
     "influence_tags": null
   },
-  "PinnacleKey": {
+  "PinnacleKey_OLD": {
     "category": "Pinnacle Key",
     "category_id": "PinnacleKey",
-    "name": "Pinnacle Keys",
+    "name": "",
     "influence_tags": null
   },
   "Talisman": {
@@ -681,6 +687,18 @@
     "category": "Transcendent Limb",
     "category_id": "IncursionLimb",
     "name": "Transcendent Leg",
+    "influence_tags": null
+  },
+  "BrequelFruit": {
+    "category": "Wombgift",
+    "category_id": "BrequelFruit",
+    "name": "Wombgifts",
+    "influence_tags": null
+  },
+  "PinnacleKeyStackable": {
+    "category": "Pinnacle Key",
+    "category_id": "PinnacleKey",
+    "name": "Pinnacle Keys",
     "influence_tags": null
   }
 }

@@ -159,6 +159,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "240": {
+    "id": "mastery_lightning150",
+    "name": "Lightning Mastery",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "244": {
     "id": "boss_slaying2_",
     "name": "Attack Damage",
@@ -186,6 +194,14 @@
   "270": {
     "id": "rage37",
     "name": "Rage Decay",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "290": {
+    "id": "fire72",
+    "name": "Fire Damage",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -225,7 +241,7 @@
   },
   "327": {
     "id": "deflect63",
-    "name": "Evasion",
+    "name": "Evasion and Energy Shield",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -321,7 +337,7 @@
   },
   "440": {
     "id": "shield13",
-    "name": "Shield Defences",
+    "name": "Shield Block",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -393,7 +409,7 @@
   },
   "517": {
     "id": "energy_shield11",
-    "name": "Energy Shield Recharge",
+    "name": "Stun and Ailment Threshold from Energy Shield",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -463,6 +479,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "658": {
+    "id": "armour_and_evasion55",
+    "name": "Armour applies to Elemental Damage and Deflection",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "664": {
     "id": "AscendancyMonk3Notable6",
     "name": "Choice of Power",
@@ -471,10 +495,26 @@
     "is_jewel_socket": false,
     "ascendancy": "Monk3"
   },
+  "675": {
+    "id": "armour29",
+    "name": "Armour and Slow Effect on You",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "703": {
     "id": "stun_threshold_from_energy_shield4",
     "name": "Stun Threshold from Energy Shield",
     "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "712": {
+    "id": "companions66",
+    "name": "Bond of the Ape",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -521,7 +561,7 @@
   },
   "765": {
     "id": "AscendancyHuntress2Notable4",
-    "name": "",
+    "name": "The Catha's Balance",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -634,6 +674,14 @@
   "1020": {
     "id": "quivers7",
     "name": "Quiver Effect",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "1040": {
+    "id": "fire73",
+    "name": "Fire Damage",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -791,6 +839,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "1221": {
+    "id": "armour_and_evasion32",
+    "name": "Armour and Evasion",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "1226": {
     "id": "AscendancyShadow2Notable7",
     "name": "[DNT-UNUSED] Shadow2Notable7",
@@ -859,6 +915,14 @@
     "id": "minion_offence3",
     "name": "Minion Damage",
     "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "1448": {
+    "id": "companions55",
+    "name": "Bond of the Cat",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -1009,7 +1073,7 @@
   },
   "1739": {
     "id": "AscendancyMonk1Notable7",
-    "name": "",
+    "name": "Hollow Form Technique",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -1086,6 +1150,14 @@
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": "Druid2"
+  },
+  "1861": {
+    "id": "armour_and_evasion52",
+    "name": "Knight of Tarcus",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
   },
   "1865": {
     "id": "endurance_charges13",
@@ -1543,6 +1615,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "2617": {
+    "id": "fire68",
+    "name": "Fire Damage",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "2645": {
     "id": "mace6_",
     "name": "Skullcrusher",
@@ -1793,7 +1873,7 @@
   },
   "3091": {
     "id": "infusion13",
-    "name": "Infusion Consumption Chance",
+    "name": "Infused Spell Damage",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -1847,6 +1927,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "3191": {
+    "id": "armour_and_evasion49_",
+    "name": "Armour applies to Elemental Damage and Deflection",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "3198": {
     "id": "AscendancyDuelist3Small8",
     "name": "",
@@ -1857,7 +1945,7 @@
   },
   "3203": {
     "id": "evasion_and_energy_shield19",
-    "name": "Evasion and Energy Shield",
+    "name": "Deflection and Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -1997,6 +2085,14 @@
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "3367": {
+    "id": "voices_jewel_slot5",
+    "name": "[SinisterJewelSockets|Sinister] [Jewel] Socket",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": true,
     "ascendancy": ""
   },
   "3414": {
@@ -2161,7 +2257,7 @@
   },
   "3630": {
     "id": "evasion_and_energy_shield21_",
-    "name": "Evasion and Energy Shield Recharge",
+    "name": "Evasion and Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -2186,6 +2282,22 @@
   "3660": {
     "id": "attack_speed44",
     "name": "Blind Chance",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "3663": {
+    "id": "DeliriumAnoint_KaomsBlessing",
+    "name": "Kaom's Blessing",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "3665": {
+    "id": "companions64",
+    "name": "Attack Damage and Companion Damage as Cold",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -2321,7 +2433,7 @@
   },
   "3893": {
     "id": "deflect27",
-    "name": "Deflection",
+    "name": "Evasion",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -2433,7 +2545,7 @@
   },
   "4017": {
     "id": "energy_shield_recovery10",
-    "name": "Energy Shield Recharge",
+    "name": "Mana Regeneration",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -2486,6 +2598,14 @@
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": "Mercenary1"
+  },
+  "4091": {
+    "id": "life_recoup34",
+    "name": "Left Ventricle",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
   },
   "4113": {
     "id": "chill_and_freeze5",
@@ -2599,9 +2719,17 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "4345": {
+    "id": "archon19",
+    "name": "Minion Damage and Command Speed",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "4346": {
     "id": "criticals13",
-    "name": "Damage on Critical",
+    "name": "Critical Chance",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -2617,7 +2745,7 @@
   },
   "4367": {
     "id": "AscendancyHuntress2Notable6",
-    "name": "",
+    "name": "The Mhacha's Gift",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -2927,6 +3055,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "4833": {
+    "id": "cold55",
+    "name": "Cold Damage",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "4844": {
     "id": "ranged2",
     "name": "Projectile Damage",
@@ -3119,14 +3255,6 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
-  "5101": {
-    "id": "minion_defence43",
-    "name": "Minion Revive Speed and Energy Shield Recharge",
-    "is_notable": false,
-    "is_keystone": false,
-    "is_jewel_socket": false,
-    "ascendancy": ""
-  },
   "5108": {
     "id": "one_handed25_",
     "name": "One Handed Ailment Chance",
@@ -3161,8 +3289,16 @@
   },
   "5188": {
     "id": "unarmed9",
-    "name": "Energy Shield Recharge and Delay",
+    "name": "Evasion and Energy Shield Delay",
     "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "5191": {
+    "id": "companions54",
+    "name": "Bond of the Wolf",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -3449,7 +3585,7 @@
   },
   "5733": {
     "id": "AscendancyHuntress2Small8",
-    "name": "",
+    "name": "Spirit",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -3809,7 +3945,7 @@
   },
   "6490": {
     "id": "physical23_",
-    "name": "Critical Damage",
+    "name": "Physical Damage",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -3839,17 +3975,17 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
-  "6516": {
-    "id": "stun_threshold_if_no_recent_stun13",
-    "name": "Stun Threshold if no recent Stun",
+  "6529": {
+    "id": "armour5",
+    "name": "Armour",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
   },
-  "6529": {
-    "id": "armour5",
-    "name": "Armour",
+  "6530": {
+    "id": "companions56",
+    "name": "Evasion and Companion Movement Speed",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -3859,6 +3995,14 @@
     "id": "fire38",
     "name": "Burning Strikes",
     "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "6554": {
+    "id": "cold61",
+    "name": "Cold Damage",
+    "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -4231,6 +4375,14 @@
     "is_jewel_socket": false,
     "ascendancy": "Huntress3"
   },
+  "7104": {
+    "id": "Puppetmaster10",
+    "name": "Puppet Master chance",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "7120": {
     "id": "AscendancyMercenary2Start",
     "name": "Witchhunter",
@@ -4491,6 +4643,14 @@
     "id": "oracle_big_family8",
     "name": "Trusted Partner",
     "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "7554": {
+    "id": "energy_shield_and_armour22",
+    "name": "Energy Shield Delay and Armour Applies to Elemental Damage",
+    "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -4783,14 +4943,6 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
-  "8194": {
-    "id": "stun_threshold_if_no_recent_stun7",
-    "name": "Stun Threshold if no recent Stun",
-    "is_notable": false,
-    "is_keystone": false,
-    "is_jewel_socket": false,
-    "ascendancy": ""
-  },
   "8246": {
     "id": "attack8",
     "name": "Attack Damage",
@@ -4857,7 +5009,7 @@
   },
   "8349": {
     "id": "energy_shield26",
-    "name": "Energy Shield Recharge",
+    "name": "Intelligence",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -4873,7 +5025,7 @@
   },
   "8382": {
     "id": "cold15",
-    "name": "Cold Damage and Energy Shield Recharge Rate",
+    "name": "Elemental Damage and Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -5023,6 +5175,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "8553": {
+    "id": "cold52",
+    "name": "Cold Damage",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "8554": {
     "id": "fire30",
     "name": "Burning Nature",
@@ -5161,7 +5321,7 @@
   },
   "8734": {
     "id": "deflect48",
-    "name": "Energy Shield Recharge",
+    "name": "Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -5791,6 +5951,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "9535": {
+    "id": "armour_and_evasion41",
+    "name": "Brinerot Ferocity",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "9554": {
     "id": "oracle_beast_corruption13",
     "name": "Life Costs and Chaos Damage",
@@ -5827,14 +5995,6 @@
     "id": "mastery_criticals68",
     "name": "Critical Mastery",
     "is_notable": false,
-    "is_keystone": false,
-    "is_jewel_socket": false,
-    "ascendancy": ""
-  },
-  "9604": {
-    "id": "warcries27_",
-    "name": "Thirst of Kitava",
-    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -5999,6 +6159,22 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "9863": {
+    "id": "armour_and_evasion53",
+    "name": "Knight of Izaro",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "9884": {
+    "id": "fire78_",
+    "name": "Fire Damage",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "9896": {
     "id": "life_recoup28",
     "name": "Heartstopping Presence",
@@ -6137,7 +6313,7 @@
   },
   "10079": {
     "id": "energy_shield_recovery9_",
-    "name": "Energy Shield Recharge",
+    "name": "Mana Regeneration",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -6183,17 +6359,17 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
-  "10192": {
-    "id": "sorcerer_start2",
-    "name": "Elemental Damage",
-    "is_notable": false,
+  "10169": {
+    "id": "DeliriumAnoint_Unfettered",
+    "name": "Unfettered",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
   },
-  "10208": {
-    "id": "energy_shield3",
-    "name": "Stun and Ailment Threshold from Energy Shield",
+  "10192": {
+    "id": "sorcerer_start2",
+    "name": "Elemental Damage",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -6655,6 +6831,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "10824": {
+    "id": "energy_shield_and_armour45_",
+    "name": "Armour and Energy Shield",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "10830": {
     "id": "armour25",
     "name": "Armour",
@@ -6775,14 +6959,6 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
-  "11030": {
-    "id": "energy_shield_recovery3",
-    "name": "Energy Shield Delay",
-    "is_notable": false,
-    "is_keystone": false,
-    "is_jewel_socket": false,
-    "ascendancy": ""
-  },
   "11032": {
     "id": "mastery_energyshield101",
     "name": "Evasion and Energy Shield Mastery",
@@ -6853,6 +7029,14 @@
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "11184": {
+    "id": "DeliriumAnoint_ZarokhsGift_",
+    "name": "Zarokh's Gift",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": true,
     "ascendancy": ""
   },
   "11230": {
@@ -6999,6 +7183,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "11410": {
+    "id": "enemies_on_low_life13",
+    "name": "Damage against Enemies on Low Life",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "11428": {
     "id": "oracle_archon_crit4",
     "name": "Exhaust All Power",
@@ -7129,7 +7321,7 @@
   },
   "11641": {
     "id": "AscendancyMercenary3Notable1_",
-    "name": "Crystalline Potential",
+    "name": "Essence of Virtue",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -7329,7 +7521,7 @@
   },
   "11873": {
     "id": "lightning51",
-    "name": "Lightning Damage and Mana Regeneration",
+    "name": "Elemental Damage and Mana Regeneration",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -7454,6 +7646,14 @@
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": "Duelist1"
+  },
+  "12099": {
+    "id": "cold56",
+    "name": "Cold Damage",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
   },
   "12116": {
     "id": "buckler1",
@@ -7951,6 +8151,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "12893": {
+    "id": "companions60",
+    "name": "Area Damage and Companion Area of Effect",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "12906": {
     "id": "pin9",
     "name": "Sitting Duck",
@@ -7961,7 +8169,7 @@
   },
   "12918": {
     "id": "energy_shield_recovery11",
-    "name": "Energy Shield Recharge",
+    "name": "Mana Regeneration",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -8042,6 +8250,14 @@
   "13108": {
     "id": "oracle_self_sacrificing3",
     "name": "Ally Attack and Cast Speed",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "13123": {
+    "id": "Puppetmaster7__",
+    "name": "Puppet Master chance",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -8151,6 +8367,14 @@
     "is_jewel_socket": false,
     "ascendancy": "Shadow2"
   },
+  "13326": {
+    "id": "fire69",
+    "name": "Fire Damage",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "13333": {
     "id": "ground6",
     "name": "Cold Damage",
@@ -8185,7 +8409,7 @@
   },
   "13359": {
     "id": "cold14",
-    "name": "Cold Damage and Energy Shield Recharge Rate",
+    "name": "Elemental Damage and Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -8290,6 +8514,14 @@
   "13482": {
     "id": "armour_break39",
     "name": "Punctured Lung",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "13489": {
+    "id": "armour30",
+    "name": "Unbreakable",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -8411,6 +8643,14 @@
     "id": "oracle_totems_mastery1",
     "name": "Totem Mastery",
     "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "13693": {
+    "id": "cold58",
+    "name": "Rhythm of Ice",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -8547,6 +8787,14 @@
     "id": "totems40",
     "name": "Totem Damage",
     "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "13844": {
+    "id": "DeliriumAnoint_GrowingPeril",
+    "name": "Growing Peril",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -8735,6 +8983,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "14122": {
+    "id": "mastery_caster41",
+    "name": "Lightning Mastery",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "14127": {
     "id": "duration7",
     "name": "Reduced Duration",
@@ -8815,10 +9071,26 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "14258": {
+    "id": "Puppetmaster9",
+    "name": "Puppet Master chance",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "14262": {
     "id": "attributes27",
     "name": "Attribute",
     "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "14265": {
+    "id": "fire85",
+    "name": "Pyromancer",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -8843,6 +9115,14 @@
     "id": "life_costs10",
     "name": "Sacrificial Blood",
     "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "14310": {
+    "id": "cold63",
+    "name": "Cold Damage",
+    "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -8907,6 +9187,14 @@
     "id": "mana_leech17",
     "name": "Suffusion",
     "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "14394": {
+    "id": "armour_and_evasion31",
+    "name": "Armour and Evasion",
+    "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -9055,6 +9343,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "14598": {
+    "id": "archon20_",
+    "name": "Minion Damage and Command Speed",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "14601": {
     "id": "mastery_elemental_6470",
     "name": "Elemental Mastery",
@@ -9097,7 +9393,15 @@
   },
   "14666": {
     "id": "energy_shield10_",
-    "name": "Energy Shield Recharge",
+    "name": "Stun and Ailment Threshold from Energy Shield",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "14686": {
+    "id": "Puppetmaster1",
+    "name": "Puppet Master chance",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -9391,6 +9695,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "15343": {
+    "id": "evasion_and_energy_shield33",
+    "name": "Deflection and Energy Shield Delay",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "15356": {
     "id": "lightning_penetration5",
     "name": "Lightning Penetration",
@@ -9401,7 +9713,7 @@
   },
   "15358": {
     "id": "minion_defence20",
-    "name": "Minion Life",
+    "name": "Minion Life and Minion Revive Speed",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -9591,6 +9903,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "15801": {
+    "id": "life_recoup37",
+    "name": "Life Recoup Speed",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "15809": {
     "id": "minion_offence30_",
     "name": "Minion Critical Chance",
@@ -9603,6 +9923,14 @@
     "id": "Sprint5",
     "name": "Evasion while Sprinting",
     "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "15825": {
+    "id": "energy_shield_and_armour49_",
+    "name": "Bhatair's Storm",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -10017,7 +10345,7 @@
   },
   "16568": {
     "id": "companions24",
-    "name": "Companion Revive Speed",
+    "name": "Defenses and Companion Life",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -10251,6 +10579,14 @@
     "id": "armour32",
     "name": "Blade Catcher",
     "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "17044": {
+    "id": "elemental47",
+    "name": "Cold and Lightning Damage",
+    "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -10497,7 +10833,7 @@
   },
   "17356": {
     "id": "AscendancyMonk1Notable4",
-    "name": "",
+    "name": "Hollow Resonance Technique",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -10751,6 +11087,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "17696": {
+    "id": "DeliriumAnoint_AugmentedFlesh",
+    "name": "Augmented Flesh",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "17702": {
     "id": "dexterity75",
     "name": "Attribute",
@@ -10761,7 +11105,7 @@
   },
   "17706": {
     "id": "energy_shield_recovery36",
-    "name": "Energy Shield Recharge and Mana Flask Recovery",
+    "name": "Mana Flask Charges Used",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -10810,6 +11154,14 @@
   "17745": {
     "id": "mastery_totem_6149",
     "name": "Totem Mastery",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "17750": {
+    "id": "armour_and_evasion48",
+    "name": "Armour applies to Elemental Damage and Deflection",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -11039,6 +11391,14 @@
     "is_jewel_socket": false,
     "ascendancy": "Templar2"
   },
+  "18101": {
+    "id": "life_recoup30",
+    "name": "Life Recoup Speed",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "18115": {
     "id": "grenades16",
     "name": "Grenade Damage",
@@ -11111,14 +11471,6 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
-  "18240": {
-    "id": "mastery_energyshield100",
-    "name": "Energy Shield Mastery",
-    "is_notable": false,
-    "is_keystone": false,
-    "is_jewel_socket": false,
-    "ascendancy": ""
-  },
   "18245": {
     "id": "minion_defence3",
     "name": "Minion Life and Physical Damage Reduction",
@@ -11147,6 +11499,14 @@
     "id": "bleed18",
     "name": "Bleeding Out",
     "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "18314": {
+    "id": "evasion_and_energy_shield36",
+    "name": "Evasion and Energy Shield",
+    "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -11311,6 +11671,14 @@
     "is_jewel_socket": false,
     "ascendancy": "Warrior2"
   },
+  "18593": {
+    "id": "lightning61",
+    "name": "Lightning Damage",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "18624": {
     "id": "hazards10",
     "name": "Hazard Damage",
@@ -11409,7 +11777,7 @@
   },
   "18793": {
     "id": "infusion14",
-    "name": "Infused Spell Damage",
+    "name": "Infusion Consumption Chance",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -11727,6 +12095,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "19224": {
+    "id": "armour_and_evasion38",
+    "name": "Deflection",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "19233": {
     "id": "AscendancyHuntress1Small6",
     "name": "Elemental Damage",
@@ -11780,6 +12156,14 @@
     "name": "Glancing Blows",
     "is_notable": false,
     "is_keystone": true,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "19318": {
+    "id": "Puppetmaster5",
+    "name": "Puppet Master chance",
+    "is_notable": false,
+    "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
   },
@@ -11841,7 +12225,7 @@
   },
   "19370": {
     "id": "AscendancyMonk1Notable3",
-    "name": "",
+    "name": "Hollow Focus Technique",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -11902,6 +12286,14 @@
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": "Shadow1"
+  },
+  "19542": {
+    "id": "mastery_companion293",
+    "name": "Companion Mastery",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
   },
   "19546": {
     "id": "being_surrounded23",
@@ -12058,6 +12450,14 @@
   "19880": {
     "id": "frenzy_charges2",
     "name": "Evasion if Consumed Frenzy Charge",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "19936": {
+    "id": "fire71",
+    "name": "Fire Damage",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -12233,7 +12633,7 @@
   },
   "20236": {
     "id": "criticals19",
-    "name": "Critical Chance",
+    "name": "Attack and Cast Speed on Critical",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -12287,6 +12687,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "20390": {
+    "id": "mastery_elemental_6472",
+    "name": "Elemental Mastery",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "20391": {
     "id": "oracle_crab_claw8",
     "name": "Block Chance",
@@ -12329,7 +12737,7 @@
   },
   "20437": {
     "id": "AscendancyMonk1Small7",
-    "name": "",
+    "name": "Attributes",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -12339,6 +12747,14 @@
     "id": "slaying1",
     "name": "Culling Strike Threshold",
     "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "20495": {
+    "id": "DeliriumAnoint_DarkEntropy",
+    "name": "Dark Entropy",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -12439,6 +12855,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "20686": {
+    "id": "DeliriumAnoint_Paragon",
+    "name": "Paragon",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "20691": {
     "id": "stun20",
     "name": "Stun Buildup",
@@ -12478,6 +12902,14 @@
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": "Witch3"
+  },
+  "20779": {
+    "id": "armour_and_evasion36_",
+    "name": "Deflection",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
   },
   "20782": {
     "id": "chaos5",
@@ -12743,6 +13175,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "21213": {
+    "id": "energy_shield_and_armour56_",
+    "name": "Cirel of Tarth's Light",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "21218": {
     "id": "oracle_bow_movement1",
     "name": "Bow Damage",
@@ -12761,7 +13201,7 @@
   },
   "21227": {
     "id": "energy_shield_recovery6",
-    "name": "Energy Shield Delay",
+    "name": "Deflection and Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -12771,6 +13211,14 @@
     "id": "physical15",
     "name": "Spell Critical Chance",
     "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "21251": {
+    "id": "DeliriumAnoint_ReplenishingHorde",
+    "name": "Replenishing Horde",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -12810,6 +13258,14 @@
   "21286": {
     "id": "armour21_",
     "name": "Armour",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "21291": {
+    "id": "armour24_",
+    "name": "Armour and Slow Effect on You",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -12857,7 +13313,7 @@
   },
   "21349": {
     "id": "azmerianimals24_",
-    "name": "The Cunning Fox",
+    "name": "The Quick Fox",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -12911,14 +13367,6 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
-  "21415": {
-    "id": "stun_threshold_from_energy_shield1_",
-    "name": "Stun and Ailment Threshold from Energy Shield",
-    "is_notable": false,
-    "is_keystone": false,
-    "is_jewel_socket": false,
-    "ascendancy": ""
-  },
   "21438": {
     "id": "armour_and_evasion7",
     "name": "Armour and Evasion",
@@ -12961,7 +13409,7 @@
   },
   "21519": {
     "id": "AscendancyHuntress2Small4",
-    "name": "",
+    "name": "Shared Companion Damage",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -12986,6 +13434,14 @@
   "21549": {
     "id": "oracle_hierarchy2",
     "name": "Physical Damage",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "21560": {
+    "id": "lightning62",
+    "name": "Lightning Damage",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -13195,14 +13651,6 @@
     "id": "stun_threshold27",
     "name": "Stun Threshold and Strength",
     "is_notable": false,
-    "is_keystone": false,
-    "is_jewel_socket": false,
-    "ascendancy": ""
-  },
-  "21935": {
-    "id": "energy_shield30",
-    "name": "Calibration",
-    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -13591,6 +14039,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "22726": {
+    "id": "DeliriumAnoint_StormsRebuke_",
+    "name": "Storm's Rebuke",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "22783": {
     "id": "minion_reservation1",
     "name": "Minion Damage",
@@ -13671,14 +14127,6 @@
     "is_jewel_socket": false,
     "ascendancy": "Warrior3"
   },
-  "22909": {
-    "id": "stun_threshold_from_energy_shield2",
-    "name": "Stun and Ailment Threshold from Energy Shield",
-    "is_notable": false,
-    "is_keystone": false,
-    "is_jewel_socket": false,
-    "ascendancy": ""
-  },
   "22927": {
     "id": "buckler11",
     "name": "Parried Debuff Magnitude and Duration",
@@ -13743,6 +14191,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "22976": {
+    "id": "enemies_on_low_life14",
+    "name": "Damage against Enemies on Low Life",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "23005": {
     "id": "AscendancyWarrior2Notable8",
     "name": "Renly's Training",
@@ -13767,6 +14223,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "23039": {
+    "id": "energy_shield_and_armour23",
+    "name": "Energy Shield Delay and Armour Applies to Elemental Damage",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "23040": {
     "id": "criticals58",
     "name": "Critical Damage",
@@ -13777,7 +14241,7 @@
   },
   "23046": {
     "id": "energy_shield_recovery8",
-    "name": "Energy Shield Delay",
+    "name": "Deflection and Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -14287,6 +14751,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "23907": {
+    "id": "cold68",
+    "name": "Ice Storm",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "23915": {
     "id": "criticals23",
     "name": "Critical Damage",
@@ -14321,10 +14793,18 @@
   },
   "23940": {
     "id": "energy_shield_and_armour12",
-    "name": "Adamant Recovery",
+    "name": "Fortified Aegis",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "23960": {
+    "id": "voices_jewel_slot3__",
+    "name": "[SinisterJewelSockets|Sinister] [Jewel] Socket",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": true,
     "ascendancy": ""
   },
   "23961": {
@@ -14385,7 +14865,7 @@
   },
   "24060": {
     "id": "infusion12",
-    "name": "Infusion Consumption Chance",
+    "name": "Infused Spell Damage",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -14505,7 +14985,7 @@
   },
   "24256": {
     "id": "deflect33",
-    "name": "Evasion",
+    "name": "Armour and Evasion",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -14514,6 +14994,14 @@
   "24259": {
     "id": "totems44",
     "name": "Totem Attack Speed",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "24269": {
+    "id": "companions57__",
+    "name": "Evasion and Companion Movement Speed",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -14719,6 +15207,22 @@
     "is_jewel_socket": false,
     "ascendancy": "Mercenary1"
   },
+  "24721": {
+    "id": "cold69_",
+    "name": "Brain Freeze",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "24736": {
+    "id": "armour_and_evasion51",
+    "name": "Knight of Chitus",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "24748": {
     "id": "evasion36",
     "name": "Evasion",
@@ -14879,9 +15383,25 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "24948": {
+    "id": "mastery_companion297",
+    "name": "Companion Mastery",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "24958": {
     "id": "dexterity44",
     "name": "Attribute",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "24963": {
+    "id": "armour_and_evasion42_",
+    "name": "Deflection",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -15295,6 +15815,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "25648": {
+    "id": "energy_shield_and_armour46",
+    "name": "Armour and Energy Shield",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "25653": {
     "id": "AscendancySorceress3Notable14",
     "name": "Kelari's Judgment",
@@ -15449,7 +15977,7 @@
   },
   "25893": {
     "id": "mana24",
-    "name": "Energy Shield Recharge",
+    "name": "Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -15615,6 +16143,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "26178": {
+    "id": "voices_jewel_slot2",
+    "name": "[SinisterJewelSockets|Sinister] [Jewel] Socket",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": true,
+    "ascendancy": ""
+  },
   "26194": {
     "id": "auras2",
     "name": "Presence Area",
@@ -15635,6 +16171,14 @@
     "id": "area_attacks46",
     "name": "Attack Area and Combo",
     "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "26214": {
+    "id": "DeliriumAnoint_Dominion",
+    "name": "Dominion",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -15689,7 +16233,7 @@
   },
   "26294": {
     "id": "AscendancyHuntress2Small1",
-    "name": "",
+    "name": "Movement Speed",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -15705,7 +16249,7 @@
   },
   "26308": {
     "id": "azmerianimals22",
-    "name": "All Attributes",
+    "name": "Evasion while Moving",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -15855,6 +16399,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "26556": {
+    "id": "evasion_and_energy_shield34",
+    "name": "Deflection and Energy Shield Delay",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "26563": {
     "id": "physical_witch12",
     "name": "Bone Chains",
@@ -15882,6 +16434,14 @@
   "26572": {
     "id": "daze_7",
     "name": "Criticals vs Dazed Enemies",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "26592": {
+    "id": "energy_shield_and_armour51",
+    "name": "Armour and Energy Shield",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -16055,6 +16615,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "26926": {
+    "id": "archon23",
+    "name": "Archon of Undeath",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "26931": {
     "id": "life_on_kill2",
     "name": "Life on Kill",
@@ -16105,7 +16673,7 @@
   },
   "27017": {
     "id": "azmerianimals23",
-    "name": "All Attributes",
+    "name": "Evasion while Moving",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -16335,6 +16903,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "27492": {
+    "id": "mastery_recovery_6677",
+    "name": "Recovery Mastery",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "27493": {
     "id": "ranged42",
     "name": "Projectile Damage",
@@ -16433,7 +17009,7 @@
   },
   "27671": {
     "id": "unarmed7",
-    "name": "Energy Shield Recharge",
+    "name": "Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -16441,7 +17017,7 @@
   },
   "27674": {
     "id": "energy_shield_recovery34",
-    "name": "Energy Shield Recharge",
+    "name": "Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -16458,6 +17034,14 @@
   "27687": {
     "id": "shield9",
     "name": "Greatest Defence",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "27704": {
+    "id": "DeliriumAnoint_GraceOfTheAncestors",
+    "name": "Grace of the Ancestors",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -16505,11 +17089,19 @@
   },
   "27773": {
     "id": "AscendancyHuntress2Notable2",
-    "name": "",
+    "name": "The Mórrigan's Guidance",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": "Huntress2"
+  },
+  "27779": {
+    "id": "DeliriumAnoint_LordOfTheSquall",
+    "name": "Lord of the Squall",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
   },
   "27785": {
     "id": "lightning_penetration12",
@@ -16526,14 +17118,6 @@
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
-  },
-  "27841": {
-    "id": "AscendancyHuntress2Small9",
-    "name": "[DNT] AscendancyHuntress2Small9",
-    "is_notable": false,
-    "is_keystone": false,
-    "is_jewel_socket": false,
-    "ascendancy": "Huntress2"
   },
   "27853": {
     "id": "immobilisation1",
@@ -16641,7 +17225,7 @@
   },
   "28038": {
     "id": "deflect26",
-    "name": "Deflection",
+    "name": "Evasion",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -16703,9 +17287,17 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "28142": {
+    "id": "companions58",
+    "name": "Attack Speed and Companion Attack Speed",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "28153": {
     "id": "AscendancySorceress2Notable4",
-    "name": "The Rapid River",
+    "name": "Phased Form",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -16761,7 +17353,7 @@
   },
   "28254": {
     "id": "AscendancyHuntress2Notable9",
-    "name": "",
+    "name": "Sacred Unity",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -16855,6 +17447,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "28414": {
+    "id": "companions62__",
+    "name": "Attack Damage and Companion Damage as Chaos",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "28429": {
     "id": "AscendancyDruid3Start",
     "name": "[DNT] Unused",
@@ -16910,6 +17510,14 @@
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": "Marauder1"
+  },
+  "28464": {
+    "id": "evasion_and_energy_shield38_",
+    "name": "Deflection and Energy Shield Delay",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
   },
   "28476": {
     "id": "mastery_thorns307",
@@ -17791,6 +18399,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "30100": {
+    "id": "AscendancyHuntress3Small7",
+    "name": "Movement Speed",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": "Huntress3"
+  },
   "30102": {
     "id": "volatility6",
     "name": "Volatility on Kill",
@@ -17991,6 +18607,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "30393": {
+    "id": "mastery_energyshield107",
+    "name": "Armour and Energy Shield Mastery",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "30395": {
     "id": "wolf14",
     "name": "Howling Beast",
@@ -18130,6 +18754,14 @@
   "30662": {
     "id": "lightning1_",
     "name": "Lightning Damage",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "30663": {
+    "id": "mastery_cold_6392",
+    "name": "Cold Mastery",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -18490,6 +19122,14 @@
   "31286": {
     "id": "physical5",
     "name": "Physical",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "31290": {
+    "id": "energy_shield_and_armour52",
+    "name": "Armour and Energy Shield",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -18929,7 +19569,7 @@
   },
   "31943": {
     "id": "cold27",
-    "name": "Cold Damage and Energy Shield Recharge Rate",
+    "name": "Elemental Damage and Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -18939,6 +19579,14 @@
     "id": "intelligence78",
     "name": "Attribute",
     "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "31955": {
+    "id": "energy_shield_and_armour44",
+    "name": "Voll's Protection",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -19023,6 +19671,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "32128": {
+    "id": "life_recoup36",
+    "name": "Flow of Time",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "32135": {
     "id": "flasks15",
     "name": "Flask Charges Gained",
@@ -19058,6 +19714,14 @@
   "32183": {
     "id": "attributes22_",
     "name": "Attribute",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "32185": {
+    "id": "companions65",
+    "name": "Attack Damage and Companion Damage as Cold",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -19175,6 +19839,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "32340": {
+    "id": "cold64__",
+    "name": "Cold Damage",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "32349": {
     "id": "passive_keystone_giants_blood",
     "name": "Giant's Blood",
@@ -19202,6 +19874,14 @@
   "32364": {
     "id": "fire52",
     "name": "Ignite Magnitude",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "32399": {
+    "id": "attack_speed11",
+    "name": "Attack Speed",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -19327,6 +20007,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "32555": {
+    "id": "armour_and_evasion39",
+    "name": "Deflection",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "32559": {
     "id": "AscendancyMercenary2Small4",
     "name": "Cooldown Recovery Rate",
@@ -19425,7 +20113,7 @@
   },
   "32681": {
     "id": "unarmed8",
-    "name": "Energy Shield Recharge and Delay",
+    "name": "Evasion and Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -19495,6 +20183,14 @@
     "is_jewel_socket": true,
     "ascendancy": ""
   },
+  "32764": {
+    "id": "energy_shield_and_armour55_",
+    "name": "Armour and Energy Shield",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "32768": {
     "id": "oracle_glory_elemental3_",
     "name": "Glory Generation",
@@ -19538,6 +20234,14 @@
   "32818": {
     "id": "charms19",
     "name": "Charm Charges",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "32836": {
+    "id": "armour26_",
+    "name": "Armour and Slow Effect on You",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -19662,6 +20366,14 @@
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": "Mercenary3"
+  },
+  "32964": {
+    "id": "energy_shield_and_armour39",
+    "name": "Armour Applies to Elemental Damage and Energy Shield Delay",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
   },
   "32976": {
     "id": "attributes100_",
@@ -19871,6 +20583,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "33292": {
+    "id": "lightning67_",
+    "name": "Lightning Damage",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "33340": {
     "id": "stun24_",
     "name": "Stun Buildup",
@@ -19945,7 +20665,7 @@
   },
   "33402": {
     "id": "shield11",
-    "name": "Shield Defences",
+    "name": "Shield Block",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -20129,7 +20849,7 @@
   },
   "33639": {
     "id": "infusion15",
-    "name": "Infused Spell Damage",
+    "name": "Infusion Consumption Chance",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -20263,6 +20983,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "33852": {
+    "id": "cold59",
+    "name": "Flurry",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "33866": {
     "id": "attack_damage3",
     "name": "Attack Damage",
@@ -20275,14 +21003,6 @@
     "id": "crossbow18",
     "name": "Full Salvo",
     "is_notable": true,
-    "is_keystone": false,
-    "is_jewel_socket": false,
-    "ascendancy": ""
-  },
-  "33914": {
-    "id": "energy_shield4_",
-    "name": "Energy Shield and Mana Regeneration",
-    "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -20401,7 +21121,7 @@
   },
   "34081": {
     "id": "AscendancyMonk1Small4",
-    "name": "",
+    "name": "Area of Effect",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -20599,6 +21319,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "34331": {
+    "id": "elemental19",
+    "name": "Fire and Cold Damage",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "34340": {
     "id": "life_regeneration4_",
     "name": "Mass Rejuvenation",
@@ -20695,6 +21423,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "34478": {
+    "id": "companions53",
+    "name": "Bond of the Viper",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "34487": {
     "id": "mastery_totem230",
     "name": "Totem Mastery",
@@ -20783,10 +21519,26 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "34567": {
+    "id": "AscendancyMonk3Notable10",
+    "name": "Archon of Chayula",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": "Monk3"
+  },
   "34612": {
     "id": "bow11",
     "name": "Bow Damage",
     "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "34617": {
+    "id": "energy_shield_and_armour40",
+    "name": "Conall the Hunted",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -21079,6 +21831,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "35046": {
+    "id": "DeliriumAnoint_MysticAvalanche",
+    "name": "Mystic Avalanche",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "35048": {
     "id": "criticals60",
     "name": "Attack Critical Chance",
@@ -21223,6 +21983,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "35387": {
+    "id": "cold60__",
+    "name": "Cold Damage",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "35388": {
     "id": "AscendancyDruid3Notable7",
     "name": "[DNT-UNUSED] Druid3Notable7",
@@ -21319,14 +22087,6 @@
     "is_jewel_socket": false,
     "ascendancy": "Druid2"
   },
-  "35558": {
-    "id": "minion_defence46",
-    "name": "Minion Revive Speed",
-    "is_notable": false,
-    "is_keystone": false,
-    "is_jewel_socket": false,
-    "ascendancy": ""
-  },
   "35560": {
     "id": "minion_offence47_",
     "name": "At your Command",
@@ -21371,6 +22131,14 @@
     "id": "chill_and_freeze25",
     "name": "Cold Coat",
     "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "35623": {
+    "id": "armour_and_evasion56_",
+    "name": "Armour applies to Elemental Damage and Deflection",
+    "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -21466,6 +22234,14 @@
   "35739": {
     "id": "area_attacks31",
     "name": "Crushing Judgement",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "35743": {
+    "id": "armour_and_evasion34",
+    "name": "Saqawal's Hide",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -21865,7 +22641,7 @@
   },
   "36290": {
     "id": "energy_shield_recovery7",
-    "name": "Energy Shield Delay",
+    "name": "Deflection and Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -22137,7 +22913,7 @@
   },
   "36643": {
     "id": "AscendancyMonk1Small6",
-    "name": "",
+    "name": "Additional Power Charge Chance",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -22217,7 +22993,7 @@
   },
   "36746": {
     "id": "mana22",
-    "name": "Energy Shield Recharge",
+    "name": "Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -22375,6 +23151,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "37113": {
+    "id": "lightning50",
+    "name": "Lightning Damage",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "37164": {
     "id": "monkchakra22",
     "name": "Non-Damaging Ailment Magnitude",
@@ -22473,7 +23257,7 @@
   },
   "37279": {
     "id": "lightning52",
-    "name": "Lightning Damage and Mana Regeneration",
+    "name": "Elemental Damage and Mana Regeneration",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -22562,6 +23346,22 @@
   "37414": {
     "id": "melee9",
     "name": "Accuracy",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "37415": {
+    "id": "cold53_",
+    "name": "Cold Damage",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "37434": {
+    "id": "mastery_armour_and_evasion_6281",
+    "name": "Armour and Evasion Mastery",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -22673,7 +23473,7 @@
   },
   "37604": {
     "id": "AscendancyMonk1Small8",
-    "name": "",
+    "name": "Immobilisation Buildup",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -22682,6 +23482,14 @@
   "37608": {
     "id": "physical9",
     "name": "Physical Damage",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "37609": {
+    "id": "energy_shield_and_armour53",
+    "name": "Armour and Energy Shield",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -22699,6 +23507,14 @@
     "id": "mastery_trap238_",
     "name": "Trap Mastery",
     "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "37619": {
+    "id": "fire76",
+    "name": "Rhythm of Fire",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -22793,7 +23609,7 @@
   },
   "37769": {
     "id": "AscendancyHuntress2Small3",
-    "name": "",
+    "name": "Shared Companion Damage",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -22843,6 +23659,14 @@
     "id": "shock16",
     "name": "Shock Duration",
     "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "37846": {
+    "id": "DeliriumAnoint_BastionOfLight",
+    "name": "Bastion of Light",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -22923,6 +23747,14 @@
     "id": "sword11_",
     "name": "Sword Damage",
     "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "37967": {
+    "id": "DeliriumAnoint_DesertsScorn",
+    "name": "Desert's Scorn",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -23457,7 +24289,7 @@
   },
   "38668": {
     "id": "unarmed10",
-    "name": "Energy Shield Delay",
+    "name": "Evasion",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -23490,6 +24322,14 @@
   "38694": {
     "id": "heralds4",
     "name": "Herald Damage",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "38696": {
+    "id": "fire77",
+    "name": "Fire Damage",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -23567,6 +24407,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "38813": {
+    "id": "AscendancyHuntress3Notable8",
+    "name": "Devotion to the King",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": "Huntress3"
+  },
   "38814": {
     "id": "dexterity71",
     "name": "Attribute",
@@ -23578,6 +24426,14 @@
   "38827": {
     "id": "energy_shield_and_armour17",
     "name": "Armour and Energy Shield",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "38835": {
+    "id": "life_recoup32",
+    "name": "Life Recoup Speed",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -23717,6 +24573,14 @@
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "39087": {
+    "id": "voices_jewel_slot4",
+    "name": "[SinisterJewelSockets|Sinister] [Jewel] Socket",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": true,
     "ascendancy": ""
   },
   "39102": {
@@ -23895,6 +24759,14 @@
     "is_jewel_socket": false,
     "ascendancy": "Warrior2"
   },
+  "39416": {
+    "id": "mastery_minionoffence187",
+    "name": "Minion Offence Mastery",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "39423": {
     "id": "lightning_penetration2",
     "name": "Lightning Penetration",
@@ -23935,6 +24807,14 @@
     "is_jewel_socket": false,
     "ascendancy": "Witch1"
   },
+  "39476": {
+    "id": "mastery_cold_6398",
+    "name": "Cold Mastery",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "39495": {
     "id": "companions10",
     "name": "Companion Damage",
@@ -23969,7 +24849,7 @@
   },
   "39552": {
     "id": "AscendancyMonk1Notable5",
-    "name": "",
+    "name": "Runic Meridians",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -23986,6 +24866,14 @@
   "39567": {
     "id": "intelligence101_",
     "name": "Ingenuity",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "39568": {
+    "id": "DeliriumAnoint_MagnumOpus",
+    "name": "Magnum Opus",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -24025,7 +24913,7 @@
   },
   "39595": {
     "id": "AscendancyMonk1Notable8",
-    "name": "",
+    "name": "Way of the Stonefist",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -24193,7 +25081,7 @@
   },
   "39887": {
     "id": "AscendancyHuntress2Notable7",
-    "name": "",
+    "name": "The Natural Order",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -24471,6 +25359,14 @@
     "is_jewel_socket": false,
     "ascendancy": "Marauder2"
   },
+  "40377": {
+    "id": "energy_shield_and_armour21",
+    "name": "Armour Applies to Elemental Damage and Energy Shield Delay",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "40395": {
     "id": "mastery_attack4",
     "name": "Attack Mastery",
@@ -24593,7 +25489,7 @@
   },
   "40691": {
     "id": "mana21",
-    "name": "Energy Shield Recharge",
+    "name": "Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -24793,7 +25689,7 @@
   },
   "41085": {
     "id": "AscendancyHuntress2Small6",
-    "name": "",
+    "name": "Critical Chance",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -24865,7 +25761,7 @@
   },
   "41159": {
     "id": "lightning53",
-    "name": "Lightning Damage and Mana Regeneration",
+    "name": "Elemental Damage and Mana Regeneration",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -24959,6 +25855,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "41384": {
+    "id": "energy_shield_and_armour42",
+    "name": "Armour Applies to Elemental Damage and Energy Shield Delay",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "41394": {
     "id": "archon11",
     "name": "Invigorating Archon",
@@ -24969,7 +25873,7 @@
   },
   "41401": {
     "id": "AscendancyHuntress2Notable1",
-    "name": "",
+    "name": "Vivid Stampede",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -25209,7 +26113,7 @@
   },
   "41751": {
     "id": "AscendancyMonk1Notable1_",
-    "name": "",
+    "name": "Martial Adept",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -25417,7 +26321,7 @@
   },
   "42076": {
     "id": "energy_shield_recovery23",
-    "name": "Energy Shield Recharge and Mana Flask Recovery",
+    "name": "Mana Flask Charges Used",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -25426,6 +26330,14 @@
   "42077": {
     "id": "energy_shield_recovery16",
     "name": "Essence Infusion",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "42078": {
+    "id": "evasion_and_energy_shield37",
+    "name": "The Hollowkeeper",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -25470,6 +26382,14 @@
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": "Shadow2"
+  },
+  "42169": {
+    "id": "armour_and_evasion43",
+    "name": "Deflection",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
   },
   "42177": {
     "id": "attack_speed20",
@@ -25895,14 +26815,6 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
-  "42916": {
-    "id": "energy_shield_recovery2",
-    "name": "Energy Shield Delay",
-    "is_notable": false,
-    "is_keystone": false,
-    "is_jewel_socket": false,
-    "ascendancy": ""
-  },
   "42936": {
     "id": "AscendancyRanger2Small1",
     "name": "",
@@ -25991,6 +26903,22 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "43064": {
+    "id": "companions68",
+    "name": "Attack Damage and Companion Damage as Chaos",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "43077": {
+    "id": "energy_shield_and_armour47",
+    "name": "Armour and Energy Shield",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "43082": {
     "id": "movement_speed9",
     "name": "Acceleration",
@@ -26033,7 +26961,7 @@
   },
   "43128": {
     "id": "AscendancySorceress2Small8",
-    "name": "Cast Speed and Area of Effect",
+    "name": "Skill Speed and Area of Effect",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -26159,6 +27087,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "43303": {
+    "id": "lightning65__",
+    "name": "Lightning Damage",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "43324": {
     "id": "oracle_life_corruption2",
     "name": "Life Costs",
@@ -26239,6 +27175,14 @@
     "is_jewel_socket": false,
     "ascendancy": "Sorceress3"
   },
+  "43431": {
+    "id": "armour_and_evasion35_",
+    "name": "Deflection",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "43443": {
     "id": "flail8",
     "name": "Flail Critical Chance",
@@ -26274,6 +27218,14 @@
   "43461": {
     "id": "fire56",
     "name": "Fire Damage and Attack Damage",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "43471": {
+    "id": "mastery_fire_6514",
+    "name": "Fire Mastery",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -26601,7 +27553,15 @@
   },
   "43964": {
     "id": "physical24",
-    "name": "Armour Break",
+    "name": "Armour Break Effect",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "43979": {
+    "id": "archon22__",
+    "name": "Minion Damage and Command Skill Cooldown",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -26641,7 +27601,7 @@
   },
   "44082": {
     "id": "energy_shield_recovery35",
-    "name": "Energy Shield Recharge",
+    "name": "Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -26690,6 +27650,14 @@
   "44188": {
     "id": "power_charges19",
     "name": "Infusion and Power Charge Duration",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "44191": {
+    "id": "cold57",
+    "name": "Cold Damage",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -26875,6 +27843,14 @@
     "id": "chaos38",
     "name": "Wither Away",
     "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "44405": {
+    "id": "lightning63",
+    "name": "Lightning Damage",
+    "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -27114,6 +28090,14 @@
   "44683": {
     "id": "six704",
     "name": "SIX",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "44684": {
+    "id": "companions69",
+    "name": "Companion Attack Speed",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -27473,7 +28457,7 @@
   },
   "45228": {
     "id": "AscendancyHuntress2Small7",
-    "name": "",
+    "name": "Companion Life and Area",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -27567,6 +28551,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "45333": {
+    "id": "archon24",
+    "name": "Archon Effect",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "45343": {
     "id": "minion_offence22",
     "name": "Minion Area",
@@ -27603,6 +28595,14 @@
     "id": "azmerianimals36",
     "name": "The Raging Ox",
     "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "45377": {
+    "id": "cold65",
+    "name": "Cold Damage",
+    "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -27785,7 +28785,7 @@
   },
   "45631": {
     "id": "evasion_and_energy_shield6_",
-    "name": "Evasion and Energy Shield Recharge",
+    "name": "Evasion and Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -27847,6 +28847,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "45736": {
+    "id": "energy_shield_and_armour50",
+    "name": "Armour and Energy Shield",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "45751": {
     "id": "shield37",
     "name": "Frightening Shield",
@@ -27882,6 +28890,14 @@
   "45798": {
     "id": "volatility10",
     "name": "Volatility on Kill",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "45808": {
+    "id": "armour_and_evasion47",
+    "name": "Armour applies to Elemental Damage and Deflection",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -28049,7 +29065,7 @@
   },
   "46070": {
     "id": "AscendancyHuntress2Notable5",
-    "name": "",
+    "name": "Primal Bounty",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -28186,6 +29202,14 @@
   "46300": {
     "id": "ignite1",
     "name": "Flammability Magnitude",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "46318": {
+    "id": "energy_shield_and_armour38",
+    "name": "Armour Applies to Elemental Damage and Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -28455,14 +29479,6 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
-  "46726": {
-    "id": "minion_defence47",
-    "name": "Reformed Barrier",
-    "is_notable": true,
-    "is_keystone": false,
-    "is_jewel_socket": false,
-    "ascendancy": ""
-  },
   "46741": {
     "id": "stun3__",
     "name": "Stun Buildup",
@@ -28567,6 +29583,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "46961": {
+    "id": "companions59",
+    "name": "Attack Speed",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "46972": {
     "id": "energy_shield_recovery25_",
     "name": "Arcane Mixtures",
@@ -28610,6 +29634,14 @@
   "47021": {
     "id": "volatility17",
     "name": "Volatility Detonation Time",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "47080": {
+    "id": "lightning60",
+    "name": "Lightning Damage",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -28847,6 +29879,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "47387": {
+    "id": "lightning68",
+    "name": "Stormkeeper",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "47418": {
     "id": "mana_flasks13",
     "name": "Warding Potions",
@@ -28895,6 +29935,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "47469": {
+    "id": "mastery_fire_6513",
+    "name": "Fire Mastery",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "47477": {
     "id": "volatility14",
     "name": "Volatility Detonation Time",
@@ -28907,6 +29955,14 @@
     "id": "daze_19",
     "name": "Dizzying Hits",
     "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "47517": {
+    "id": "mastery_armour_6284",
+    "name": "Armour Mastery",
+    "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -29105,7 +30161,7 @@
   },
   "47831": {
     "id": "deflect43",
-    "name": "Deflection",
+    "name": "Deflection and Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -29115,6 +30171,14 @@
     "id": "mastery_critical_270_",
     "name": "Critical Mastery",
     "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "47853": {
+    "id": "companions52",
+    "name": "Bond of the Mamba",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -29871,14 +30935,6 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
-  "49136": {
-    "id": "warcries26",
-    "name": "Life Leech",
-    "is_notable": false,
-    "is_keystone": false,
-    "is_jewel_socket": false,
-    "ascendancy": ""
-  },
   "49150": {
     "id": "triggers28",
     "name": "Precise Invocations",
@@ -30038,6 +31094,14 @@
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": "Warrior3"
+  },
+  "49356": {
+    "id": "evasion_and_energy_shield31",
+    "name": "First Principle of the Hollow",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
   },
   "49357": {
     "id": "intelligence33_",
@@ -30401,7 +31465,7 @@
   },
   "50062": {
     "id": "energy_shield_and_armour13",
-    "name": "Reinforced Barrier",
+    "name": "Barrier of Venarius",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -30455,6 +31519,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "50124": {
+    "id": "armour_and_evasion33",
+    "name": "Armour and Evasion",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "50142": {
     "id": "oracle_rust_king7",
     "name": "Lightning Damage",
@@ -30473,7 +31545,15 @@
   },
   "50150": {
     "id": "lightning46",
-    "name": "Lightning Damage and Mana Regeneration",
+    "name": "Elemental Damage and Mana Regeneration",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "50177": {
+    "id": "mastery_cold_6393",
+    "name": "Cold Mastery",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -30513,7 +31593,7 @@
   },
   "50219": {
     "id": "AscendancySorceress2Small3",
-    "name": "Curse Delay",
+    "name": "Area of Effect",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -30523,6 +31603,14 @@
     "id": "warcries43",
     "name": "Fire Damage",
     "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "50239": {
+    "id": "armour_and_evasion37",
+    "name": "Mutewind Agility",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -30658,6 +31746,14 @@
   "50485": {
     "id": "curses6",
     "name": "Zone of Control",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "50498": {
+    "id": "lightning70",
+    "name": "Brain Storm",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -30871,6 +31967,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "50837": {
+    "id": "archon21",
+    "name": "Minion Damage and Command Speed",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "50847": {
     "id": "flail3",
     "name": "Flail Damage",
@@ -30945,7 +32049,7 @@
   },
   "51040": {
     "id": "deflect60",
-    "name": "Deflection",
+    "name": "Deflection and Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -31103,6 +32207,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "51328": {
+    "id": "cold54",
+    "name": "Cold Damage",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "51335": {
     "id": "fire32",
     "name": "Affliction Enforcer",
@@ -31217,7 +32329,7 @@
   },
   "51546": {
     "id": "AscendancyMonk1Notable6",
-    "name": "",
+    "name": "Way of the Mountain",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -31266,6 +32378,14 @@
   "51618": {
     "id": "oracle_life_corruption1",
     "name": "Life Costs and Regeneration",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "51672": {
+    "id": "energy_shield_and_armour43",
+    "name": "Armour Applies to Elemental Damage and Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -31459,6 +32579,14 @@
     "id": "attack31",
     "name": "Attack Damage and Accuracy",
     "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "51850": {
+    "id": "armour_and_evasion45",
+    "name": "Path of the Renegade",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -31753,7 +32881,7 @@
   },
   "52295": {
     "id": "AscendancyMonk1Small3",
-    "name": "",
+    "name": "Evasion and Energy Shield",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -31959,6 +33087,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "52568": {
+    "id": "companions51",
+    "name": "Bond of the Owl",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "52574": {
     "id": "area_attacks21",
     "name": "Attack Area Damage and Area",
@@ -32007,6 +33143,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "52669": {
+    "id": "fire75",
+    "name": "Flamekeeper",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "52676": {
     "id": "minion_reservation9",
     "name": "Minion Duration",
@@ -32041,7 +33185,7 @@
   },
   "52743": {
     "id": "deflect47",
-    "name": "Energy Shield Recharge",
+    "name": "Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -32153,7 +33297,7 @@
   },
   "52971": {
     "id": "energy_shield_recovery13",
-    "name": "Quick Response",
+    "name": "The Soul Meridian",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -32353,7 +33497,7 @@
   },
   "53280": {
     "id": "AscendancyMonk1Small1",
-    "name": "",
+    "name": "Attack Speed",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -32378,6 +33522,14 @@
   "53320": {
     "id": "banners18",
     "name": "Banner Glory Gained",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "53324": {
+    "id": "Puppetmaster4",
+    "name": "Puppet Master chance",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -32631,6 +33783,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "53795": {
+    "id": "Puppetmaster2_",
+    "name": "Puppet Master chance",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "53804": {
     "id": "warcries46",
     "name": "Fire Damage",
@@ -32865,11 +34025,19 @@
   },
   "54194": {
     "id": "AscendancySorceress2Small4",
-    "name": "Life Recoup",
+    "name": "Cast Speed",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": "Sorceress2"
+  },
+  "54198": {
+    "id": "mastery_companion294",
+    "name": "Companion Mastery",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
   },
   "54228": {
     "id": "physical29",
@@ -33143,6 +34311,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "54733": {
+    "id": "Puppetmaster11",
+    "name": "Puppet Master chance",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "54746": {
     "id": "ailments16",
     "name": "Ailment Chance and Effect",
@@ -33153,7 +34329,7 @@
   },
   "54783": {
     "id": "mastery_energy_shield_6485",
-    "name": "Energy Shield Mastery",
+    "name": "Mana Mastery",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -33210,6 +34386,14 @@
   "54849": {
     "id": "mastery_minionoffence185",
     "name": "Minion Offence Mastery",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "54868": {
+    "id": "fire74",
+    "name": "Fire Damage",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -33491,6 +34675,14 @@
     "id": "minion_offence21_",
     "name": "Relentless Fallen",
     "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "55188": {
+    "id": "fire70",
+    "name": "Fire Damage",
+    "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -34385,7 +35577,7 @@
   },
   "56489": {
     "id": "AscendancyHuntress2Notable8",
-    "name": "",
+    "name": "Idolatry",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -34417,7 +35609,7 @@
   },
   "56564": {
     "id": "energy_shield28_",
-    "name": "Energy Shield Recharge",
+    "name": "Intelligence",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -34495,6 +35687,22 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "56666": {
+    "id": "DeliriumAnoint_ThaumaturgicGenerator",
+    "name": "Thaumaturgic Generator",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "56701": {
+    "id": "mastery_companion295",
+    "name": "Companion Mastery",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "56703": {
     "id": "cast_speed11",
     "name": "Cast Speed",
@@ -34513,7 +35721,7 @@
   },
   "56729": {
     "id": "azmerianimals19",
-    "name": "Reduced Attribute Requirements and All Attributes",
+    "name": "Evasion while Moving",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -34993,7 +36201,7 @@
   },
   "57449": {
     "id": "AscendancyMonk1Small5",
-    "name": "",
+    "name": "Area of Effect",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -35159,14 +36367,6 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
-  "57776": {
-    "id": "energy_shield1",
-    "name": "Energy Shield and Mana Regeneration",
-    "is_notable": false,
-    "is_keystone": false,
-    "is_jewel_socket": false,
-    "ascendancy": ""
-  },
   "57785": {
     "id": "ballista15",
     "name": "Trained Turrets",
@@ -35259,6 +36459,14 @@
     "id": "shapeshifting29",
     "name": "Wolf's Howl",
     "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "57928": {
+    "id": "lightning66",
+    "name": "Lightning Damage",
+    "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -35417,7 +36625,7 @@
   },
   "58125": {
     "id": "shield12",
-    "name": "Shield Defences",
+    "name": "Shield Block",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -35655,6 +36863,14 @@
     "is_jewel_socket": false,
     "ascendancy": "Mercenary3"
   },
+  "58593": {
+    "id": "evasion_and_energy_shield30",
+    "name": "Evasion and Energy Shield",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "58644": {
     "id": "bleed44",
     "name": "Bleeding Damage",
@@ -35682,6 +36898,14 @@
   "58674": {
     "id": "mastery_elemental_6469",
     "name": "Elemental Mastery",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "58692": {
+    "id": "evasion_and_energy_shield29_",
+    "name": "Deflection and Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -35729,7 +36953,7 @@
   },
   "58779": {
     "id": "deflect65",
-    "name": "Deflection",
+    "name": "Deflection and Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -35795,6 +37019,14 @@
     "id": "mastery_two_hand_6773",
     "name": "Two Hand Mastery",
     "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "58894": {
+    "id": "energy_shield_and_armour48",
+    "name": "Dominus' Providence",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -35975,6 +37207,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "59281": {
+    "id": "armour_and_evasion30_",
+    "name": "Armour and Evasion",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "59289": {
     "id": "immobilisation2",
     "name": "Immobilisation Buildup",
@@ -36071,6 +37311,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "59413": {
+    "id": "life_recoup29",
+    "name": "Life Recoup Speed",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "59425": {
     "id": "life_recoup21",
     "name": "Life Recoup",
@@ -36091,6 +37339,22 @@
     "id": "power_endurance_charges6",
     "name": "Thirst for Endurance",
     "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "59438": {
+    "id": "life_recoup35",
+    "name": "Flow of Life",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "59442": {
+    "id": "life_recoup33",
+    "name": "Life Recoup Speed",
+    "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -36191,14 +37455,6 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
-  "59596": {
-    "id": "energy_shield_recovery15",
-    "name": "Covering Ward",
-    "is_notable": true,
-    "is_keystone": false,
-    "is_jewel_socket": false,
-    "ascendancy": ""
-  },
   "59600": {
     "id": "life_flasks17",
     "name": "Life Flasks",
@@ -36251,6 +37507,14 @@
     "id": "movement_speed3",
     "name": "Movement Speed",
     "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "59657": {
+    "id": "evasion_and_energy_shield28",
+    "name": "First Teachings of the Keeper",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -36331,6 +37595,14 @@
     "id": "armour_and_evasion2",
     "name": "Armour and Evasion",
     "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "59781": {
+    "id": "archon25",
+    "name": "Embodiment of Death",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -36447,14 +37719,6 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
-  "60013": {
-    "id": "energy_shield2_",
-    "name": "Energy Shield",
-    "is_notable": false,
-    "is_keystone": false,
-    "is_jewel_socket": false,
-    "ascendancy": ""
-  },
   "60014": {
     "id": "oracle_bleed3",
     "name": "Scent of Blood",
@@ -36506,6 +37770,14 @@
   "60107": {
     "id": "criticals24",
     "name": "Critical Chance",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "60116": {
+    "id": "mastery_armour_and_evasion_6283",
+    "name": "Armour and Evasion Mastery",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -36575,6 +37847,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "60239": {
+    "id": "evasion_and_energy_shield32",
+    "name": "Evasion and Energy Shield",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "60241": {
     "id": "physical16",
     "name": "Bleed Chance",
@@ -36582,6 +37862,14 @@
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
+  },
+  "60251": {
+    "id": "AscendancyMonk3Small10",
+    "name": "Chaos Damage",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": "Monk3"
   },
   "60269": {
     "id": "area_spells24",
@@ -36642,6 +37930,14 @@
   "60324": {
     "id": "remnant16_",
     "name": "Remnant Pickup Range",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "60332": {
+    "id": "energy_shield_and_armour54",
+    "name": "Armour and Energy Shield",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -36870,6 +38166,14 @@
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": "Huntress3"
+  },
+  "60878": {
+    "id": "lightning69_",
+    "name": "Lightning Storm",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
   },
   "60886": {
     "id": "stun_threshold6",
@@ -37119,6 +38423,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "61309": {
+    "id": "armour_and_evasion44",
+    "name": "Redblade Discipline",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "61312": {
     "id": "dexterity22",
     "name": "Attribute",
@@ -37343,14 +38655,6 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
-  "61493": {
-    "id": "stun_threshold_from_energy_shield9",
-    "name": "Austerity Measures",
-    "is_notable": true,
-    "is_keystone": false,
-    "is_jewel_socket": false,
-    "ascendancy": ""
-  },
   "61500": {
     "id": "AscendancyDuelist1Notable4",
     "name": "[DNT-UNUSED] Duelist1Notable4",
@@ -37377,7 +38681,7 @@
   },
   "61586": {
     "id": "AscendancyMonk1Notable2",
-    "name": "",
+    "name": "Martial Master",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -37391,9 +38695,25 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "61615": {
+    "id": "life_recoup31",
+    "name": "Life Recoup Speed",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "61632": {
     "id": "quarterstaff6",
     "name": "Quarterstaff Freeze and Daze Buildup",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "61657": {
+    "id": "armour_and_evasion46",
+    "name": "Armour applies to Elemental Damage and Deflection",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -37505,7 +38825,7 @@
   },
   "61863": {
     "id": "cold16",
-    "name": "Cold Damage and Energy Shield Recharge Rate",
+    "name": "Elemental Damage and Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -37719,12 +39039,28 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "62096": {
+    "id": "companions63",
+    "name": "Attack Damage and Companion Damage as Chaos",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "62122": {
     "id": "damage_from_mana1",
     "name": "Damage from Mana",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "62152": {
+    "id": "voices_jewel_slot1",
+    "name": "[SinisterJewelSockets|Sinister] [Jewel] Socket",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": true,
     "ascendancy": ""
   },
   "62153": {
@@ -37775,6 +39111,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "62210": {
+    "id": "Puppetmaster6",
+    "name": "Puppet Master chance",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "62216": {
     "id": "warcries23",
     "name": "Empowered Attack Damage",
@@ -37795,6 +39139,14 @@
     "id": "mastery_evasion109",
     "name": "Armour and Evasion Mastery",
     "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "62237": {
+    "id": "armour_and_evasion29",
+    "name": "Saqawal's Talon",
+    "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": ""
@@ -37897,7 +39249,7 @@
   },
   "62424": {
     "id": "AscendancyHuntress2Small5",
-    "name": "",
+    "name": "Critical Chance",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -38129,11 +39481,19 @@
   },
   "62702": {
     "id": "AscendancyHuntress2Small2_",
-    "name": "",
+    "name": "Movement Speed",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": "Huntress2"
+  },
+  "62723": {
+    "id": "Puppetmaster8",
+    "name": "Puppet Master chance",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
   },
   "62732": {
     "id": "stun_threshold11",
@@ -38145,7 +39505,7 @@
   },
   "62743": {
     "id": "AscendancyHuntress2Notable3",
-    "name": "",
+    "name": "Wild Protector",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -38162,6 +39522,14 @@
   "62757": {
     "id": "stun1",
     "name": "Stun Buildup",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "62779": {
+    "id": "mastery_companion296",
+    "name": "Companion Mastery",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -38250,6 +39618,14 @@
   "62936": {
     "id": "mana14",
     "name": "Damage from Mana",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "62948": {
+    "id": "mastery_armour_and_energy_shield_6276",
+    "name": "Armour and Energy Shield Mastery",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -38378,6 +39754,14 @@
   "63182": {
     "id": "duelist_minions7",
     "name": "Defences and Companion Life",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "63192": {
+    "id": "companions67",
+    "name": "Attack Damage and Companion Damage as Chaos",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -38543,6 +39927,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "63482": {
+    "id": "mastery_lightning148",
+    "name": "Lightning Mastery",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "63484": {
     "id": "AscendancyWitch1Small8",
     "name": "Flammability Magnitude",
@@ -38553,7 +39945,7 @@
   },
   "63493": {
     "id": "AscendancyHuntress2Start",
-    "name": "Beastmaster",
+    "name": "Spirit Walker",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -38871,14 +40263,6 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
-  "63981": {
-    "id": "stun_threshold_if_no_recent_stun11",
-    "name": "Deft Recovery",
-    "is_notable": true,
-    "is_keystone": false,
-    "is_jewel_socket": false,
-    "ascendancy": ""
-  },
   "64016": {
     "id": "AscendancyShadow3Notable5",
     "name": "[DNT-UNUSED] Shadow3Notable5",
@@ -39153,7 +40537,7 @@
   },
   "64434": {
     "id": "deflect28",
-    "name": "Deflection",
+    "name": "Evasion",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -39319,14 +40703,6 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
-  "64690": {
-    "id": "minion_defence44",
-    "name": "Energy Shield Recharge",
-    "is_notable": false,
-    "is_keystone": false,
-    "is_jewel_socket": false,
-    "ascendancy": ""
-  },
   "64700": {
     "id": "quarterstaff15",
     "name": "Quarterstaff Freeze and Daze Buildup",
@@ -39359,6 +40735,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "64770": {
+    "id": "energy_shield_and_armour24",
+    "name": "Morgana, the Storm Seer",
+    "is_notable": true,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "64789": {
     "id": "AscendancySorceress1Small1",
     "name": "Mana Regeneration",
@@ -39366,6 +40750,14 @@
     "is_keystone": false,
     "is_jewel_socket": false,
     "ascendancy": "Sorceress1"
+  },
+  "64804": {
+    "id": "Puppetmaster3",
+    "name": "Puppet Master chance",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
   },
   "64807": {
     "id": "slam_area1",
@@ -39559,6 +40951,14 @@
     "is_jewel_socket": false,
     "ascendancy": ""
   },
+  "65167": {
+    "id": "companions61",
+    "name": "Area Damage and Companion Area of Effect",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
   "65173": {
     "id": "AscendancyMonk2Notable2_",
     "name": "...and Protect me from Harm",
@@ -39633,7 +41033,7 @@
   },
   "65228": {
     "id": "AscendancyMonk1Small2",
-    "name": "",
+    "name": "Attack Speed",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -39698,6 +41098,14 @@
   "65322": {
     "id": "bleed10",
     "name": "Bleeding Chance",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "65324": {
+    "id": "armour_and_evasion50",
+    "name": "Armour applies to Elemental Damage and Deflection",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -39786,6 +41194,14 @@
   "65498": {
     "id": "physical43",
     "name": "Armour Break",
+    "is_notable": false,
+    "is_keystone": false,
+    "is_jewel_socket": false,
+    "ascendancy": ""
+  },
+  "65509": {
+    "id": "energy_shield_and_armour41",
+    "name": "Armour Applies to Elemental Damage and Energy Shield Delay",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,

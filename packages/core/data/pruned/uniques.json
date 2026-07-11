@@ -170,7 +170,7 @@
     "visual_identity_id": "FourUniqueBodyStrInt3"
   },
   "34": {
-    "name": "Husk of Dreams",
+    "name": "Reverie",
     "item_class": "Body Armour",
     "visual_identity_id": "FourUniqueBodyStrInt4"
   },
@@ -1165,17 +1165,17 @@
     "visual_identity_id": "FourUniqueSanctum3"
   },
   "233": {
-    "name": "Sekhema's Resolve",
+    "name": "Safrin's Resolve",
     "item_class": "Ring",
     "visual_identity_id": "FourUniqueSanctum4a"
   },
   "234": {
-    "name": "Sekhema's Resolve",
+    "name": "Eshtera's Path",
     "item_class": "Ring",
     "visual_identity_id": "FourUniqueSanctum4b"
   },
   "235": {
-    "name": "Sekhema's Resolve",
+    "name": "Zaida's Longevity",
     "item_class": "Ring",
     "visual_identity_id": "FourUniqueSanctum4c"
   },
@@ -2013,5 +2013,235 @@
     "name": "Flesh Crucible",
     "item_class": "Jewel",
     "visual_identity_id": "FourUniqueJewel13"
+  },
+  "403": {
+    "name": "Grip of Kulemak",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing33_b"
+  },
+  "404": {
+    "name": "Grip of Kulemak",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing33_c"
+  },
+  "405": {
+    "name": "Grip of Kulemak",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing33_d"
+  },
+  "406": {
+    "name": "Grip of Kulemak",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing33__e"
+  },
+  "407": {
+    "name": "The Auspex",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyDex16_"
+  },
+  "408": {
+    "name": "The Sunken Vessel",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrDex14"
+  },
+  "409": {
+    "name": "Geofri's Sanctuary",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrInt11"
+  },
+  "410": {
+    "name": "Loreweave",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrInt14"
+  },
+  "411": {
+    "name": "The Unleashed",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrInt15"
+  },
+  "412": {
+    "name": "Decree of Loyalty",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyStrInt16"
+  },
+  "413": {
+    "name": "Forgotten Warden",
+    "item_class": "Body Armour",
+    "visual_identity_id": "FourUniqueBodyDexInt14"
+  },
+  "414": {
+    "name": "Decree of Acuity",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetStrDex9_"
+  },
+  "415": {
+    "name": "Vestige of Darkness",
+    "item_class": "Helmet",
+    "visual_identity_id": "FourUniqueHelmetStrInt9"
+  },
+  "416": {
+    "name": "Facebreaker",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesStr1"
+  },
+  "417": {
+    "name": "Horror's Flight",
+    "item_class": "Gloves",
+    "visual_identity_id": "FourUniqueGlovesDex9"
+  },
+  "418": {
+    "name": "Decree of Flight",
+    "item_class": "Boots",
+    "visual_identity_id": "FourUniqueBootsStrInt9"
+  },
+  "419": {
+    "name": "Nightfall",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldStr14"
+  },
+  "420": {
+    "name": "Eyes of the Runefather",
+    "item_class": "Shield",
+    "visual_identity_id": "FourUniqueShieldStrDex12"
+  },
+  "421": {
+    "name": "Eventide Petals",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueAmulet22"
+  },
+  "422": {
+    "name": "Immaculate Adherence",
+    "item_class": "Amulet",
+    "visual_identity_id": "FourUniqueAmulet23"
+  },
+  "423": {
+    "name": "Berek's Grip",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing26a__"
+  },
+  "424": {
+    "name": "Berek's Pass",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing26b"
+  },
+  "425": {
+    "name": "Berek's Respite",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing26c"
+  },
+  "426": {
+    "name": "The Taming",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing27"
+  },
+  "427": {
+    "name": "Veilpiercer",
+    "item_class": "Ring",
+    "visual_identity_id": "FourUniqueRing34_"
+  },
+  "428": {
+    "name": "Cat O' Nine Tails",
+    "item_class": "Belt",
+    "visual_identity_id": "FourUniqueBelt19_"
+  },
+  "429": {
+    "name": "Opportunity",
+    "item_class": "Flask",
+    "visual_identity_id": "FourUniqueLifeFlask2"
+  },
+  "430": {
+    "name": "Uhtred's Chalice",
+    "item_class": "Flask",
+    "visual_identity_id": "FourUniqueManaFlask2"
+  },
+  "431": {
+    "name": "Brutus' Lead Sprinkler",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueOneHandMace9"
+  },
+  "432": {
+    "name": "Sadist's Mercy",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueOneHandMace14"
+  },
+  "433": {
+    "name": "Serle's Grit",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueOneHandMace15"
+  },
+  "434": {
+    "name": "Twisted Empyrean",
+    "item_class": "Mace",
+    "visual_identity_id": "FourUniqueTwoHandMace14_"
+  },
+  "435": {
+    "name": "The Ordained",
+    "item_class": "Spear",
+    "visual_identity_id": "FourUniqueSpear15"
+  },
+  "436": {
+    "name": "Duality",
+    "item_class": "Warstaff",
+    "visual_identity_id": "FourUniqueQuarterstaff14"
+  },
+  "437": {
+    "name": "Liminal Coil",
+    "item_class": "Wand",
+    "visual_identity_id": "FourUniqueWand15_"
+  },
+  "438": {
+    "name": "Runeseeker's Call",
+    "item_class": "Wand",
+    "visual_identity_id": "FourUniqueWand16_"
+  },
+  "439": {
+    "name": "The Raven's Flock",
+    "item_class": "Staff",
+    "visual_identity_id": "FourUniqueStaff18"
+  },
+  "440": {
+    "name": "Ironbound",
+    "item_class": "Bow",
+    "visual_identity_id": "FourUniqueBow3"
+  },
+  "441": {
+    "name": "Periphery",
+    "item_class": "Bow",
+    "visual_identity_id": "FourUniqueBow14"
+  },
+  "442": {
+    "name": "Redemption",
+    "item_class": "Crossbow",
+    "visual_identity_id": "FourUniqueCrossbow14"
+  },
+  "443": {
+    "name": "Sylvan's Effigy",
+    "item_class": "Sceptre",
+    "visual_identity_id": "FourUniqueSceptre14"
+  },
+  "444": {
+    "name": "Spiteful Floret",
+    "item_class": "Talisman",
+    "visual_identity_id": "FourUniqueTalisman2_"
+  },
+  "445": {
+    "name": "Surge of the Tide",
+    "item_class": "Talisman",
+    "visual_identity_id": "FourUniqueTalisman10"
+  },
+  "446": {
+    "name": "Split Personality",
+    "item_class": "Jewel",
+    "visual_identity_id": "FourUniqueJewel14_"
+  },
+  "447": {
+    "name": "Voices",
+    "item_class": "Jewel",
+    "visual_identity_id": "FourUniqueJewel15"
+  },
+  "448": {
+    "name": "Mageblood",
+    "item_class": "Belt",
+    "visual_identity_id": "FourUniqueBelt24"
   }
 }

@@ -1,19 +1,19 @@
 [
   {
     "filename": "ascendancies.json",
-    "raw_size": 12173855,
-    "pruned_size": 2734,
+    "raw_size": 17172354,
+    "pruned_size": 2715,
     "reduction_pct": 100,
     "pruned": true,
-    "sha256": "b515a907e13a1b2a3722f14f8fa45cd199e8cfc3d7b0e1cbcc2220c77a75163a"
+    "sha256": "ea1159ffcd1f4de5f480779b8a2a82ff227bfaf8725bf58e1e82d3cf053fe4af"
   },
   {
     "filename": "base_items.json",
-    "raw_size": 5841967,
-    "pruned_size": 727751,
-    "reduction_pct": 87.5,
+    "raw_size": 7842214,
+    "pruned_size": 960152,
+    "reduction_pct": 87.8,
     "pruned": true,
-    "sha256": "52d2956422b49f7890b07d369d27c93377193346792c730229f595c47d0cc2fb"
+    "sha256": "c9b77dd6e1d2af0eed30eddbf8d7d70759594a4db512395c6cdcac71b8e0c7e6"
   },
   {
     "filename": "characters.json",
@@ -25,50 +25,50 @@
   },
   {
     "filename": "gem_labels.json",
-    "raw_size": 471820,
-    "pruned_size": 61366,
-    "reduction_pct": 87,
+    "raw_size": 513395,
+    "pruned_size": 66184,
+    "reduction_pct": 87.1,
     "pruned": true,
-    "sha256": "119a721dbf8fab1f9bacbd1ac896534b2f8a12d721786d5bbe2c7252f6572f60"
+    "sha256": "cbba8553aa030b031cbcbcdbe8d3a83bf027700a738dfdce478ae182c320c20a"
   },
   {
     "filename": "item_classes.json",
-    "raw_size": 15405,
-    "pruned_size": 15405,
+    "raw_size": 15850,
+    "pruned_size": 15850,
     "reduction_pct": 0,
     "pruned": false,
-    "sha256": "de910ff003f6879723e3bc185c780834467f673bb5a1f71aefe34f1e7f8592ee"
+    "sha256": "eec6f2a4c3b53a26f6979a26e57c9ab7644f26b914e57c4d3a9f9768a1aed723"
   },
   {
     "filename": "passives_default.json",
-    "raw_size": 4614578,
-    "pruned_size": 903766,
-    "reduction_pct": 80.4,
+    "raw_size": 4797052,
+    "pruned_size": 937740,
+    "reduction_pct": 80.5,
     "pruned": true,
-    "sha256": "b2e2f2e19e632fcca26161dcbeb5c6939c3e305d1743a49a090bc25fa4dca777"
+    "sha256": "0eb1895355980e32bf15be9cf63922f3b6edfd32522a5640bd7d47b4384a4b22"
   },
   {
     "filename": "skill_gems.json",
-    "raw_size": 1246875,
-    "pruned_size": 56677,
+    "raw_size": 1357516,
+    "pruned_size": 61339,
     "reduction_pct": 95.5,
     "pruned": true,
-    "sha256": "a390521f76d3cc2a48fe2b2277864b0049d45a89a7995930ae7b6f724e2fd84d"
+    "sha256": "2519ef80e6a84961e5121e49bbd9d7258a2718555810c61de1d8238b3666157e"
   },
   {
     "filename": "tree.json",
-    "raw_size": 1812234,
-    "pruned_size": 1812234,
+    "raw_size": 1910409,
+    "pruned_size": 1910409,
     "reduction_pct": 0,
     "pruned": false,
-    "sha256": "0e316ffb8e953125f2e72ea4e8479e18ea2bd8a2058016f38b83ef09bac35eed"
+    "sha256": "f737d85016b834fcf56c961fd5fd93e1add172f01600fbf6d0f4f0a95e5af848"
   },
   {
     "filename": "uniques.json",
-    "raw_size": 153483,
-    "pruned_size": 49112,
+    "raw_size": 171109,
+    "pruned_size": 54736,
     "reduction_pct": 68,
     "pruned": true,
-    "sha256": "525650bb54392d58f85b14230d887f0d3c53e95300192ade2048ba20ac7e9d5a"
+    "sha256": "e9feec4bdcb43116cf93b83bf0b7c9f9dcf7e2553f418529928277c6b382e366"
   }
 ]

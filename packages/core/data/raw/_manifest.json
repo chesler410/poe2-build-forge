@@ -2,64 +2,64 @@
   {
     "filename": "ascendancies.json",
     "source_url": "https://raw.githubusercontent.com/repoe-fork/poe2/master/data/ascendancies.json",
-    "fetched_at": "2026-05-25T09:47:49.196Z",
-    "size_bytes": 12173855,
-    "sha256": "65d7811142d0d280dbe4c7703929d7e1ac2baab8feaee19c2c4d9c8e787a96ab"
+    "fetched_at": "2026-07-11T17:31:33.289Z",
+    "size_bytes": 17172354,
+    "sha256": "5406e6bdfdc73eea6b2a5d4efbe5af68f32efbc2a2728506facda59130fc0f0b"
   },
   {
     "filename": "base_items.json",
     "source_url": "https://raw.githubusercontent.com/repoe-fork/poe2/master/data/base_items.json",
-    "fetched_at": "2026-05-25T09:47:49.231Z",
-    "size_bytes": 5841967,
-    "sha256": "13e52267e058ef2a9d3a9a7d242f1635e8faadc15a7613b13cbe2b96486fbd37"
+    "fetched_at": "2026-07-11T17:31:33.314Z",
+    "size_bytes": 7842214,
+    "sha256": "acb63728684a57d61e99ac2e919833fcf3199e9ca185770d57a0df568e60266c"
   },
   {
     "filename": "characters.json",
     "source_url": "https://raw.githubusercontent.com/repoe-fork/poe2/master/data/characters.json",
-    "fetched_at": "2026-05-25T09:47:49.229Z",
+    "fetched_at": "2026-07-11T17:31:33.313Z",
     "size_bytes": 7233,
     "sha256": "a10fc5bc7b3da0a5644ad5a1ca76b4189065977aec3fdc202617392d0ad8cc3f"
   },
   {
     "filename": "gems.lua",
     "source_url": "https://raw.githubusercontent.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/dev/src/Data/Gems.lua",
-    "fetched_at": "2026-05-25T09:47:49.236Z",
-    "size_bytes": 471820,
-    "sha256": "5de0f4fdde67654ade0402949952e7fe82e83978fd09800c88b29dc2b7039c22"
+    "fetched_at": "2026-07-11T17:31:33.316Z",
+    "size_bytes": 513395,
+    "sha256": "1ccea00a77c66dded39ee6c5d477d705c0e2602348d752982d075ac56136ffe1"
   },
   {
     "filename": "item_classes.json",
     "source_url": "https://raw.githubusercontent.com/repoe-fork/poe2/master/data/item_classes.json",
-    "fetched_at": "2026-05-25T09:47:49.232Z",
-    "size_bytes": 15405,
-    "sha256": "de910ff003f6879723e3bc185c780834467f673bb5a1f71aefe34f1e7f8592ee"
+    "fetched_at": "2026-07-11T17:31:33.314Z",
+    "size_bytes": 15850,
+    "sha256": "eec6f2a4c3b53a26f6979a26e57c9ab7644f26b914e57c4d3a9f9768a1aed723"
   },
   {
     "filename": "passives_default.json",
     "source_url": "https://raw.githubusercontent.com/repoe-fork/poe2/master/data/passive_skill_trees/Default.json",
-    "fetched_at": "2026-05-25T09:47:49.235Z",
-    "size_bytes": 4614578,
-    "sha256": "52a7e25a81d81d3809b0cde29e3da0da3571520d52ca5033617d1996ca2d20c7"
+    "fetched_at": "2026-07-11T17:31:33.316Z",
+    "size_bytes": 4797052,
+    "sha256": "fe8cf8ffd50af8f15119abdb73212bf4068cb377eecd23c4c4b4feee294d37fb"
   },
   {
     "filename": "skill_gems.json",
     "source_url": "https://raw.githubusercontent.com/repoe-fork/poe2/master/data/skill_gems.json",
-    "fetched_at": "2026-05-25T09:47:49.230Z",
-    "size_bytes": 1246875,
-    "sha256": "6e204339f6f57b262abb61b5b421904f7c22e4a4aab16c52d5b95f52278e550a"
+    "fetched_at": "2026-07-11T17:31:33.314Z",
+    "size_bytes": 1357516,
+    "sha256": "c38a0b64a137490af32b855bc8e35c1afe0f03ed3a076b85127d0ea4d3ed3e80"
   },
   {
     "filename": "tree.json",
-    "source_url": "https://raw.githubusercontent.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/dev/src/TreeData/0_4/tree.json",
-    "fetched_at": "2026-05-25T09:47:49.234Z",
-    "size_bytes": 1812234,
-    "sha256": "0e316ffb8e953125f2e72ea4e8479e18ea2bd8a2058016f38b83ef09bac35eed"
+    "source_url": "https://raw.githubusercontent.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/dev/src/TreeData/0_5/tree.json",
+    "fetched_at": "2026-07-11T17:31:33.315Z",
+    "size_bytes": 1910409,
+    "sha256": "f737d85016b834fcf56c961fd5fd93e1add172f01600fbf6d0f4f0a95e5af848"
   },
   {
     "filename": "uniques.json",
     "source_url": "https://raw.githubusercontent.com/repoe-fork/poe2/master/data/uniques.json",
-    "fetched_at": "2026-05-25T09:47:49.233Z",
-    "size_bytes": 153483,
-    "sha256": "8cc5e3bd58e5c0a54b4ba1fb5dbcb493a1f1a215125b57ec1de2c2737838b1a2"
+    "fetched_at": "2026-07-11T17:31:33.315Z",
+    "size_bytes": 171109,
+    "sha256": "5c303e991763d4f89c7e41306561c1eb02bb55d79ebe0c26f43520906f9c059b"
   }
 ]
