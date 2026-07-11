@@ -26,10 +26,10 @@
   {
     "filename": "gem_labels.json",
     "raw_size": 513395,
-    "pruned_size": 66184,
-    "reduction_pct": 87.1,
+    "pruned_size": 132418,
+    "reduction_pct": 74.2,
     "pruned": true,
-    "sha256": "cbba8553aa030b031cbcbcdbe8d3a83bf027700a738dfdce478ae182c320c20a"
+    "sha256": "34ac625b9c1541f5214bb15885ea583c61da63b87647b9ebd05511c1371c01f2"
   },
   {
     "filename": "item_classes.json",
@@ -50,10 +50,10 @@
   {
     "filename": "skill_gems.json",
     "raw_size": 1357516,
-    "pruned_size": 61339,
-    "reduction_pct": 95.5,
+    "pruned_size": 129757,
+    "reduction_pct": 90.4,
     "pruned": true,
-    "sha256": "2519ef80e6a84961e5121e49bbd9d7258a2718555810c61de1d8238b3666157e"
+    "sha256": "04cb6d079f08ee97aafcd6e2c2dc2a2e6aaec78f6e69c0049621ba2f40ba21b6"
   },
   {
     "filename": "tree.json",
