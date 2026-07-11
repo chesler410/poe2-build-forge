@@ -207,7 +207,15 @@ describe('mapPobToBuild', () => {
     const synthetic = {
       ...stormweaver,
       tree: {
-        specs: [{ title: '', nodes: [999999001, 999999002], treeVersion: '0_5' }]
+        specs: [
+          {
+            title: '',
+            nodes: [999999001, 999999002],
+            treeVersion: '0_5',
+            weaponSet1Nodes: [],
+            weaponSet2Nodes: []
+          }
+        ]
       }
     } as typeof stormweaver
     const { build, warnings } = mapPobToBuild(synthetic, {
@@ -227,6 +235,68 @@ describe('mapPobToBuild', () => {
     const source = stormweaver.tree!.specs.at(-1)!.nodes.length
     const emitted = build.passives!.length
     expect(emitted + warnings.length).toBe(source)
+  })
+
+  it('tags weapon-set-specific passives with weapon_set 1 or 2', () => {
+    // PoB2 stores per-weapon-set allocations in <WeaponSet1>/<WeaponSet2>
+    // (parser: weaponSet1Nodes / weaponSet2Nodes). Nodes in neither set are
+    // shared and carry no weapon_set. Verified value scheme (repo fixtures):
+    // weapon_set is 1 or 2, never 0.
+    const entry = (id: string) => ({
+      id,
+      name: id,
+      is_notable: false,
+      is_keystone: false,
+      is_jewel_socket: false,
+      ascendancy: ''
+    })
+    const lookup: PassiveLookup = {
+      '10': entry('shared_node'),
+      '11': entry('set_one_node'),
+      '12': entry('set_two_node')
+    }
+    const spec = {
+      title: '',
+      treeVersion: '0_5',
+      classId: 0,
+      classInternalId: 0,
+      ascendClassId: 0,
+      ascendancyInternalId: '',
+      nodes: [10, 11, 12],
+      weaponSet1Nodes: [11],
+      weaponSet2Nodes: [12]
+    }
+    const synthetic = {
+      ...stormweaver,
+      tree: { activeSpec: 1, specs: [spec] }
+    } as typeof stormweaver
+
+    const { build } = mapPobToBuild(synthetic, { passives: lookup })
+    const wsById = new Map<string, number | undefined>(
+      build.passives!.map((p) =>
+        typeof p === 'string' ? [p, undefined] : [p.id, p.weapon_set]
+      )
+    )
+    expect(wsById.get('shared_node')).toBeUndefined()
+    expect(wsById.get('set_one_node')).toBe(1)
+    expect(wsById.get('set_two_node')).toBe(2)
+  })
+
+  it('emits weapon_set tags for the real Stormweaver fixture', () => {
+    const { build } = mapPobToBuild(stormweaver, { passives: passivesLookup })
+    const objects = build.passives!.filter(
+      (p): p is Exclude<typeof p, string> => typeof p !== 'string'
+    )
+    const ws1 = objects.filter((p) => p.weapon_set === 1)
+    const ws2 = objects.filter((p) => p.weapon_set === 2)
+    // The fixture's <WeaponSet1> has 24 nodes; <WeaponSet2> resolves to 23
+    // after PoB's anoint marker (3663c) is excluded by the parser.
+    expect(ws1.length).toBe(24)
+    expect(ws2.length).toBe(23)
+    // weapon_set is always 1 or 2, never 0.
+    for (const p of objects) {
+      if (p.weapon_set !== undefined) expect([1, 2]).toContain(p.weapon_set)
+    }
   })
 
   it('maps the Stormweaver fixture slots to the game inventory vocabulary', () => {

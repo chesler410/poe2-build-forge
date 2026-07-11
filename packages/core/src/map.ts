@@ -1,6 +1,7 @@
 import type {
   BuildFile,
   BuildPassive,
+  BuildPassiveObject,
   BuildSkill,
   BuildSkillObject,
   BuildSupportObject,
@@ -175,6 +176,16 @@ function mapPassives(
   const out: BuildPassive[] = []
   const warnings: MapWarning[] = []
 
+  // Weapon-set membership. PoE2 grants separate weapon-set skill points;
+  // PoB stores those allocations in <WeaponSet1>/<WeaponSet2> (parsed into
+  // weaponSet1Nodes / weaponSet2Nodes). Nodes in neither set are shared and
+  // carry no weapon_set. Verified against game-accepted fixtures: the tag
+  // value is 1 or 2, never 0. Without this, converted characters lose every
+  // swap-tree allocation.
+  const weaponSetByNode = new Map<number, 1 | 2>()
+  for (const nodeId of finalSpec.weaponSet1Nodes) weaponSetByNode.set(nodeId, 1)
+  for (const nodeId of finalSpec.weaponSet2Nodes) weaponSetByNode.set(nodeId, 2)
+
   // A node with no lookup entry can't be translated to a GGG id. This is
   // almost always stale bundled tree data after a patch. Surface it as a
   // warning instead of dropping it — game-accepted .build files include
@@ -184,7 +195,8 @@ function mapPassives(
   }
 
   // Single-spec builds: no progression info to derive. Emit shorthand
-  // strings (always-shown hints).
+  // strings (always-shown hints), unless the node is weapon-set-specific —
+  // that needs the object form to carry weapon_set.
   if (specs.length === 1) {
     for (const nodeId of finalSpec.nodes) {
       const entry = lookup[String(nodeId)]
@@ -192,7 +204,12 @@ function mapPassives(
         warnUnmapped(nodeId)
         continue
       }
-      out.push(entry.id)
+      const weaponSet = weaponSetByNode.get(nodeId)
+      if (weaponSet === undefined) {
+        out.push(entry.id)
+      } else {
+        out.push({ id: entry.id, weapon_set: weaponSet })
+      }
     }
     return { passives: out, warnings }
   }
@@ -227,11 +244,15 @@ function mapPassives(
 
     const earliestSpec = earliestSpecForNode.get(nodeId) ?? specs.length - 1
     const startLevel = startLevelForSpec(earliestSpec)
+    const weaponSet = weaponSetByNode.get(nodeId)
 
-    if (startLevel <= 1) {
+    if (startLevel <= 1 && weaponSet === undefined) {
       out.push(entry.id)
     } else {
-      out.push({ id: entry.id, level_interval: [startLevel, 100] })
+      const passive: BuildPassiveObject = { id: entry.id }
+      if (startLevel > 1) passive.level_interval = [startLevel, 100]
+      if (weaponSet !== undefined) passive.weapon_set = weaponSet
+      out.push(passive)
     }
   }
   return { passives: out, warnings }
