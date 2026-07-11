@@ -245,8 +245,10 @@ function mapItems(pob: PathOfBuilding2): BuildItem[] | undefined {
   const out: BuildItem[] = []
   for (const slot of itemSet.slots) {
     if (slot.itemId === 0) continue // empty slot, no hint to emit
+    const inventoryId = translateSlotName(slot.name)
+    if (inventoryId === null) continue // slot not part of the game vocabulary
     const buildItem: BuildItem = {
-      inventory_id: translateSlotName(slot.name),
+      inventory_id: inventoryId,
       slot_x: 0,
       slot_y: 0,
       level_interval: ALWAYS_SHOWN
@@ -283,26 +285,48 @@ function mapItems(pob: PathOfBuilding2): BuildItem[] | undefined {
 }
 
 /**
- * Translate PoB inventory slot names ("Weapon 1", "Body Armour") to
- * the `.build` schema's `inventory_id` format (no spaces, "Helm" for
- * helmets, etc., matching the schema example values).
+ * Translate a PoB inventory slot name ("Weapon 1", "Body Armour") to the
+ * `.build` `inventory_id` vocabulary. This mapping is verified against
+ * game-accepted `.build` files (repo `fixtures/`), which are ground truth
+ * over GGG's developer docs:
+ *
+ *  - Weapons: `Weapon1` (set I) and `Weapon2` (the weapon-swap set II).
+ *    There is NO `Offhand` — the game never emits it. Staff builds put
+ *    the swap weapon in "Weapon 1 Swap" -> `Weapon2`.
+ *  - Armour is always suffixed: `Helm1`, `BodyArmour1`, `Gloves1`, `Boots1`.
+ *  - Jewellery: `Amulet1`, `Belt1`, `Ring1`, `Ring2`. Rings are the only
+ *    category that increments.
+ *  - Every charm collapses to `Charm1`; every flask to `Flask1`, regardless
+ *    of how many are equipped.
+ *
+ * Returns `null` for slots outside this vocabulary (PoB carries empty
+ * placeholder slots like "Ring 3", "Arm 1", "Leg 1"); the caller skips
+ * them rather than emitting a non-vocabulary id.
+ *
+ * Note: a set-I offhand ("Weapon 2") and a swap weapon ("Weapon 1 Swap")
+ * both target `Weapon2`. No game-accepted fixture exercises both at once
+ * (two-handed staff builds have no set-I offhand); if a build ever did,
+ * two `Weapon2` hints would be emitted.
  */
-function translateSlotName(name: string): string {
+function translateSlotName(name: string): string | null {
   const map: Record<string, string> = {
     'Weapon 1': 'Weapon1',
     'Weapon 2': 'Weapon2',
-    'Weapon 1 Swap': 'Offhand1',
-    'Weapon 2 Swap': 'Offhand2',
-    'Body Armour': 'BodyArmour',
-    Helmet: 'Helm',
-    Gloves: 'Gloves',
-    Boots: 'Boots',
-    Belt: 'Belt',
-    Amulet: 'Amulet',
-    'Ring 1': 'Ring',
+    'Weapon 1 Swap': 'Weapon2',
+    'Weapon 2 Swap': 'Weapon2',
+    'Body Armour': 'BodyArmour1',
+    Helmet: 'Helm1',
+    Gloves: 'Gloves1',
+    Boots: 'Boots1',
+    Belt: 'Belt1',
+    Amulet: 'Amulet1',
+    'Ring 1': 'Ring1',
     'Ring 2': 'Ring2',
+    'Charm 1': 'Charm1',
+    'Charm 2': 'Charm1',
+    'Charm 3': 'Charm1',
     'Flask 1': 'Flask1',
-    'Flask 2': 'Flask2'
+    'Flask 2': 'Flask1'
   }
-  return map[name] ?? name.replace(/\s+/g, '')
+  return map[name] ?? null
 }

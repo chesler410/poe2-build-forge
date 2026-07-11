@@ -14,6 +14,29 @@ const fixtureXml = readFileSync(
 )
 const pob = parsePobXml(fixtureXml)
 
+// Real 0.5 Sorceress/Stormweaver export (CoC Comet), fully equipped.
+// Used to verify inventory_id vocabulary against game-accepted output.
+const stormweaver = parsePobXml(
+  readFileSync(join(here, 'fixtures/pob-stormweaver.xml'), 'utf8')
+)
+
+// The exact game vocabulary, verified from repo fixtures/. Mirrors the
+// schema enum; kept here so the mapper is checked independently.
+const INVENTORY_VOCAB = new Set([
+  'Weapon1',
+  'Weapon2',
+  'Helm1',
+  'BodyArmour1',
+  'Gloves1',
+  'Boots1',
+  'Amulet1',
+  'Belt1',
+  'Ring1',
+  'Ring2',
+  'Charm1',
+  'Flask1'
+])
+
 const passivesLookup = JSON.parse(
   readFileSync(
     join(here, '../data/pruned/passives_default.json'),
@@ -157,6 +180,47 @@ describe('mapPobToBuild', () => {
     ])
   })
 
+  it('maps the Stormweaver fixture slots to the game inventory vocabulary', () => {
+    const result = mapPobToBuild(stormweaver, { passives: passivesLookup })
+    const ids = (result.inventory_slots ?? []).map((i) => i.inventory_id)
+
+    expect(ids.length).toBeGreaterThan(0)
+    // Every emitted id must be in the verified game vocabulary.
+    for (const id of ids) expect(INVENTORY_VOCAB.has(id)).toBe(true)
+
+    // Suffixed armour + jewellery, never bare, never Offhand.
+    expect(ids).toContain('Helm1')
+    expect(ids).toContain('BodyArmour1')
+    expect(ids).toContain('Gloves1')
+    expect(ids).toContain('Boots1')
+    expect(ids).toContain('Amulet1')
+    expect(ids).toContain('Belt1')
+    expect(ids).toContain('Ring1')
+    expect(ids).toContain('Ring2')
+
+    // Weapon1 = set I; Weapon2 = the swap-set weapon (this build has a
+    // populated "Weapon 1 Swap" but an empty "Weapon 2").
+    expect(ids).toContain('Weapon1')
+    expect(ids).toContain('Weapon2')
+
+    // The build has three charms — all collapse to Charm1 (no Charm2/3).
+    expect(ids.filter((id) => id === 'Charm1').length).toBe(3)
+    expect(ids).not.toContain('Charm2')
+    expect(ids).not.toContain('Charm3')
+
+    // One flask populated -> Flask1 (never Flask2, never Offhand).
+    expect(ids).toContain('Flask1')
+    expect(ids).not.toContain('Flask2')
+    expect(ids.some((id) => id.startsWith('Offhand'))).toBe(false)
+  })
+
+  it('produces schema-valid output from the Stormweaver fixture', () => {
+    const result = mapPobToBuild(stormweaver, { passives: passivesLookup })
+    const v = validate(result)
+    if (!v.valid) console.error(JSON.stringify(v.errors, null, 2))
+    expect(v.valid).toBe(true)
+  })
+
   it('omits items entirely when no slots are filled in the fixture', () => {
     // The 90pcuxN4XtJG fixture has all slots empty (itemId=0).
     const result = mapPobToBuild(pob, { passives: passivesLookup })
@@ -180,9 +244,10 @@ describe('mapPobToBuild', () => {
     expect(result.ascendancy).toBeUndefined()
   })
 
-  it('disambiguates Flask 1 / Flask 2 to distinct inventory_ids', () => {
-    // Regression: previously both mapped to "Flask" and collided in
-    // builds that actually had flasks selected.
+  it('collapses every flask to Flask1 (the game never increments flasks)', () => {
+    // Ground truth (repo fixtures/) shows two flask slots both emit
+    // inventory_id "Flask1". The old converter emitted Flask1/Flask2;
+    // that vocabulary is not what the game uses.
     const synthetic = {
       ...pob,
       items: {
@@ -201,9 +266,30 @@ describe('mapPobToBuild', () => {
     }
     const result = mapPobToBuild(synthetic, { passives: passivesLookup })
     const ids = (result.inventory_slots ?? []).map((i) => i.inventory_id)
-    expect(ids).toContain('Flask1')
-    expect(ids).toContain('Flask2')
-    expect(new Set(ids).size).toBe(ids.length) // no duplicates
+    expect(ids).toEqual(['Flask1', 'Flask1'])
+  })
+
+  it('collapses every charm to Charm1 (the game never increments charms)', () => {
+    const synthetic = {
+      ...pob,
+      items: {
+        activeItemSet: 1,
+        itemSets: [
+          {
+            id: 1,
+            slots: [
+              { name: 'Charm 1', itemId: 100 },
+              { name: 'Charm 2', itemId: 101 },
+              { name: 'Charm 3', itemId: 102 }
+            ]
+          }
+        ],
+        catalog: {}
+      }
+    }
+    const result = mapPobToBuild(synthetic, { passives: passivesLookup })
+    const ids = (result.inventory_slots ?? []).map((i) => i.inventory_id)
+    expect(ids).toEqual(['Charm1', 'Charm1', 'Charm1'])
   })
 
   it('emits unique_name when a slot references a unique in the catalog', () => {
@@ -298,7 +384,7 @@ describe('mapPobToBuild', () => {
     }
     const result = mapPobToBuild(synthetic, { passives: passivesLookup })
     expect(result.inventory_slots).toHaveLength(1)
-    expect(result.inventory_slots![0].inventory_id).toBe('Belt')
+    expect(result.inventory_slots![0].inventory_id).toBe('Belt1')
     expect(result.inventory_slots![0].unique_name).toBeUndefined()
     expect(result.inventory_slots![0].additional_text).toBeUndefined()
   })

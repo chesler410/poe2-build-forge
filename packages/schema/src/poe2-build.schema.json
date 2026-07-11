@@ -16,6 +16,10 @@
       "type": "string",
       "description": "Build author / creator name. Optional."
     },
+    "link": {
+      "type": "string",
+      "description": "Source URL for the build (e.g. the build guide it was exported from). Optional; emitted by third-party exporters such as Mobalytics and preserved verbatim."
+    },
     "description": {
       "type": "string",
       "description": "Build description. Supports markup tags (see $defs/AdditionalText)."
@@ -144,21 +148,20 @@
       "properties": {
         "inventory_id": {
           "type": "string",
-          "description": "Inventory slot identifier. Common values: 'Weapon1', 'Weapon2', 'Offhand1', 'Offhand2', 'Helm', 'BodyArmour', 'Gloves', 'Boots', 'Belt', 'Amulet', 'Ring', 'Ring2', 'Flask'.",
-          "examples": [
+          "description": "Inventory slot identifier. This exact vocabulary is verified against game-accepted .build files (see repo fixtures/): weapons are 'Weapon1' (set I) and 'Weapon2' (the weapon-swap set); armour is always suffixed ('Helm1', 'BodyArmour1', 'Gloves1', 'Boots1'); jewellery is 'Amulet1', 'Belt1', 'Ring1', 'Ring2' (rings are the only category that increments); every charm is 'Charm1' and every flask is 'Flask1' regardless of count. Note there is no 'Offhand'; the game never uses it.",
+          "enum": [
             "Weapon1",
             "Weapon2",
-            "Offhand1",
-            "Offhand2",
-            "Helm",
-            "BodyArmour",
-            "Gloves",
-            "Boots",
-            "Belt",
-            "Amulet",
-            "Ring",
+            "Helm1",
+            "BodyArmour1",
+            "Gloves1",
+            "Boots1",
+            "Amulet1",
+            "Belt1",
+            "Ring1",
             "Ring2",
-            "Flask"
+            "Charm1",
+            "Flask1"
           ]
         },
         "slot_x": {

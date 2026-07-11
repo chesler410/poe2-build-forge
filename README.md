@@ -65,8 +65,13 @@ verbatim.
   ("Ranger2") via a bundled lookup
 - Surfaces equipped items: uniques as `unique_name`, rares/magics as
   `additional_text` with rarity + base type + rolled name
-- Disambiguates multi-slot inventory positions (`Flask 1` / `Flask 2`
-  → `Flask1` / `Flask2`; `Weapon 1 Swap` → `Offhand1`)
+- Maps PoB slots to the game's `inventory_id` vocabulary, verified against
+  game-accepted `.build` files (see [`fixtures/`](fixtures/)): `Weapon1`
+  (set I) and `Weapon2` (the weapon-swap set — e.g. a staff build's
+  `Weapon 1 Swap`); suffixed armour (`Helm1`, `BodyArmour1`, `Gloves1`,
+  `Boots1`); `Amulet1`, `Belt1`, `Ring1`, `Ring2` (rings are the only
+  category that increments); every charm → `Charm1` and every flask →
+  `Flask1`. There is no `Offhand` — the game never uses it.
 - **Edit before download**: in-browser form for build name, description,
   per-passive `weapon_set` + `unique_name`, per-item `unique_name`, and
   per-entry `additional_text` + `level_interval` on everything. JSON

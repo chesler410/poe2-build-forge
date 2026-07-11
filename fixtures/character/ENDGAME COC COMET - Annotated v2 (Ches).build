@@ -1,0 +1,2051 @@
+{
+ "author": "animeprincess",
+ "link": "https://mobalytics.gg/poe-2/builds/animeprincess-coc-comet-stormweaver",
+ "ascendancy": "Sorceress1",
+ "inventory_slots": [
+  {
+   "additional_text": "Pyrophyte Staff\n1. 88% increased Spell Damage\n2. 49% increased Cast Speed\n3. 89% increased Critical Hit Chance for Spells\n4. Gain 60% of Damage as Extra Fire Damage\n5. Gain 54% of Damage as Extra Cold Damage\n\n<gold>{STAFF = biggest damage slot.\nPrefixes: gain dmg as extra > incr. spell dmg > incr. COLD dmg (not lightning!)\nSuffixes: +levels all spell skills > cast speed > crit chance\nSpirit: amanamu prefix craft (35-50). Trade tip: sort by SUM, set max buyout.}",
+   "inventory_id": "Weapon1",
+   "level_interval": [
+    16,
+    100
+   ],
+   "slot_x": 0,
+   "slot_y": 0
+  },
+  {
+   "additional_text": "Ancestral Tiara\n1. +41 to maximum Life\n2. +40% to Cold Resistance\n3. +20% to Lightning Resistance\n4. +70 to maximum Energy Shield\n5. 38% increased Energy Shield\n6. 20% increased Energy Shield Recharge Rate\n\n<gold>{Spirit corruption 20-30 if you are short.} <grey>{ES, res, Int.}",
+   "inventory_id": "Helm1",
+   "level_interval": [
+    80,
+    100
+   ],
+   "slot_x": 0,
+   "slot_y": 0
+  },
+  {
+   "additional_text": "Flowing Raiment\n1. +30% to Cold Resistance\n2. +40% to Lightning Resistance\n3. +89 to maximum Energy Shield\n4. 100% increased Energy Shield\n5. +53 to Spirit\n6. 23% increased Energy Shield Recharge Rate\n\n<gold>{Flowing Raiment = free mana regen. Spirit prefix 30-61.} <grey>{Then max ES, res.}",
+   "inventory_id": "BodyArmour1",
+   "level_interval": [
+    70,
+    100
+   ],
+   "slot_x": 0,
+   "slot_y": 0
+  },
+  {
+   "inventory_id": "Gloves1",
+   "slot_x": 0,
+   "slot_y": 0,
+   "unique_name": "Maligaro's Virtuosity",
+   "additional_text": "\n\n<m>{<gold>{MANDATORY: Maligaro's Virtuosity}}\n<gold>{Locks crit damage high -> crit-chance downsides stop mattering -> Pinpoint Critical becomes free power. Scale crit CHANCE, never crit damage. 40-50% works, 60-70% strong endgame target - do not sacrifice everything chasing more.}"
+  },
+  {
+   "additional_text": "Sekhema Sandals\n1. +25% to Fire Resistance\n2. +40% to Cold Resistance\n3. +30% to Lightning Resistance\n4. +51 to maximum Energy Shield\n5. 55% increased Energy Shield\n6. 30% increased Movement Speed\n\n<grey>{Movement speed first, then ES/res.}",
+   "inventory_id": "Boots1",
+   "level_interval": [
+    80,
+    100
+   ],
+   "slot_x": 0,
+   "slot_y": 0
+  },
+  {
+   "additional_text": "Gold Amulet\n1. +14% to all Elemental Resistances\n2. +33 to Strength\n3. +79 to maximum Energy Shield\n4. +3 to Level of all Spell Skills\n5. +50 to Spirit\n\n<m>{<gold>{ANOINT - pick by situation:}}\n<gold>{Need mana -> Conservative Casting\nMana solved -> Climate Change\nWant an ascendancy point back -> Aspiring Genius (replaces Constant Gale)\nAdvanced tech -> Dominion (video guide)\nExtreme budget only -> Heavy Ammunition}\n<gold>{Solar Amulet implicit = 15 spirit; prefix 30-50 more.}",
+   "inventory_id": "Amulet1",
+   "level_interval": [
+    35,
+    100
+   ],
+   "slot_x": 0,
+   "slot_y": 0
+  },
+  {
+   "additional_text": "Rawhide Belt\n1. +119 to maximum Life\n2. +35% to Fire Resistance\n3. +61 to maximum Energy Shield\n4. 13 Life Regeneration per second\n5. 49% increased Spell Damage during any Flask Effect\n6. 16% increased Cast Speed during any Flask Effect\n\n<grey>{ES, mana, res. Flask mana recovery rate = strong roll.}",
+   "inventory_id": "Belt1",
+   "level_interval": [
+    1,
+    100
+   ],
+   "slot_x": 0,
+   "slot_y": 0
+  },
+  {
+   "inventory_id": "Ring1",
+   "slot_x": 0,
+   "slot_y": 0,
+   "unique_name": "Call of the Brotherhood",
+   "additional_text": "\n\n<gold>{Call of the Brotherhood: converts Spark/OoS lightning -> cold. This is WHY you scale cold. Mandatory for the damage identity.}"
+  },
+  {
+   "additional_text": "Pearl Ring\n1. +149 to maximum Mana\n2. +24 to Intelligence\n3. +35% to Fire Resistance\n4. Adds 7 to 13 Physical Damage to Attacks\n5. 34% increased Cold Damage\n6. 25% increased Cast Speed\n\n<gold>{Rare: cast speed, resistances, mana.} <grey>{Finish res caps here.}",
+   "inventory_id": "Ring2",
+   "level_interval": [
+    32,
+    100
+   ],
+   "slot_x": 0,
+   "slot_y": 0
+  },
+  {
+   "inventory_id": "Flask1",
+   "slot_x": 1,
+   "slot_y": 0,
+   "unique_name": "Lavianga's Spirits",
+   "additional_text": "\n\n<gold>{Jewels (from guide): pick ~4 strong mods, do not copy anyone exactly; % max ES is MANDATORY on each. 2% mana on kill sapphires for mapping sustain.}"
+  },
+  {
+   "inventory_id": "Charm1",
+   "slot_x": 0,
+   "slot_y": 0,
+   "unique_name": "Nascent Hope"
+  },
+  {
+   "additional_text": "Stone Charm\n1. 21% reduced Charges per use\n2. Also grants 66 Guard",
+   "inventory_id": "Charm1",
+   "level_interval": [
+    8,
+    100
+   ],
+   "slot_x": 1,
+   "slot_y": 0
+  },
+  {
+   "inventory_id": "Charm1",
+   "slot_x": 2,
+   "slot_y": 0,
+   "unique_name": "The Fall of the Axe"
+  },
+  {
+   "inventory_id": "Weapon2",
+   "slot_x": 0,
+   "slot_y": 0,
+   "level_interval": [
+    1,
+    100
+   ],
+   "additional_text": "Chiming Staff\n\n<gold>{Sigil of Power swap. Damage spells on Set 1 only -> auto-swap back after casting Sigil.}"
+  }
+ ],
+ "name": "ENDGAME COC COMET - Annotated v2 (Ches)",
+ "skills": [
+  {
+   "id": "Metadata/Items/Gems/SkillGemSigilOfPower",
+   "level_interval": [
+    1,
+    100
+   ],
+   "support_skills": [
+    {
+     "id": "Metadata/Items/Gems/SupportGemInspiration",
+     "level_interval": [
+      1,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gems/SupportGemPersistenceTwo",
+     "level_interval": [
+      1,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gems/SupportGemMagnifiedEffectTwo",
+     "level_interval": [
+      1,
+      100
+     ]
+    }
+   ],
+   "additional_text": "<gold>{Flexible set. Chiming Staff swap tech - assign damage spells to Set 1 only, auto-swap back.}"
+  },
+  {
+   "id": "Metadata/Items/Gem/SkillGemSiphonElements",
+   "level_interval": [
+    27,
+    100
+   ],
+   "support_skills": [
+    {
+     "id": "Metadata/Items/Gem/SupportGemDissipateTwo",
+     "level_interval": [
+      1,
+      100
+     ]
+    }
+   ],
+   "additional_text": "<gold>{30 spirit. Passive infusion generation.}"
+  },
+  {
+   "id": "Metadata/Items/Gem/SkillGemManaRemnants",
+   "level_interval": [
+    11,
+    100
+   ],
+   "support_skills": [
+    {
+     "id": "Metadata/Items/Gem/SupportGemDissipate",
+     "level_interval": [
+      1,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gems/SupportGemClarityTwo",
+     "level_interval": [
+      1,
+      100
+     ]
+    }
+   ],
+   "additional_text": "<gold>{30 spirit. Doubled by Storm's Recollection - core mana sustain.}"
+  },
+  {
+   "id": "Metadata/Items/Gems/SkillGemCastOnCritical",
+   "level_interval": [
+    59,
+    100
+   ],
+   "support_skills": [
+    {
+     "id": "Metadata/Items/Gems/SkillGemComet",
+     "level_interval": [
+      42,
+      100
+     ],
+     "additional_text": "<gold>{LEVEL THIS - Comet gem level is your biggest damage stat.}"
+    },
+    {
+     "id": "Metadata/Items/Gems/SupportGemPinpointCritical",
+     "level_interval": [
+      15,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gem/SupportGemFluke",
+     "level_interval": [
+      1,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gems/SupportGemColdMastery",
+     "level_interval": [
+      1,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gems/SupportGemInspirationTwo",
+     "level_interval": [
+      1,
+      100
+     ]
+    }
+   ],
+   "additional_text": "<m>{<gold>{THE NUKE - Set 1}}\n<gold>{91 spirit qualitied. Level Comet max. For rares/bosses/juice - not for white packs.}"
+  },
+  {
+   "id": "Metadata/Items/Gems/SkillGemManaTempest",
+   "level_interval": [
+    23,
+    100
+   ],
+   "support_skills": [
+    {
+     "id": "Metadata/Items/Gems/SupportGemInspirationTwo",
+     "level_interval": [
+      1,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gems/SupportGemArcaneTempoTwo",
+     "level_interval": [
+      1,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gems/SupportGemLightningMastery",
+     "level_interval": [
+      1,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gems/SupportGemMobility",
+     "level_interval": [
+      1,
+      100
+     ]
+    }
+   ],
+   "additional_text": "<gold>{Flexible. Use PROACTIVELY before rituals/dense packs - delete the screen before it becomes a problem.}"
+  },
+  {
+   "id": "Metadata/Items/Gem/SkillGemConvalescence",
+   "level_interval": [
+    10,
+    100
+   ],
+   "support_skills": [
+    {
+     "id": "Metadata/Items/Gems/SupportGemPersistenceTwo",
+     "level_interval": [
+      1,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gems/SupportGemIngenuityTwo",
+     "level_interval": [
+      1,
+      100
+     ]
+    }
+   ],
+   "additional_text": "<gold>{Flexible. 30 spirit. ES recovery when the plan fails - goal is to rarely need it.}"
+  },
+  {
+   "id": "Metadata/Items/Gem/SkillGemElementalWeakness",
+   "level_interval": [
+    23,
+    100
+   ],
+   "support_skills": [
+    {
+     "id": "Metadata/Items/Gems/SupportGemHeightenedCurse",
+     "level_interval": [
+      1,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gem/SupportGemFocusedCurse",
+     "level_interval": [
+      1,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gem/SupportGemCursedGround",
+     "level_interval": [
+      1,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gems/SupportGemInspirationTwo",
+     "level_interval": [
+      1,
+      100
+     ]
+    }
+   ],
+   "additional_text": "<gold>{SET 2 utility. Preload before boss vulnerability window.}"
+  },
+  {
+   "id": "Metadata/Items/Gems/SkillGemSpark",
+   "level_interval": [
+    1,
+    100
+   ],
+   "support_skills": [
+    {
+     "id": "Metadata/Items/Gems/SupportGemPinpointCritical",
+     "level_interval": [
+      15,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gem/SupportGemConsideredCasting",
+     "level_interval": [
+      1,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gem/SupportGemArbitersIgnition",
+     "level_interval": [
+      65,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gems/SupportGemVilentasPropulsion",
+     "level_interval": [
+      65,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gems/SupportGemInspirationTwo",
+     "level_interval": [
+      1,
+      100
+     ]
+    }
+   ],
+   "additional_text": "<m>{<gold>{CORE CLEAR - Set 1}}\n<gold>{Scales COLD damage (Call of the Brotherhood converts it) - never scale lightning. Zenith II here once mana is solved: +30% more while above 90% mana.}"
+  },
+  {
+   "id": "Metadata/Items/Gems/SkillGemOrbOfStorms",
+   "level_interval": [
+    7,
+    100
+   ],
+   "support_skills": [
+    {
+     "id": "Metadata/Items/Gems/SupportGemPinpointCritical",
+     "level_interval": [
+      15,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gems/SupportGemUnleash",
+     "level_interval": [
+      1,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gems/SupportGemOverabundanceTwo",
+     "level_interval": [
+      1,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gem/SupportGemInnervate",
+     "level_interval": [
+      1,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gems/SupportGemIceBiteTwo",
+     "level_interval": [
+      1,
+      100
+     ]
+    }
+   ],
+   "additional_text": "<m>{<gold>{CORE TRIGGER - Set 1}}\n<gold>{On LEFT CLICK with Unleash to get 3 orbs out fast. Cold infusions for Spark via EE.}"
+  },
+  {
+   "id": "Metadata/Items/Gems/SkillGemFrostBomb",
+   "level_interval": [
+    1,
+    100
+   ],
+   "support_skills": [
+    {
+     "id": "Metadata/Items/Gem/SupportGemStripAway",
+     "level_interval": [
+      1,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gem/SupportGemSpellCascade",
+     "level_interval": [
+      1,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gems/SupportGemOverabundanceTwo",
+     "level_interval": [
+      1,
+      100
+     ]
+    },
+    {
+     "id": "Metadata/Items/Gems/SupportGemMagnifiedEffectTwo",
+     "level_interval": [
+      1,
+      100
+     ]
+    }
+   ],
+   "additional_text": "<gold>{SET 2 utility. Fire infusions for Comet via EE + resistance shred. Part of boss preload.}"
+  }
+ ],
+ "description": "<m>{<gold>{SPARK / ORB OF STORMS / COC COMET}}\n<gold>{Philosophy: Spark + Orb of Storms clear the map. Comet is the nuke for rares, rituals, juiced content, bosses. Do NOT build around raining weak Comets on white mobs.}\n\n<b>{MAPPING LOOP: }<gold>{Drop Orb of Storms -> cast Spark through it -> Mana Tempest BEFORE scary packs (proactive, not panic) -> Sigil when you can preload -> keep moving.}\n<b>{BOSS PRELOAD: }<gold>{Sigil -> Elemental Weakness -> Frost Bomb as boss becomes vulnerable -> Orb of Storms -> Spark -> Mana Tempest in the burst window -> Comets shotgun.}\n\n<b>{WEAPON SETS: }<gold>{Set 1 = damage (Spark, Orb of Storms, Cast on Critical). Set 2 = utility preload (Frost Bomb, Elemental Weakness). Flexible: Sigil, Mana Tempest, Convalescence.}\n\n<b>{SPIRIT: 181 total. }<gold>{Sources: 100 campaign quests, 35-50 staff amanamu prefix, 15 Solar Amulet implicit, 30-50 amulet prefix, 30-61 body prefix, 20-30 helm corruption.}\n\n<b>{DEFENSE: }<gold>{Not a face-tank build. Freeze, range, offscreen kills ARE the defense; Convalescence recovers ES when it goes wrong.}\n\n<grey>{Gold = creator guide (updated Jul 10). Grey = general wisdom/tracker.}",
+ "passives": [
+  {
+   "id": "spells18",
+   "level_interval": [
+    2,
+    100
+   ],
+   "additional_text": "<grey>{Point #1 (creator ordering).}"
+  },
+  {
+   "id": "spells15",
+   "level_interval": [
+    3,
+    100
+   ],
+   "additional_text": "<grey>{Point #2 (creator ordering).}"
+  },
+  {
+   "id": "spell_criticals2__",
+   "level_interval": [
+    4,
+    100
+   ],
+   "additional_text": "<grey>{Point #3 (creator ordering).}"
+  },
+  {
+   "id": "spell_criticals1",
+   "level_interval": [
+    5,
+    100
+   ],
+   "additional_text": "<grey>{Point #4 (creator ordering).}"
+  },
+  {
+   "id": "witch_sorceress_notable1",
+   "level_interval": [
+    6,
+    100
+   ],
+   "additional_text": "<grey>{Point #5 (creator ordering).}"
+  },
+  {
+   "id": "cast_speed10",
+   "level_interval": [
+    7,
+    100
+   ],
+   "additional_text": "<grey>{Point #6 (creator ordering).}"
+  },
+  {
+   "id": "cast_speed36_",
+   "level_interval": [
+    8,
+    100
+   ],
+   "additional_text": "<grey>{Point #7 (creator ordering).}"
+  },
+  {
+   "id": "cast_speed15_",
+   "level_interval": [
+    8,
+    100
+   ],
+   "additional_text": "<grey>{Point #8 (creator ordering).}"
+  },
+  {
+   "id": "witch_sorceress_notable2",
+   "level_interval": [
+    9,
+    100
+   ],
+   "additional_text": "<grey>{Point #9 (creator ordering).}"
+  },
+  {
+   "id": "energy_shield10_",
+   "level_interval": [
+    10,
+    100
+   ],
+   "additional_text": "<grey>{Point #10 (creator ordering).}"
+  },
+  {
+   "id": "energy_shield37",
+   "level_interval": [
+    10,
+    100
+   ],
+   "additional_text": "<grey>{Point #11 (creator ordering).}"
+  },
+  {
+   "id": "energy_shield27",
+   "level_interval": [
+    11,
+    100
+   ],
+   "additional_text": "<grey>{Point #12 (creator ordering).}"
+  },
+  {
+   "id": "energy_shield21",
+   "level_interval": [
+    12,
+    100
+   ],
+   "additional_text": "<grey>{Point #13 (creator ordering).}"
+  },
+  {
+   "id": "energy_shield_recovery24",
+   "level_interval": [
+    13,
+    100
+   ],
+   "additional_text": "<grey>{Point #14 (creator ordering).}"
+  },
+  {
+   "id": "energy_shield_recovery14",
+   "level_interval": [
+    13,
+    100
+   ],
+   "additional_text": "<grey>{Point #15 (creator ordering).}"
+  },
+  {
+   "id": "elemental14",
+   "level_interval": [
+    14,
+    100
+   ],
+   "additional_text": "<grey>{Point #16 (creator ordering).}"
+  },
+  {
+   "id": "cold2",
+   "level_interval": [
+    15,
+    100
+   ],
+   "additional_text": "<grey>{Point #17 (creator ordering).}"
+  },
+  {
+   "id": "cold34",
+   "level_interval": [
+    15,
+    100
+   ],
+   "additional_text": "<grey>{Point #18 (creator ordering).}"
+  },
+  {
+   "id": "lightning6",
+   "level_interval": [
+    16,
+    100
+   ],
+   "additional_text": "<grey>{Point #19 (creator ordering).}"
+  },
+  {
+   "id": "lightning34",
+   "level_interval": [
+    17,
+    100
+   ],
+   "additional_text": "<grey>{Point #20 (creator ordering).}"
+  },
+  {
+   "id": "sorcerer_start3",
+   "level_interval": [
+    18,
+    100
+   ],
+   "additional_text": "<grey>{Point #21 (creator ordering).}"
+  },
+  {
+   "id": "elemental15",
+   "level_interval": [
+    18,
+    100
+   ],
+   "additional_text": "<grey>{Point #22 (creator ordering).}"
+  },
+  {
+   "id": "intelligence15",
+   "level_interval": [
+    19,
+    100
+   ],
+   "additional_text": "<grey>{Point #23 (creator ordering).}"
+  },
+  {
+   "id": "intelligence16",
+   "level_interval": [
+    20,
+    100
+   ],
+   "additional_text": "<grey>{Point #24 (creator ordering).}"
+  },
+  {
+   "id": "intelligence86",
+   "level_interval": [
+    20,
+    100
+   ],
+   "additional_text": "<grey>{Point #25 (creator ordering).}"
+  },
+  {
+   "id": "intelligence84",
+   "level_interval": [
+    21,
+    100
+   ],
+   "additional_text": "<grey>{Point #26 (creator ordering).}"
+  },
+  {
+   "id": "intelligence85",
+   "level_interval": [
+    22,
+    100
+   ],
+   "additional_text": "<grey>{Point #27 (creator ordering).}"
+  },
+  {
+   "id": "energy_shield12",
+   "level_interval": [
+    23,
+    100
+   ],
+   "additional_text": "<grey>{Point #28 (creator ordering).}"
+  },
+  {
+   "id": "energy_shield16",
+   "level_interval": [
+    23,
+    100
+   ],
+   "additional_text": "<grey>{Point #29 (creator ordering).}"
+  },
+  {
+   "id": "energy_shield35",
+   "level_interval": [
+    24,
+    100
+   ],
+   "additional_text": "<grey>{Point #30 (creator ordering).}"
+  },
+  {
+   "id": "energy_shield7",
+   "level_interval": [
+    25,
+    100
+   ],
+   "additional_text": "<grey>{Point #31 (creator ordering).}"
+  },
+  {
+   "id": "energy_shield13",
+   "level_interval": [
+    25,
+    100
+   ],
+   "additional_text": "<grey>{Point #32 (creator ordering).}"
+  },
+  {
+   "id": "energy_shield34_",
+   "level_interval": [
+    26,
+    100
+   ],
+   "additional_text": "<grey>{Point #33 (creator ordering).}"
+  },
+  {
+   "id": "mana_regeneration46",
+   "level_interval": [
+    27,
+    100
+   ],
+   "additional_text": "<grey>{Point #34 (creator ordering).}"
+  },
+  {
+   "id": "mana_regeneration45",
+   "level_interval": [
+    28,
+    100
+   ],
+   "additional_text": "<grey>{Point #35 (creator ordering).}"
+  },
+  {
+   "id": "mana_regeneration50_",
+   "level_interval": [
+    28,
+    100
+   ],
+   "additional_text": "<grey>{Point #36 (creator ordering).}"
+  },
+  {
+   "id": "intelligence6",
+   "level_interval": [
+    29,
+    100
+   ],
+   "additional_text": "<grey>{Point #37 (creator ordering).}"
+  },
+  {
+   "id": "attributes21",
+   "level_interval": [
+    30,
+    100
+   ],
+   "additional_text": "<grey>{ASSIGNABLE. Guide reqs: Str 35 / Dex 25 / Int 110 for supports. Meet those, then dump INT.}\n<grey>{Point #38 (creator ordering).}"
+  },
+  {
+   "id": "spell_criticals13",
+   "level_interval": [
+    30,
+    100
+   ],
+   "additional_text": "<grey>{Point #39 (creator ordering).}"
+  },
+  {
+   "id": "spell_criticals8",
+   "level_interval": [
+    31,
+    100
+   ],
+   "additional_text": "<grey>{Point #40 (creator ordering).}"
+  },
+  {
+   "id": "spell_criticals11_",
+   "level_interval": [
+    32,
+    100
+   ],
+   "additional_text": "<grey>{Point #41 (creator ordering).}"
+  },
+  {
+   "id": "jewel_slot1972",
+   "level_interval": [
+    33,
+    100
+   ],
+   "additional_text": "<grey>{Point #42 (creator ordering).}"
+  },
+  {
+   "id": "intelligence57",
+   "level_interval": [
+    33,
+    100
+   ],
+   "additional_text": "<grey>{Point #43 (creator ordering).}"
+  },
+  {
+   "id": "intelligence56",
+   "level_interval": [
+    34,
+    100
+   ],
+   "additional_text": "<grey>{Point #44 (creator ordering).}"
+  },
+  {
+   "id": "intelligence45",
+   "level_interval": [
+    35,
+    100
+   ],
+   "additional_text": "<grey>{Point #45 (creator ordering).}"
+  },
+  {
+   "id": "intelligence58",
+   "level_interval": [
+    35,
+    100
+   ],
+   "additional_text": "<grey>{Point #46 (creator ordering).}"
+  },
+  {
+   "id": "intelligence59",
+   "level_interval": [
+    36,
+    100
+   ],
+   "additional_text": "<grey>{Point #47 (creator ordering).}"
+  },
+  {
+   "id": "intelligence60",
+   "level_interval": [
+    37,
+    100
+   ],
+   "additional_text": "<grey>{Point #48 (creator ordering).}"
+  },
+  {
+   "id": "attributes1",
+   "level_interval": [
+    38,
+    100
+   ],
+   "additional_text": "<grey>{ASSIGNABLE. Guide reqs: Str 35 / Dex 25 / Int 110 for supports. Meet those, then dump INT.}\n<grey>{Point #49 (creator ordering).}"
+  },
+  {
+   "id": "jewel_slot1979",
+   "level_interval": [
+    38,
+    100
+   ],
+   "additional_text": "<grey>{Point #50 (creator ordering).}"
+  },
+  {
+   "id": "intelligence69",
+   "level_interval": [
+    39,
+    100
+   ],
+   "additional_text": "<grey>{Point #51 (creator ordering).}"
+  },
+  {
+   "id": "passive_keystone_chaos_inoculation",
+   "level_interval": [
+    40,
+    100
+   ],
+   "additional_text": "<gold>{KEYSTONE CI: life=1, chaos immune. ES is your health. Take once gear ES is solid.}\n<grey>{Point #52 (creator ordering).}"
+  },
+  {
+   "id": "cold65",
+   "level_interval": [
+    40,
+    100
+   ],
+   "additional_text": "<grey>{Point #53 (creator ordering).}"
+  },
+  {
+   "id": "cold63",
+   "level_interval": [
+    41,
+    100
+   ],
+   "additional_text": "<grey>{Point #54 (creator ordering).}"
+  },
+  {
+   "id": "cold64__",
+   "level_interval": [
+    42,
+    100
+   ],
+   "additional_text": "<grey>{Point #55 (creator ordering).}"
+  },
+  {
+   "id": "cold69_",
+   "level_interval": [
+    43,
+    100
+   ],
+   "additional_text": "<grey>{Point #56 (creator ordering).}"
+  },
+  {
+   "id": "intelligence68",
+   "level_interval": [
+    43,
+    100
+   ],
+   "additional_text": "<grey>{Point #57 (creator ordering).}"
+  },
+  {
+   "id": "criticals86",
+   "level_interval": [
+    44,
+    100
+   ],
+   "additional_text": "<grey>{Point #58 (creator ordering).}"
+  },
+  {
+   "id": "criticals85",
+   "level_interval": [
+    45,
+    100
+   ],
+   "additional_text": "<grey>{Point #59 (creator ordering).}"
+  },
+  {
+   "id": "criticals84",
+   "level_interval": [
+    45,
+    100
+   ],
+   "additional_text": "<grey>{Point #60 (creator ordering).}"
+  },
+  {
+   "id": "archon8",
+   "level_interval": [
+    46,
+    100
+   ],
+   "additional_text": "<grey>{Point #61 (creator ordering).}"
+  },
+  {
+   "id": "archon9",
+   "level_interval": [
+    47,
+    100
+   ],
+   "additional_text": "<grey>{Point #62 (creator ordering).}"
+  },
+  {
+   "id": "archon10",
+   "level_interval": [
+    48,
+    100
+   ],
+   "additional_text": "<grey>{Point #63 (creator ordering).}"
+  },
+  {
+   "id": "archon11",
+   "level_interval": [
+    48,
+    100
+   ],
+   "additional_text": "<grey>{Point #64 (creator ordering).}"
+  },
+  {
+   "id": "mana_regeneration32",
+   "level_interval": [
+    49,
+    100
+   ],
+   "additional_text": "<grey>{Point #65 (creator ordering).}"
+  },
+  {
+   "id": "mana_regeneration34",
+   "level_interval": [
+    50,
+    100
+   ],
+   "additional_text": "<grey>{Point #66 (creator ordering).}"
+  },
+  {
+   "id": "mana_regeneration40",
+   "level_interval": [
+    50,
+    100
+   ],
+   "additional_text": "<grey>{Point #67 (creator ordering).}"
+  },
+  {
+   "id": "intelligence46",
+   "level_interval": [
+    51,
+    100
+   ],
+   "additional_text": "<grey>{Point #68 (creator ordering).}"
+  },
+  {
+   "id": "intelligence47",
+   "level_interval": [
+    52,
+    100
+   ],
+   "additional_text": "<grey>{Point #69 (creator ordering).}"
+  },
+  {
+   "id": "attributes78",
+   "level_interval": [
+    53,
+    100
+   ],
+   "additional_text": "<grey>{ASSIGNABLE. Guide reqs: Str 35 / Dex 25 / Int 110 for supports. Meet those, then dump INT.}\n<grey>{Point #70 (creator ordering).}"
+  },
+  {
+   "id": "intelligence48",
+   "level_interval": [
+    53,
+    100
+   ],
+   "additional_text": "<grey>{Point #71 (creator ordering).}"
+  },
+  {
+   "id": "attributes33",
+   "level_interval": [
+    54,
+    100
+   ],
+   "additional_text": "<grey>{ASSIGNABLE. Guide reqs: Str 35 / Dex 25 / Int 110 for supports. Meet those, then dump INT.}\n<grey>{Point #72 (creator ordering).}"
+  },
+  {
+   "id": "intelligence49",
+   "level_interval": [
+    55,
+    100
+   ],
+   "additional_text": "<grey>{Point #73 (creator ordering).}"
+  },
+  {
+   "id": "attributes14",
+   "level_interval": [
+    55,
+    100
+   ],
+   "additional_text": "<grey>{ASSIGNABLE. Guide reqs: Str 35 / Dex 25 / Int 110 for supports. Meet those, then dump INT.}\n<grey>{Point #74 (creator ordering).}"
+  },
+  {
+   "id": "attributes13",
+   "level_interval": [
+    56,
+    100
+   ],
+   "additional_text": "<grey>{ASSIGNABLE. Guide reqs: Str 35 / Dex 25 / Int 110 for supports. Meet those, then dump INT.}\n<grey>{Point #75 (creator ordering).}"
+  },
+  {
+   "id": "jewel_slot1969",
+   "level_interval": [
+    57,
+    100
+   ],
+   "additional_text": "<grey>{Point #76 (creator ordering).}"
+  },
+  {
+   "id": "intelligence51",
+   "level_interval": [
+    58,
+    100
+   ],
+   "additional_text": "<grey>{Point #77 (creator ordering).}"
+  },
+  {
+   "id": "passive_keystone_elemental_equilibrium",
+   "level_interval": [
+    58,
+    100
+   ],
+   "additional_text": "<gold>{KEYSTONE EE - the engine: Orb of Storms makes COLD infusions for Spark, Frost Bomb makes FIRE infusions for Comet. No easy fire infusions without it.}\n<grey>{Point #78 (creator ordering).}"
+  },
+  {
+   "id": "elemental12",
+   "level_interval": [
+    59,
+    100
+   ],
+   "additional_text": "<grey>{Point #79 (creator ordering).}"
+  },
+  {
+   "id": "elemental11_",
+   "level_interval": [
+    60,
+    100
+   ],
+   "additional_text": "<grey>{Point #80 (creator ordering).}"
+  },
+  {
+   "id": "elemental39",
+   "level_interval": [
+    60,
+    100
+   ],
+   "additional_text": "<grey>{Point #81 (creator ordering).}"
+  },
+  {
+   "id": "elemental7",
+   "level_interval": [
+    61,
+    100
+   ],
+   "additional_text": "<grey>{Point #82 (creator ordering).}"
+  },
+  {
+   "id": "elemental10",
+   "level_interval": [
+    62,
+    100
+   ],
+   "additional_text": "<grey>{Point #83 (creator ordering).}"
+  },
+  {
+   "id": "elemental6",
+   "level_interval": [
+    63,
+    100
+   ],
+   "additional_text": "<grey>{Point #84 (creator ordering).}"
+  },
+  {
+   "id": "elemental33",
+   "level_interval": [
+    63,
+    100
+   ],
+   "additional_text": "<grey>{Point #85 (creator ordering).}"
+  },
+  {
+   "id": "energy_shield29",
+   "level_interval": [
+    64,
+    100
+   ],
+   "additional_text": "<grey>{Point #86 (creator ordering).}"
+  },
+  {
+   "id": "energy_shield41",
+   "level_interval": [
+    65,
+    100
+   ],
+   "additional_text": "<grey>{Point #87 (creator ordering).}"
+  },
+  {
+   "id": "energy_shield39",
+   "level_interval": [
+    65,
+    100
+   ],
+   "additional_text": "<grey>{Point #88 (creator ordering).}"
+  },
+  {
+   "id": "stun_threshold_from_energy_shield7",
+   "level_interval": [
+    66,
+    100
+   ],
+   "additional_text": "<grey>{Point #89 (creator ordering).}"
+  },
+  {
+   "id": "stun_threshold_from_energy_shield12",
+   "level_interval": [
+    67,
+    100
+   ],
+   "additional_text": "<grey>{Point #90 (creator ordering).}"
+  },
+  {
+   "id": "orb1",
+   "level_interval": [
+    68,
+    100
+   ],
+   "additional_text": "<grey>{Point #91 (creator ordering).}"
+  },
+  {
+   "id": "orb3",
+   "level_interval": [
+    69,
+    100
+   ],
+   "additional_text": "<grey>{Point #92 (creator ordering).}"
+  },
+  {
+   "id": "orb4",
+   "level_interval": [
+    70,
+    100
+   ],
+   "additional_text": "<grey>{Point #93 (creator ordering).}"
+  },
+  {
+   "id": "orb5",
+   "level_interval": [
+    71,
+    100
+   ],
+   "additional_text": "<grey>{Point #94 (creator ordering).}"
+  },
+  {
+   "id": "elemental53",
+   "level_interval": [
+    72,
+    100
+   ],
+   "additional_text": "<grey>{Point #95 (creator ordering).}"
+  },
+  {
+   "id": "elemental21",
+   "level_interval": [
+    73,
+    100
+   ],
+   "additional_text": "<grey>{Point #96 (creator ordering).}"
+  },
+  {
+   "id": "cold12",
+   "weapon_set": 1,
+   "level_interval": [
+    12,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "cold3",
+   "weapon_set": 1,
+   "level_interval": [
+    13,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "cold13",
+   "weapon_set": 1,
+   "level_interval": [
+    14,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "cold5",
+   "weapon_set": 1,
+   "level_interval": [
+    15,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "projectile_spells9",
+   "weapon_set": 1,
+   "level_interval": [
+    16,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "elemental13",
+   "weapon_set": 1,
+   "level_interval": [
+    17,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "chill_and_freeze14",
+   "weapon_set": 1,
+   "level_interval": [
+    18,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "cold33",
+   "weapon_set": 1,
+   "level_interval": [
+    19,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "cold_penetration26",
+   "weapon_set": 1,
+   "level_interval": [
+    20,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "chill_and_freeze4",
+   "weapon_set": 1,
+   "level_interval": [
+    21,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "cold32",
+   "weapon_set": 1,
+   "level_interval": [
+    22,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "projectile_spells3",
+   "weapon_set": 1,
+   "level_interval": [
+    22,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "cold38",
+   "weapon_set": 1,
+   "level_interval": [
+    23,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "spell_criticals16",
+   "weapon_set": 1,
+   "level_interval": [
+    24,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "spell_criticals15",
+   "weapon_set": 1,
+   "level_interval": [
+    25,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "spell_criticals12_",
+   "weapon_set": 1,
+   "level_interval": [
+    26,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "cold7",
+   "weapon_set": 1,
+   "level_interval": [
+    27,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "criticals30",
+   "weapon_set": 1,
+   "level_interval": [
+    28,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "criticals22",
+   "weapon_set": 1,
+   "level_interval": [
+    29,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "elemental37_",
+   "weapon_set": 1,
+   "level_interval": [
+    30,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "criticals21",
+   "weapon_set": 1,
+   "level_interval": [
+    31,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "criticals24",
+   "weapon_set": 1,
+   "level_interval": [
+    32,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "projectile_spells1",
+   "weapon_set": 1,
+   "level_interval": [
+    32,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "intelligence60",
+   "weapon_set": 1,
+   "level_interval": [
+    33,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "intelligence85",
+   "weapon_set": 1,
+   "level_interval": [
+    34,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "elemental12",
+   "weapon_set": 1,
+   "level_interval": [
+    35,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "intelligence45",
+   "weapon_set": 1,
+   "level_interval": [
+    36,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "attributes1",
+   "weapon_set": 1,
+   "level_interval": [
+    37,
+    100
+   ],
+   "additional_text": "<grey>{ASSIGNABLE. Guide reqs: Str 35 / Dex 25 / Int 110 for supports. Meet those, then dump INT.}\n<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "intelligence68",
+   "weapon_set": 1,
+   "level_interval": [
+    38,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 1) - free extra points.}"
+  },
+  {
+   "id": "slowed_enemies6",
+   "weapon_set": 2,
+   "level_interval": [
+    39,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "duration10",
+   "weapon_set": 2,
+   "level_interval": [
+    40,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "slowed_enemies10",
+   "weapon_set": 2,
+   "level_interval": [
+    41,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "area_spells9",
+   "weapon_set": 2,
+   "level_interval": [
+    42,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "duration6",
+   "weapon_set": 2,
+   "level_interval": [
+    43,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "area_spells8_",
+   "weapon_set": 2,
+   "level_interval": [
+    43,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "elemental35",
+   "weapon_set": 2,
+   "level_interval": [
+    44,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "curses18",
+   "weapon_set": 2,
+   "level_interval": [
+    45,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "elemental60",
+   "weapon_set": 2,
+   "level_interval": [
+    46,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "area_spells24",
+   "weapon_set": 2,
+   "level_interval": [
+    47,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "elemental34",
+   "weapon_set": 2,
+   "level_interval": [
+    48,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "elemental36",
+   "weapon_set": 2,
+   "level_interval": [
+    49,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "duration12",
+   "weapon_set": 2,
+   "level_interval": [
+    50,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "curses17",
+   "weapon_set": 2,
+   "level_interval": [
+    51,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "curses15",
+   "weapon_set": 2,
+   "level_interval": [
+    52,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "elemental61_",
+   "weapon_set": 2,
+   "level_interval": [
+    53,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "intelligence38",
+   "weapon_set": 2,
+   "level_interval": [
+    53,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "area_spells11",
+   "weapon_set": 2,
+   "level_interval": [
+    54,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "curses16",
+   "weapon_set": 2,
+   "level_interval": [
+    55,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "slowed_enemies8",
+   "weapon_set": 2,
+   "level_interval": [
+    56,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "elemental59",
+   "weapon_set": 2,
+   "level_interval": [
+    57,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "intelligence2",
+   "weapon_set": 2,
+   "level_interval": [
+    58,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "elemental58_",
+   "weapon_set": 2,
+   "level_interval": [
+    59,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "intelligence60",
+   "weapon_set": 2,
+   "level_interval": [
+    60,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "intelligence86",
+   "weapon_set": 2,
+   "level_interval": [
+    61,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "elemental21",
+   "weapon_set": 2,
+   "level_interval": [
+    62,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "intelligence49",
+   "weapon_set": 2,
+   "level_interval": [
+    63,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "intelligence58",
+   "weapon_set": 2,
+   "level_interval": [
+    64,
+    100
+   ],
+   "additional_text": "<grey>{Weapon-set point (set 2) - free extra points.}"
+  },
+  {
+   "id": "AscendancySorceress1Small1",
+   "level_interval": [
+    74,
+    100
+   ],
+   "additional_text": "<grey>{Point #97 (creator ordering).}"
+  },
+  {
+   "id": "AscendancySorceress1Notable1",
+   "level_interval": [
+    75,
+    100
+   ],
+   "additional_text": "<grey>{Point #98 (creator ordering).}"
+  },
+  {
+   "id": "AscendancySorceress1Start_",
+   "level_interval": [
+    76,
+    100
+   ],
+   "additional_text": "<grey>{Point #99 (creator ordering).}"
+  },
+  {
+   "id": "AscendancySorceress1Small5",
+   "level_interval": [
+    77,
+    100
+   ],
+   "additional_text": "<grey>{Point #100 (creator ordering).}"
+  },
+  {
+   "id": "AscendancySorceress1Notable5",
+   "level_interval": [
+    78,
+    100
+   ],
+   "additional_text": "<grey>{Point #101 (creator ordering).}"
+  },
+  {
+   "id": "AscendancySorceress1Small6",
+   "level_interval": [
+    79,
+    100
+   ],
+   "additional_text": "<grey>{Point #102 (creator ordering).}"
+  },
+  {
+   "id": "AscendancySorceress1Notable6",
+   "level_interval": [
+    80,
+    100
+   ],
+   "additional_text": "<grey>{Point #103 (creator ordering).}"
+  },
+  {
+   "id": "AscendancySorceress1Small9",
+   "level_interval": [
+    81,
+    100
+   ],
+   "additional_text": "<grey>{Point #104 (creator ordering).}"
+  },
+  {
+   "id": "AscendancySorceress1Notable9",
+   "level_interval": [
+    82,
+    100
+   ],
+   "additional_text": "<grey>{Point #105 (creator ordering).}"
+  },
+  {
+   "id": "intelligence59",
+   "level_interval": [
+    83,
+    100
+   ],
+   "additional_text": "<grey>{Point #106 (creator ordering).}"
+  },
+  {
+   "id": "intelligence56",
+   "level_interval": [
+    84,
+    100
+   ],
+   "additional_text": "<grey>{Point #107 (creator ordering).}"
+  },
+  {
+   "id": "intelligence15",
+   "level_interval": [
+    85,
+    100
+   ],
+   "additional_text": "<grey>{Point #108 (creator ordering).}"
+  },
+  {
+   "id": "attributes1",
+   "level_interval": [
+    86,
+    100
+   ],
+   "additional_text": "<grey>{ASSIGNABLE. Guide reqs: Str 35 / Dex 25 / Int 110 for supports. Meet those, then dump INT.}\n<grey>{Point #109 (creator ordering).}"
+  },
+  {
+   "id": "attributes33",
+   "level_interval": [
+    87,
+    100
+   ],
+   "additional_text": "<grey>{ASSIGNABLE. Guide reqs: Str 35 / Dex 25 / Int 110 for supports. Meet those, then dump INT.}\n<grey>{Point #110 (creator ordering).}"
+  },
+  {
+   "id": "intelligence60",
+   "level_interval": [
+    88,
+    100
+   ],
+   "additional_text": "<grey>{Point #111 (creator ordering).}"
+  },
+  {
+   "id": "intelligence57",
+   "level_interval": [
+    89,
+    100
+   ],
+   "additional_text": "<grey>{Point #112 (creator ordering).}"
+  },
+  {
+   "id": "intelligence84",
+   "level_interval": [
+    90,
+    100
+   ],
+   "additional_text": "<grey>{Point #113 (creator ordering).}"
+  },
+  {
+   "id": "intelligence48",
+   "level_interval": [
+    91,
+    100
+   ],
+   "additional_text": "<grey>{Point #114 (creator ordering).}"
+  },
+  {
+   "id": "intelligence16",
+   "level_interval": [
+    92,
+    100
+   ],
+   "additional_text": "<grey>{Point #115 (creator ordering).}"
+  },
+  {
+   "id": "intelligence38",
+   "level_interval": [
+    93,
+    100
+   ],
+   "additional_text": "<grey>{Point #116 (creator ordering).}"
+  },
+  {
+   "id": "attributes78",
+   "level_interval": [
+    94,
+    100
+   ],
+   "additional_text": "<grey>{ASSIGNABLE. Guide reqs: Str 35 / Dex 25 / Int 110 for supports. Meet those, then dump INT.}\n<grey>{Point #117 (creator ordering).}"
+  },
+  {
+   "id": "attributes21",
+   "level_interval": [
+    95,
+    100
+   ],
+   "additional_text": "<grey>{ASSIGNABLE. Guide reqs: Str 35 / Dex 25 / Int 110 for supports. Meet those, then dump INT.}\n<grey>{Point #118 (creator ordering).}"
+  },
+  {
+   "id": "intelligence49",
+   "level_interval": [
+    96,
+    100
+   ],
+   "additional_text": "<grey>{Point #119 (creator ordering).}"
+  },
+  {
+   "id": "intelligence58",
+   "level_interval": [
+    97,
+    100
+   ],
+   "additional_text": "<grey>{Point #120 (creator ordering).}"
+  },
+  {
+   "id": "intelligence6",
+   "level_interval": [
+    98,
+    100
+   ],
+   "additional_text": "<grey>{Point #121 (creator ordering).}"
+  },
+  {
+   "id": "intelligence46",
+   "level_interval": [
+    99,
+    100
+   ],
+   "additional_text": "<grey>{Point #122 (creator ordering).}"
+  },
+  {
+   "id": "attributes13",
+   "level_interval": [
+    100,
+    100
+   ],
+   "additional_text": "<grey>{ASSIGNABLE. Guide reqs: Str 35 / Dex 25 / Int 110 for supports. Meet those, then dump INT.}\n<grey>{Point #123 (creator ordering).}"
+  },
+  {
+   "id": "intelligence2",
+   "level_interval": [
+    92,
+    100
+   ],
+   "additional_text": "<grey>{Point #124 (creator ordering).}"
+  },
+  {
+   "id": "intelligence51",
+   "level_interval": [
+    92,
+    100
+   ],
+   "additional_text": "<grey>{Point #125 (creator ordering).}"
+  },
+  {
+   "id": "intelligence85",
+   "level_interval": [
+    92,
+    100
+   ],
+   "additional_text": "<grey>{Point #126 (creator ordering).}"
+  },
+  {
+   "id": "intelligence86",
+   "level_interval": [
+    92,
+    100
+   ],
+   "additional_text": "<grey>{Point #127 (creator ordering).}"
+  },
+  {
+   "id": "attributes14",
+   "level_interval": [
+    92,
+    100
+   ],
+   "additional_text": "<grey>{ASSIGNABLE. Guide reqs: Str 35 / Dex 25 / Int 110 for supports. Meet those, then dump INT.}\n<grey>{Point #128 (creator ordering).}"
+  },
+  {
+   "id": "intelligence69",
+   "level_interval": [
+    92,
+    100
+   ],
+   "additional_text": "<grey>{Point #129 (creator ordering).}"
+  },
+  {
+   "id": "intelligence68",
+   "level_interval": [
+    92,
+    100
+   ],
+   "additional_text": "<grey>{Point #130 (creator ordering).}"
+  },
+  {
+   "id": "intelligence47",
+   "level_interval": [
+    92,
+    100
+   ],
+   "additional_text": "<grey>{Point #131 (creator ordering).}"
+  },
+  {
+   "id": "intelligence45",
+   "level_interval": [
+    92,
+    100
+   ],
+   "additional_text": "<grey>{Point #132 (creator ordering).}"
+  }
+ ]
+}
