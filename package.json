@@ -13,13 +13,16 @@
     "test": "pnpm -r test",
     "typecheck": "tsc -b",
     "dev": "pnpm --filter @poe2-build-forge/web dev",
+    "forge": "tsx scripts/forge.ts",
     "spike:decode": "tsx scripts/decode-spike.ts",
     "fetch-data": "tsx scripts/fetch-data.ts",
     "prune-data": "tsx scripts/prune-data.ts",
     "watch-docs": "tsx scripts/watch-buildplanner-docs.ts"
   },
   "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
     "@types/node": "^22.10.0",
+    "js-yaml": "^5.2.1",
     "tsx": "^4.19.0",
     "typescript": "^5.6.3"
   }
