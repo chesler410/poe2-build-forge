@@ -467,22 +467,25 @@ export function App() {
       </header>
 
       <aside className="winddown-notice" role="note">
-        <strong>This project is no longer maintained.</strong> Since Path of
-        Exile 2 0.5.0, the major build sites export <code>.build</code> files
-        natively — use{' '}
+        <strong>Following a published creator guide?</strong> Subscribing on{' '}
         <a href="https://maxroll.gg/poe2" target="_blank" rel="noreferrer">
           maxroll.gg/poe2
-        </a>
-        ,{' '}
+        </a>{' '}
+        or{' '}
         <a href="https://mobalytics.gg/poe-2" target="_blank" rel="noreferrer">
           mobalytics.gg/poe-2
-        </a>
-        , or{' '}
-        <a href="https://poe.ninja/poe2/builds" target="_blank" rel="noreferrer">
-          poe.ninja/poe2
-        </a>
-        . The converter below still works for any standalone PoB code, but won't
-        be updated for future patches. Thanks for using it.
+        </a>{' '}
+        and syncing it in-game is easier — no files. This tool is for turning{' '}
+        <strong>your own</strong> PoB code (or any build not on those sites)
+        into a <code>.build</code> you can upload at{' '}
+        <a
+          href="https://www.pathofexile2.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          pathofexile2.com
+        </a>{' '}
+        (My Account → Builds).
       </aside>
 
       <section className="quick-start">
