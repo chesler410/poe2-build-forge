@@ -51,14 +51,21 @@ const ascendanciesLookup = JSON.parse(
   )
 ) as AscendancyLookup
 
+// Most assertions only care about the produced build. mapPobToBuild now
+// returns { build, warnings }; this helper keeps those tests focused.
+const mapBuild = (
+  pobDoc: Parameters<typeof mapPobToBuild>[0],
+  opts: Parameters<typeof mapPobToBuild>[1]
+) => mapPobToBuild(pobDoc, opts).build
+
 describe('mapPobToBuild', () => {
   it('produces a build with a derived name when none provided', () => {
-    const result = mapPobToBuild(pob, { passives: passivesLookup })
+    const result = mapBuild(pob, { passives: passivesLookup })
     expect(result.name).toBe('Ranger - Deadeye')
   })
 
   it('honours an explicit name override', () => {
-    const result = mapPobToBuild(pob, {
+    const result = mapBuild(pob, {
       passives: passivesLookup,
       name: 'My custom name'
     })
@@ -66,12 +73,12 @@ describe('mapPobToBuild', () => {
   })
 
   it('passes through ascendClassName when no ascendancy lookup is given', () => {
-    const result = mapPobToBuild(pob, { passives: passivesLookup })
+    const result = mapBuild(pob, { passives: passivesLookup })
     expect(result.ascendancy).toBe('Deadeye')
   })
 
   it('resolves the GGG-format ascendancy key when lookup is given', () => {
-    const result = mapPobToBuild(pob, {
+    const result = mapBuild(pob, {
       passives: passivesLookup,
       ascendancies: ascendanciesLookup
     })
@@ -81,7 +88,7 @@ describe('mapPobToBuild', () => {
   })
 
   it('translates PoB tree integer ids into GGG passive ids', () => {
-    const result = mapPobToBuild(pob, { passives: passivesLookup })
+    const result = mapBuild(pob, { passives: passivesLookup })
     expect(Array.isArray(result.passives)).toBe(true)
     expect(result.passives!.length).toBeGreaterThan(0)
     for (const p of result.passives!) {
@@ -94,7 +101,7 @@ describe('mapPobToBuild', () => {
   })
 
   it('derives level_interval per passive from PoB spec ordering', () => {
-    const result = mapPobToBuild(pob, { passives: passivesLookup })
+    const result = mapBuild(pob, { passives: passivesLookup })
     expect(result.passives).toBeDefined()
 
     const withIntervals = result.passives!.filter(
@@ -117,13 +124,13 @@ describe('mapPobToBuild', () => {
   it('emits shorthand strings for nodes that appear in the first spec', () => {
     // First-spec nodes should always show in-game from level 1, so
     // we emit them without a level_interval (shorthand string form).
-    const result = mapPobToBuild(pob, { passives: passivesLookup })
+    const result = mapBuild(pob, { passives: passivesLookup })
     const shorthand = result.passives!.filter((p) => typeof p === 'string')
     expect(shorthand.length).toBeGreaterThan(0)
   })
 
   it('emits skills as gem-id strings or {id, support_skills} objects', () => {
-    const result = mapPobToBuild(pob, { passives: passivesLookup })
+    const result = mapBuild(pob, { passives: passivesLookup })
     expect(result.skills).toBeDefined()
     expect(result.skills!.length).toBeGreaterThan(0)
 
@@ -172,7 +179,7 @@ describe('mapPobToBuild', () => {
         ]
       }
     }
-    const result = mapPobToBuild(synthetic, { passives: passivesLookup })
+    const result = mapBuild(synthetic, { passives: passivesLookup })
     const ids = (result.skills ?? []).map((s) => (typeof s === 'string' ? s : s.id))
     expect(ids).toEqual([
       'Metadata/Items/Gem/SkillGemDemonForm',
@@ -180,8 +187,50 @@ describe('mapPobToBuild', () => {
     ])
   })
 
+  it('emits jewel-socket nodes instead of dropping them (ground truth includes them)', () => {
+    // Game-accepted .build files carry jewel-socket passive entries.
+    // The mapper used to skip is_jewel_socket nodes, silently losing them.
+    const { build, warnings } = mapPobToBuild(stormweaver, {
+      passives: passivesLookup
+    })
+    const source = stormweaver.tree!.specs.at(-1)!.nodes.length
+    const emitted = build.passives!.length
+
+    // Nothing unmapped for this fixture: every source node is emitted.
+    expect(warnings).toEqual([])
+    expect(emitted).toBe(source)
+  })
+
+  it('surfaces unmapped nodes as warnings rather than dropping them silently', () => {
+    // A node id absent from the lookup (e.g. stale tree data) must be
+    // reported, not swallowed.
+    const synthetic = {
+      ...stormweaver,
+      tree: {
+        specs: [{ title: '', nodes: [999999001, 999999002], treeVersion: '0_5' }]
+      }
+    } as typeof stormweaver
+    const { build, warnings } = mapPobToBuild(synthetic, {
+      passives: passivesLookup
+    })
+    expect(build.passives ?? []).toHaveLength(0)
+    expect(warnings).toEqual([
+      { type: 'unmapped_node', pobId: 999999001 },
+      { type: 'unmapped_node', pobId: 999999002 }
+    ])
+  })
+
+  it('keeps the count invariant: emitted + unmapped == source nodes', () => {
+    const { build, warnings } = mapPobToBuild(stormweaver, {
+      passives: passivesLookup
+    })
+    const source = stormweaver.tree!.specs.at(-1)!.nodes.length
+    const emitted = build.passives!.length
+    expect(emitted + warnings.length).toBe(source)
+  })
+
   it('maps the Stormweaver fixture slots to the game inventory vocabulary', () => {
-    const result = mapPobToBuild(stormweaver, { passives: passivesLookup })
+    const result = mapBuild(stormweaver, { passives: passivesLookup })
     const ids = (result.inventory_slots ?? []).map((i) => i.inventory_id)
 
     expect(ids.length).toBeGreaterThan(0)
@@ -215,7 +264,7 @@ describe('mapPobToBuild', () => {
   })
 
   it('produces schema-valid output from the Stormweaver fixture', () => {
-    const result = mapPobToBuild(stormweaver, { passives: passivesLookup })
+    const result = mapBuild(stormweaver, { passives: passivesLookup })
     const v = validate(result)
     if (!v.valid) console.error(JSON.stringify(v.errors, null, 2))
     expect(v.valid).toBe(true)
@@ -223,7 +272,7 @@ describe('mapPobToBuild', () => {
 
   it('omits items entirely when no slots are filled in the fixture', () => {
     // The 90pcuxN4XtJG fixture has all slots empty (itemId=0).
-    const result = mapPobToBuild(pob, { passives: passivesLookup })
+    const result = mapBuild(pob, { passives: passivesLookup })
     expect(result.inventory_slots).toBeUndefined()
   })
 
@@ -239,7 +288,7 @@ describe('mapPobToBuild', () => {
         ascendClassName: 'None'
       }
     }
-    const result = mapPobToBuild(noneBuild, { passives: passivesLookup })
+    const result = mapBuild(noneBuild, { passives: passivesLookup })
     expect(result.name).toBe('Witch')
     expect(result.ascendancy).toBeUndefined()
   })
@@ -264,7 +313,7 @@ describe('mapPobToBuild', () => {
         catalog: {}
       }
     }
-    const result = mapPobToBuild(synthetic, { passives: passivesLookup })
+    const result = mapBuild(synthetic, { passives: passivesLookup })
     const ids = (result.inventory_slots ?? []).map((i) => i.inventory_id)
     expect(ids).toEqual(['Flask1', 'Flask1'])
   })
@@ -287,7 +336,7 @@ describe('mapPobToBuild', () => {
         catalog: {}
       }
     }
-    const result = mapPobToBuild(synthetic, { passives: passivesLookup })
+    const result = mapBuild(synthetic, { passives: passivesLookup })
     const ids = (result.inventory_slots ?? []).map((i) => i.inventory_id)
     expect(ids).toEqual(['Charm1', 'Charm1', 'Charm1'])
   })
@@ -310,7 +359,7 @@ describe('mapPobToBuild', () => {
         }
       }
     }
-    const result = mapPobToBuild(synthetic, { passives: passivesLookup })
+    const result = mapBuild(synthetic, { passives: passivesLookup })
     expect(result.inventory_slots).toHaveLength(1)
     expect(result.inventory_slots![0].unique_name).toBe('Seed of Cataclysm')
     expect(result.inventory_slots![0].additional_text).toBeUndefined()
@@ -334,7 +383,7 @@ describe('mapPobToBuild', () => {
         }
       }
     }
-    const result = mapPobToBuild(synthetic, { passives: passivesLookup })
+    const result = mapBuild(synthetic, { passives: passivesLookup })
     expect(result.inventory_slots![0].unique_name).toBeUndefined()
     expect(result.inventory_slots![0].additional_text).toContain('RARE')
     expect(result.inventory_slots![0].additional_text).toContain('Cultist Crown')
@@ -364,7 +413,7 @@ describe('mapPobToBuild', () => {
         }
       }
     }
-    const result = mapPobToBuild(synthetic, { passives: passivesLookup })
+    const result = mapBuild(synthetic, { passives: passivesLookup })
     expect(result.inventory_slots![0].additional_text).toBe(
       'MAGIC: Bubbling Ultimate Life Flask of the Ample'
     )
@@ -382,7 +431,7 @@ describe('mapPobToBuild', () => {
         catalog: {} // itemId 999 not present
       }
     }
-    const result = mapPobToBuild(synthetic, { passives: passivesLookup })
+    const result = mapBuild(synthetic, { passives: passivesLookup })
     expect(result.inventory_slots).toHaveLength(1)
     expect(result.inventory_slots![0].inventory_id).toBe('Belt1')
     expect(result.inventory_slots![0].unique_name).toBeUndefined()
@@ -390,7 +439,7 @@ describe('mapPobToBuild', () => {
   })
 
   it('produces output that validates against @poe2-build-forge/schema', () => {
-    const result = mapPobToBuild(pob, {
+    const result = mapBuild(pob, {
       passives: passivesLookup,
       ascendancies: ascendanciesLookup
     })

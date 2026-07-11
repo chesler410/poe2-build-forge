@@ -30,4 +30,10 @@ export type {
   Tree
 } from './types'
 
-export type { AscendancyLookup, MapOptions, PassiveLookup } from './map'
+export type {
+  AscendancyLookup,
+  MapOptions,
+  MapResult,
+  MapWarning,
+  PassiveLookup
+} from './map'

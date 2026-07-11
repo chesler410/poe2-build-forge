@@ -32,7 +32,7 @@ const ascendancies = JSON.parse(
 
 describe('Blood Mage end-to-end (real data with items)', () => {
   const pob = parsePobXml(fixtureXml)
-  const build = mapPobToBuild(pob, { passives, ascendancies })
+  const build = mapPobToBuild(pob, { passives, ascendancies }).build
 
   it('parses the Witch / Blood Mage header', () => {
     expect(pob.build.className).toBe('Witch')

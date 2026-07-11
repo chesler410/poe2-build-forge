@@ -23,7 +23,7 @@ const ascendancies = JSON.parse(
 
 describe('emitBuildFile', () => {
   it('returns filename and content for a valid build', () => {
-    const build = mapPobToBuild(pob, { passives, ascendancies })
+    const build = mapPobToBuild(pob, { passives, ascendancies }).build
     const result = emitBuildFile(build)
 
     expect(result.filename).toBe('Ranger - Deadeye.build')
@@ -36,7 +36,7 @@ describe('emitBuildFile', () => {
   })
 
   it('respects custom indent width', () => {
-    const build = mapPobToBuild(pob, { passives })
+    const build = mapPobToBuild(pob, { passives }).build
     const result = emitBuildFile(build, { indent: 4 })
     // 4-space indent means lines beyond the opening brace start with 4+ spaces.
     const lines = result.content.split('\n')

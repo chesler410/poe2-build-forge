@@ -48,6 +48,27 @@ export interface AscendancyLookup {
   }
 }
 
+/**
+ * A node the mapper could not translate. Surfaced to the caller (and the
+ * UI) rather than dropped — a build that silently loses tree allocations
+ * is worse than one that warns about them. The usual cause is stale
+ * bundled tree data after a patch; run `pnpm fetch-data` to refresh.
+ */
+export interface MapWarning {
+  type: 'unmapped_node'
+  /** The PoB integer node id that had no entry in the passive lookup. */
+  pobId: number
+}
+
+/**
+ * Result of {@link mapPobToBuild}: the converted build plus any warnings
+ * gathered while mapping (currently unmapped passive nodes).
+ */
+export interface MapResult {
+  build: BuildFile
+  warnings: MapWarning[]
+}
+
 export interface MapOptions {
   /**
    * Passive node lookup. Required to translate PoB integer node IDs
@@ -79,7 +100,7 @@ export interface MapOptions {
 export function mapPobToBuild(
   pob: PathOfBuilding2,
   options: MapOptions
-): BuildFile {
+): MapResult {
   const out: BuildFile = {
     name: options.name ?? deriveName(pob)
   }
@@ -90,8 +111,8 @@ export function mapPobToBuild(
   const ascendancy = mapAscendancy(pob, options.ascendancies)
   if (ascendancy) out.ascendancy = ascendancy
 
-  const passives = mapPassives(pob, options.passives)
-  if (passives && passives.length > 0) out.passives = passives
+  const { passives, warnings } = mapPassives(pob, options.passives)
+  if (passives.length > 0) out.passives = passives
 
   const skills = mapSkills(pob)
   if (skills && skills.length > 0) out.skills = skills
@@ -99,7 +120,7 @@ export function mapPobToBuild(
   const items = mapItems(pob)
   if (items && items.length > 0) out.inventory_slots = items
 
-  return out
+  return { build: out, warnings }
 }
 
 // PoB stores "None" as the placeholder ascendClassName when the
@@ -133,30 +154,47 @@ function mapAscendancy(
   return display
 }
 
+interface MappedPassives {
+  passives: BuildPassive[]
+  warnings: MapWarning[]
+}
+
 function mapPassives(
   pob: PathOfBuilding2,
   lookup: PassiveLookup
-): BuildPassive[] | undefined {
-  if (!pob.tree) return undefined
+): MappedPassives {
+  if (!pob.tree) return { passives: [], warnings: [] }
   const specs = pob.tree.specs
-  if (specs.length === 0) return undefined
+  if (specs.length === 0) return { passives: [], warnings: [] }
 
   // The LAST spec is taken as the canonical "final" allocation set
   // — build creators add specs progressively, so the last spec
   // contains every node the build eventually picks up.
   const finalSpec = specs[specs.length - 1]
 
+  const out: BuildPassive[] = []
+  const warnings: MapWarning[] = []
+
+  // A node with no lookup entry can't be translated to a GGG id. This is
+  // almost always stale bundled tree data after a patch. Surface it as a
+  // warning instead of dropping it — game-accepted .build files include
+  // every allocated node (jewel sockets included), so silent loss is a bug.
+  const warnUnmapped = (nodeId: number) => {
+    warnings.push({ type: 'unmapped_node', pobId: nodeId })
+  }
+
   // Single-spec builds: no progression info to derive. Emit shorthand
-  // strings (always-shown hints) — same behaviour as before.
+  // strings (always-shown hints).
   if (specs.length === 1) {
-    const out: BuildPassive[] = []
     for (const nodeId of finalSpec.nodes) {
       const entry = lookup[String(nodeId)]
-      if (!entry) continue
-      if (entry.is_jewel_socket) continue
+      if (!entry) {
+        warnUnmapped(nodeId)
+        continue
+      }
       out.push(entry.id)
     }
-    return out
+    return { passives: out, warnings }
   }
 
   // Multi-spec builds: derive a level_interval per node from the
@@ -180,11 +218,12 @@ function mapPassives(
     }
   }
 
-  const out: BuildPassive[] = []
   for (const nodeId of finalSpec.nodes) {
     const entry = lookup[String(nodeId)]
-    if (!entry) continue
-    if (entry.is_jewel_socket) continue
+    if (!entry) {
+      warnUnmapped(nodeId)
+      continue
+    }
 
     const earliestSpec = earliestSpecForNode.get(nodeId) ?? specs.length - 1
     const startLevel = startLevelForSpec(earliestSpec)
@@ -195,7 +234,7 @@ function mapPassives(
       out.push({ id: entry.id, level_interval: [startLevel, 100] })
     }
   }
-  return out
+  return { passives: out, warnings }
 }
 
 function mapSkills(pob: PathOfBuilding2): BuildSkill[] | undefined {
