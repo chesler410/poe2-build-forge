@@ -9,6 +9,8 @@
   --accent-hover: #1d4ed8;
   --error: #b91c1c;
   --error-bg: #fef2f2;
+  --warning: #92400e;
+  --warning-bg: #fffbeb;
   --border: #d1d5db;
   --code-bg: #f9fafb;
 }
@@ -24,6 +26,8 @@
     --accent-hover: #3b82f6;
     --error: #fca5a5;
     --error-bg: #450a0a;
+    --warning: #fcd34d;
+    --warning-bg: #422006;
     --border: #334155;
     --code-bg: #0b1120;
   }

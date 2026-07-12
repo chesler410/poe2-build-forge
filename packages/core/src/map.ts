@@ -1,6 +1,7 @@
 import type {
   BuildFile,
   BuildPassive,
+  BuildPassiveObject,
   BuildSkill,
   BuildSkillObject,
   BuildSupportObject,
@@ -48,6 +49,27 @@ export interface AscendancyLookup {
   }
 }
 
+/**
+ * A node the mapper could not translate. Surfaced to the caller (and the
+ * UI) rather than dropped — a build that silently loses tree allocations
+ * is worse than one that warns about them. The usual cause is stale
+ * bundled tree data after a patch; run `pnpm fetch-data` to refresh.
+ */
+export interface MapWarning {
+  type: 'unmapped_node'
+  /** The PoB integer node id that had no entry in the passive lookup. */
+  pobId: number
+}
+
+/**
+ * Result of {@link mapPobToBuild}: the converted build plus any warnings
+ * gathered while mapping (currently unmapped passive nodes).
+ */
+export interface MapResult {
+  build: BuildFile
+  warnings: MapWarning[]
+}
+
 export interface MapOptions {
   /**
    * Passive node lookup. Required to translate PoB integer node IDs
@@ -79,7 +101,7 @@ export interface MapOptions {
 export function mapPobToBuild(
   pob: PathOfBuilding2,
   options: MapOptions
-): BuildFile {
+): MapResult {
   const out: BuildFile = {
     name: options.name ?? deriveName(pob)
   }
@@ -90,8 +112,8 @@ export function mapPobToBuild(
   const ascendancy = mapAscendancy(pob, options.ascendancies)
   if (ascendancy) out.ascendancy = ascendancy
 
-  const passives = mapPassives(pob, options.passives)
-  if (passives && passives.length > 0) out.passives = passives
+  const { passives, warnings } = mapPassives(pob, options.passives)
+  if (passives.length > 0) out.passives = passives
 
   const skills = mapSkills(pob)
   if (skills && skills.length > 0) out.skills = skills
@@ -99,7 +121,7 @@ export function mapPobToBuild(
   const items = mapItems(pob)
   if (items && items.length > 0) out.inventory_slots = items
 
-  return out
+  return { build: out, warnings }
 }
 
 // PoB stores "None" as the placeholder ascendClassName when the
@@ -133,30 +155,63 @@ function mapAscendancy(
   return display
 }
 
+interface MappedPassives {
+  passives: BuildPassive[]
+  warnings: MapWarning[]
+}
+
 function mapPassives(
   pob: PathOfBuilding2,
   lookup: PassiveLookup
-): BuildPassive[] | undefined {
-  if (!pob.tree) return undefined
+): MappedPassives {
+  if (!pob.tree) return { passives: [], warnings: [] }
   const specs = pob.tree.specs
-  if (specs.length === 0) return undefined
+  if (specs.length === 0) return { passives: [], warnings: [] }
 
   // The LAST spec is taken as the canonical "final" allocation set
   // — build creators add specs progressively, so the last spec
   // contains every node the build eventually picks up.
   const finalSpec = specs[specs.length - 1]
 
+  const out: BuildPassive[] = []
+  const warnings: MapWarning[] = []
+
+  // Weapon-set membership. PoE2 grants separate weapon-set skill points;
+  // PoB stores those allocations in <WeaponSet1>/<WeaponSet2> (parsed into
+  // weaponSet1Nodes / weaponSet2Nodes). Nodes in neither set are shared and
+  // carry no weapon_set. Verified against game-accepted fixtures: the tag
+  // value is 1 or 2, never 0. Without this, converted characters lose every
+  // swap-tree allocation.
+  const weaponSetByNode = new Map<number, 1 | 2>()
+  for (const nodeId of finalSpec.weaponSet1Nodes) weaponSetByNode.set(nodeId, 1)
+  for (const nodeId of finalSpec.weaponSet2Nodes) weaponSetByNode.set(nodeId, 2)
+
+  // A node with no lookup entry can't be translated to a GGG id. This is
+  // almost always stale bundled tree data after a patch. Surface it as a
+  // warning instead of dropping it — game-accepted .build files include
+  // every allocated node (jewel sockets included), so silent loss is a bug.
+  const warnUnmapped = (nodeId: number) => {
+    warnings.push({ type: 'unmapped_node', pobId: nodeId })
+  }
+
   // Single-spec builds: no progression info to derive. Emit shorthand
-  // strings (always-shown hints) — same behaviour as before.
+  // strings (always-shown hints), unless the node is weapon-set-specific —
+  // that needs the object form to carry weapon_set.
   if (specs.length === 1) {
-    const out: BuildPassive[] = []
     for (const nodeId of finalSpec.nodes) {
       const entry = lookup[String(nodeId)]
-      if (!entry) continue
-      if (entry.is_jewel_socket) continue
-      out.push(entry.id)
+      if (!entry) {
+        warnUnmapped(nodeId)
+        continue
+      }
+      const weaponSet = weaponSetByNode.get(nodeId)
+      if (weaponSet === undefined) {
+        out.push(entry.id)
+      } else {
+        out.push({ id: entry.id, weapon_set: weaponSet })
+      }
     }
-    return out
+    return { passives: out, warnings }
   }
 
   // Multi-spec builds: derive a level_interval per node from the
@@ -180,22 +235,27 @@ function mapPassives(
     }
   }
 
-  const out: BuildPassive[] = []
   for (const nodeId of finalSpec.nodes) {
     const entry = lookup[String(nodeId)]
-    if (!entry) continue
-    if (entry.is_jewel_socket) continue
+    if (!entry) {
+      warnUnmapped(nodeId)
+      continue
+    }
 
     const earliestSpec = earliestSpecForNode.get(nodeId) ?? specs.length - 1
     const startLevel = startLevelForSpec(earliestSpec)
+    const weaponSet = weaponSetByNode.get(nodeId)
 
-    if (startLevel <= 1) {
+    if (startLevel <= 1 && weaponSet === undefined) {
       out.push(entry.id)
     } else {
-      out.push({ id: entry.id, level_interval: [startLevel, 100] })
+      const passive: BuildPassiveObject = { id: entry.id }
+      if (startLevel > 1) passive.level_interval = [startLevel, 100]
+      if (weaponSet !== undefined) passive.weapon_set = weaponSet
+      out.push(passive)
     }
   }
-  return out
+  return { passives: out, warnings }
 }
 
 function mapSkills(pob: PathOfBuilding2): BuildSkill[] | undefined {
@@ -245,8 +305,10 @@ function mapItems(pob: PathOfBuilding2): BuildItem[] | undefined {
   const out: BuildItem[] = []
   for (const slot of itemSet.slots) {
     if (slot.itemId === 0) continue // empty slot, no hint to emit
+    const inventoryId = translateSlotName(slot.name)
+    if (inventoryId === null) continue // slot not part of the game vocabulary
     const buildItem: BuildItem = {
-      inventory_id: translateSlotName(slot.name),
+      inventory_id: inventoryId,
       slot_x: 0,
       slot_y: 0,
       level_interval: ALWAYS_SHOWN
@@ -283,26 +345,48 @@ function mapItems(pob: PathOfBuilding2): BuildItem[] | undefined {
 }
 
 /**
- * Translate PoB inventory slot names ("Weapon 1", "Body Armour") to
- * the `.build` schema's `inventory_id` format (no spaces, "Helm" for
- * helmets, etc., matching the schema example values).
+ * Translate a PoB inventory slot name ("Weapon 1", "Body Armour") to the
+ * `.build` `inventory_id` vocabulary. This mapping is verified against
+ * game-accepted `.build` files (repo `fixtures/`), which are ground truth
+ * over GGG's developer docs:
+ *
+ *  - Weapons: `Weapon1` (set I) and `Weapon2` (the weapon-swap set II).
+ *    There is NO `Offhand` — the game never emits it. Staff builds put
+ *    the swap weapon in "Weapon 1 Swap" -> `Weapon2`.
+ *  - Armour is always suffixed: `Helm1`, `BodyArmour1`, `Gloves1`, `Boots1`.
+ *  - Jewellery: `Amulet1`, `Belt1`, `Ring1`, `Ring2`. Rings are the only
+ *    category that increments.
+ *  - Every charm collapses to `Charm1`; every flask to `Flask1`, regardless
+ *    of how many are equipped.
+ *
+ * Returns `null` for slots outside this vocabulary (PoB carries empty
+ * placeholder slots like "Ring 3", "Arm 1", "Leg 1"); the caller skips
+ * them rather than emitting a non-vocabulary id.
+ *
+ * Note: a set-I offhand ("Weapon 2") and a swap weapon ("Weapon 1 Swap")
+ * both target `Weapon2`. No game-accepted fixture exercises both at once
+ * (two-handed staff builds have no set-I offhand); if a build ever did,
+ * two `Weapon2` hints would be emitted.
  */
-function translateSlotName(name: string): string {
+function translateSlotName(name: string): string | null {
   const map: Record<string, string> = {
     'Weapon 1': 'Weapon1',
     'Weapon 2': 'Weapon2',
-    'Weapon 1 Swap': 'Offhand1',
-    'Weapon 2 Swap': 'Offhand2',
-    'Body Armour': 'BodyArmour',
-    Helmet: 'Helm',
-    Gloves: 'Gloves',
-    Boots: 'Boots',
-    Belt: 'Belt',
-    Amulet: 'Amulet',
-    'Ring 1': 'Ring',
+    'Weapon 1 Swap': 'Weapon2',
+    'Weapon 2 Swap': 'Weapon2',
+    'Body Armour': 'BodyArmour1',
+    Helmet: 'Helm1',
+    Gloves: 'Gloves1',
+    Boots: 'Boots1',
+    Belt: 'Belt1',
+    Amulet: 'Amulet1',
+    'Ring 1': 'Ring1',
     'Ring 2': 'Ring2',
+    'Charm 1': 'Charm1',
+    'Charm 2': 'Charm1',
+    'Charm 3': 'Charm1',
     'Flask 1': 'Flask1',
-    'Flask 2': 'Flask2'
+    'Flask 2': 'Flask1'
   }
-  return map[name] ?? name.replace(/\s+/g, '')
+  return map[name] ?? null
 }

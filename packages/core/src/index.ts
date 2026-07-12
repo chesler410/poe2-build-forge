@@ -4,6 +4,8 @@ export { decodePobCode } from './decode'
 export { parsePobXml } from './parse'
 export { mapPobToBuild } from './map'
 export { emitBuildFile, deriveBuildFilename } from './emit'
+export { extractSidecar, composeSidecar } from './sidecar'
+export type { Sidecar, SidecarEntry, SidecarSkillEntry } from './sidecar'
 
 export type { EmitOptions, EmitResult } from './emit'
 
@@ -30,4 +32,10 @@ export type {
   Tree
 } from './types'
 
-export type { AscendancyLookup, MapOptions, PassiveLookup } from './map'
+export type {
+  AscendancyLookup,
+  MapOptions,
+  MapResult,
+  MapWarning,
+  PassiveLookup
+} from './map'

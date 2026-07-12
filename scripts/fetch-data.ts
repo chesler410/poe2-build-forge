@@ -51,7 +51,7 @@ const SOURCES: Source[] = [
   },
   {
     filename: 'tree.json',
-    url: 'https://raw.githubusercontent.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/dev/src/TreeData/0_4/tree.json'
+    url: 'https://raw.githubusercontent.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/dev/src/TreeData/0_5/tree.json'
   },
   {
     filename: 'passives_default.json',

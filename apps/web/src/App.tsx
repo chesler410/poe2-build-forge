@@ -6,6 +6,7 @@ import {
   emitBuildFile,
   type AscendancyLookup,
   type BuildFile,
+  type MapWarning,
   type PassiveLookup
 } from '@poe2-build-forge/core'
 import { BuildEditor, type EditorLabels } from './BuildEditor'
@@ -126,6 +127,9 @@ export function App() {
 
   function resetHistory(build: BuildFile) {
     setHistory({ stack: [build], index: 0 })
+    // Loading a fresh build clears any prior conversion warnings. The one
+    // path that has warnings (decodeAndShow) re-sets them after this call.
+    setWarnings([])
   }
   function pushEdit(build: BuildFile) {
     setHistory((h) => {
@@ -149,6 +153,10 @@ export function App() {
 
   const [labels, setLabels] = useState<EditorLabels | null>(null)
   const [error, setError] = useState<AppError | null>(null)
+  // Non-fatal conversion warnings (e.g. passive nodes that couldn't be
+  // mapped because the bundled tree data is stale). Surfaced as a banner;
+  // the build still loads.
+  const [warnings, setWarnings] = useState<MapWarning[]>([])
   const [dragging, setDragging] = useState(false)
   const dragDepthRef = useRef(0)
   const [toasts, setToasts] = useState<Toast[]>([])
@@ -244,12 +252,13 @@ export function App() {
     try {
       const xml = decodePobCode(code)
       const pob = parsePobXml(xml)
-      const build = mapPobToBuild(pob, lookups)
+      const { build, warnings: mapWarnings } = mapPobToBuild(pob, lookups)
       // Validate up front so a broken initial build is surfaced before the
       // editor opens. The editor re-emits on every change with its own
       // graceful handling of mid-edit validation errors.
       emitBuildFile(build)
       resetHistory(build)
+      setWarnings(mapWarnings)
     } catch (err) {
       setError({
         kind: 'plain',
@@ -458,22 +467,25 @@ export function App() {
       </header>
 
       <aside className="winddown-notice" role="note">
-        <strong>This project is no longer maintained.</strong> Since Path of
-        Exile 2 0.5.0, the major build sites export <code>.build</code> files
-        natively — use{' '}
+        <strong>Following a published creator guide?</strong> Subscribing on{' '}
         <a href="https://maxroll.gg/poe2" target="_blank" rel="noreferrer">
           maxroll.gg/poe2
-        </a>
-        ,{' '}
+        </a>{' '}
+        or{' '}
         <a href="https://mobalytics.gg/poe-2" target="_blank" rel="noreferrer">
           mobalytics.gg/poe-2
-        </a>
-        , or{' '}
-        <a href="https://poe.ninja/poe2/builds" target="_blank" rel="noreferrer">
-          poe.ninja/poe2
-        </a>
-        . The converter below still works for any standalone PoB code, but won't
-        be updated for future patches. Thanks for using it.
+        </a>{' '}
+        and syncing it in-game is easier — no files. This tool is for turning{' '}
+        <strong>your own</strong> PoB code (or any build not on those sites)
+        into a <code>.build</code> you can upload at{' '}
+        <a
+          href="https://www.pathofexile2.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          pathofexile2.com
+        </a>{' '}
+        (My Account → Builds).
       </aside>
 
       <section className="quick-start">
@@ -618,6 +630,27 @@ export function App() {
         <section className="error" role="alert">
           <strong>Conversion failed:</strong>
           <pre>{error.message}</pre>
+        </section>
+      )}
+
+      {warnings.length > 0 && (
+        <section className="warning" role="status">
+          <strong>
+            {warnings.length} passive{' '}
+            {warnings.length === 1 ? 'node' : 'nodes'} could not be mapped
+          </strong>
+          <p>
+            The bundled passive-tree data may be stale after a game patch.
+            Run <code>pnpm fetch-data</code> to refresh it, then convert
+            again. The build still loaded; only these allocations are
+            missing.
+          </p>
+          <details>
+            <summary>
+              Unmapped PoB node {warnings.length === 1 ? 'id' : 'ids'}
+            </summary>
+            <code>{warnings.map((w) => w.pobId).join(', ')}</code>
+          </details>
         </section>
       )}
 

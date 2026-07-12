@@ -16,6 +16,7 @@
 
 import { createHash } from 'node:crypto'
 import { readFile, writeFile, mkdir } from 'node:fs/promises'
+import { readFileSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -62,18 +63,16 @@ const pruners: Pruner[] = [
       }))
   },
   {
+    // repoe-fork's schema nests the display name and type under base_item /
+    // gem_type; the old field names (gameId/name/gemType) no longer exist,
+    // so this used to emit empty objects. Extract the real fields.
     filename: 'skill_gems.json',
     prune: (raw: Record<string, any>) => {
-      const out: Record<
-        string,
-        { gameId: string; name: string; gemType: string }
-      > = {}
+      const out: Record<string, { name: string; gemType: string }> = {}
       for (const [key, value] of Object.entries(raw)) {
-        out[key] = {
-          gameId: value.gameId,
-          name: value.name,
-          gemType: value.gemType
-        }
+        const name = value?.base_item?.display_name
+        if (typeof name !== 'string' || name.length === 0) continue
+        out[key] = { name, gemType: value.gem_type ?? '' }
       }
       return out
     }
@@ -131,10 +130,19 @@ const pruners: Pruner[] = [
     prune: null // defer pruning until decoder consumes it
   },
   {
-    // PoB's Gems.lua is the canonical source of gem display names
-    // (e.g. "Sigil of Power" instead of CamelCase-derived approximations).
-    // We extract just gameId -> display name; the Lua file has type tags,
-    // stats, requirements, etc. that the converter doesn't need.
+    // Gem display names, keyed by the Metadata id that appears in PoB
+    // exports and .build files. Merged from two sources:
+    //
+    //  1. PoB's Gems.lua (base) — covers PoB-style ids and well-cased names.
+    //  2. repoe-fork skill_gems.json (override) — game-derived, keyed by the
+    //     exact ids the live game/export uses, with CURRENT display names.
+    //
+    // The override matters because PoB's dev branch can run ahead of the
+    // live game and rename gem ids: e.g. the game keeps
+    // SupportGemInspirationTwo (which exports still emit) but renames its
+    // display to "Efficiency II", while Gems.lua drops the id entirely.
+    // Sourcing game names by game id keeps labels resolvable and fresh; the
+    // game names win on any conflict.
     filename: 'gems.lua',
     outputFilename: 'gem_labels.json',
     prune: (text: string) => {
@@ -144,6 +152,13 @@ const pruners: Pruner[] = [
       let m: RegExpExecArray | null
       while ((m = pattern.exec(text)) !== null) {
         out[m[1]] = m[2]
+      }
+      const skillGems = JSON.parse(
+        readFileSync(join(RAW_DIR, 'skill_gems.json'), 'utf8')
+      ) as Record<string, { base_item?: { display_name?: string } }>
+      for (const [id, value] of Object.entries(skillGems)) {
+        const name = value?.base_item?.display_name
+        if (typeof name === 'string' && name.length > 0) out[id] = name
       }
       return out
     }

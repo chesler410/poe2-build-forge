@@ -14,6 +14,29 @@ const fixtureXml = readFileSync(
 )
 const pob = parsePobXml(fixtureXml)
 
+// Real 0.5 Sorceress/Stormweaver export (CoC Comet), fully equipped.
+// Used to verify inventory_id vocabulary against game-accepted output.
+const stormweaver = parsePobXml(
+  readFileSync(join(here, 'fixtures/pob-stormweaver.xml'), 'utf8')
+)
+
+// The exact game vocabulary, verified from repo fixtures/. Mirrors the
+// schema enum; kept here so the mapper is checked independently.
+const INVENTORY_VOCAB = new Set([
+  'Weapon1',
+  'Weapon2',
+  'Helm1',
+  'BodyArmour1',
+  'Gloves1',
+  'Boots1',
+  'Amulet1',
+  'Belt1',
+  'Ring1',
+  'Ring2',
+  'Charm1',
+  'Flask1'
+])
+
 const passivesLookup = JSON.parse(
   readFileSync(
     join(here, '../data/pruned/passives_default.json'),
@@ -28,14 +51,21 @@ const ascendanciesLookup = JSON.parse(
   )
 ) as AscendancyLookup
 
+// Most assertions only care about the produced build. mapPobToBuild now
+// returns { build, warnings }; this helper keeps those tests focused.
+const mapBuild = (
+  pobDoc: Parameters<typeof mapPobToBuild>[0],
+  opts: Parameters<typeof mapPobToBuild>[1]
+) => mapPobToBuild(pobDoc, opts).build
+
 describe('mapPobToBuild', () => {
   it('produces a build with a derived name when none provided', () => {
-    const result = mapPobToBuild(pob, { passives: passivesLookup })
+    const result = mapBuild(pob, { passives: passivesLookup })
     expect(result.name).toBe('Ranger - Deadeye')
   })
 
   it('honours an explicit name override', () => {
-    const result = mapPobToBuild(pob, {
+    const result = mapBuild(pob, {
       passives: passivesLookup,
       name: 'My custom name'
     })
@@ -43,12 +73,12 @@ describe('mapPobToBuild', () => {
   })
 
   it('passes through ascendClassName when no ascendancy lookup is given', () => {
-    const result = mapPobToBuild(pob, { passives: passivesLookup })
+    const result = mapBuild(pob, { passives: passivesLookup })
     expect(result.ascendancy).toBe('Deadeye')
   })
 
   it('resolves the GGG-format ascendancy key when lookup is given', () => {
-    const result = mapPobToBuild(pob, {
+    const result = mapBuild(pob, {
       passives: passivesLookup,
       ascendancies: ascendanciesLookup
     })
@@ -58,7 +88,7 @@ describe('mapPobToBuild', () => {
   })
 
   it('translates PoB tree integer ids into GGG passive ids', () => {
-    const result = mapPobToBuild(pob, { passives: passivesLookup })
+    const result = mapBuild(pob, { passives: passivesLookup })
     expect(Array.isArray(result.passives)).toBe(true)
     expect(result.passives!.length).toBeGreaterThan(0)
     for (const p of result.passives!) {
@@ -71,7 +101,7 @@ describe('mapPobToBuild', () => {
   })
 
   it('derives level_interval per passive from PoB spec ordering', () => {
-    const result = mapPobToBuild(pob, { passives: passivesLookup })
+    const result = mapBuild(pob, { passives: passivesLookup })
     expect(result.passives).toBeDefined()
 
     const withIntervals = result.passives!.filter(
@@ -94,13 +124,13 @@ describe('mapPobToBuild', () => {
   it('emits shorthand strings for nodes that appear in the first spec', () => {
     // First-spec nodes should always show in-game from level 1, so
     // we emit them without a level_interval (shorthand string form).
-    const result = mapPobToBuild(pob, { passives: passivesLookup })
+    const result = mapBuild(pob, { passives: passivesLookup })
     const shorthand = result.passives!.filter((p) => typeof p === 'string')
     expect(shorthand.length).toBeGreaterThan(0)
   })
 
   it('emits skills as gem-id strings or {id, support_skills} objects', () => {
-    const result = mapPobToBuild(pob, { passives: passivesLookup })
+    const result = mapBuild(pob, { passives: passivesLookup })
     expect(result.skills).toBeDefined()
     expect(result.skills!.length).toBeGreaterThan(0)
 
@@ -149,7 +179,7 @@ describe('mapPobToBuild', () => {
         ]
       }
     }
-    const result = mapPobToBuild(synthetic, { passives: passivesLookup })
+    const result = mapBuild(synthetic, { passives: passivesLookup })
     const ids = (result.skills ?? []).map((s) => (typeof s === 'string' ? s : s.id))
     expect(ids).toEqual([
       'Metadata/Items/Gem/SkillGemDemonForm',
@@ -157,9 +187,162 @@ describe('mapPobToBuild', () => {
     ])
   })
 
+  it('emits jewel-socket nodes instead of dropping them (ground truth includes them)', () => {
+    // Game-accepted .build files carry jewel-socket passive entries.
+    // The mapper used to skip is_jewel_socket nodes, silently losing them.
+    const { build, warnings } = mapPobToBuild(stormweaver, {
+      passives: passivesLookup
+    })
+    const source = stormweaver.tree!.specs.at(-1)!.nodes.length
+    const emitted = build.passives!.length
+
+    // Nothing unmapped for this fixture: every source node is emitted.
+    expect(warnings).toEqual([])
+    expect(emitted).toBe(source)
+  })
+
+  it('surfaces unmapped nodes as warnings rather than dropping them silently', () => {
+    // A node id absent from the lookup (e.g. stale tree data) must be
+    // reported, not swallowed.
+    const synthetic = {
+      ...stormweaver,
+      tree: {
+        specs: [
+          {
+            title: '',
+            nodes: [999999001, 999999002],
+            treeVersion: '0_5',
+            weaponSet1Nodes: [],
+            weaponSet2Nodes: []
+          }
+        ]
+      }
+    } as typeof stormweaver
+    const { build, warnings } = mapPobToBuild(synthetic, {
+      passives: passivesLookup
+    })
+    expect(build.passives ?? []).toHaveLength(0)
+    expect(warnings).toEqual([
+      { type: 'unmapped_node', pobId: 999999001 },
+      { type: 'unmapped_node', pobId: 999999002 }
+    ])
+  })
+
+  it('keeps the count invariant: emitted + unmapped == source nodes', () => {
+    const { build, warnings } = mapPobToBuild(stormweaver, {
+      passives: passivesLookup
+    })
+    const source = stormweaver.tree!.specs.at(-1)!.nodes.length
+    const emitted = build.passives!.length
+    expect(emitted + warnings.length).toBe(source)
+  })
+
+  it('tags weapon-set-specific passives with weapon_set 1 or 2', () => {
+    // PoB2 stores per-weapon-set allocations in <WeaponSet1>/<WeaponSet2>
+    // (parser: weaponSet1Nodes / weaponSet2Nodes). Nodes in neither set are
+    // shared and carry no weapon_set. Verified value scheme (repo fixtures):
+    // weapon_set is 1 or 2, never 0.
+    const entry = (id: string) => ({
+      id,
+      name: id,
+      is_notable: false,
+      is_keystone: false,
+      is_jewel_socket: false,
+      ascendancy: ''
+    })
+    const lookup: PassiveLookup = {
+      '10': entry('shared_node'),
+      '11': entry('set_one_node'),
+      '12': entry('set_two_node')
+    }
+    const spec = {
+      title: '',
+      treeVersion: '0_5',
+      classId: 0,
+      classInternalId: 0,
+      ascendClassId: 0,
+      ascendancyInternalId: '',
+      nodes: [10, 11, 12],
+      weaponSet1Nodes: [11],
+      weaponSet2Nodes: [12]
+    }
+    const synthetic = {
+      ...stormweaver,
+      tree: { activeSpec: 1, specs: [spec] }
+    } as typeof stormweaver
+
+    const { build } = mapPobToBuild(synthetic, { passives: lookup })
+    const wsById = new Map<string, number | undefined>(
+      build.passives!.map((p) =>
+        typeof p === 'string' ? [p, undefined] : [p.id, p.weapon_set]
+      )
+    )
+    expect(wsById.get('shared_node')).toBeUndefined()
+    expect(wsById.get('set_one_node')).toBe(1)
+    expect(wsById.get('set_two_node')).toBe(2)
+  })
+
+  it('emits weapon_set tags for the real Stormweaver fixture', () => {
+    const { build } = mapPobToBuild(stormweaver, { passives: passivesLookup })
+    const objects = build.passives!.filter(
+      (p): p is Exclude<typeof p, string> => typeof p !== 'string'
+    )
+    const ws1 = objects.filter((p) => p.weapon_set === 1)
+    const ws2 = objects.filter((p) => p.weapon_set === 2)
+    // The fixture's <WeaponSet1> has 24 nodes; <WeaponSet2> resolves to 23
+    // after PoB's anoint marker (3663c) is excluded by the parser.
+    expect(ws1.length).toBe(24)
+    expect(ws2.length).toBe(23)
+    // weapon_set is always 1 or 2, never 0.
+    for (const p of objects) {
+      if (p.weapon_set !== undefined) expect([1, 2]).toContain(p.weapon_set)
+    }
+  })
+
+  it('maps the Stormweaver fixture slots to the game inventory vocabulary', () => {
+    const result = mapBuild(stormweaver, { passives: passivesLookup })
+    const ids = (result.inventory_slots ?? []).map((i) => i.inventory_id)
+
+    expect(ids.length).toBeGreaterThan(0)
+    // Every emitted id must be in the verified game vocabulary.
+    for (const id of ids) expect(INVENTORY_VOCAB.has(id)).toBe(true)
+
+    // Suffixed armour + jewellery, never bare, never Offhand.
+    expect(ids).toContain('Helm1')
+    expect(ids).toContain('BodyArmour1')
+    expect(ids).toContain('Gloves1')
+    expect(ids).toContain('Boots1')
+    expect(ids).toContain('Amulet1')
+    expect(ids).toContain('Belt1')
+    expect(ids).toContain('Ring1')
+    expect(ids).toContain('Ring2')
+
+    // Weapon1 = set I; Weapon2 = the swap-set weapon (this build has a
+    // populated "Weapon 1 Swap" but an empty "Weapon 2").
+    expect(ids).toContain('Weapon1')
+    expect(ids).toContain('Weapon2')
+
+    // The build has three charms — all collapse to Charm1 (no Charm2/3).
+    expect(ids.filter((id) => id === 'Charm1').length).toBe(3)
+    expect(ids).not.toContain('Charm2')
+    expect(ids).not.toContain('Charm3')
+
+    // One flask populated -> Flask1 (never Flask2, never Offhand).
+    expect(ids).toContain('Flask1')
+    expect(ids).not.toContain('Flask2')
+    expect(ids.some((id) => id.startsWith('Offhand'))).toBe(false)
+  })
+
+  it('produces schema-valid output from the Stormweaver fixture', () => {
+    const result = mapBuild(stormweaver, { passives: passivesLookup })
+    const v = validate(result)
+    if (!v.valid) console.error(JSON.stringify(v.errors, null, 2))
+    expect(v.valid).toBe(true)
+  })
+
   it('omits items entirely when no slots are filled in the fixture', () => {
     // The 90pcuxN4XtJG fixture has all slots empty (itemId=0).
-    const result = mapPobToBuild(pob, { passives: passivesLookup })
+    const result = mapBuild(pob, { passives: passivesLookup })
     expect(result.inventory_slots).toBeUndefined()
   })
 
@@ -175,14 +358,15 @@ describe('mapPobToBuild', () => {
         ascendClassName: 'None'
       }
     }
-    const result = mapPobToBuild(noneBuild, { passives: passivesLookup })
+    const result = mapBuild(noneBuild, { passives: passivesLookup })
     expect(result.name).toBe('Witch')
     expect(result.ascendancy).toBeUndefined()
   })
 
-  it('disambiguates Flask 1 / Flask 2 to distinct inventory_ids', () => {
-    // Regression: previously both mapped to "Flask" and collided in
-    // builds that actually had flasks selected.
+  it('collapses every flask to Flask1 (the game never increments flasks)', () => {
+    // Ground truth (repo fixtures/) shows two flask slots both emit
+    // inventory_id "Flask1". The old converter emitted Flask1/Flask2;
+    // that vocabulary is not what the game uses.
     const synthetic = {
       ...pob,
       items: {
@@ -199,11 +383,32 @@ describe('mapPobToBuild', () => {
         catalog: {}
       }
     }
-    const result = mapPobToBuild(synthetic, { passives: passivesLookup })
+    const result = mapBuild(synthetic, { passives: passivesLookup })
     const ids = (result.inventory_slots ?? []).map((i) => i.inventory_id)
-    expect(ids).toContain('Flask1')
-    expect(ids).toContain('Flask2')
-    expect(new Set(ids).size).toBe(ids.length) // no duplicates
+    expect(ids).toEqual(['Flask1', 'Flask1'])
+  })
+
+  it('collapses every charm to Charm1 (the game never increments charms)', () => {
+    const synthetic = {
+      ...pob,
+      items: {
+        activeItemSet: 1,
+        itemSets: [
+          {
+            id: 1,
+            slots: [
+              { name: 'Charm 1', itemId: 100 },
+              { name: 'Charm 2', itemId: 101 },
+              { name: 'Charm 3', itemId: 102 }
+            ]
+          }
+        ],
+        catalog: {}
+      }
+    }
+    const result = mapBuild(synthetic, { passives: passivesLookup })
+    const ids = (result.inventory_slots ?? []).map((i) => i.inventory_id)
+    expect(ids).toEqual(['Charm1', 'Charm1', 'Charm1'])
   })
 
   it('emits unique_name when a slot references a unique in the catalog', () => {
@@ -224,7 +429,7 @@ describe('mapPobToBuild', () => {
         }
       }
     }
-    const result = mapPobToBuild(synthetic, { passives: passivesLookup })
+    const result = mapBuild(synthetic, { passives: passivesLookup })
     expect(result.inventory_slots).toHaveLength(1)
     expect(result.inventory_slots![0].unique_name).toBe('Seed of Cataclysm')
     expect(result.inventory_slots![0].additional_text).toBeUndefined()
@@ -248,7 +453,7 @@ describe('mapPobToBuild', () => {
         }
       }
     }
-    const result = mapPobToBuild(synthetic, { passives: passivesLookup })
+    const result = mapBuild(synthetic, { passives: passivesLookup })
     expect(result.inventory_slots![0].unique_name).toBeUndefined()
     expect(result.inventory_slots![0].additional_text).toContain('RARE')
     expect(result.inventory_slots![0].additional_text).toContain('Cultist Crown')
@@ -278,7 +483,7 @@ describe('mapPobToBuild', () => {
         }
       }
     }
-    const result = mapPobToBuild(synthetic, { passives: passivesLookup })
+    const result = mapBuild(synthetic, { passives: passivesLookup })
     expect(result.inventory_slots![0].additional_text).toBe(
       'MAGIC: Bubbling Ultimate Life Flask of the Ample'
     )
@@ -296,15 +501,15 @@ describe('mapPobToBuild', () => {
         catalog: {} // itemId 999 not present
       }
     }
-    const result = mapPobToBuild(synthetic, { passives: passivesLookup })
+    const result = mapBuild(synthetic, { passives: passivesLookup })
     expect(result.inventory_slots).toHaveLength(1)
-    expect(result.inventory_slots![0].inventory_id).toBe('Belt')
+    expect(result.inventory_slots![0].inventory_id).toBe('Belt1')
     expect(result.inventory_slots![0].unique_name).toBeUndefined()
     expect(result.inventory_slots![0].additional_text).toBeUndefined()
   })
 
   it('produces output that validates against @poe2-build-forge/schema', () => {
-    const result = mapPobToBuild(pob, {
+    const result = mapBuild(pob, {
       passives: passivesLookup,
       ascendancies: ascendanciesLookup
     })

@@ -3,17 +3,20 @@
 [![CI](https://github.com/chesler410/poe2-build-forge/actions/workflows/ci.yml/badge.svg)](https://github.com/chesler410/poe2-build-forge/actions/workflows/ci.yml)
 [![Deploy](https://github.com/chesler410/poe2-build-forge/actions/workflows/deploy.yml/badge.svg)](https://github.com/chesler410/poe2-build-forge/actions/workflows/deploy.yml)
 
-> ## ⚠️ No longer maintained
+> ## Status: active
 >
-> Path of Exile 2 0.5.0 (May 2026) shipped a native in-game Build Planner, and
-> the major build sites now export `.build` files directly. For PoB → `.build`
-> conversion, use **[maxroll.gg/poe2](https://maxroll.gg/poe2)**,
-> **[mobalytics.gg/poe-2](https://mobalytics.gg/poe-2)**, or
-> **[poe.ninja/poe2](https://poe.ninja/poe2/builds)** — they pull from build
-> catalogs and live characters via the GGG API, which this solo tool can't match.
+> Briefly wound down after PoE2 0.5.0 shipped a native Build Planner, then
+> revived once field-testing against game-accepted `.build` files surfaced
+> real, fixable defects. The big build sites cover *their* catalogs and let you
+> subscribe to a creator's guide; forge covers the gap they don't — turning
+> **your own** PoB code (or any arbitrary build) into a `.build` you upload to
+> your account, plus an [annotation sidecar](#annotation-sidecar) so your
+> personal notes survive every re-export.
 >
-> The converter still works for any standalone PoB code, but it's no longer
-> updated for new patches. Thanks to everyone who used it. 🫡
+> If you just want to follow a published creator guide, subscribing on
+> **[maxroll.gg/poe2](https://maxroll.gg/poe2)** or
+> **[mobalytics.gg/poe-2](https://mobalytics.gg/poe-2)** and syncing it in-game
+> is the easier path — no files involved.
 
 **Try it now → [chesler410.github.io/poe2-build-forge](https://chesler410.github.io/poe2-build-forge/)**
 
@@ -22,36 +25,49 @@ Convert Path of Exile 2 build guides — PoB codes from
 `.build` file format consumed by PoE 2's
 [Build Planner](https://www.pathofexile.com/developer/docs/game).
 
-`.build` files live in `Documents/My Games/Path of Exile 2/BuildPlanner/`
-and let players drop in-game annotations onto their character panel:
-passive nodes to allocate, gem combinations to slot, items to chase, all
-keyed to character-level ranges.
+A `.build` file lets players drop in-game annotations onto their character
+panel: passive nodes to allocate, gem combinations to slot, items to chase,
+all keyed to character-level ranges. There are two ways to get one into the
+game:
 
-> **Platforms:** the in-game Build Planner reads `.build` files from disk, so
-> it works on **PC (Windows) and Steam Deck** only — PlayStation/Xbox aren't
-> supported by GGG yet. On Steam Deck (Proton) the folder is under
-> `~/.local/share/Steam/steamapps/compatdata/2315204395/pfx/drive_c/users/steamuser/Documents/My Games/Path of Exile 2/BuildPlanner/`.
-> If your Documents folder syncs to OneDrive, it's under
-> `OneDrive\Documents\...` instead.
+- **Account upload (all platforms).** Since 0.5.3 you can upload a `.build`
+  at [pathofexile2.com](https://www.pathofexile2.com/) under **My Account →
+  Builds → Upload Build**. Subscribed builds sync into the in-game Build
+  Planner across your devices — including **console**, which can't read local
+  files. (Clicking a creator's *Subscribe* link on a supported build site does
+  the same thing for their guide.) Note the portal has no in-place editing —
+  "Edit" just re-uploads a file — which is what the
+  [annotation sidecar](#annotation-sidecar) is for.
+- **Local file (PC / Steam Deck).** Drop the file into
+  `Documents/My Games/Path of Exile 2/BuildPlanner/`. The in-game planner
+  reads it from disk, so this path is PC (Windows) and Steam Deck only. On
+  Steam Deck (Proton) the folder is under
+  `~/.local/share/Steam/steamapps/compatdata/2315204395/pfx/drive_c/users/steamuser/Documents/My Games/Path of Exile 2/BuildPlanner/`.
+  If your Documents folder syncs to OneDrive, it's under `OneDrive\Documents\...`.
 
 ## Status
 
-**Archived / no longer maintained** (see notice above). The web app stays
-live and the full PoB → `.build` pipeline works: generated files load in the
-in-game Build Planner — validated against GGG's format and three third-party
-generators (maxroll, mobalytics, poe.ninja) on 0.5.0 launch day, 2026-05-29.
-It simply won't be updated for future patches.
+Active. The full PoB → `.build` pipeline works end-to-end: generated files
+load in the in-game Build Planner and upload cleanly to the account portal —
+validated against GGG's format on 0.5.0 launch day and cross-checked since
+against five game-accepted Mobalytics exports the planner demonstrably loads.
 
-| Package | Status | Purpose |
-|---|---|---|
-| [`@poe2-build-forge/schema`](packages/schema) | scaffolded, tested | JSON Schema for `.build` files + Ajv-backed `validate()` |
-| [`@poe2-build-forge/core`](packages/core) | scaffolded, tested | PoB decoder, parser, mapper, emitter — full pipeline working |
-| [`@poe2-build-forge/web`](apps/web) | **live** at [chesler410.github.io/poe2-build-forge](https://chesler410.github.io/poe2-build-forge/) | Static client-side converter UI |
+| Package | Purpose |
+|---|---|
+| [`@poe2-build-forge/schema`](packages/schema) | JSON Schema for `.build` files + Ajv-backed `validate()` |
+| [`@poe2-build-forge/core`](packages/core) | PoB decoder, parser, mapper, emitter, annotation sidecar |
+| [`@poe2-build-forge/web`](apps/web) | Static client-side converter UI, **live** at [chesler410.github.io/poe2-build-forge](https://chesler410.github.io/poe2-build-forge/) |
+| [`scripts/forge.ts`](scripts/forge.ts) | `forge` CLI: `convert`, `extract`, `compose` |
 
-The full PoB-code → `.build` pipeline works end-to-end and the output
-validates against the schema, which follows the
-[GGG developer docs](https://www.pathofexile.com/developer/docs/game)
-verbatim.
+### Fixtures are ground truth
+
+The [`fixtures/`](fixtures/) directory holds real, **game-accepted** `.build`
+files — five Mobalytics variant exports and one annotated character file that
+the in-game planner and the account portal both load. Tests validate against
+them verbatim. The governing rule: **where GGG's developer docs and these
+files disagree, the game follows the files.** Field testing this way corrected
+several docs-derived assumptions (the `inventory_id` vocabulary, `weapon_set`
+values of 1/2 rather than 0/1, and renamed-gem labels).
 
 ### What the converter handles
 
@@ -65,8 +81,13 @@ verbatim.
   ("Ranger2") via a bundled lookup
 - Surfaces equipped items: uniques as `unique_name`, rares/magics as
   `additional_text` with rarity + base type + rolled name
-- Disambiguates multi-slot inventory positions (`Flask 1` / `Flask 2`
-  → `Flask1` / `Flask2`; `Weapon 1 Swap` → `Offhand1`)
+- Maps PoB slots to the game's `inventory_id` vocabulary, verified against
+  game-accepted `.build` files (see [`fixtures/`](fixtures/)): `Weapon1`
+  (set I) and `Weapon2` (the weapon-swap set — e.g. a staff build's
+  `Weapon 1 Swap`); suffixed armour (`Helm1`, `BodyArmour1`, `Gloves1`,
+  `Boots1`); `Amulet1`, `Belt1`, `Ring1`, `Ring2` (rings are the only
+  category that increments); every charm → `Charm1` and every flask →
+  `Flask1`. There is no `Offhand` — the game never uses it.
 - **Edit before download**: in-browser form for build name, description,
   per-passive `weapon_set` + `unique_name`, per-item `unique_name`, and
   per-entry `additional_text` + `level_interval` on everything. JSON
@@ -147,8 +168,11 @@ const code = await fetch('https://pobb.in/90pcuxN4XtJG/raw', {
 const xml = decodePobCode(code)
 const pob = parsePobXml(xml)
 
-// 3. Translate into the .build schema shape.
-const build = mapPobToBuild(pob, { passives, ascendancies })
+// 3. Translate into the .build schema shape. Returns the build plus any
+//    warnings (e.g. passive nodes that couldn't be mapped — never dropped
+//    silently; run `pnpm fetch-data` if the bundled tree data is stale).
+const { build, warnings } = mapPobToBuild(pob, { passives, ascendancies })
+if (warnings.length) console.warn(warnings)
 
 // 4. Serialize. Validation against the schema runs automatically.
 const { filename, content } = emitBuildFile(build)
@@ -177,26 +201,53 @@ The raw JSON Schema is exported as a static asset for non-TS consumers:
 import schemaJson from '@poe2-build-forge/schema/poe2-build.schema.json'
 ```
 
+## Annotation sidecar
+
+The account portal has no in-place editing, so re-uploading after you level
+means regenerating the whole `.build` — and re-doing every annotation. The
+sidecar keeps your notes decoupled from the converted structure so they
+survive a re-export. Use the `forge` CLI (`pnpm forge <subcommand>`):
+
+```sh
+# One-time: turn your current annotated .build into a sidecar (YAML).
+pnpm forge extract "ENDGAME COC COMET.build"   # -> ENDGAME COC COMET.build.yml
+
+# Later, after leveling and re-exporting from PoB — one command:
+pnpm forge compose stormweaver-pob.txt "ENDGAME COC COMET.build.yml"
+#   base may be a PoB export OR any .build; the sidecar is applied on top.
+#   Output is named after the build; -o <path> or --stdout to override.
+
+# Or just convert a PoB export with no annotations:
+pnpm forge convert stormweaver-pob.txt
+```
+
+The sidecar is keyed by stable identity — passives by `id` + `weapon_set`,
+skill/support gems by id, inventory slots by `inventory_id` + ordinal — so
+`compose(base, extract(base))` round-trips exactly and re-composing is
+idempotent. New nodes come through unannotated; annotations for nodes you
+dropped are simply skipped. The same `extractSidecar` / `composeSidecar`
+functions are exported from `@poe2-build-forge/core`.
+
+> The CLI resolves the schema and core packages from their build output, so
+> run `pnpm build` once first (or after pulling changes).
+
 ## Roadmap
 
-Ideas under consideration — not commitments. Most are gated on PoE2
-**0.5.0** (May 29, 2026) landing first, so they're built against stable
-game data rather than a moving target.
+Ideas under consideration — not commitments.
 
 - **Inverse conversion: `.build` → PoB code** *(community-requested)*.
   Take a `.build` — your own, or one a build creator shared — back into
   [Path of Building](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2)
   to theorycraft, check DPS/defenses, tweak, and re-export. Closes the
   round-trip loop and would be the mirror of the existing pipeline.
-  Feasibility hinges on how items are stored in the `.build` format;
-  being scoped once 0.5.0 data settles.
+  Feasibility hinges on how items are stored in the `.build` format.
 - **Direct save to the BuildPlanner folder.** Skip the
   download-then-drag step by writing straight to
   `Documents/My Games/Path of Exile 2/BuildPlanner/` via the File System
   Access API on supported browsers (the download path stays as the
-  fallback). Needs the in-game planner to exist first.
-- **Round-trip regression suite.** Capture a real `.build` from the
-  in-game planner and confirm our parser/emitter reproduce it faithfully.
+  fallback).
+- **Sidecar action in the web editor.** The CLI `extract`/`compose` flow
+  as an in-browser upload/download action, for people who don't run Node.
 
 Have an idea or a request? [Open an issue](https://github.com/chesler410/poe2-build-forge/issues).
 
@@ -206,7 +257,7 @@ Requires Node 22.13+ (pnpm 11 needs `node:sqlite`) and pnpm 11+.
 
 ```sh
 pnpm install
-pnpm test       # vitest across schema + core + web (69 tests)
+pnpm test       # vitest across schema + core + web (136 tests)
 pnpm build      # tsup (JS) + tsc -b (types)
 pnpm typecheck  # tsc -b only
 ```
@@ -215,6 +266,7 @@ Useful scripts under [`scripts/`](scripts/):
 
 ```sh
 pnpm dev                       # run the web app locally at http://localhost:5173/
+pnpm forge <cmd> [args]        # convert / extract / compose (see Annotation sidecar)
 pnpm spike:decode <pobbBuildId> # inspect a pobb.in payload (decode + dump XML head/tail)
 pnpm fetch-data                 # refresh the bundled GGG data tables in core
 pnpm prune-data                 # prune the raw data snapshot to the mapper essentials
