@@ -30,20 +30,24 @@ panel: passive nodes to allocate, gem combinations to slot, items to chase,
 all keyed to character-level ranges. There are two ways to get one into the
 game:
 
-- **Account upload (all platforms).** Since 0.5.3 you can upload a `.build`
-  at [pathofexile2.com](https://www.pathofexile2.com/) under **My Account →
-  Builds → Upload Build**. Subscribed builds sync into the in-game Build
-  Planner across your devices — including **console**, which can't read local
-  files. (Clicking a creator's *Subscribe* link on a supported build site does
-  the same thing for their guide.) Note the portal has no in-place editing —
-  "Edit" just re-uploads a file — which is what the
+- **Account upload.** Since 0.5.3 you can upload a `.build` at
+  [pathofexile2.com](https://www.pathofexile2.com/) under **My Account →
+  Builds → Upload Build**, and it syncs into the in-game Build Planner across
+  your (supported) devices without copying files by hand. (Clicking a
+  creator's *Subscribe* link on a supported build site does the same thing for
+  their guide.) Note the portal has no in-place editing — "Edit" just
+  re-uploads a file — which is what the
   [annotation sidecar](#annotation-sidecar) is for.
-- **Local file (PC / Steam Deck).** Drop the file into
-  `Documents/My Games/Path of Exile 2/BuildPlanner/`. The in-game planner
-  reads it from disk, so this path is PC (Windows) and Steam Deck only. On
-  Steam Deck (Proton) the folder is under
+- **Local file.** Drop the file into
+  `Documents/My Games/Path of Exile 2/BuildPlanner/`. On Steam Deck (Proton)
+  the folder is under
   `~/.local/share/Steam/steamapps/compatdata/2315204395/pfx/drive_c/users/steamuser/Documents/My Games/Path of Exile 2/BuildPlanner/`.
   If your Documents folder syncs to OneDrive, it's under `OneDrive\Documents\...`.
+
+> **Platforms:** the in-game Build Planner is **PC (Windows) and Steam Deck
+> only** for now. **PlayStation and Xbox aren't supported yet** — the planner
+> reads `.build` files from disk and consoles don't expose one. That's a Path
+> of Exile 2 limitation, not this tool's.
 
 ## Status
 
