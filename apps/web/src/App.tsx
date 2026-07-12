@@ -151,6 +151,7 @@ export function App() {
     )
   }
 
+  const importInputRef = useRef<HTMLInputElement>(null)
   const [labels, setLabels] = useState<EditorLabels | null>(null)
   const [error, setError] = useState<AppError | null>(null)
   // Non-fatal conversion warnings (e.g. passive nodes that couldn't be
@@ -332,6 +333,13 @@ export function App() {
     setError(null)
   }
 
+  function handleImportPick(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0]
+    if (file) void loadDroppedFile(file)
+    // Reset so picking the same file again still fires onChange.
+    e.target.value = ''
+  }
+
   async function loadDroppedFile(file: File) {
     setError(null)
     const name = file.name.toLowerCase()
@@ -458,11 +466,15 @@ export function App() {
         </div>
       )}
 
-      <header>
-        <h1>poe2-build-forge</h1>
+      <header className="hero">
+        <p className="hero-eyebrow">
+          Path of Building <span aria-hidden="true">→</span>{' '}
+          <code>.build</code>
+        </p>
+        <h1 className="wordmark">poe2-build-forge</h1>
         <p className="tagline">
-          Convert a Path of Building 2 export into a <code>.build</code> file
-          the in-game Build Planner can load.
+          Turn a Path of Building 2 export into a <code>.build</code> file the
+          in-game Build Planner can load.
         </p>
       </header>
 
@@ -526,10 +538,20 @@ export function App() {
               </code>
             </li>
             <li>
-              <strong>PlayStation / Xbox:</strong> not supported yet. The in-game
-              Build Planner only reads <code>.build</code> files from disk, which
-              consoles don't expose — so it's PC and Steam Deck only for now (a
-              Path of Exile 2 limitation, not this tool's).
+              <strong>PlayStation / Xbox:</strong> consoles can't read files
+              from disk, so use the account path instead — upload your{' '}
+              <code>.build</code> at{' '}
+              <a
+                href="https://www.pathofexile2.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                pathofexile2.com
+              </a>{' '}
+              (My Account → Builds), authorize on the Path of Exile site, and it
+              syncs into the in-game planner on your console at next login.
+              (Subscribing to a creator's guide works the same way.) The local
+              folder above is PC and Steam Deck only.
             </li>
           </ul>
         </details>
@@ -624,6 +646,36 @@ export function App() {
           (outside text fields). Drag a <code>.pob</code> or{' '}
           <code>.build</code> file onto the page to load it.
         </p>
+      </section>
+
+      <section className="import-edit">
+        <div className="import-edit-copy">
+          <p className="import-edit-eyebrow">Already have a build?</p>
+          <p className="import-edit-lede">
+            Want to insert your own notes, or make your favorite build better
+            with your own details?
+          </p>
+          <p className="import-edit-sub">
+            Import an existing <code>.build</code> to edit it directly — add
+            annotations, tune level ranges, refine gems and item hints — then
+            download or re-upload. No conversion needed.
+          </p>
+        </div>
+        <div className="import-edit-action">
+          <input
+            ref={importInputRef}
+            type="file"
+            accept=".build,.pob,.txt"
+            onChange={handleImportPick}
+            hidden
+          />
+          <button
+            type="button"
+            onClick={() => importInputRef.current?.click()}
+          >
+            Import a .build to edit
+          </button>
+        </div>
       </section>
 
       {error?.kind === 'plain' && (
@@ -835,6 +887,7 @@ function ResultPanel({
   return (
     <section className="result">
       <div className="result-summary">
+        <p className="result-eyebrow">Converted build</p>
         <h2>{build.name || '(unnamed build)'}</h2>
         <dl>
           <dt>Ascendancy</dt>
@@ -887,11 +940,19 @@ function ResultPanel({
           </p>
         )}
         <p className="placement-hint">
-          Drop the downloaded file into{' '}
-          <code>Documents\My Games\Path of Exile 2\BuildPlanner\</code>
-          {' '}and select the build in-game. Documents synced to OneDrive? It's
-          under <code>OneDrive\Documents\…</code> instead. Console isn't
-          supported yet — PC and Steam Deck only.
+          <strong>PC / Steam Deck:</strong> drop this file into{' '}
+          <code>Documents\My Games\Path of Exile 2\BuildPlanner\</code> and
+          select it in-game (OneDrive users:{' '}
+          <code>OneDrive\Documents\…</code>).{' '}
+          <strong>Console:</strong> upload it at{' '}
+          <a
+            href="https://www.pathofexile2.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            pathofexile2.com
+          </a>{' '}
+          → My Account → Builds and it syncs in-game.
         </p>
       </div>
 

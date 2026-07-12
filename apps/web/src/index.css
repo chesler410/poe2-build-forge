@@ -1,35 +1,68 @@
-/* Neutral-utility palette per docs/ui-exploration.md section 3 (option C). */
+/* "Arcane Panel" — grounded in PoE2's in-game Build Planner: near-black
+ * chambers, ornate gold frames, engraved caps. Two accents: gold carries
+ * identity (wordmark, section labels, the build panel frame); arcane violet
+ * carries interaction (CTA, links) and stays clear of the red/blue/green
+ * STR/INT/DEX chips. */
 :root {
-  --bg: #ffffff;
-  --surface: #f3f4f6;
-  --surface-2: #e5e7eb;
-  --text: #111827;
-  --text-muted: #6b7280;
-  --accent: #2563eb;
-  --accent-hover: #1d4ed8;
+  --bg: #faf8f3;
+  --surface: #ffffff;
+  --surface-2: #efece3;
+  --text: #1b1712;
+  --text-muted: #6c6556;
+  --accent: #6a3fd6;
+  --accent-hover: #5730bd;
+  --accent-glow: rgba(106, 63, 214, 0.18);
+  --on-accent: #ffffff;
+  --gold: #9a6f1c;
+  --gold-hover: #7d5912;
+  --gold-line: rgba(154, 111, 28, 0.4);
   --error: #b91c1c;
   --error-bg: #fef2f2;
   --warning: #92400e;
   --warning-bg: #fffbeb;
-  --border: #d1d5db;
-  --code-bg: #f9fafb;
+  --border: #ddd8cc;
+  --code-bg: #f4f1e9;
+  --panel-sheen: rgba(255, 255, 255, 0.6);
+  --atmosphere: transparent;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0f172a;
-    --surface: #1e293b;
-    --surface-2: #334155;
-    --text: #f1f5f9;
-    --text-muted: #94a3b8;
-    --accent: #60a5fa;
-    --accent-hover: #3b82f6;
+    --bg: #0a0b11;
+    --surface: #13141f;
+    --surface-2: #1c1d2c;
+    --text: #ecedf6;
+    --text-muted: #979dba;
+    --accent: #a78bff;
+    --accent-hover: #c1adff;
+    --accent-glow: rgba(167, 139, 255, 0.32);
+    --on-accent: #160e2e;
+    --gold: #e8b962;
+    --gold-hover: #f4cd85;
+    --gold-line: rgba(232, 185, 98, 0.5);
     --error: #fca5a5;
     --error-bg: #450a0a;
     --warning: #fcd34d;
     --warning-bg: #422006;
-    --border: #334155;
-    --code-bg: #0b1120;
+    --border: #2a2c40;
+    --code-bg: #0c0d16;
+    --panel-sheen: rgba(255, 255, 255, 0.04);
+    /* Arcane chamber: a warm gold pool up top, a cool violet pool below. */
+    --atmosphere: radial-gradient(
+        1100px 520px at 50% -8%,
+        rgba(232, 185, 98, 0.09),
+        transparent 60%
+      ),
+      radial-gradient(
+        900px 700px at 88% 22%,
+        rgba(167, 139, 255, 0.1),
+        transparent 55%
+      ),
+      radial-gradient(
+        820px 620px at 8% 88%,
+        rgba(120, 108, 214, 0.08),
+        transparent 55%
+      );
   }
 }
 
@@ -55,9 +88,21 @@ body {
     Arial,
     sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.55;
   background: var(--bg);
   color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Fixed atmosphere behind everything, so the page reads as a lit chamber
+ * rather than one flat slab. Cheap: a static layered gradient, no animation. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: var(--atmosphere);
 }
 
 code,
@@ -70,8 +115,12 @@ a {
   color: var(--accent);
   text-decoration: underline;
   text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
+  transition: color 0.12s ease, text-decoration-color 0.12s ease;
 }
 
 a:hover {
   color: var(--accent-hover);
+  text-decoration-color: currentColor;
 }

@@ -29,48 +29,151 @@ main {
   margin-top: 1rem;
 }
 
-header h1 {
-  margin: 0 0 0.25rem;
-  font-size: 1.75rem;
-  letter-spacing: -0.01em;
+.hero {
+  position: relative;
+  padding: 2.25rem 0 2.5rem;
+  margin-bottom: 1.75rem;
+  text-align: center;
+}
+
+/* A soft arcane halo behind the wordmark so the page opens with light. */
+.hero::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -1rem;
+  height: 240px;
+  z-index: -1;
+  background: radial-gradient(
+    70% 100% at 50% 0%,
+    var(--accent-glow),
+    transparent 70%
+  );
+  pointer-events: none;
+}
+
+.hero-eyebrow {
+  margin: 0 0 0.85rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.hero-eyebrow code {
+  font-family: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+  letter-spacing: 0;
+  font-size: 0.9em;
+  color: var(--gold);
+}
+
+.hero-eyebrow span {
+  color: var(--text-muted);
+  margin: 0 0.15em;
+}
+
+.wordmark {
+  margin: 0 0 0.7rem;
+  font-size: clamp(2.1rem, 7vw, 3rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  background: linear-gradient(
+    180deg,
+    var(--gold-hover) 0%,
+    var(--gold) 55%,
+    color-mix(in srgb, var(--gold) 70%, #000) 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .tagline {
-  margin: 0 0 2rem;
+  margin: 0 auto;
+  max-width: 34rem;
   color: var(--text-muted);
+  font-size: 1.02rem;
 }
 
-.tagline code {
-  background: var(--surface);
-  padding: 0.05rem 0.35rem;
+.tagline code,
+.hero-eyebrow code {
+  background: color-mix(in srgb, var(--gold) 12%, transparent);
+  padding: 0.05rem 0.4rem;
   border-radius: 4px;
   font-size: 0.85em;
 }
 
 .quick-start {
-  background: var(--surface);
-  padding: 1rem 1.5rem 1.25rem;
-  border-radius: 8px;
+  position: relative;
+  background: linear-gradient(180deg, var(--panel-sheen), transparent 120px),
+    var(--surface);
+  padding: 1.4rem 1.6rem 1.35rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
   margin-bottom: 1.5rem;
+  box-shadow: 0 1px 0 var(--panel-sheen) inset, 0 10px 30px rgba(0, 0, 0, 0.18);
 }
 
+/* Gold eyebrow with a short rule — the engraved-panel section marker. */
 .quick-start h2 {
-  margin: 0 0 0.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin: 0 0 1rem;
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--gold);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.16em;
+}
+
+.quick-start h2::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--gold-line), transparent);
 }
 
 .quick-start ol {
-  margin: 0 0 0.75rem;
-  padding-left: 1.25rem;
+  margin: 0 0 1rem;
+  padding: 0;
+  list-style: none;
+  counter-reset: step;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
 }
 
 .quick-start ol li {
-  margin: 0.25rem 0;
+  counter-increment: step;
+  position: relative;
+  padding-left: 2.4rem;
   font-size: 0.95rem;
+  min-height: 1.6rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Numbered here because these steps are a real sequence. */
+.quick-start ol li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: -0.05rem;
+  width: 1.65rem;
+  height: 1.65rem;
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--gold);
+  background: color-mix(in srgb, var(--gold) 10%, transparent);
+  border: 1px solid var(--gold-line);
+  border-radius: 50%;
 }
 
 .quick-start code {
@@ -112,13 +215,18 @@ header h1 {
 }
 
 .winddown-notice {
-  background: var(--surface);
-  border-left: 3px solid var(--accent);
-  border-radius: 8px;
-  padding: 0.85rem 1.25rem;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--gold) 8%, var(--surface)),
+    var(--surface) 55%
+  );
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--gold);
+  border-radius: 10px;
+  padding: 0.95rem 1.3rem;
   margin-bottom: 1.5rem;
   font-size: 0.95rem;
-  line-height: 1.5;
+  line-height: 1.55;
 }
 
 .link-button {
@@ -150,6 +258,88 @@ header h1 {
   flex-direction: column;
   gap: 0.5rem;
   margin-bottom: 1.5rem;
+  padding: 1.4rem 1.6rem 1.5rem;
+  background: linear-gradient(180deg, var(--panel-sheen), transparent 120px),
+    var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  box-shadow: 0 1px 0 var(--panel-sheen) inset, 0 10px 30px rgba(0, 0, 0, 0.18);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* The primary work surface lights up when you're in it. */
+.input-section:focus-within {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+  box-shadow: 0 1px 0 var(--panel-sheen) inset, 0 0 0 1px var(--accent-glow),
+    0 14px 36px rgba(0, 0, 0, 0.24);
+}
+
+.input-section > label {
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* The second path: bring an existing .build in to annotate. Violet-keyed to
+ * read as the creative/editing action, distinct from the gold convert flow. */
+.import-edit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem 1.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  padding: 1.3rem 1.6rem;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--accent) 12%, var(--surface)),
+    var(--surface) 62%
+  );
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.16);
+}
+
+.import-edit-copy {
+  flex: 1 1 22rem;
+  min-width: 0;
+}
+
+.import-edit-eyebrow {
+  margin: 0 0 0.3rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.import-edit-lede {
+  margin: 0 0 0.4rem;
+  font-size: 1.06rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text);
+}
+
+.import-edit-sub {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.import-edit-sub code {
+  background: var(--surface-2);
+  padding: 0.05rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+.import-edit-action {
+  flex: 0 0 auto;
 }
 
 .input-actions {
@@ -339,28 +529,42 @@ textarea:focus {
 
 button {
   align-self: flex-start;
-  padding: 0.5rem 1.25rem;
+  padding: 0.55rem 1.35rem;
   font-size: 0.95rem;
-  font-weight: 600;
-  background: var(--accent);
-  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  background: linear-gradient(
+    180deg,
+    var(--accent),
+    color-mix(in srgb, var(--accent) 80%, #000)
+  );
+  color: var(--on-accent);
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
-  transition: background 0.1s ease;
+  box-shadow: 0 6px 18px var(--accent-glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  transition: transform 0.1s ease, box-shadow 0.15s ease, filter 0.15s ease;
 }
 
 button:hover:not(:disabled) {
-  background: var(--accent-hover);
+  filter: brightness(1.08);
+  box-shadow: 0 8px 24px var(--accent-glow),
+    inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+button:active:not(:disabled) {
+  transform: translateY(1px);
 }
 
 button:disabled {
   opacity: 0.4;
   cursor: not-allowed;
+  box-shadow: none;
 }
 
 button:focus-visible {
-  outline: 2px solid var(--text);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
@@ -411,39 +615,96 @@ button:focus-visible {
 }
 
 .result {
-  margin-top: 1.5rem;
-  padding: 1.25rem 1.5rem;
-  background: var(--surface);
+  margin-top: 1.75rem;
+}
+
+/* Signature: the converted build shown as an in-game character panel —
+ * gold frame, engraved title, stat grid. The one loud moment on the page. */
+.result-summary {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem 1.65rem 1.4rem;
+  border: 1px solid var(--gold-line);
+  border-radius: 12px;
+  background: radial-gradient(
+      120% 100% at 50% 0%,
+      color-mix(in srgb, var(--gold) 7%, transparent),
+      transparent 55%
+    ),
+    linear-gradient(180deg, var(--panel-sheen), transparent 140px),
+    var(--surface);
+  box-shadow: 0 12px 34px rgba(0, 0, 0, 0.28),
+    inset 0 0 0 1px color-mix(in srgb, var(--gold) 8%, transparent);
+}
+
+/* Inner hairline — the double-rule of an ornate frame. */
+.result-summary::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border: 1px solid color-mix(in srgb, var(--gold) 22%, transparent);
   border-radius: 8px;
+  pointer-events: none;
+}
+
+.result-eyebrow {
+  margin: 0 0 0.4rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
 }
 
 .result h2 {
-  margin: 0 0 0.5rem;
-  font-size: 1.25rem;
+  margin: 0 0 1.1rem;
+  font-size: clamp(1.35rem, 4vw, 1.7rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  text-shadow: 0 0 24px var(--accent-glow);
 }
 
 dl {
   display: grid;
   grid-template-columns: max-content 1fr;
-  column-gap: 1.5rem;
-  row-gap: 0.25rem;
-  margin: 0.75rem 0 1rem;
+  column-gap: 1.75rem;
+  row-gap: 0;
+  margin: 0 0 1.25rem;
 }
 
 dt {
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.82rem;
+  letter-spacing: 0.03em;
+  padding: 0.4rem 0;
+  border-top: 1px solid var(--border);
+}
+
+dt:first-of-type,
+dt:first-of-type + dd {
+  border-top: none;
 }
 
 dd {
   margin: 0;
+  padding: 0.4rem 0;
+  font-weight: 700;
   font-variant-numeric: tabular-nums;
+  border-top: 1px solid var(--border);
+  text-align: right;
 }
 
 .placement-hint {
-  margin: 0.75rem 0 0;
+  margin: 1.25rem 0 0;
   font-size: 0.85rem;
+  line-height: 1.55;
   color: var(--text-muted);
+}
+
+.placement-hint strong {
+  color: var(--gold);
+  font-weight: 700;
 }
 
 .placement-hint code {
@@ -489,10 +750,6 @@ footer .version {
   white-space: nowrap;
 }
 
-.result-summary {
-  margin-bottom: 1.25rem;
-}
-
 .result-actions {
   display: flex;
   gap: 0.5rem;
@@ -500,14 +757,18 @@ footer .version {
 }
 
 .secondary-button {
-  background: transparent;
-  color: var(--accent);
-  border: 1px solid var(--accent);
+  background: color-mix(in srgb, var(--surface-2) 55%, transparent);
+  color: var(--text);
+  border: 1px solid var(--border);
+  box-shadow: none;
 }
 
 .secondary-button:hover:not(:disabled) {
-  background: var(--accent);
-  color: #ffffff;
+  filter: none;
+  background: var(--surface-2);
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+  color: var(--text);
+  box-shadow: 0 0 0 1px var(--accent-glow);
 }
 
 .validation-error {
@@ -946,13 +1207,16 @@ details.editor-section[open] {
 
   .result-actions,
   .input-actions,
-  .editor-toolbar {
+  .editor-toolbar,
+  .import-edit-action {
     width: 100%;
   }
 
   .result-actions > button,
   .input-actions > button,
-  .editor-toolbar > button {
+  .editor-toolbar > button,
+  .import-edit-action > button {
     flex: 1 1 auto;
+    width: 100%;
   }
 }
