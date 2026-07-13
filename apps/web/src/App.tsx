@@ -504,11 +504,9 @@ export function App() {
         <h2>How to use</h2>
         <ol>
           <li>
-            Copy a PoB code from your build of choice — from{' '}
-            <a href="https://pobb.in" target="_blank" rel="noreferrer">
-              pobb.in
-            </a>
-            , a maxroll.gg guide, your own Path of Building app, etc.
+            Copy a PoB code from your build of choice — see{' '}
+            <a href="#resources">where to find one</a> below if you don't
+            have one yet.
           </li>
           <li>Paste it in the box below.</li>
           <li>Click <strong>Convert</strong>.</li>
@@ -566,37 +564,87 @@ export function App() {
           </button>{' '}
           to see what the result looks like.
         </p>
-        <p className="example-prompt">
-          Don't have a build yet? Try{' '}
-          <a href="https://pobb.in" target="_blank" rel="noreferrer">
-            pobb.in
-          </a>
-          ,{' '}
-          <a
-            href="https://maxroll.gg/poe2/build-guides"
-            target="_blank"
-            rel="noreferrer"
-          >
-            maxroll.gg/poe2
-          </a>
-          ,{' '}
-          <a
-            href="https://poe.ninja/poe2/builds"
-            target="_blank"
-            rel="noreferrer"
-          >
-            poe.ninja/poe2
-          </a>
-          , or{' '}
-          <a
-            href="https://mobalytics.gg/poe-2/builds"
-            target="_blank"
-            rel="noreferrer"
-          >
-            mobalytics.gg/poe-2
-          </a>
-          .
-        </p>
+      </section>
+
+      <section className="quick-start resources" id="resources">
+        <h2>Where to find a build or PoB code</h2>
+        <div className="resource-group">
+          <span className="resource-group-label">Paste or host a raw PoB code</span>
+          <div className="resource-links">
+            <a
+              className="resource-chip"
+              href="https://pobb.in"
+              target="_blank"
+              rel="noreferrer"
+            >
+              pobb.in
+            </a>
+          </div>
+        </div>
+        <div className="resource-group">
+          <span className="resource-group-label">
+            Build guides — subscribe and it auto-syncs in-game, no files needed
+          </span>
+          <div className="resource-links">
+            <a
+              className="resource-chip"
+              href="https://maxroll.gg/poe2/build-guides"
+              target="_blank"
+              rel="noreferrer"
+            >
+              maxroll.gg/poe2
+            </a>
+            <a
+              className="resource-chip"
+              href="https://mobalytics.gg/poe-2/builds"
+              target="_blank"
+              rel="noreferrer"
+            >
+              mobalytics.gg/poe-2
+            </a>
+          </div>
+        </div>
+        <div className="resource-group">
+          <span className="resource-group-label">Browse community builds</span>
+          <div className="resource-links">
+            <a
+              className="resource-chip"
+              href="https://poe.ninja/poe2/builds"
+              target="_blank"
+              rel="noreferrer"
+            >
+              poe.ninja/poe2
+            </a>
+          </div>
+        </div>
+        <div className="resource-group">
+          <span className="resource-group-label">
+            Build your own in the Path of Building app
+          </span>
+          <div className="resource-links">
+            <a
+              className="resource-chip"
+              href="https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/releases"
+              target="_blank"
+              rel="noreferrer"
+            >
+              PathOfBuilding-PoE2 (GitHub)
+            </a>
+          </div>
+        </div>
+        <div className="resource-group">
+          <span className="resource-group-label">Upload the finished .build to sync in-game</span>
+          <div className="resource-links">
+            <a
+              className="resource-chip"
+              href="https://www.pathofexile2.com/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              pathofexile2.com
+            </a>
+          </div>
+        </div>
       </section>
 
       <section className="input-section">
