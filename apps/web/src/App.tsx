@@ -504,9 +504,8 @@ export function App() {
         <h2>How to use</h2>
         <ol>
           <li>
-            Copy a PoB code from your build of choice — see{' '}
-            <a href="#resources">where to find one</a> below if you don't
-            have one yet.
+            Copy a PoB code from your build of choice. Don't have one?{' '}
+            <a href="#resources">See where to find one below.</a>
           </li>
           <li>Paste it in the box below.</li>
           <li>Click <strong>Convert</strong>.</li>

@@ -151,18 +151,19 @@ main {
   counter-increment: step;
   position: relative;
   padding-left: 2.4rem;
+  min-height: 1.65rem;
   font-size: 0.95rem;
-  min-height: 1.6rem;
-  display: flex;
-  align-items: center;
+  line-height: 1.5;
 }
 
-/* Numbered here because these steps are a real sequence. */
+/* Numbered here because these steps are a real sequence. Plain block flow
+ * (not flex) so wrapped text and inline links/code read left-to-right
+ * normally instead of splitting into separate wrapping columns. */
 .quick-start ol li::before {
   content: counter(step);
   position: absolute;
   left: 0;
-  top: -0.05rem;
+  top: -0.11rem;
   width: 1.65rem;
   height: 1.65rem;
   display: grid;
