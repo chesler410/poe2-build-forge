@@ -55,6 +55,26 @@ export function BuildEditor({ build, onChange, labels }: Props) {
   const skills = build.skills ?? []
   const items = build.inventory_slots ?? []
 
+  const ascendancyCount = passives.filter((p) =>
+    normalizePassive(p).id.startsWith('Ascendancy')
+  ).length
+  const regularPassiveCount = passives.length - ascendancyCount
+
+  const navItems: Array<{ href: string; label: string; count: number }> = [
+    ...(regularPassiveCount > 0
+      ? [{ href: '#section-passives', label: 'Passives', count: regularPassiveCount }]
+      : []),
+    ...(ascendancyCount > 0
+      ? [{ href: '#section-ascendancy', label: 'Ascendancy', count: ascendancyCount }]
+      : []),
+    ...(skills.length > 0
+      ? [{ href: '#section-skills', label: 'Skill groups', count: skills.length }]
+      : []),
+    ...(items.length > 0
+      ? [{ href: '#section-items', label: 'Item hints', count: items.length }]
+      : [])
+  ]
+
   return (
     <div className="build-editor">
       <div className="editor-section">
@@ -88,6 +108,16 @@ export function BuildEditor({ build, onChange, labels }: Props) {
         </p>
       </div>
 
+      {navItems.length > 1 && (
+        <nav className="editor-nav" aria-label="Jump to section">
+          {navItems.map(({ href, label, count }) => (
+            <a key={href} className="editor-nav-link" href={href}>
+              {label} <span className="editor-nav-count">{count}</span>
+            </a>
+          ))}
+        </nav>
+      )}
+
       {passives.length > 0 && (
         <PassivesSection
           passives={passives}
@@ -99,6 +129,7 @@ export function BuildEditor({ build, onChange, labels }: Props) {
       {skills.length > 0 && (
         <EntryListEditor
           title={`Skill groups (${skills.length})`}
+          anchorId="section-skills"
           entries={skills}
           renderHeader={(s) => skillHeader(s, labels)}
           renderRow={(s, onEntryChange) => (
@@ -118,6 +149,7 @@ export function BuildEditor({ build, onChange, labels }: Props) {
       {items.length > 0 && (
         <EntryListEditor
           title={`Item-slot hints (${items.length})`}
+          anchorId="section-items"
           entries={items}
           renderHeader={(it) => itemHeader(it)}
           renderRow={(it, onEntryChange) => (
@@ -175,6 +207,15 @@ function PassivesSection({
     0
   )
 
+  const [query, setQuery] = useState('')
+  const q = query.trim().toLowerCase()
+  const matchesQuery = (entry: BuildPassive) => {
+    if (!q) return true
+    const obj = normalizePassive(entry)
+    const name = labels?.passiveNameById[obj.id] ?? ''
+    return obj.id.toLowerCase().includes(q) || name.toLowerCase().includes(q)
+  }
+
   function applyGroup(originalIndices: number[], nextSubset: BuildPassive[]) {
     const copy = passives.slice()
     originalIndices.forEach((origIdx, k) => {
@@ -182,6 +223,8 @@ function PassivesSection({
     })
     onChange(copy)
   }
+
+  let visibleGroupCount = 0
 
   return (
     <>
@@ -193,6 +236,16 @@ function PassivesSection({
           <summary className="editor-section-title">
             Passives ({regularCount}, {sortedPrefixes.length} types)
           </summary>
+          <span id="section-passives" className="section-anchor" />
+          {regularCount > 12 && (
+            <input
+              type="search"
+              className="entry-search"
+              value={query}
+              placeholder="Filter by name or id…"
+              onChange={(e) => setQuery(e.target.value)}
+            />
+          )}
           <div className="passive-groups">
             {sortedPrefixes.map((prefix) => {
               const rawIndices = groups.get(prefix)!
@@ -208,18 +261,23 @@ function PassivesSection({
                 return pa.id.localeCompare(pb.id)
               })
               const entries = sortedIndices.map((i) => passives[i])
+              const visibleK = entries
+                .map((entry, k) => ({ entry, k }))
+                .filter(({ entry }) => matchesQuery(entry))
+              if (q !== '' && visibleK.length === 0) return null
+              visibleGroupCount += 1
               const isChoice = isAttributeChoiceGroup(prefix)
               return (
                 <details
                   key={prefix}
                   className="editor-subsection"
-                  open={entries.length <= 3}
+                  open={q !== '' || entries.length <= 3}
                 >
                   <summary className="editor-subsection-title">
-                    {prefixLabel(prefix)} ({entries.length})
+                    {prefixLabel(prefix)} ({q !== '' ? visibleK.length : entries.length})
                   </summary>
                   <ul className="entry-list">
-                    {entries.map((entry, k) => (
+                    {visibleK.map(({ entry, k }) => (
                       <li key={sortedIndices[k]} className="entry-row">
                         {passiveHeader(entry, labels)}
                         {isChoice && (
@@ -249,12 +307,16 @@ function PassivesSection({
                 </details>
               )
             })}
+            {q !== '' && visibleGroupCount === 0 && (
+              <p className="entry-no-match">No passives match "{query}".</p>
+            )}
           </div>
         </details>
       )}
       {ascendancyIdx.length > 0 && (
         <EntryListEditor
           title={`Ascendancy passives (${ascendancyIdx.length})`}
+          anchorId="section-ascendancy"
           entries={ascendancyIdx.map((i) => passives[i])}
           renderHeader={(p) => passiveHeader(p, labels)}
           renderRow={(p, onEntryChange) => (
@@ -344,6 +406,7 @@ function formatGemId(id: string): string {
 
 interface EntryListProps<T> {
   title: string
+  anchorId?: string
   entries: T[]
   renderHeader: (entry: T) => React.ReactNode
   renderRow: (entry: T, onEntryChange: (next: T) => void) => React.ReactNode
@@ -353,6 +416,7 @@ interface EntryListProps<T> {
 
 function EntryListEditor<T>({
   title,
+  anchorId,
   entries,
   renderHeader,
   renderRow,
@@ -373,6 +437,7 @@ function EntryListEditor<T>({
   return (
     <details className="editor-section" open={entries.length <= 8}>
       <summary className="editor-section-title">{title}</summary>
+      {anchorId && <span id={anchorId} className="section-anchor" />}
       {showSearch && (
         <input
           type="search"

@@ -854,10 +854,55 @@ footer .version {
   margin-bottom: 1rem;
 }
 
+/* Jump straight to a section instead of scrolling past a long passive
+ * list — the more entries a build has, the more this earns its keep. */
+.editor-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.15rem 0;
+}
+
+.editor-nav-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.7rem;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.editor-nav-link:hover {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+  color: var(--accent);
+}
+
+.editor-nav-count {
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+/* Zero-size scroll targets, one per section, so #section-x links (and
+ * details' own fragment-auto-open behavior) land just below the header
+ * instead of flush against the top edge. */
+.section-anchor {
+  display: block;
+  scroll-margin-top: 0.75rem;
+}
+
 .editor-section {
   background: var(--surface-2);
+  border: 1px solid var(--border);
   padding: 0.75rem 1rem;
   border-radius: 6px;
+  scroll-margin-top: 0.75rem;
 }
 
 details.editor-section[open] {
@@ -866,12 +911,41 @@ details.editor-section[open] {
 
 .editor-section-title {
   cursor: pointer;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text);
   padding: 0.25rem 0;
+}
+
+.editor-section-title::-webkit-details-marker {
+  display: none;
+}
+
+/* Custom chevron, rotates open — reads more clearly than the default
+ * browser triangle and stays consistent across browsers/themes. */
+.editor-section-title::before {
+  content: '';
+  flex: 0 0 auto;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
+  transform: rotate(-45deg);
+  transition: transform 0.15s ease;
+}
+
+details[open] > .editor-section-title::before {
+  transform: rotate(45deg);
+}
+
+details.editor-section[open] > .editor-section-title {
+  margin-bottom: 0.6rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border);
 }
 
 .editor-field {
@@ -944,9 +1018,32 @@ details.editor-section[open] {
 
 .editor-subsection-title {
   cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
   font-size: 0.82rem;
   font-weight: 600;
-  color: var(--text);
+  color: var(--text-muted);
+}
+
+.editor-subsection-title::-webkit-details-marker {
+  display: none;
+}
+
+.editor-subsection-title::before {
+  content: '';
+  flex: 0 0 auto;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-right: 1.5px solid var(--text-muted);
+  border-bottom: 1.5px solid var(--text-muted);
+  transform: rotate(-45deg);
+  transition: transform 0.15s ease;
+}
+
+details[open] > .editor-subsection-title::before {
+  transform: rotate(45deg);
 }
 
 .entry-list {
