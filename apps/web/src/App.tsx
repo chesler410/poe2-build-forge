@@ -500,151 +500,168 @@ export function App() {
         (My Account → Builds).
       </aside>
 
-      <section className="quick-start">
-        <h2>How to use</h2>
-        <ol>
-          <li>
-            Copy a PoB code from your build of choice. Don't have one?{' '}
-            <a href="#resources">See where to find one below.</a>
-          </li>
-          <li>Paste it in the box below.</li>
-          <li>Click <strong>Convert</strong>.</li>
-          <li>Click <strong>Download</strong> to save the <code>.build</code> file.</li>
-          <li>
-            Drop the file into{' '}
-            <code>Documents\My Games\Path of Exile 2\BuildPlanner\</code> and
-            pick it from the in-game Build Planner.
-          </li>
-        </ol>
-        <details className="platform-note">
-          <summary>On Steam Deck, OneDrive, or console?</summary>
-          <ul>
-            <li>
-              <strong>Documents synced to OneDrive?</strong> The folder is under{' '}
-              <code>
-                OneDrive\Documents\My Games\Path of Exile 2\BuildPlanner\
-              </code>{' '}
-              instead — navigating via “Documents” in Explorer lands you in the
-              right place automatically.
-            </li>
-            <li>
-              <strong>Steam Deck</strong> (Proton):{' '}
-              <code>
-                ~/.local/share/Steam/steamapps/compatdata/2315204395/pfx/drive_c/users/steamuser/Documents/My
-                Games/Path of Exile 2/BuildPlanner/
-              </code>
-            </li>
-            <li>
-              <strong>PlayStation / Xbox:</strong> consoles can't read files
-              from disk, so use the account path instead — upload your{' '}
-              <code>.build</code> at{' '}
-              <a
-                href="https://www.pathofexile2.com/"
-                target="_blank"
-                rel="noreferrer"
-              >
-                pathofexile2.com
-              </a>{' '}
-              (My Account → Builds), authorize on the Path of Exile site, and it
-              syncs into the in-game planner on your console at next login.
-              (Subscribing to a creator's guide works the same way.) The local
-              folder above is PC and Steam Deck only.
-            </li>
-          </ul>
-        </details>
-        <p className="example-prompt">
-          First time here?{' '}
-          <button
-            type="button"
-            className="link-button"
-            onClick={handleLoadExample}
-          >
-            Load an example build
-          </button>{' '}
-          to see what the result looks like.
-        </p>
-      </section>
+      <details className="quick-start getting-started">
+        <summary className="getting-started-summary">
+          <span className="getting-started-summary-title">
+            How to use this tool
+          </span>
+          <span className="getting-started-summary-sub">
+            5 steps to convert, platform notes, and where to find a build
+          </span>
+        </summary>
+        <div className="getting-started-body">
+          <div className="getting-started-block">
+            <h3 className="getting-started-block-title">How to use</h3>
+            <ol>
+              <li>
+                Copy a PoB code from your build of choice. Don't have one?{' '}
+                <a href="#resources">See where to find one below.</a>
+              </li>
+              <li>Paste it in the box below.</li>
+              <li>Click <strong>Convert</strong>.</li>
+              <li>Click <strong>Download</strong> to save the <code>.build</code> file.</li>
+              <li>
+                Drop the file into{' '}
+                <code>Documents\My Games\Path of Exile 2\BuildPlanner\</code> and
+                pick it from the in-game Build Planner.
+              </li>
+            </ol>
+            <details className="platform-note">
+              <summary>On Steam Deck, OneDrive, or console?</summary>
+              <ul>
+                <li>
+                  <strong>Documents synced to OneDrive?</strong> The folder is under{' '}
+                  <code>
+                    OneDrive\Documents\My Games\Path of Exile 2\BuildPlanner\
+                  </code>{' '}
+                  instead — navigating via “Documents” in Explorer lands you in the
+                  right place automatically.
+                </li>
+                <li>
+                  <strong>Steam Deck</strong> (Proton):{' '}
+                  <code>
+                    ~/.local/share/Steam/steamapps/compatdata/2315204395/pfx/drive_c/users/steamuser/Documents/My
+                    Games/Path of Exile 2/BuildPlanner/
+                  </code>
+                </li>
+                <li>
+                  <strong>PlayStation / Xbox:</strong> consoles can't read files
+                  from disk, so use the account path instead — upload your{' '}
+                  <code>.build</code> at{' '}
+                  <a
+                    href="https://www.pathofexile2.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    pathofexile2.com
+                  </a>{' '}
+                  (My Account → Builds), authorize on the Path of Exile site, and it
+                  syncs into the in-game planner on your console at next login.
+                  (Subscribing to a creator's guide works the same way.) The local
+                  folder above is PC and Steam Deck only.
+                </li>
+              </ul>
+            </details>
+          </div>
 
-      <section className="quick-start resources" id="resources">
-        <h2>Where to find a build or PoB code</h2>
-        <div className="resource-group">
-          <span className="resource-group-label">Paste or host a raw PoB code</span>
-          <div className="resource-links">
-            <a
-              className="resource-chip"
-              href="https://pobb.in"
-              target="_blank"
-              rel="noreferrer"
-            >
-              pobb.in
-            </a>
+          <div className="getting-started-divider" />
+
+          <div className="getting-started-block" id="resources">
+            <h3 className="getting-started-block-title">
+              Where to find a build or PoB code
+            </h3>
+            <div className="resource-group">
+              <span className="resource-group-label">Paste or host a raw PoB code</span>
+              <div className="resource-links">
+                <a
+                  className="resource-chip"
+                  href="https://pobb.in"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  pobb.in
+                </a>
+              </div>
+            </div>
+            <div className="resource-group">
+              <span className="resource-group-label">
+                Build guides — subscribe and it auto-syncs in-game, no files needed
+              </span>
+              <div className="resource-links">
+                <a
+                  className="resource-chip"
+                  href="https://maxroll.gg/poe2/build-guides"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  maxroll.gg/poe2
+                </a>
+                <a
+                  className="resource-chip"
+                  href="https://mobalytics.gg/poe-2/builds"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  mobalytics.gg/poe-2
+                </a>
+              </div>
+            </div>
+            <div className="resource-group">
+              <span className="resource-group-label">Browse community builds</span>
+              <div className="resource-links">
+                <a
+                  className="resource-chip"
+                  href="https://poe.ninja/poe2/builds"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  poe.ninja/poe2
+                </a>
+              </div>
+            </div>
+            <div className="resource-group">
+              <span className="resource-group-label">
+                Build your own in the Path of Building app
+              </span>
+              <div className="resource-links">
+                <a
+                  className="resource-chip"
+                  href="https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/releases"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  PathOfBuilding-PoE2 (GitHub)
+                </a>
+              </div>
+            </div>
+            <div className="resource-group">
+              <span className="resource-group-label">Upload the finished .build to sync in-game</span>
+              <div className="resource-links">
+                <a
+                  className="resource-chip"
+                  href="https://www.pathofexile2.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  pathofexile2.com
+                </a>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="resource-group">
-          <span className="resource-group-label">
-            Build guides — subscribe and it auto-syncs in-game, no files needed
-          </span>
-          <div className="resource-links">
-            <a
-              className="resource-chip"
-              href="https://maxroll.gg/poe2/build-guides"
-              target="_blank"
-              rel="noreferrer"
-            >
-              maxroll.gg/poe2
-            </a>
-            <a
-              className="resource-chip"
-              href="https://mobalytics.gg/poe-2/builds"
-              target="_blank"
-              rel="noreferrer"
-            >
-              mobalytics.gg/poe-2
-            </a>
-          </div>
-        </div>
-        <div className="resource-group">
-          <span className="resource-group-label">Browse community builds</span>
-          <div className="resource-links">
-            <a
-              className="resource-chip"
-              href="https://poe.ninja/poe2/builds"
-              target="_blank"
-              rel="noreferrer"
-            >
-              poe.ninja/poe2
-            </a>
-          </div>
-        </div>
-        <div className="resource-group">
-          <span className="resource-group-label">
-            Build your own in the Path of Building app
-          </span>
-          <div className="resource-links">
-            <a
-              className="resource-chip"
-              href="https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2/releases"
-              target="_blank"
-              rel="noreferrer"
-            >
-              PathOfBuilding-PoE2 (GitHub)
-            </a>
-          </div>
-        </div>
-        <div className="resource-group">
-          <span className="resource-group-label">Upload the finished .build to sync in-game</span>
-          <div className="resource-links">
-            <a
-              className="resource-chip"
-              href="https://www.pathofexile2.com/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              pathofexile2.com
-            </a>
-          </div>
-        </div>
-      </section>
+      </details>
+
+      <p className="example-prompt standalone">
+        First time here?{' '}
+        <button
+          type="button"
+          className="link-button"
+          onClick={handleLoadExample}
+        >
+          Load an example build
+        </button>{' '}
+        to see what the result looks like.
+      </p>
 
       <section className="input-section">
         <label htmlFor="pob-code">PoB code or pobb.in URL</label>

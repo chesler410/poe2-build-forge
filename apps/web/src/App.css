@@ -117,11 +117,68 @@ main {
   box-shadow: 0 1px 0 var(--panel-sheen) inset, 0 10px 30px rgba(0, 0, 0, 0.18);
 }
 
-/* Gold eyebrow with a short rule — the engraved-panel section marker. */
-.quick-start h2 {
+/* Getting-started: how-to-use + resources collapsed into one disclosure so
+ * a first-time visitor sees the hero and the input box without scrolling
+ * past two full panels of instructions first. Gold eyebrow + chevron,
+ * matching the panel's engraved-marker language used elsewhere. */
+.getting-started-summary {
+  cursor: pointer;
+  list-style: none;
   display: flex;
   align-items: center;
   gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.getting-started-summary::-webkit-details-marker {
+  display: none;
+}
+
+.getting-started-summary::before {
+  content: '';
+  flex: 0 0 auto;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-right: 2px solid var(--gold);
+  border-bottom: 2px solid var(--gold);
+  transform: rotate(-45deg);
+  transition: transform 0.15s ease;
+}
+
+.getting-started[open] > .getting-started-summary::before {
+  transform: rotate(45deg);
+}
+
+.getting-started-summary-title {
+  font-size: 0.74rem;
+  font-weight: 700;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+
+.getting-started-summary-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.getting-started[open] > .getting-started-summary {
+  margin-bottom: 1.1rem;
+}
+
+.getting-started-body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Collapsed state reads as a slim, inviting header rather than a full
+ * empty panel — most visitors won't need to open this. */
+details.getting-started:not([open]) {
+  padding-top: 0.95rem;
+  padding-bottom: 0.95rem;
+}
+
+.getting-started-block-title {
   margin: 0 0 1rem;
   font-size: 0.74rem;
   font-weight: 700;
@@ -130,11 +187,14 @@ main {
   letter-spacing: 0.16em;
 }
 
-.quick-start h2::after {
-  content: '';
-  flex: 1;
+.getting-started-divider {
   height: 1px;
-  background: linear-gradient(90deg, var(--gold-line), transparent);
+  margin: 1.4rem 0;
+  background: linear-gradient(
+    90deg,
+    var(--gold-line),
+    transparent 70%
+  );
 }
 
 .quick-start ol {
@@ -190,11 +250,9 @@ main {
   color: var(--text-muted);
 }
 
-/* Resources: a categorized directory of every known place to get a PoB
- * code or a finished build, so we never look like we're steering people
- * toward only one source. */
-.resources h2 {
-  margin-bottom: 1.1rem;
+.example-prompt.standalone {
+  margin: -0.75rem 0 1.5rem;
+  text-align: center;
 }
 
 .resource-group {
@@ -854,9 +912,9 @@ footer .version {
   margin-bottom: 1rem;
 }
 
-/* Jump straight to a section instead of scrolling past a long passive
- * list — the more entries a build has, the more this earns its keep. */
-.editor-nav {
+/* One section visible at a time instead of four stacked accordions —
+ * the biggest lever on page height for a build with a long passive list. */
+.editor-tabs {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
@@ -866,6 +924,7 @@ footer .version {
 .editor-nav-link {
   display: inline-flex;
   align-items: center;
+  align-self: auto;
   gap: 0.4rem;
   padding: 0.3rem 0.7rem;
   background: var(--surface-2);
@@ -875,10 +934,19 @@ footer .version {
   font-size: 0.82rem;
   font-weight: 500;
   text-decoration: none;
-  transition: border-color 0.15s ease, color 0.15s ease;
+  box-shadow: none;
+  transition: border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
 }
 
-.editor-nav-link:hover {
+.editor-nav-link:hover:not(:disabled) {
+  border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
+  color: var(--accent);
+  filter: none;
+  box-shadow: none;
+}
+
+.editor-nav-link-active {
+  background: color-mix(in srgb, var(--accent) 16%, var(--surface-2));
   border-color: color-mix(in srgb, var(--accent) 55%, var(--border));
   color: var(--accent);
 }
@@ -889,12 +957,9 @@ footer .version {
   font-size: 0.78rem;
 }
 
-/* Zero-size scroll targets, one per section, so #section-x links (and
- * details' own fragment-auto-open behavior) land just below the header
- * instead of flush against the top edge. */
-.section-anchor {
-  display: block;
-  scroll-margin-top: 0.75rem;
+.editor-nav-link-active .editor-nav-count {
+  color: inherit;
+  opacity: 0.75;
 }
 
 .editor-section {
@@ -902,7 +967,84 @@ footer .version {
   border: 1px solid var(--border);
   padding: 0.75rem 1rem;
   border-radius: 6px;
-  scroll-margin-top: 0.75rem;
+}
+
+.editor-tabpanel-body {
+  padding-bottom: 1rem;
+}
+
+.panel-toolbar {
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.panel-toolbar-search {
+  flex: 1 1 auto;
+  margin: 0;
+  min-width: 0;
+}
+
+.panel-toolbar button {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.secondary-button-active {
+  background: color-mix(in srgb, var(--accent) 22%, var(--surface-2));
+  border-color: color-mix(in srgb, var(--accent) 60%, var(--border));
+  color: var(--accent);
+}
+
+/* Focus mode: one entry at a time with Prev/Next, so annotating a long
+ * build (or swapping attribute-choice nodes) doesn't mean scrolling
+ * through a wall of rows to find what's left undone. */
+.focus-stepper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.focus-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.focus-only-unannotated {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+.focus-remaining {
+  font-variant-numeric: tabular-nums;
+}
+
+.focus-progress {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.focus-card {
+  padding: 0.9rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.focus-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
 }
 
 details.editor-section[open] {
