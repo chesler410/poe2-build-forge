@@ -1,7 +1,7 @@
 [
   {
     "filename": "ascendancies.json",
-    "raw_size": 17172354,
+    "raw_size": 17127138,
     "pruned_size": 2715,
     "reduction_pct": 100,
     "pruned": true,
@@ -9,11 +9,11 @@
   },
   {
     "filename": "base_items.json",
-    "raw_size": 7842214,
-    "pruned_size": 960152,
-    "reduction_pct": 87.8,
+    "raw_size": 8167102,
+    "pruned_size": 1003204,
+    "reduction_pct": 87.7,
     "pruned": true,
-    "sha256": "c9b77dd6e1d2af0eed30eddbf8d7d70759594a4db512395c6cdcac71b8e0c7e6"
+    "sha256": "e17a5b56cd6dfa268e13335a1cc0bf30143434b644cddba9d9170f2a95626855"
   },
   {
     "filename": "characters.json",
@@ -57,11 +57,11 @@
   },
   {
     "filename": "tree.json",
-    "raw_size": 1910409,
-    "pruned_size": 1910409,
+    "raw_size": 2049036,
+    "pruned_size": 2049036,
     "reduction_pct": 0,
     "pruned": false,
-    "sha256": "f737d85016b834fcf56c961fd5fd93e1add172f01600fbf6d0f4f0a95e5af848"
+    "sha256": "6449fe534c0265b21f59f8213254bd3f37a445887582c40aab04ad11cede3e95"
   },
   {
     "filename": "uniques.json",

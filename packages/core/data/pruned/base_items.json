@@ -1931,6 +1931,150 @@
     "drop_level": 1,
     "release_state": "released"
   },
+  "Metadata/Items/MicrotransactionCurrency/MicrotransactionWrapper1x1": {
+    "name": "MTX Wrapper",
+    "item_class": "Microtransaction",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/MicrotransactionWrapper1x2": {
+    "name": "MTX Wrapper",
+    "item_class": "Microtransaction",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/MicrotransactionWrapper2x1": {
+    "name": "MTX Wrapper",
+    "item_class": "Microtransaction",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/MicrotransactionWrapper2x2": {
+    "name": "MTX Wrapper",
+    "item_class": "Microtransaction",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/MicrotransactionWrapper2x3": {
+    "name": "MTX Wrapper",
+    "item_class": "Microtransaction",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/MicrotransactionMysteryBoxWrapper": {
+    "name": "Mystery Box",
+    "item_class": "Microtransaction",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionAnimations/MicrotransactionDanceDuelist": {
+    "name": "Dance - Duelist",
+    "item_class": "Microtransaction",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionAnimations/MicrotransactionDanceMarauder": {
+    "name": "Dance - Marauder",
+    "item_class": "Microtransaction",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionAnimations/MicrotransactionDanceRanger": {
+    "name": "Dance - Ranger",
+    "item_class": "Microtransaction",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionAnimations/MicrotransactionDanceShadow": {
+    "name": "Dance - Shadow",
+    "item_class": "Microtransaction",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionAnimations/MicrotransactionDanceTemplar": {
+    "name": "Dance - Templar",
+    "item_class": "Microtransaction",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionAnimations/MicrotransactionDanceWitch": {
+    "name": "Dance - Witch",
+    "item_class": "Microtransaction",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionAnimations/MicrotransactionDanceScion": {
+    "name": "Dance - Scion",
+    "item_class": "Microtransaction",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/HiddenItem1x1": {
+    "name": "Hidden Item",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/HiddenItem1x2": {
+    "name": "Hidden Item",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/HiddenItem1x3": {
+    "name": "Hidden Item",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/HiddenItem1x4": {
+    "name": "Hidden Item",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/HiddenItem2x1": {
+    "name": "Hidden Item",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/HiddenItem2x2": {
+    "name": "Hidden Item",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/HiddenItem2x3": {
+    "name": "Hidden Item",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/HiddenItem2x4": {
+    "name": "Hidden Item",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/HiddenItem3x2": {
+    "name": "Hidden Item",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/HiddenItem3x1": {
+    "name": "Hidden Item",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/HiddenItem4x1": {
+    "name": "Hidden Item",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
   "Metadata/Items/MicrotransactionCurrency/GiftBox1x1": {
     "name": "Wrapped Gift",
     "item_class": "GiftBox",
@@ -1994,6 +2138,72 @@
   "Metadata/Items/MicrotransactionCurrency/GiftBox4x1": {
     "name": "Wrapped Gift",
     "item_class": "GiftBox",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/HiddenItem1x1Ritual": {
+    "name": "Hidden Item",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/HiddenItem1x2Ritual": {
+    "name": "Hidden Item",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/HiddenItem1x3Ritual": {
+    "name": "Hidden Item",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/HiddenItem1x4Ritual": {
+    "name": "Hidden Item",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/HiddenItem2x1Ritual": {
+    "name": "Hidden Item",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/HiddenItem2x2Ritual": {
+    "name": "Hidden Item",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/HiddenItem2x3Ritual": {
+    "name": "Hidden Item",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/HiddenItem2x4Ritual": {
+    "name": "Hidden Item",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/HiddenItem3x2Ritual": {
+    "name": "Hidden Item",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/HiddenItem3x1Ritual": {
+    "name": "Hidden Item",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MicrotransactionCurrency/HiddenItem4x1Ritual": {
+    "name": "Hidden Item",
+    "item_class": "HiddenItem",
     "drop_level": 1,
     "release_state": "released"
   },
@@ -2708,6 +2918,18 @@
   "Metadata/Items/Masters/PirateTreasureKey": {
     "name": "Master Key",
     "item_class": "QuestItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Incursion/IncursionKey": {
+    "name": "Stone of Passage",
+    "item_class": "IncursionItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Incursion/IncursionBomb": {
+    "name": "Flashpowder Keg",
+    "item_class": "IncursionItem",
     "drop_level": 1,
     "release_state": "released"
   },
@@ -5315,6 +5537,186 @@
     "drop_level": 1,
     "release_state": "unreleased"
   },
+  "Metadata/Items/Currency/CurrencyIncubationEssence": {
+    "name": "Whispering Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationCurrency": {
+    "name": "Fine Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationUniques": {
+    "name": "Singular Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationMaps": {
+    "name": "Cartographer's Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationUniqueMaps": {
+    "name": "Otherworldly Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationAbyss": {
+    "name": "Abyssal Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationFragments": {
+    "name": "Fragmented Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationScarabs": {
+    "name": "Skittering Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationEssenceHigh": {
+    "name": "Infused Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationFossils": {
+    "name": "Fossilised Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationPerandus": {
+    "name": "Kalguuran Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationDivination": {
+    "name": "Diviner's Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationTalismans": {
+    "name": "Primal Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationLabyrinthHelm": {
+    "name": "Enchanted Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationArmour6Linked": {
+    "name": "Geomancer's Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationCurrencyMid": {
+    "name": "Ornate Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationUniqueLeague": {
+    "name": "Time-Lost Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationArmourShaperElder": {
+    "name": "Celestial Armoursmith's Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationWeaponShaperElder": {
+    "name": "Celestial Blacksmith's Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationTrinketShaperElder": {
+    "name": "Celestial Jeweller's Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationMapElder": {
+    "name": "Eldritch Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationBreach": {
+    "name": "Obscured Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationHarbingerShard": {
+    "name": "Foreboding Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationGem": {
+    "name": "Thaumaturge's Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationGeneric": {
+    "name": "Mysterious Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationGemLow": {
+    "name": "Gemcutter's Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationBestiary": {
+    "name": "Feral Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationBlight": {
+    "name": "Blighted Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationMetamorph": {
+    "name": "Morphing Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Currency/CurrencyIncubationDelirium": {
+    "name": "Maddening Incubator",
+    "item_class": "Incubator",
+    "drop_level": 1,
+    "release_state": "released"
+  },
   "Metadata/Items/Currency/CurrencyIncubationEssenceStackable": {
     "name": "Whispering Incubator",
     "item_class": "IncubatorStackable",
@@ -5492,6 +5894,258 @@
   "Metadata/Items/Currency/CurrencyIncubationDeliriumStackable": {
     "name": "Maddening Incubator",
     "item_class": "IncubatorStackable",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/PantheonSouls/PantheonSoulBrineKingUpgrade1": {
+    "name": "Captured Soul of Puruna, the Challenger",
+    "item_class": "PantheonSoul",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/PantheonSouls/PantheonSoulBrineKingUpgrade2": {
+    "name": "Captured Soul of Captain Tanner Lightfoot",
+    "item_class": "PantheonSoul",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/PantheonSouls/PantheonSoulBrineKingUpgrade3": {
+    "name": "Captured Soul of Pirate Treasure",
+    "item_class": "PantheonSoul",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/PantheonSouls/PantheonSoulArakaaliUpgrade1": {
+    "name": "Captured Soul of Maligaro the Mutilator",
+    "item_class": "PantheonSoul",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/PantheonSouls/PantheonSoulArakaaliUpgrade2": {
+    "name": "Captured Soul of Hybrid Widow",
+    "item_class": "PantheonSoul",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/PantheonSouls/PantheonSoulArakaaliUpgrade3": {
+    "name": "Captured Soul of Queen of the Great Tangle",
+    "item_class": "PantheonSoul",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/PantheonSouls/PantheonSoulSolarisUpgrade1": {
+    "name": "Captured Soul of a Redblade Warlord",
+    "item_class": "PantheonSoul",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/PantheonSouls/PantheonSoulSolarisUpgrade2": {
+    "name": "Captured Soul of The Infernal King",
+    "item_class": "PantheonSoul",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/PantheonSouls/PantheonSoulSolarisUpgrade3": {
+    "name": "Captured Soul of Jorus, Sky's Edge",
+    "item_class": "PantheonSoul",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/PantheonSouls/PantheonSoulLunarisUpgrade1": {
+    "name": "Captured Soul of Sebbert, Crescent's Point",
+    "item_class": "PantheonSoul",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/PantheonSouls/PantheonSoulLunarisUpgrade2": {
+    "name": "Captured Soul of Khor, Sister of Shadows",
+    "item_class": "PantheonSoul",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/PantheonSouls/PantheonSoulLunarisUpgrade3": {
+    "name": "Captured Soul of Captain Clayborne, The Accursed",
+    "item_class": "PantheonSoul",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/PantheonSouls/PantheonSoulAbberathUpgrade1": {
+    "name": "Captured Soul of Megaera",
+    "item_class": "PantheonSoul",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/PantheonSouls/PantheonSoulGruthkulUpgrade1": {
+    "name": "Captured Soul of Erebix, Light's Bane",
+    "item_class": "PantheonSoul",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/PantheonSouls/PantheonSoulYugulUpgrade1": {
+    "name": "Captured Soul of Varhesh, Shimmering Aberration",
+    "item_class": "PantheonSoul",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/PantheonSouls/PantheonSoulShakariUpgrade1": {
+    "name": "Captured Soul of Terror of the Infinite Drifts",
+    "item_class": "PantheonSoul",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/PantheonSouls/PantheonSoulTukohamaUpgrade1": {
+    "name": "Captured Soul of Tahsin, Warmaker",
+    "item_class": "PantheonSoul",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/PantheonSouls/PantheonSoulRalakeshUpgrade1": {
+    "name": "Captured Soul of Drek, Apex Hunter",
+    "item_class": "PantheonSoul",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/PantheonSouls/PantheonSoulGarukhanUpgrade1": {
+    "name": "Captured Soul of Stalker of the Endless Dunes",
+    "item_class": "PantheonSoul",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/PantheonSouls/PantheonSoulRyslathaUpgrade1": {
+    "name": "Captured Soul of Gorulis, Will-Thief",
+    "item_class": "PantheonSoul",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/UniqueFragments/FragmentUniqueShield1_1": {
+    "name": "Archon Kite Shield Piece",
+    "item_class": "UniqueFragment",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/UniqueFragments/FragmentUniqueShield1_2": {
+    "name": "Archon Kite Shield Piece",
+    "item_class": "UniqueFragment",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/UniqueFragments/FragmentUniqueShield1_3": {
+    "name": "Archon Kite Shield Piece",
+    "item_class": "UniqueFragment",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/UniqueFragments/FragmentUniqueShield1_4": {
+    "name": "Archon Kite Shield Piece",
+    "item_class": "UniqueFragment",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/UniqueFragments/FragmentUniqueSword1_1": {
+    "name": "Legion Sword Piece",
+    "item_class": "UniqueFragment",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/UniqueFragments/FragmentUniqueSword1_2": {
+    "name": "Legion Sword Piece",
+    "item_class": "UniqueFragment",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/UniqueFragments/FragmentUniqueSword1_3": {
+    "name": "Legion Sword Piece",
+    "item_class": "UniqueFragment",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/UniqueFragments/FragmentUniqueStaff1_1": {
+    "name": "Imperial Staff Piece",
+    "item_class": "UniqueFragment",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/UniqueFragments/FragmentUniqueStaff1_2": {
+    "name": "Imperial Staff Piece",
+    "item_class": "UniqueFragment",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/UniqueFragments/FragmentUniqueStaff1_3": {
+    "name": "Imperial Staff Piece",
+    "item_class": "UniqueFragment",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/UniqueFragments/FragmentUniqueBelt1_1": {
+    "name": "Cloth Belt Piece",
+    "item_class": "UniqueFragment",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/UniqueFragments/FragmentUniqueBelt1_2": {
+    "name": "Cloth Belt Piece",
+    "item_class": "UniqueFragment",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/UniqueFragments/FragmentUniqueQuiver1_1": {
+    "name": "Blunt Arrow Quiver Piece",
+    "item_class": "UniqueFragment",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/UniqueFragments/FragmentUniqueQuiver1_2": {
+    "name": "Blunt Arrow Quiver Piece",
+    "item_class": "UniqueFragment",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/UniqueFragments/FragmentUniqueQuiver1_3": {
+    "name": "Blunt Arrow Quiver Piece",
+    "item_class": "UniqueFragment",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/UniqueFragments/FragmentUniqueHelmet1_1": {
+    "name": "Callous Mask Piece",
+    "item_class": "UniqueFragment",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/UniqueFragments/FragmentUniqueHelmet1_2": {
+    "name": "Callous Mask Piece",
+    "item_class": "UniqueFragment",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/UniqueFragments/FragmentUniqueHelmet1_3": {
+    "name": "Callous Mask Piece",
+    "item_class": "UniqueFragment",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/UniqueFragments/FragmentUniqueMap26_1": {
+    "name": "Ultimatum Aspect",
+    "item_class": "UniqueFragment",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/UniqueFragments/FragmentUniqueMap26_2": {
+    "name": "Ultimatum Aspect",
+    "item_class": "UniqueFragment",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/UniqueFragments/FragmentUniqueMap26_3": {
+    "name": "Ultimatum Aspect",
+    "item_class": "UniqueFragment",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/UniqueFragments/FragmentUniqueMap26_4": {
+    "name": "Ultimatum Aspect",
+    "item_class": "UniqueFragment",
     "drop_level": 1,
     "release_state": "released"
   },
@@ -6995,6 +7649,288 @@
     "drop_level": 83,
     "release_state": "released"
   },
+  "Metadata/Items/Heist/HeistFinalObjective1": {
+    "name": "Urn of Farud",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective2": {
+    "name": "Box of Tripyxis",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective3": {
+    "name": "Incense of Keth",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective4": {
+    "name": "Crest of Ezomyr",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective5": {
+    "name": "Ez Myrae Tome",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective6": {
+    "name": "Hand of Arimor",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective7": {
+    "name": "Abberathine Horns",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective8": {
+    "name": "Admiral Proclar's Pipe",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective9": {
+    "name": "Alchemical Chalice",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective10": {
+    "name": "Ogham Candelabra",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective11": {
+    "name": "Tusked Hominid Skull",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective12": {
+    "name": "Celestial Stone",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective13": {
+    "name": "Urn of the Original Ashes",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective14": {
+    "name": "Heart Coil",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective15": {
+    "name": "Enigmatic Assembly A4",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective16": {
+    "name": "Enigmatic Assembly B2",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective17": {
+    "name": "Enigmatic Assembly C5",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective18": {
+    "name": "Enigmatic Assembly D1",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective19": {
+    "name": "Mirror of Teklatipitzi",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective20": {
+    "name": "Bust of Emperor Caspiro",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective21": {
+    "name": "Golden Hetzapal Idol",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective22": {
+    "name": "Flask of Welakath",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective23": {
+    "name": "Forbidden Lamp",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective24": {
+    "name": "The Goddess of Water",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective25": {
+    "name": "The Golden Ibis",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective26": {
+    "name": "Impossible Crystal",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective27": {
+    "name": "Living Ice",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective28": {
+    "name": "Seal of Lunaris",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective29": {
+    "name": "Golden Matatl Idol",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective30": {
+    "name": "The Sea Pearl Heirloom",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective31": {
+    "name": "Seal of Solaris",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective32": {
+    "name": "Golden Napuatzi Idol",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective33": {
+    "name": "Essence Burner",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective34": {
+    "name": "Ancient Seal",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective35": {
+    "name": "Blood of Innocence",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective36": {
+    "name": "Dekhara's Resolve",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective37": {
+    "name": "Orbala's Fifth Adventure",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective38": {
+    "name": "Staff of the First Sin Eater",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective39": {
+    "name": "Sword of the Inverse Relic",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective40": {
+    "name": "Golden Slave Idol",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective41": {
+    "name": "Golden Xoplotli Idol",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective42": {
+    "name": "Ceremonial Goblet",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective43": {
+    "name": "Crested Golden Idol",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective44": {
+    "name": "Golden Ceremonial Mask",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective45": {
+    "name": "Golden Prayer Idol",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective46": {
+    "name": "Golden Grotesque",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Heist/HeistFinalObjective47": {
+    "name": "Golden Sacrificial Glyph",
+    "item_class": "HeistObjective",
+    "drop_level": 1,
+    "release_state": "released"
+  },
   "Metadata/Items/Heist/QuestItems/HeistFinalObjectiveQuestKarst1": {
     "name": "Karst's Lockpicks",
     "item_class": "QuestItem",
@@ -7223,6 +8159,42 @@
     "drop_level": 1,
     "release_state": "released"
   },
+  "Metadata/Items/MapFragments/Maven/MavenMapVoid1": {
+    "name": "Maven's Invitation: The Formed",
+    "item_class": "MiscMapItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MapFragments/Maven/MavenMapVoid2": {
+    "name": "Maven's Invitation: The Twisted",
+    "item_class": "MiscMapItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MapFragments/Maven/MavenMapVoid3": {
+    "name": "Maven's Invitation: The Forgotten",
+    "item_class": "MiscMapItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MapFragments/Maven/MavenMapVoid4": {
+    "name": "Maven's Invitation: The Hidden",
+    "item_class": "MiscMapItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MapFragments/Maven/MavenMapVoid5": {
+    "name": "Maven's Invitation: The Feared",
+    "item_class": "MiscMapItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MapFragments/Maven/MavenMapVoid6": {
+    "name": "Maven's Invitation: The Elderslayers",
+    "item_class": "MiscMapItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
   "Metadata/Items/MapFragments/Maven/MavenMapAtlas1": {
     "name": "Maven's Invitation: The Atlas",
     "item_class": "QuestItem",
@@ -7244,6 +8216,12 @@
   "Metadata/Items/MapFragments/Maven/MavenMapAtlas4": {
     "name": "Maven's Invitation: The Atlas",
     "item_class": "QuestItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MapFragments/Maven/MavenMapAtlas5": {
+    "name": "Maven's Invitation: The Atlas",
+    "item_class": "MiscMapItem",
     "drop_level": 1,
     "release_state": "released"
   },
@@ -7271,6 +8249,12 @@
     "drop_level": 1,
     "release_state": "released"
   },
+  "Metadata/Items/MapFragments/Maven/MavenMapOutsideTopLeft5": {
+    "name": "Maven's Invitation: Haewark Hamlet",
+    "item_class": "MiscMapItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
   "Metadata/Items/MapFragments/Maven/MavenMapInsideTopLeft1": {
     "name": "Maven's Invitation: Tirn's End",
     "item_class": "QuestItem",
@@ -7292,6 +8276,12 @@
   "Metadata/Items/MapFragments/Maven/MavenMapInsideTopLeft4": {
     "name": "Maven's Invitation: Tirn's End",
     "item_class": "QuestItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MapFragments/Maven/MavenMapInsideTopLeft5": {
+    "name": "Maven's Invitation: Tirn's End",
+    "item_class": "MiscMapItem",
     "drop_level": 1,
     "release_state": "released"
   },
@@ -7319,6 +8309,12 @@
     "drop_level": 1,
     "release_state": "released"
   },
+  "Metadata/Items/MapFragments/Maven/MavenMapInsideTopRight5": {
+    "name": "Maven's Invitation: Lex Proxima",
+    "item_class": "MiscMapItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
   "Metadata/Items/MapFragments/Maven/MavenMapOutsideTopRight1": {
     "name": "Maven's Invitation: Lex Ejoris",
     "item_class": "QuestItem",
@@ -7340,6 +8336,12 @@
   "Metadata/Items/MapFragments/Maven/MavenMapOutsideTopRight4": {
     "name": "Maven's Invitation: Lex Ejoris",
     "item_class": "QuestItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MapFragments/Maven/MavenMapOutsideTopRight5": {
+    "name": "Maven's Invitation: Lex Ejoris",
+    "item_class": "MiscMapItem",
     "drop_level": 1,
     "release_state": "released"
   },
@@ -7367,6 +8369,12 @@
     "drop_level": 1,
     "release_state": "released"
   },
+  "Metadata/Items/MapFragments/Maven/MavenMapOutsideBottomLeft5": {
+    "name": "Maven's Invitation: New Vastir",
+    "item_class": "MiscMapItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
   "Metadata/Items/MapFragments/Maven/MavenMapInsideBottomLeft1": {
     "name": "Maven's Invitation: Glennach Cairns",
     "item_class": "QuestItem",
@@ -7388,6 +8396,12 @@
   "Metadata/Items/MapFragments/Maven/MavenMapInsideBottomLeft4": {
     "name": "Maven's Invitation: Glennach Cairns",
     "item_class": "QuestItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MapFragments/Maven/MavenMapInsideBottomLeft5": {
+    "name": "Maven's Invitation: Glennach Cairns",
+    "item_class": "MiscMapItem",
     "drop_level": 1,
     "release_state": "released"
   },
@@ -7415,6 +8429,12 @@
     "drop_level": 1,
     "release_state": "released"
   },
+  "Metadata/Items/MapFragments/Maven/MavenMapInsideBottomRight5": {
+    "name": "Maven's Invitation: Valdo's Rest",
+    "item_class": "MiscMapItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
   "Metadata/Items/MapFragments/Maven/MavenMapOutsideBottomRight1": {
     "name": "Maven's Invitation: Lira Arthain",
     "item_class": "QuestItem",
@@ -7436,6 +8456,12 @@
   "Metadata/Items/MapFragments/Maven/MavenMapOutsideBottomRight4": {
     "name": "Maven's Invitation: Lira Arthain",
     "item_class": "QuestItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MapFragments/Maven/MavenMapOutsideBottomRight5": {
+    "name": "Maven's Invitation: Lira Arthain",
+    "item_class": "MiscMapItem",
     "drop_level": 1,
     "release_state": "released"
   },
@@ -7592,6 +8618,18 @@
   "Metadata/Items/AtlasUpgrades/AtlasUpgradeCraftable3_8": {
     "name": "Titanium Lira Arthain Watchstone",
     "item_class": "AtlasUpgradeItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Incursion/ItemisedTemple": {
+    "name": "Chronicle of Atzoatl",
+    "item_class": "MiscMapItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Ultimatum/ItemisedTrial": {
+    "name": "Inscribed Ultimatum",
+    "item_class": "MiscMapItem",
     "drop_level": 1,
     "release_state": "released"
   },
@@ -10295,9 +11333,21 @@
     "drop_level": 1,
     "release_state": "released"
   },
+  "Metadata/Items/MapFragments/Primordial/CurrencyTangleKey": {
+    "name": "Writhing Invitation",
+    "item_class": "MiscMapItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
   "Metadata/Items/MapFragments/Primordial/QuestTangleBossKey": {
     "name": "Screaming Invitation",
     "item_class": "QuestItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MapFragments/Primordial/CurrencyTangleBossKey": {
+    "name": "Screaming Invitation",
+    "item_class": "MiscMapItem",
     "drop_level": 1,
     "release_state": "released"
   },
@@ -10307,9 +11357,27 @@
     "drop_level": 1,
     "release_state": "released"
   },
+  "Metadata/Items/MapFragments/Primordial/CurrencyCleansingFireKey": {
+    "name": "Polaric Invitation",
+    "item_class": "MiscMapItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
   "Metadata/Items/MapFragments/Primordial/QuestCleansingFireBossKey": {
     "name": "Incandescent Invitation",
     "item_class": "QuestItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/MapFragments/Primordial/CurrencyCleansingFireBossKey": {
+    "name": "Incandescent Invitation",
+    "item_class": "MiscMapItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Archnemesis/ArchnemesisMod": {
+    "name": "Archnemesis Mod",
+    "item_class": "ArchnemesisMod",
     "drop_level": 1,
     "release_state": "released"
   },
@@ -14955,6 +16023,318 @@
     "name": "Refined Breach Ring",
     "item_class": "Ring",
     "drop_level": 40,
+    "release_state": "released"
+  },
+  "Metadata/Items/Weapons/OneHandWeapons/OneHandSwords/FourOneHandSwordGamble": {
+    "name": "Random One Handed Sword",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Weapons/TwoHandWeapons/TwoHandSwords/FourTwoHandSwordGamble": {
+    "name": "Random Two Handed Sword",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Weapons/OneHandWeapons/OneHandAxes/FourOneHandAxeGamble": {
+    "name": "Random One Handed Axe",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Weapons/TwoHandWeapons/TwoHandAxes/FourTwoHandAxeGamble": {
+    "name": "Random Two Handed Axe",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/FourOneHandMaceGamble": {
+    "name": "Random One Handed Mace",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Weapons/TwoHandWeapons/TwoHandMaces/FourTwoHandMaceGamble": {
+    "name": "Random Two Handed Mace",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Weapons/OneHandWeapons/OneHandSpears/FourSpearGamble": {
+    "name": "Random Spear",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Weapons/OneHandWeapons/Claws/FourClawGamble": {
+    "name": "Random Claw",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Weapons/OneHandWeapons/Daggers/FourDaggerGamble": {
+    "name": "Random Dagger",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourQuarterstaffGamble": {
+    "name": "Random Quarterstaff",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Weapons/OneHandWeapons/Flails/FourFlailGamble": {
+    "name": "Random Flail",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Weapons/OneHandWeapons/Wands/FourWandGamble": {
+    "name": "Random Wand",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Weapons/TwoHandWeapons/Staves/FourStaffGamble": {
+    "name": "Random Staff",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Weapons/TwoHandWeapons/Bows/FourBowGamble": {
+    "name": "Random Bow",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Weapons/TwoHandWeapons/Crossbows/FourCrossbowGamble": {
+    "name": "Random Crossbow",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/FourSceptreGamble": {
+    "name": "Random Sceptre",
+    "item_class": "HiddenItem",
+    "drop_level": 2,
+    "release_state": "released"
+  },
+  "Metadata/Items/Weapons/OneHandWeapons/Traps/FourTrapGamble": {
+    "name": "Random Trap",
+    "item_class": "HiddenItem",
+    "drop_level": 2,
+    "release_state": "released"
+  },
+  "Metadata/Items/Weapons/OneHandWeapons/Talisman/FourTalismanGamble": {
+    "name": "Random Talisman",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/BodyArmours/FourBodyStrGamble": {
+    "name": "Random Body Armour",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/BodyArmours/FourBodyDexGamble": {
+    "name": "Random Body Armour",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/BodyArmours/FourBodyIntGamble": {
+    "name": "Random Body Armour",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/BodyArmours/FourBodyStrDexGamble": {
+    "name": "Random Body Armour",
+    "item_class": "HiddenItem",
+    "drop_level": 4,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/BodyArmours/FourBodyStrIntGamble": {
+    "name": "Random Body Armour",
+    "item_class": "HiddenItem",
+    "drop_level": 5,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/BodyArmours/FourBodyDexIntGamble": {
+    "name": "Random Body Armour",
+    "item_class": "HiddenItem",
+    "drop_level": 4,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Helmets/FourHelmetStrGamble": {
+    "name": "Random Helmet",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Helmets/FourHelmetDexGamble": {
+    "name": "Random Helmet",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Helmets/FourHelmetIntGamble": {
+    "name": "Random Helmet",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Helmets/FourHelmetStrDexGamble": {
+    "name": "Random Helmet",
+    "item_class": "HiddenItem",
+    "drop_level": 6,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Helmets/FourHelmetStrIntGamble": {
+    "name": "Random Helmet",
+    "item_class": "HiddenItem",
+    "drop_level": 5,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Helmets/FourHelmetDexIntGamble": {
+    "name": "Random Helmet",
+    "item_class": "HiddenItem",
+    "drop_level": 5,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Gloves/FourGlovesStrGamble": {
+    "name": "Random Gloves",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Gloves/FourGlovesDexGamble": {
+    "name": "Random Gloves",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Gloves/FourGlovesIntGamble": {
+    "name": "Random Gloves",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Gloves/FourGlovesStrDexGamble": {
+    "name": "Random Gloves",
+    "item_class": "HiddenItem",
+    "drop_level": 6,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Gloves/FourGlovesStrIntGamble": {
+    "name": "Random Gloves",
+    "item_class": "HiddenItem",
+    "drop_level": 5,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Gloves/FourGlovesDexIntGamble": {
+    "name": "Random Gloves",
+    "item_class": "HiddenItem",
+    "drop_level": 4,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Boots/FourBootsStrGamble": {
+    "name": "Random Boots",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Boots/FourBootsDexGamble": {
+    "name": "Random Boots",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Boots/FourBootsIntGamble": {
+    "name": "Random Boots",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Boots/FourBootsStrDexGamble": {
+    "name": "Random Boots",
+    "item_class": "HiddenItem",
+    "drop_level": 6,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Boots/FourBootsStrIntGamble": {
+    "name": "Random Boots",
+    "item_class": "HiddenItem",
+    "drop_level": 5,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Boots/FourBootsDexIntGamble": {
+    "name": "Random Boots",
+    "item_class": "HiddenItem",
+    "drop_level": 5,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Shields/FourShieldStrGamble": {
+    "name": "Random Shield",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Shields/FourShieldStrDexGamble": {
+    "name": "Random Shield",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Shields/FourShieldStrIntGamble": {
+    "name": "Random Shield",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Shields/FourShieldDexGamble": {
+    "name": "Random Buckler",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Armours/Focii/FourFocusGamble": {
+    "name": "Random Focus",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Quivers/FourQuiverGamble": {
+    "name": "Random Quiver",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Amulets/FourAmuletGamble": {
+    "name": "Random Amulet",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Rings/FourRingGamble": {
+    "name": "Random Ring",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Belts/FourBeltGamble": {
+    "name": "Random Belt",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
+    "release_state": "released"
+  },
+  "Metadata/Items/Runes/FourRuneGamble": {
+    "name": "Random Rune",
+    "item_class": "HiddenItem",
+    "drop_level": 1,
     "release_state": "released"
   },
   "Metadata/Items/Weapons/OneHandWeapons/OneHandMaces/FourOneHandMace2Cruel": {
