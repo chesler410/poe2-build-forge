@@ -59,7 +59,7 @@ against five game-accepted Mobalytics exports the planner demonstrably loads.
 | Package | Purpose |
 |---|---|
 | [`@poe2-build-forge/schema`](packages/schema) | JSON Schema for `.build` files + Ajv-backed `validate()` |
-| [`@poe2-build-forge/core`](packages/core) | PoB decoder, parser, mapper, emitter, annotation sidecar |
+| [`@poe2-build-forge/core`](packages/core) | PoB decoder, parser, mapper, `.build` → PoB exporter, annotation sidecar |
 | [`@poe2-build-forge/web`](apps/web) | Static client-side converter UI, **live** at [chesler410.github.io/poe2-build-forge](https://chesler410.github.io/poe2-build-forge/) |
 | [`scripts/forge.ts`](scripts/forge.ts) | `forge` CLI: `convert`, `extract`, `compose` |
 
@@ -147,6 +147,14 @@ Recent changes are tracked in [`CHANGELOG.md`](CHANGELOG.md).
 4. **Map** PoB's display names and tree allocations to GGG's internal table IDs using bundled lookup tables (`mapPobToBuild`).
 5. **Emit** a validated JSON `.build` file ready to drop into PoE2's BuildPlanner directory (`emitBuildFile`).
 
+The reverse path, `.build` → PoB code, stays in the same package and also runs in the browser:
+
+1. **Read** the `.build` JSON (`name`, `author`, `ascendancy`, `passives`, `skills`, `inventory_slots`).
+2. **Invert** the passive table from GGG slug to Path of Building's numeric node id (`mapBuildToPob`). A slug with no node is reported and left out.
+3. **Socket** each skill as one group. `support_skills` stay in that group. A `level_interval`, when present, sets the gem level from its start.
+4. **Notes** receive item hints. `additional_text` is free text, not a Path of Building item. A `unique_name` is recorded only as that name. Equipment is not reconstructed.
+5. **Encode** `<PathOfBuilding2>` XML with zlib and URL-safe base64 (`encodePobCode`), the same envelope `decodePobCode` reads.
+
 ## Usage
 
 End-to-end: turn a pobb.in URL into a `.build` file the in-game Build
@@ -185,6 +193,26 @@ const { filename, content } = emitBuildFile(build)
 
 // 5. Up to you: write `content` to `<filename>` inside
 //    Documents/My Games/Path of Exile 2/BuildPlanner/
+```
+
+The other direction: a `.build` file back into a Path of Building share
+code. Tree nodes and socket groups come back; items do not.
+
+```ts
+import { mapBuildToPob } from '@poe2-build-forge/core'
+import passives from '@poe2-build-forge/core/data/passives_default.json'
+import ascendancies from '@poe2-build-forge/core/data/ascendancies.json'
+import characters from '@poe2-build-forge/core/data/characters.json'
+
+const build = JSON.parse(fileContent)
+const { code, report } = mapBuildToPob(build, {
+  passives,
+  ascendancies,
+  characters
+})
+// code is the URL-safe share string. Paste it into Path of Building 2.
+// report.equipment.reconstructed === false
+// report.passives.skipped lists slugs with no numeric node
 ```
 
 The pipeline functions are pure and cross-runtime — Node 22+ and modern
@@ -239,12 +267,10 @@ functions are exported from `@poe2-build-forge/core`.
 
 Ideas under consideration — not commitments.
 
-- **Inverse conversion: `.build` → PoB code** *(community-requested)*.
-  Take a `.build` — your own, or one a build creator shared — back into
-  [Path of Building](https://github.com/PathOfBuildingCommunity/PathOfBuilding-PoE2)
-  to theorycraft, check DPS/defenses, tweak, and re-export. Closes the
-  round-trip loop and would be the mirror of the existing pipeline.
-  Feasibility hinges on how items are stored in the `.build` format.
+- **Inverse conversion: `.build` → PoB code** — done. The web app's
+  `.build → PoB` mode and `mapBuildToPob` export the tree and socket
+  groups. Items stay in the notes as text; they are not rebuilt as
+  Path of Building items.
 - **Direct save to the BuildPlanner folder.** Skip the
   download-then-drag step by writing straight to
   `Documents/My Games/Path of Exile 2/BuildPlanner/` via the File System

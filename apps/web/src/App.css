@@ -461,6 +461,27 @@ details.getting-started:not([open]) {
   flex-wrap: wrap;
 }
 
+.direction-switch {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.export-list {
+  margin: 0.4rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.export-list li {
+  margin: 0.2rem 0;
+}
+
+.export-note {
+  margin: 0.75rem 0 0;
+  color: var(--text-muted);
+}
+
 .shortcuts-hint {
   margin-top: 0.25rem;
 }

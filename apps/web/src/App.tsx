@@ -3,9 +3,12 @@ import {
   decodePobCode,
   parsePobXml,
   mapPobToBuild,
+  mapBuildToPob,
   emitBuildFile,
   type AscendancyLookup,
   type BuildFile,
+  type BuildToPobResult,
+  type CharacterEntry,
   type MapWarning,
   type PassiveLookup
 } from '@poe2-build-forge/core'
@@ -25,8 +28,11 @@ import './App.css'
 interface Lookups {
   passives: PassiveLookup
   ascendancies: AscendancyLookup
+  characters: CharacterEntry[]
   gemLabels: Record<string, string>
 }
+
+type Direction = 'pob-to-build' | 'build-to-pob'
 
 let lookupsCache: Lookups | null = null
 let lookupsInFlight: Promise<Lookups> | null = null
@@ -36,14 +42,17 @@ async function loadLookups(): Promise<Lookups> {
   if (lookupsInFlight) return lookupsInFlight
 
   lookupsInFlight = (async () => {
-    const [passivesModule, ascendanciesModule, gemLabelsModule] = await Promise.all([
-      import('@poe2-build-forge/core/data/passives_default.json'),
-      import('@poe2-build-forge/core/data/ascendancies.json'),
-      import('@poe2-build-forge/core/data/gem_labels.json')
-    ])
+    const [passivesModule, ascendanciesModule, charactersModule, gemLabelsModule] =
+      await Promise.all([
+        import('@poe2-build-forge/core/data/passives_default.json'),
+        import('@poe2-build-forge/core/data/ascendancies.json'),
+        import('@poe2-build-forge/core/data/characters.json'),
+        import('@poe2-build-forge/core/data/gem_labels.json')
+      ])
     const lookups: Lookups = {
       passives: passivesModule.default as PassiveLookup,
       ascendancies: ascendanciesModule.default as AscendancyLookup,
+      characters: charactersModule.default as CharacterEntry[],
       gemLabels: gemLabelsModule.default as Record<string, string>
     }
     lookupsCache = lookups
@@ -73,6 +82,46 @@ function loadStoredInput(): string {
     return localStorage.getItem(STORAGE_INPUT) ?? ''
   } catch {
     return ''
+  }
+}
+
+function downloadFile(filename: string, content: string, type: string) {
+  const blob = new Blob([content], { type })
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = filename
+  document.body.appendChild(a)
+  a.click()
+  document.body.removeChild(a)
+  URL.revokeObjectURL(url)
+}
+
+function derivePobFilename(name: string): string {
+  const safe = name
+    // eslint-disable-next-line no-control-regex
+    .replace(/[<>:"/\\|?*\u0000-\u001f]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim()
+  return `${safe.length > 0 ? safe : 'build'}.txt`
+}
+
+async function writeToClipboard(text: string) {
+  try {
+    await navigator.clipboard.writeText(text)
+    return true
+  } catch {
+    const ta = document.createElement('textarea')
+    ta.value = text
+    ta.style.position = 'fixed'
+    ta.style.opacity = '0'
+    document.body.appendChild(ta)
+    ta.select()
+    try {
+      return document.execCommand('copy')
+    } finally {
+      document.body.removeChild(ta)
+    }
   }
 }
 
@@ -109,7 +158,10 @@ function classifyHost(input: string): KnownHost {
 }
 
 export function App() {
+  const [direction, setDirection] = useState<Direction>('pob-to-build')
   const [input, setInput] = useState<string>(loadStoredInput)
+  const [buildInput, setBuildInput] = useState('')
+  const [pobExport, setPobExport] = useState<BuildToPobResult | null>(null)
   const [busy, setBusy] = useState(false)
   // The current build lives at history.stack[history.index]. Treating it as
   // a stack lets us do Ctrl+Z / Ctrl+Y for free; treating it as the source
@@ -279,7 +331,47 @@ export function App() {
     }
   }
 
+  async function convertBuildText(raw: string) {
+    setError(null)
+    const text = raw.trim()
+    if (!text) return
+
+    setBusy(true)
+    try {
+      const lookups = await loadLookups()
+      let parsed: BuildFile
+      try {
+        parsed = JSON.parse(text) as BuildFile
+      } catch {
+        throw new Error(
+          'That is not a .build file. Paste the JSON, or drop a .build file onto the page.'
+        )
+      }
+      setPobExport(
+        mapBuildToPob(parsed, {
+          passives: lookups.passives,
+          ascendancies: lookups.ascendancies,
+          characters: lookups.characters,
+          gemLabels: lookups.gemLabels
+        })
+      )
+    } catch (err) {
+      setPobExport(null)
+      setError({
+        kind: 'plain',
+        message: err instanceof Error ? err.message : String(err)
+      })
+    } finally {
+      setBusy(false)
+    }
+  }
+
   async function handleConvert() {
+    if (direction === 'build-to-pob') {
+      await convertBuildText(buildInput)
+      return
+    }
+
     setError(null)
     clearHistory()
     const raw = input.trim()
@@ -328,9 +420,14 @@ export function App() {
   }
 
   function handleStartOver() {
+    setError(null)
+    if (direction === 'build-to-pob') {
+      setBuildInput('')
+      setPobExport(null)
+      return
+    }
     setInput('')
     clearHistory()
-    setError(null)
   }
 
   function handleImportPick(e: React.ChangeEvent<HTMLInputElement>) {
@@ -344,6 +441,11 @@ export function App() {
     setError(null)
     const name = file.name.toLowerCase()
     const text = await file.text()
+    if (direction === 'build-to-pob') {
+      setBuildInput(text)
+      await convertBuildText(text)
+      return
+    }
     if (name.endsWith('.build')) {
       // Skip PoB conversion entirely; treat as an existing build to edit.
       try {
@@ -410,13 +512,24 @@ export function App() {
     function onKey(e: KeyboardEvent) {
       if (!(e.ctrlKey || e.metaKey)) return
       const key = e.key.toLowerCase()
-      if (key === 's' && currentBuild) {
-        e.preventDefault()
-        try {
-          const { filename, content } = emitBuildFile(currentBuild)
-          downloadEdited(filename, content)
-        } catch { /* validation error surfaces in the UI */ }
-        return
+      if (key === 's') {
+        if (direction === 'build-to-pob' && pobExport) {
+          e.preventDefault()
+          downloadFile(
+            derivePobFilename(pobExport.pob.tree?.specs[0]?.title ?? 'build'),
+            pobExport.code,
+            'text/plain'
+          )
+          return
+        }
+        if (direction === 'pob-to-build' && currentBuild) {
+          e.preventDefault()
+          try {
+            const { filename, content } = emitBuildFile(currentBuild)
+            downloadEdited(filename, content)
+          } catch { /* validation error surfaces in the UI */ }
+          return
+        }
       }
       const target = e.target as HTMLElement | null
       const inEditable =
@@ -435,21 +548,17 @@ export function App() {
     }
     window.addEventListener('keydown', onKey)
     return () => window.removeEventListener('keydown', onKey)
-  }, [currentBuild, canUndo, canRedo])
+  }, [direction, pobExport, currentBuild, canUndo, canRedo])
 
   function downloadEdited(filename: string, content: string) {
-    const blob = new Blob([content], { type: 'application/json' })
-    const url = URL.createObjectURL(blob)
-    const a = document.createElement('a')
-    a.href = url
-    a.download = filename
-    document.body.appendChild(a)
-    a.click()
-    document.body.removeChild(a)
-    URL.revokeObjectURL(url)
+    downloadFile(filename, content, 'application/json')
   }
 
-  const hasState = input.length > 0 || currentBuild !== null
+  const reverse = direction === 'build-to-pob'
+  const hasState = reverse
+    ? buildInput.length > 0 || pobExport !== null
+    : input.length > 0 || currentBuild !== null
+  const activeInput = reverse ? buildInput : input
 
   return (
     <main
@@ -461,7 +570,15 @@ export function App() {
       {dragging && (
         <div className="drop-overlay" aria-hidden="true">
           <div className="drop-overlay-message">
-            Drop a <code>.pob</code> or <code>.build</code> file
+            {reverse ? (
+              <>
+                Drop a <code>.build</code> file to export a PoB code
+              </>
+            ) : (
+              <>
+                Drop a <code>.pob</code> or <code>.build</code> file
+              </>
+            )}
           </div>
         </div>
       )}
@@ -651,6 +768,26 @@ export function App() {
         </div>
       </details>
 
+      <div className="direction-switch" role="group" aria-label="Conversion direction">
+        <button
+          type="button"
+          className={reverse ? 'secondary-button' : undefined}
+          aria-pressed={!reverse}
+          onClick={() => setDirection('pob-to-build')}
+        >
+          PoB → .build
+        </button>
+        <button
+          type="button"
+          className={reverse ? undefined : 'secondary-button'}
+          aria-pressed={reverse}
+          onClick={() => setDirection('build-to-pob')}
+        >
+          .build → PoB
+        </button>
+      </div>
+
+      {!reverse && (
       <p className="example-prompt standalone">
         First time here?{' '}
         <button
@@ -662,33 +799,53 @@ export function App() {
         </button>{' '}
         to see what the result looks like.
       </p>
+      )}
 
       <section className="input-section">
-        <label htmlFor="pob-code">PoB code or pobb.in URL</label>
+        <label htmlFor="pob-code">
+          {reverse ? '.build JSON' : 'PoB code or pobb.in URL'}
+        </label>
         <p className="hint">
-          Paste a raw PoB export (long URL-safe base64 string) or a{' '}
-          <code>pobb.in/&lt;id&gt;</code> URL. Conversion runs in your
-          browser; nothing is sent to a server.
+          {reverse ? (
+            <>
+              Paste a <code>.build</code> file or drop one onto the page.
+              Conversion runs in your browser; nothing is sent to a server.
+              Gear is copied into the Path of Building notes, not rebuilt as
+              items.
+            </>
+          ) : (
+            <>
+              Paste a raw PoB export (long URL-safe base64 string) or a{' '}
+              <code>pobb.in/&lt;id&gt;</code> URL. Conversion runs in your
+              browser; nothing is sent to a server.
+            </>
+          )}
         </p>
         <textarea
           id="pob-code"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
+          value={activeInput}
+          onChange={(e) =>
+            reverse ? setBuildInput(e.target.value) : setInput(e.target.value)
+          }
           onKeyDown={(e) => {
             if ((e.ctrlKey || e.metaKey) && e.key === 'Enter' && !busy) {
               e.preventDefault()
-              handleConvert()
+              void handleConvert()
             }
           }}
-          placeholder="https://pobb.in/90pcuxN4XtJG  —or—  eNrtXVtX4krTvt7vr2B5rdscIXmX..."
+          placeholder={
+            reverse
+              ? '{ "name": "My build", "ascendancy": "Sorceress1", "passives": [...] }'
+              : 'https://pobb.in/90pcuxN4XtJG  —or—  eNrtXVtX4krTvt7vr2B5rdscIXmX...'
+          }
           rows={6}
           spellCheck={false}
         />
         <div className="input-actions">
           <button
             type="button"
-            onClick={handleConvert}
-            disabled={busy || input.trim().length === 0}
+            onClick={() => void handleConvert()}
+            disabled={busy || activeInput.trim().length === 0}
           >
             {busy ? 'Converting…' : 'Convert'}
           </button>
@@ -705,13 +862,22 @@ export function App() {
         </div>
         <p className="hint shortcuts-hint">
           Shortcuts: <kbd>Ctrl</kbd>+<kbd>Enter</kbd> convert,{' '}
-          <kbd>Ctrl</kbd>+<kbd>S</kbd> download,{' '}
-          <kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd> undo / redo
-          (outside text fields). Drag a <code>.pob</code> or{' '}
-          <code>.build</code> file onto the page to load it.
+          <kbd>Ctrl</kbd>+<kbd>S</kbd> download
+          {reverse ? (
+            <>
+              . Drag a <code>.build</code> file onto the page to export it.
+            </>
+          ) : (
+            <>
+              , <kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd> undo
+              / redo (outside text fields). Drag a <code>.pob</code> or{' '}
+              <code>.build</code> file onto the page to load it.
+            </>
+          )}
         </p>
       </section>
 
+      {!reverse && (
       <section className="import-edit">
         <div className="import-edit-copy">
           <p className="import-edit-eyebrow">Already have a build?</p>
@@ -741,6 +907,7 @@ export function App() {
           </button>
         </div>
       </section>
+      )}
 
       {error?.kind === 'plain' && (
         <section className="error" role="alert">
@@ -749,7 +916,7 @@ export function App() {
         </section>
       )}
 
-      {warnings.length > 0 && (
+      {!reverse && warnings.length > 0 && (
         <section className="warning" role="status">
           <strong>
             {warnings.length} passive{' '}
@@ -845,7 +1012,7 @@ export function App() {
         </section>
       )}
 
-      {currentBuild && (
+      {!reverse && currentBuild && (
         <ResultPanel
           build={currentBuild}
           labels={labels}
@@ -855,6 +1022,16 @@ export function App() {
           onUndo={undo}
           onRedo={redo}
           onDownload={downloadEdited}
+          onToast={pushToast}
+        />
+      )}
+
+      {reverse && pobExport && (
+        <PobExportPanel
+          result={pobExport}
+          onDownload={(filename, content) =>
+            downloadFile(filename, content, 'text/plain')
+          }
           onToast={pushToast}
         />
       )}
@@ -910,25 +1087,6 @@ function ResultPanel({
   const { content, filename, error } = useEmittedContent(build)
   const [copied, setCopied] = useState(false)
   const [shared, setShared] = useState(false)
-
-  async function writeToClipboard(text: string) {
-    try {
-      await navigator.clipboard.writeText(text)
-      return true
-    } catch {
-      const ta = document.createElement('textarea')
-      ta.value = text
-      ta.style.position = 'fixed'
-      ta.style.opacity = '0'
-      document.body.appendChild(ta)
-      ta.select()
-      try {
-        return document.execCommand('copy')
-      } finally {
-        document.body.removeChild(ta)
-      }
-    }
-  }
 
   async function handleShareLink() {
     const url = buildShareUrl(build)
@@ -1050,6 +1208,144 @@ function ResultPanel({
       <details>
         <summary>JSON preview</summary>
         <pre>{content}</pre>
+      </details>
+    </section>
+  )
+}
+
+function PobExportPanel({
+  result,
+  onDownload,
+  onToast
+}: {
+  result: BuildToPobResult
+  onDownload: (filename: string, content: string) => void
+  onToast: (message: React.ReactNode, kind?: Toast['kind']) => void
+}) {
+  const [copied, setCopied] = useState(false)
+  const { report } = result
+  const filename = derivePobFilename(result.pob.tree?.specs[0]?.title ?? 'build')
+  const skills = result.pob.skills?.skillSets[0]?.skills ?? []
+
+  async function handleCopy() {
+    if (await writeToClipboard(result.code)) {
+      setCopied(true)
+      window.setTimeout(() => setCopied(false), 1500)
+    } else {
+      onToast('Could not copy to clipboard.', 'info')
+    }
+  }
+
+  return (
+    <section className="result">
+      <div className="result-summary">
+        <p className="result-eyebrow">Path of Building code</p>
+        <h2>{result.pob.tree?.specs[0]?.title || '(unnamed build)'}</h2>
+        <dl>
+          <dt>Class</dt>
+          <dd>
+            {report.ascendancy.recognized
+              ? `${report.ascendancy.ascendClassName} (${report.ascendancy.className})`
+              : 'Not resolved'}
+          </dd>
+          <dt>Passives converted</dt>
+          <dd>{report.passives.converted.length}</dd>
+          <dt>Passives skipped</dt>
+          <dd>{report.passives.skipped.length}</dd>
+          <dt>Socket groups</dt>
+          <dd>{report.skills.groups.length}</dd>
+          <dt>Equipment</dt>
+          <dd>Not reconstructed</dd>
+        </dl>
+        <p className="export-note">{report.equipment.message}</p>
+        <div className="result-actions">
+          <button
+            type="button"
+            onClick={() => onDownload(filename, result.code)}
+          >
+            Download {filename}
+          </button>
+          <button
+            type="button"
+            className="secondary-button"
+            onClick={() => void handleCopy()}
+          >
+            {copied ? 'Copied ✓' : 'Copy code'}
+          </button>
+        </div>
+        <p className="placement-hint">
+          Paste the code into Path of Building 2 via Import/Export Build.
+          Allocated nodes and socket groups are included. Item hints stay in
+          the build notes.
+        </p>
+      </div>
+
+      {report.passives.converted.length > 0 && (
+        <details>
+          <summary>
+            Converted passives ({report.passives.converted.length})
+          </summary>
+          <code>
+            {report.passives.converted
+              .map((entry) => `${entry.id} → ${entry.pobId}`)
+              .join(', ')}
+          </code>
+        </details>
+      )}
+
+      {report.passives.skipped.length > 0 && (
+        <details open>
+          <summary>
+            Skipped passives ({report.passives.skipped.length})
+          </summary>
+          <code>{report.passives.skipped.map((entry) => entry.id).join(', ')}</code>
+        </details>
+      )}
+
+      <details>
+        <summary>Socket groups ({report.skills.groups.length})</summary>
+        <ul className="export-list">
+          {report.skills.groups.map((group, index) => {
+            const gems = skills[index]?.gems ?? []
+            return (
+              <li key={`${group.gemId}-${index}`}>
+                <strong>{gems[0]?.nameSpec || group.gemId}</strong> level{' '}
+                {group.level}
+                {group.supports.length > 0 && (
+                  <ul>
+                    {group.supports.map((support, supportIndex) => (
+                      <li key={`${support.gemId}-${supportIndex}`}>
+                        {gems[supportIndex + 1]?.nameSpec || support.gemId}{' '}
+                        level {support.level}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            )
+          })}
+        </ul>
+      </details>
+
+      {report.equipment.slots.length > 0 && (
+        <details>
+          <summary>
+            Equipment left as notes ({report.equipment.slots.length})
+          </summary>
+          <ul className="export-list">
+            {report.equipment.slots.map((slot, index) => (
+              <li key={`${slot.inventoryId}-${index}`}>
+                {slot.inventoryId}
+                {slot.uniqueName ? `: ${slot.uniqueName}` : ': text note only'}
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
+
+      <details>
+        <summary>Code preview</summary>
+        <pre>{result.code}</pre>
       </details>
     </section>
   )
