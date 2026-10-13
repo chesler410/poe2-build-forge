@@ -24,3 +24,20 @@ export function decodePobCode(code: string): string {
   const inflated = pako.inflate(compressed)
   return new TextDecoder('utf-8').decode(inflated)
 }
+
+/**
+ * Encode a `<PathOfBuilding2>` XML document into the share-code format
+ * {@link decodePobCode} reads: zlib-deflate, then URL-safe base64
+ * (`+`/`/` become `-`/`_`, padding stripped).
+ */
+export function encodePobCode(xml: string): string {
+  const compressed = pako.deflate(new TextEncoder().encode(xml))
+  let binary = ''
+  // String.fromCharCode rejects a huge spread, so encode in chunks.
+  const chunkSize = 0x8000
+  for (let i = 0; i < compressed.length; i += chunkSize) {
+    const chunk = compressed.subarray(i, i + chunkSize)
+    binary += String.fromCharCode(...chunk)
+  }
+  return btoa(binary).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/g, '')
+}

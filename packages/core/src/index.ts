@@ -1,6 +1,17 @@
 export const VERSION = '0.0.0' as const
 
-export { decodePobCode } from './decode'
+export { decodePobCode, encodePobCode } from './decode'
+export { mapBuildToPob, EQUIPMENT_NOT_RECONSTRUCTED } from './reverse'
+export type {
+  BuildToPobOptions,
+  BuildToPobReport,
+  BuildToPobResult,
+  CharacterEntry,
+  ConvertedPassive,
+  ConvertedSkillGroup,
+  EquipmentSlotReport,
+  SkippedPassive
+} from './reverse'
 export { parsePobXml } from './parse'
 export { mapPobToBuild } from './map'
 export { emitBuildFile, deriveBuildFilename } from './emit'

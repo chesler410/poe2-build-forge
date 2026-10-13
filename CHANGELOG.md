@@ -3,6 +3,17 @@
 All notable changes to poe2-build-forge. Versions track the web app at
 `apps/web`; the libraries follow alongside.
 
+## [Unreleased]
+
+**Added**
+
+- `.build` → Path of Building export. `mapBuildToPob` / `encodePobCode`
+  turn a planner file back into a share code: allocated node ids and
+  socket groups are preserved, and a `level_interval` sets the gem level
+  from its start. Equipment is not reconstructed — slot text and unique
+  names go into the build notes. The web app has a `.build → PoB` mode
+  to paste or drop a file, then copy or download the code.
+
 ## [0.9.5] — 2026-05-13
 
 **Added**
