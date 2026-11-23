@@ -10345,7 +10345,7 @@
   },
   "16568": {
     "id": "companions24",
-    "name": "Defenses and Companion Life",
+    "name": "Defences and Companion Life",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -23553,7 +23553,7 @@
   },
   "37688": {
     "id": "trap17",
-    "name": "Devestating Devices",
+    "name": "Devastating Devices",
     "is_notable": true,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -30561,7 +30561,7 @@
   },
   "48583": {
     "id": "life_leech2",
-    "name": "Life Leech. Armour and Evasion while Leeching",
+    "name": "Life Leech, Armour and Evasion while Leeching",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
@@ -36961,7 +36961,7 @@
   },
   "58783": {
     "id": "life_leech1",
-    "name": "Life Leech. Armour and Evasion while Leeching",
+    "name": "Life Leech, Armour and Evasion while Leeching",
     "is_notable": false,
     "is_keystone": false,
     "is_jewel_socket": false,
